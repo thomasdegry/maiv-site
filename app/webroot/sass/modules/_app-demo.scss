@@ -1,0 +1,31 @@
+.app-demo {
+    background-image: url('../images/demo/iphone-01.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 9;
+
+    // .app-demo-started is a class that gets added to the body
+    // with Javascript when the demo should scroll
+    // and removed when the demo shouldn't scroll
+    .app-demo-started & {
+        background-attachment: fixed;
+        background-position: center 120%;
+    }
+}
+
+.app-demo-1 {
+    background-image: url('../images/demo/iphone-01.png');
+}
+
+.app-demo-2 {
+    background-image: url('../images/demo/iphone-02.png');
+}
+
+.app-demo-3 {
+    background-image: url('../images/demo/iphone-03.png');
+}
+
+.app-demo-4 {
+    background-image: url('../images/demo/iphone-04.png');
+}

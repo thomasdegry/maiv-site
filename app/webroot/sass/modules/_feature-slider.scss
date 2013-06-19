@@ -1,0 +1,49 @@
+.feature-slider-container {
+    padding: 5.3em 0 3.5em;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.feature-slider-navigation {
+    margin: 0 auto;
+    padding: 1.5em 0 0;
+    width: 6em;
+
+    li {
+        @include inline-block;
+        padding-right: .5em;
+    }
+}
+
+.feature-slider-navigation-item {
+    @include inline-block;
+    background-color: $beige;
+    border-radius: .5em;
+    color: transparent;
+    font: 0/0;
+    height: 1em;
+    text-decoration: none;
+    width: 1em;
+}
+
+.mr-burger-appstore {
+    background-image: url('../images/festi-food-appstore.svg');
+    display: block;
+    height: 280px;
+    @include hide-text;
+    width: 320px;
+}
+
+.feature-slogan {
+    @extend %offset-text-shadow;
+    @include font-alternate($beige, 2.75em);
+    margin: 0 auto;
+    padding: 1em 0 0;
+    text-align: center;
+    width: 65%;
+
+    span {
+        font-family: $font-mission-script;
+        text-transform: none;
+    }
+}

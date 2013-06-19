@@ -1,0 +1,58 @@
+// Define your colors here
+$blue: #2d353a;
+$blue-darkened: #1e2328;
+
+$beige: #ecedde;
+$beige-darkened: #d2d2bf;
+
+$orange: #ef691d;
+$orange-darkened: #ef4c0c;
+
+$brown: #992a07;
+
+$facebook: #395897;
+$facebook-darkened: #21406f;
+
+$twitter: #29abe2;
+$twitter-darkened: #0a7da5;
+
+$font-traveler: 'Traveler';
+
+@mixin font ($font-name, $color: $blue, $size: 1em, $line-height: 1.45, $bold: normal, $italic: normal) {
+    color: $color;
+    font: {
+        family: $font-name;
+        size: $size;
+        style: $italic;
+        weight: $bold;
+    }
+    line-height: $line-height;
+}
+
+@mixin font-traveler ($color: $blue, $size: 1em, $line-height: 1.45, $bold: normal, $italic: normal) {
+    @include font($font-traveler, $color, $size, $line-height, $bold, $italic);
+}
+
+$font-alternate: 'AlternateGothicCom-No2';
+
+@mixin font-alternate ($color: $blue, $size: 1em, $line-height: 1.1, $bold: normal, $italic: normal) {
+    @include font($font-alternate, $color, $size, $line-height, $bold, $italic);
+    text-transform: uppercase;
+}
+
+$font-mission-script: 'Mission Script';
+
+@mixin font-mission-script ($color: $blue, $size: 2em, $line-height: 1.1, $bold: normal, $italic: normal) {
+    @include font($font-mission-script, $color, $size, $line-height, $bold, $italic);
+}
+
+%offset-text-shadow {
+    text-shadow: -0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+%sprite {
+    @include hide-text;
+    background-image: url('../images/sprite.svg');
+    background-repeat: no-repeat;
+    display: block;
+}

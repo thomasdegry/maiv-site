@@ -1,0 +1,941 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Traveler';
+  src: url("fonts/traveller.eot");
+  src: url("fonts/traveller.eot?#iefix") format("embedded-opentype"), url("fonts/traveller.woff") format("woff"), url("fonts/traveller.ttf") format("truetype"), url("fonts/traveller.svg#travelermedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mission Script';
+  src: url("fonts/mission-script.eot");
+  src: url("fonts/mission-script.eot?#iefix") format("embedded-opentype"), url("fonts/mission-script.woff") format("woff"), url("fonts/mission-script.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 49, ../sass/_variables.scss */
+.horizontal-slider-navigation-title, .feature-slogan, .calendar-item-title, .gallery-introduction {
+  text-shadow: -0.2rem 0.2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+/* line 53, ../sass/_variables.scss */
+.horizontal-slider-previous-button, .horizontal-slider-next-button {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url("../images/sprite.svg");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* line 1, ../sass/_base.scss */
+html {
+  height: 100%;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 7, ../sass/_base.scss */
+body {
+  background-color: #ecedde;
+  font-family: "Traveler";
+  height: 100%;
+  padding-top: 4.375em;
+}
+
+/* line 16, ../sass/_base.scss */
+.orange {
+  background-color: #ef691d;
+  color: #ecedde;
+}
+
+/* line 21, ../sass/_base.scss */
+.full-screen {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 4.375em;
+  position: relative;
+  width: 100%;
+}
+
+/* line 29, ../sass/_base.scss */
+.gradient-background {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, #f57121), color-stop(65%, #e84a0c)), #ef691d;
+  background: -webkit-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: -moz-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: -o-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+}
+
+/* line 33, ../sass/_base.scss */
+.blurry-background {
+  background-image: url("../images/blurry-background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* line 41, ../sass/_base.scss */
+p {
+  color: inherit;
+  font-family: "Traveler";
+  font-size: 0.9735em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+
+/* line 48, ../sass/_base.scss */
+select, input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ecedde;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #2d353a;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* line 59, ../sass/_base.scss */
+label {
+  display: none;
+}
+
+/* line 63, ../sass/_base.scss */
+.label-icon-container {
+  position: relative;
+  padding-bottom: .5em;
+}
+
+/* line 68, ../sass/_base.scss */
+.label-icon {
+  background-color: #2d353a;
+  border-radius: 1.4em;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  height: 2.8em;
+  width: 2.8em;
+  position: absolute;
+  top: -.4em;
+  right: 3em;
+  z-index: 999;
+}
+
+/* line 81, ../sass/_base.scss */
+select {
+  height: 1.7em;
+  padding: .4em 1em .3em;
+  position: relative;
+  top: .1em;
+  z-index: 9;
+}
+
+/* line 93, ../sass/_base.scss */
+input[type="text"] {
+  letter-spacing: .05em;
+  padding: .45em 1em .25em;
+}
+/* line 98, ../sass/_base.scss */
+input[type="text"]::after {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  z-index: 999;
+}
+
+/* line 108, ../sass/_base.scss */
+.prefixed-link {
+  color: #ef691d;
+  text-decoration: none;
+  -webkit-transition: color 220ms ease-in-out;
+  -moz-transition: color 220ms ease-in-out;
+  -o-transition: color 220ms ease-in-out;
+  transition: color 220ms ease-in-out;
+}
+/* line 113, ../sass/_base.scss */
+.prefixed-link:hover {
+  color: #f2894d;
+}
+
+/* line 118, ../sass/_base.scss */
+.circle-picture {
+  background-position: center center;
+  border: .3em solid white;
+  border-radius: 1.5em;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+/* line 3, ../sass/_layout.scss */
+.container {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  width: 92%;
+}
+
+/* line 11, ../sass/_layout.scss */
+.container-small {
+  width: 55%;
+}
+
+/* line 17, ../sass/_layout.scss */
+.column-container {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.column-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 21, ../sass/_layout.scss */
+.column {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 2em;
+}
+/* line 25, ../sass/_layout.scss */
+.column:last-child {
+  float: right;
+}
+
+/* line 30, ../sass/_layout.scss */
+.span-one-column {
+  float: left;
+}
+/* line 33, ../sass/_layout.scss */
+.has-four-columns .span-one-column {
+  width: 25%;
+}
+/* line 37, ../sass/_layout.scss */
+.has-three-columns .span-one-column {
+  width: 33%;
+}
+/* line 41, ../sass/_layout.scss */
+.has-two-columns .span-one-column {
+  width: 50%;
+}
+
+/* line 46, ../sass/_layout.scss */
+.span-two-columns {
+  float: left;
+}
+/* line 49, ../sass/_layout.scss */
+.has-four-columns .span-two-columns {
+  width: 50%;
+}
+/* line 53, ../sass/_layout.scss */
+.has-three-columns .span-two-columns {
+  width: 66%;
+}
+
+/* line 60, ../sass/_layout.scss */
+.has-four-columns .span-three-columns {
+  width: 75%;
+}
+/* line 64, ../sass/_layout.scss */
+.has-three-columns .span-three-columns {
+  width: 100%;
+}
+
+/* line 1, ../sass/modules/_site-header.scss */
+.site-header {
+  background-color: #ecedde;
+  box-shadow: 0 0.5em 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.375em;
+  width: 100%;
+  z-index: 999;
+}
+
+/* line 14, ../sass/modules/_site-header.scss */
+.circle-logo {
+  background-image: url("../images/circle-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 175px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  left: -600px;
+  opacity: 0;
+  position: absolute;
+  top: -2.15em;
+  -webkit-transition: all 440ms ease-in-out;
+  -moz-transition: all 440ms ease-in-out;
+  -o-transition: all 440ms ease-in-out;
+  transition: all 440ms ease-in-out;
+  width: 170px;
+}
+/* line 28, ../sass/modules/_site-header.scss */
+.show-logo .circle-logo {
+  display: block;
+  left: 0px;
+  opacity: 1;
+}
+
+/* line 35, ../sass/modules/_site-header.scss */
+.horizontal-nav {
+  color: #2d353a;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding-left: 7em;
+  width: 800px;
+  -webkit-transition: all 330ms ease-in-out;
+  -webkit-transition-delay: 110ms;
+  -moz-transition: all 330ms ease-in-out 110ms;
+  -o-transition: all 330ms ease-in-out 110ms;
+  transition: all 330ms ease-in-out 110ms;
+}
+/* line 41, ../sass/modules/_site-header.scss */
+.horizontal-nav li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 45, ../sass/modules/_site-header.scss */
+.show-logo .horizontal-nav {
+  padding-left: 8em;
+}
+
+/* line 50, ../sass/modules/_site-header.scss */
+.nav-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: #2d353a;
+  padding: .8em 1.5em;
+  text-decoration: none;
+  -webkit-transition: color 220ms ease-in-out;
+  -moz-transition: color 220ms ease-in-out;
+  -o-transition: color 220ms ease-in-out;
+  transition: color 220ms ease-in-out;
+}
+/* line 57, ../sass/modules/_site-header.scss */
+.nav-item:hover {
+  color: #ef691d;
+}
+
+/* line 1, ../sass/modules/_site-footer.scss */
+.site-footer {
+  background-color: #1e2328;
+  color: #ecedde;
+  padding-top: 4em;
+}
+
+/* line 7, ../sass/modules/_site-footer.scss */
+.mr-burger {
+  background-image: url("../images/mr-burger.svg");
+  background-position: center;
+  display: block;
+  height: 128px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto 2em;
+  width: 175px;
+}
+
+/* line 17, ../sass/modules/_site-footer.scss */
+.copyright {
+  margin-top: 4em;
+  line-height: 5em;
+}
+
+/* line 1, ../sass/modules/_full-width-image.scss */
+.full-width-image {
+  background-image: url("../images/full-width-image.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30em;
+}
+
+/* line 1, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 2.5em 0;
+}
+
+/* line 6, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation-title {
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 2.125em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding: 1em 0 .4em;
+}
+
+/* line 12, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation {
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 4.5em;
+}
+/* line 16, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 21, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-color: #d2d2bf;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ecedde), color-stop(49%, #ecedde), color-stop(50%, #d2d2bf), color-stop(100%, #d2d2bf));
+  background: -webkit-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: -moz-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: -o-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  border-radius: .2em;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  color: #2d353a;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.7em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-right: .5rem;
+  padding: .6em .4em;
+  text-decoration: none;
+}
+/* line 32, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation-item:hover {
+  background-color: #ecedde;
+  background-image: none;
+}
+
+/* line 38, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation-item-active {
+  background-color: #1e2328;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2d353a), color-stop(49%, #2d353a), color-stop(50%, #1e2328), color-stop(100%, #1e2328));
+  background: -webkit-linear-gradient(center top, #2d353a, #2d353a 49%, #1e2328 50%, #1e2328);
+  background: -moz-linear-gradient(center top, #2d353a, #2d353a 49%, #1e2328 50%, #1e2328);
+  background: -o-linear-gradient(center top, #2d353a, #2d353a 49%, #1e2328 50%, #1e2328);
+  background: linear-gradient(center top, #2d353a, #2d353a 49%, #1e2328 50%, #1e2328);
+  color: #ecedde;
+}
+/* line 43, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-navigation-item-active:hover {
+  background-color: #2d353a;
+  background-image: none;
+}
+
+/* line 49, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-item {
+  text-align: center;
+  position: relative;
+}
+
+/* line 54, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-previous-button, .horizontal-slider-next-button {
+  background-position: -20px -73px;
+  position: absolute;
+  top: 40%;
+  left: -3em;
+  height: 2.2em;
+  width: 2.2em;
+}
+
+/* line 64, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-next-button {
+  background-position: -17px -125px;
+  left: auto;
+  right: -3em;
+}
+
+/* line 1, ../sass/modules/_app-demo.scss */
+.app-demo {
+  background-image: url("../images/demo/iphone-01.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 9;
+}
+/* line 11, ../sass/modules/_app-demo.scss */
+.app-demo-started .app-demo {
+  background-attachment: fixed;
+  background-position: center 120%;
+}
+
+/* line 17, ../sass/modules/_app-demo.scss */
+.app-demo-1 {
+  background-image: url("../images/demo/iphone-01.png");
+}
+
+/* line 21, ../sass/modules/_app-demo.scss */
+.app-demo-2 {
+  background-image: url("../images/demo/iphone-02.png");
+}
+
+/* line 25, ../sass/modules/_app-demo.scss */
+.app-demo-3 {
+  background-image: url("../images/demo/iphone-03.png");
+}
+
+/* line 29, ../sass/modules/_app-demo.scss */
+.app-demo-4 {
+  background-image: url("../images/demo/iphone-04.png");
+}
+
+/* line 1, ../sass/modules/_feature-slider.scss */
+.feature-slider-container {
+  padding: 5.3em 0 3.5em;
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* line 7, ../sass/modules/_feature-slider.scss */
+.feature-slider-navigation {
+  margin: 0 auto;
+  padding: 1.5em 0 0;
+  width: 6em;
+}
+/* line 12, ../sass/modules/_feature-slider.scss */
+.feature-slider-navigation li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding-right: .5em;
+}
+
+/* line 18, ../sass/modules/_feature-slider.scss */
+.feature-slider-navigation-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-color: #ecedde;
+  border-radius: .5em;
+  color: transparent;
+  font: 0/0;
+  height: 1em;
+  text-decoration: none;
+  width: 1em;
+}
+
+/* line 29, ../sass/modules/_feature-slider.scss */
+.mr-burger-appstore {
+  background-image: url("../images/festi-food-appstore.svg");
+  display: block;
+  height: 280px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  width: 320px;
+}
+
+/* line 37, ../sass/modules/_feature-slider.scss */
+.feature-slogan {
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 2.75em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 1em 0 0;
+  text-align: center;
+  width: 65%;
+}
+/* line 45, ../sass/modules/_feature-slider.scss */
+.feature-slogan span {
+  font-family: "Mission Script";
+  text-transform: none;
+}
+
+/* line 1, ../sass/modules/_stats.scss */
+.stats {
+  width: 12em;
+}
+
+/* line 5, ../sass/modules/_stats.scss */
+.stat-item, .stat-number {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-color: #ef691d;
+  border-radius: .3em;
+  box-shadow: 0 0.2em 0 #be3d0a;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.125em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.25em;
+  text-align: center;
+  padding: .5em;
+}
+
+/* line 18, ../sass/modules/_stats.scss */
+.stat-item, .stat-number {
+  width: 2.3em;
+}
+
+/* line 22, ../sass/modules/_stats.scss */
+.stat-number {
+  margin-left: .625em;
+  position: relative;
+  width: 6.75em;
+}
+/* line 28, ../sass/modules/_stats.scss */
+.stat-number::after {
+  background-color: transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid #ef691d;
+  content: " ";
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  margin-top: -5px;
+  width: 0;
+}
+
+/* line 44, ../sass/modules/_stats.scss */
+.stat-item-facebook, .stat-number-facebook {
+  background-color: #395897;
+  box-shadow: 0 0.2em 0 #21406f;
+}
+
+/* line 52, ../sass/modules/_stats.scss */
+.stat-number-facebook::after {
+  border-right-color: #395897;
+}
+
+/* line 57, ../sass/modules/_stats.scss */
+.stat-item-twitter, .stat-number-twitter {
+  background-color: #29abe2;
+  box-shadow: 0 0.2em 0 #0a7da5;
+}
+
+/* line 65, ../sass/modules/_stats.scss */
+.stat-number-twitter::after {
+  border-right-color: #29abe2;
+}
+
+/* line 1, ../sass/modules/_feed.scss */
+.feed {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 5, ../sass/modules/_feed.scss */
+.feed-profile-picture {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 9, ../sass/modules/_feed.scss */
+.feed-content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 13, ../sass/modules/_feed.scss */
+.feed-user {
+  color: #ef691d;
+  font-weight: bold;
+}
+
+/* line 1, ../sass/modules/_calendar.scss */
+.calendar-item {
+  padding-bottom: 3em;
+}
+/* line 4, ../sass/modules/_calendar.scss */
+.calendar-item::after {
+  content: " ";
+  display: block;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(153, 42, 7, 0.3)), color-stop(35%, rgba(153, 42, 7, 0)), color-stop(100%, rgba(153, 42, 7, 0)));
+  background: -webkit-radial-gradient(rgba(153, 42, 7, 0.3), rgba(153, 42, 7, 0) 35%, rgba(153, 42, 7, 0));
+  background: -moz-radial-gradient(rgba(153, 42, 7, 0.3), rgba(153, 42, 7, 0) 35%, rgba(153, 42, 7, 0));
+  background: -o-radial-gradient(rgba(153, 42, 7, 0.3), rgba(153, 42, 7, 0) 35%, rgba(153, 42, 7, 0));
+  background: radial-gradient(rgba(153, 42, 7, 0.3), rgba(153, 42, 7, 0) 35%, rgba(153, 42, 7, 0));
+  position: absolute;
+  bottom: -1em;
+  height: 2.5em;
+  width: 100%;
+}
+
+/* line 15, ../sass/modules/_calendar.scss */
+.calendar-item-title {
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 4.75em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: .2em;
+}
+
+/* line 22, ../sass/modules/_calendar.scss */
+.calendar-item-subtitle {
+  color: #992a07;
+  font-family: "Mission Script";
+  font-size: 2.6em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  display: block;
+  text-align: center;
+}
+
+/* line 28, ../sass/modules/_calendar.scss */
+.calendar-item-add {
+  color: #ecedde;
+  text-decoration: none;
+  line-height: 3em;
+}
+
+/* line 1, ../sass/modules/_gallery.scss */
+.gallery {
+  padding-top: 3em;
+}
+
+/* line 5, ../sass/modules/_gallery.scss */
+.gallery-header {
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 3em;
+}
+
+/* line 10, ../sass/modules/_gallery.scss */
+.gallery-introduction {
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 3em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding-top: 1em;
+}
+/* line 15, ../sass/modules/_gallery.scss */
+.gallery-introduction span {
+  font-family: "Mission Script";
+  text-transform: none;
+}
+
+/* line 23, ../sass/modules/_gallery.scss */
+.gallery-grid > li {
+  padding: 2em 2em 2em 0;
+}
+
+/* line 29, ../sass/modules/_gallery.scss */
+.gallery-item {
+  background-color: #ecedde;
+  border-bottom: 1em solid #2d353a;
+  -webkit-box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  color: #2d353a;
+  position: relative;
+}
+
+/* line 37, ../sass/modules/_gallery.scss */
+.gallery-item-heading {
+  background-color: #2d353a;
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding: .5em;
+  text-align: center;
+}
+/* line 43, ../sass/modules/_gallery.scss */
+.gallery-item-featured .gallery-item-heading {
+  background-color: #ef691d;
+}
+
+/* line 48, ../sass/modules/_gallery.scss */
+.gallery-burger {
+  height: 17em;
+}
+
+/* line 52, ../sass/modules/_gallery.scss */
+.gallery-item-participants {
+  position: absolute;
+  left: -1.5em;
+  top: .8em;
+  width: 2.8em;
+}
+/* line 58, ../sass/modules/_gallery.scss */
+.gallery-item-participants li {
+  margin-bottom: .7em;
+}
+
+/* line 63, ../sass/modules/_gallery.scss */
+.gallery-item-rating {
+  background-color: #2d353a;
+  border-radius: 1.6em;
+  display: block;
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.4em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  height: 1.4em;
+  line-height: 1.4em;
+  padding: .6em;
+  position: absolute;
+  text-align: center;
+  right: 1em;
+  top: 3em;
+  width: 1.4em;
+}
+/* line 77, ../sass/modules/_gallery.scss */
+.gallery-item-rating span {
+  font-size: .75em;
+}

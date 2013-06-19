@@ -1,0 +1,69 @@
+.stats {
+    width: 12em;
+}
+
+.stat-item {
+    @include inline-block;
+    background-color: $orange;
+    border-radius: .3em;
+    box-shadow: 0 .2em 0 darken($orange-darkened, 10%);
+    @include box-sizing(border-box);
+    @include font-alternate(#fff, 1.125em);
+    line-height: 1.1;
+    margin-bottom: 1.25em;
+    text-align: center;
+    padding: .5em;
+}
+
+.stat-item {
+    width: 2.3em;
+}
+
+.stat-number {
+    @extend .stat-item;
+    margin-left: .625em;
+    position: relative;
+    width: 6.75em;
+
+    &::after {
+        background-color: transparent;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: 7px solid $orange;
+        content: " ";
+        display: block;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: -7px;
+        margin-top: -5px;
+        width: 0;
+    }
+}
+
+.stat-item-facebook {
+    background-color: $facebook;
+    box-shadow: 0 .2em 0 $facebook-darkened;
+}
+
+.stat-number-facebook {
+    @extend .stat-item-facebook;
+
+    &::after {
+        border-right-color: $facebook;
+    }
+}
+
+.stat-item-twitter {
+    background-color: $twitter;
+    box-shadow: 0 .2em 0 $twitter-darkened;
+}
+
+.stat-number-twitter {
+    @extend .stat-item-twitter;
+
+    &::after {
+        border-right-color: $twitter;
+    }
+}
+

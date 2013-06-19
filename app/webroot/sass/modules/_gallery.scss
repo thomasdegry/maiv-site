@@ -1,0 +1,80 @@
+.gallery {
+    padding-top: 3em;
+}
+
+.gallery-header {
+    @include clearfix;
+    padding-bottom: 3em;
+}
+
+.gallery-introduction {
+    @extend %offset-text-shadow;
+    @include font-alternate($beige, 3em);
+    padding-top: 1em;
+
+    span {
+        font-family: $font-mission-script;
+        text-transform: none;
+    }
+}
+
+.gallery-grid {
+
+    > li {
+        // Vertical spacing
+        padding: 2em 2em 2em 0;
+    }
+}
+
+.gallery-item {
+    background-color: $beige;
+    border-bottom: 1em solid $blue;
+    @include box-shadow(0 0 3em rgba(0, 0, 0, .3));
+    color: $blue;
+    position: relative;
+}
+
+.gallery-item-heading {
+    background-color: $blue;
+    @include font-alternate($beige, 1.5em);
+    padding: .5em;
+    text-align: center;
+
+    .gallery-item-featured & {
+        background-color: $orange;
+    }
+}
+
+.gallery-burger {
+    height: 17em;
+}
+
+.gallery-item-participants {
+    position: absolute;
+    left: -1.5em;
+    top: .8em;
+    width: 2.8em;
+
+    li {
+        margin-bottom: .7em;
+    }
+}
+
+.gallery-item-rating {
+    background-color: $blue;
+    border-radius: 1.6em;
+    display: block;
+    @include font-alternate($beige, 1.4em);
+    height: 1.4em;
+    line-height: 1.4em;
+    padding: .6em;
+    position: absolute;
+    text-align: center;
+    right: 1em;
+    top: 3em;
+    width: 1.4em;
+
+    span {
+        font-size: .75em;
+    }
+}

@@ -1,0 +1,32 @@
+.calendar-item {
+    padding-bottom: 3em;
+
+    &::after {
+        content: " ";
+        display: block;
+        @include background(radial-gradient(rgba($brown, .3), rgba($brown, 0) 35%, rgba($brown, 0)));
+        position: absolute;
+        bottom: -1em;
+        height: 2.5em;
+        width: 100%;
+    }
+}
+
+.calendar-item-title {
+    @extend %offset-text-shadow;
+    @include font-alternate($beige, 4.75em);
+    text-align: center;
+    padding-bottom: .2em;
+}
+
+.calendar-item-subtitle {
+    @include font-mission-script($brown, 2.6em);
+    display: block;
+    text-align: center;
+}
+
+.calendar-item-add {
+    color: $beige;
+    text-decoration: none;
+    line-height: 3em;
+}

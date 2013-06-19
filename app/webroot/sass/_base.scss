@@ -1,0 +1,125 @@
+html {
+    height: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: $beige;
+    font-family: $font-traveler;
+    height: 100%;
+    padding-top: 4.375em; // Height of header
+}
+
+// Different kinds of containers
+
+.orange {
+    background-color: $orange;
+    color: $beige;
+}
+
+.full-screen {
+    height: 100%;
+    min-height: 100%;
+    padding-top: 4.375em;
+    position: relative;
+    width: 100%;
+}
+
+.gradient-background {
+    @include background(radial-gradient(#f57121, #e84a0c 65%), $orange);
+}
+
+.blurry-background {
+    background-image: url('../images/blurry-background.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+// Typography
+
+p {
+    @include font-traveler(inherit, .9735em);
+    margin-bottom: 1em;
+}
+
+// Form elements
+
+%form-element {
+    @include appearance(none);
+    background-color: $beige;
+    border: none;
+    border-radius: 0px;
+    @include box-shadow(-.2em .3em 0 rgba(0, 0, 0, .2));
+    @include box-sizing(border-box);
+    @include font-alternate($blue, 1em);
+    width: 100%;
+}
+
+label {
+    display: none;
+}
+
+.label-icon-container {
+    position: relative;
+    padding-bottom: .5em;
+}
+
+.label-icon {
+    background-color: $blue;
+    border-radius: 1.4em;
+    @include hide-text;
+    display: block;
+    height: 2.8em;
+    width: 2.8em;
+    position: absolute;
+    top: -.4em;
+    right: 3em;
+    z-index: 999;
+}
+
+select {
+    @extend %form-element;
+    height: 1.7em;
+    padding: .4em 1em .3em;
+    position: relative;
+    top: .1em;
+    z-index: 9;
+
+    &::after {
+    }
+}
+
+input[type="text"] {
+    @extend %form-element;
+    letter-spacing: .05em;
+    padding: .45em 1em .25em;
+
+    &::after {
+        position: absolute;
+        top: -1em;
+        right: -1em;
+        z-index: 999;
+    }
+}
+
+// Helper classes
+
+.prefixed-link {
+    color: $orange;
+    text-decoration: none;
+    @include transition(color 220ms ease-in-out);
+
+    &:hover {
+        color: lighten($orange, 10%);
+    }
+}
+
+.circle-picture {
+    background-position: center center;
+    border: .3em solid white;
+    border-radius: 1.5em;
+    @include hide-text;
+    height: 2.5em;
+    width: 2.5em;
+}

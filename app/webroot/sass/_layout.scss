@@ -1,0 +1,67 @@
+// Container element
+
+.container {
+    clear: both;
+    margin: 0 auto;
+    max-width: 1024px;
+    position: relative;
+    width: 92%;
+}
+
+.container-small {
+    width: 55%;
+}
+
+// Grid system
+
+.column-container {
+    @include pie-clearfix;
+}
+
+.column {
+    @include box-sizing(border-box);
+    padding-right: 2em;
+
+    &:last-child {
+        float: right;
+    }
+}
+
+.span-one-column {
+    float: left;
+
+    .has-four-columns & {
+        width: 25%;
+    }
+
+    .has-three-columns & {
+        width: 33%;
+    }
+
+    .has-two-columns & {
+        width: 50%;
+    }
+}
+
+.span-two-columns {
+    float: left;
+
+    .has-four-columns & {
+        width: 50%;
+    }
+
+    .has-three-columns & {
+        width: 66%;
+    }
+}
+
+.span-three-columns {
+
+    .has-four-columns & {
+        width: 75%;
+    }
+
+    .has-three-columns & {
+        width: 100%;
+    }
+}

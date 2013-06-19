@@ -1,0 +1,16 @@
+.feed {
+    @include clearfix;
+}
+
+.feed-profile-picture {
+    @include inline-block;
+}
+
+.feed-content {
+    @include inline-block;
+}
+
+.feed-user {
+    color: $orange;
+    font-weight: bold;
+}

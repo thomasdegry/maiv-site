@@ -1,0 +1,69 @@
+.horizontal-slider {
+    @include clearfix;
+    padding: 2.5em 0;
+}
+
+.horizontal-slider-navigation-title {
+    @extend %offset-text-shadow;
+    @include font-alternate($beige, 2.125em);
+    padding: 1em 0 .4em;
+}
+
+.horizontal-slider-navigation {
+    @include clearfix;
+    padding-bottom: 4.5em;
+
+    li {
+        @include inline-block;
+    }
+}
+
+.horizontal-slider-navigation-item {
+    @include inline-block;
+    background-color: $beige-darkened;
+    @include background(linear-gradient(center top, $beige, $beige 49%, $beige-darkened 50%, $beige-darkened));
+    border-radius: .2em;
+    @include box-shadow(0 2px 0 rgba(0, 0, 0, .15));
+    @include font-alternate($blue, 1.7em);
+    margin-right: .5rem;
+    padding: .6em .4em;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $beige;
+        background-image: none;
+    }
+}
+
+.horizontal-slider-navigation-item-active {
+    background-color: $blue-darkened;
+    @include background(linear-gradient(center top, $blue, $blue 49%, $blue-darkened 50%, $blue-darkened));
+    color: $beige;
+
+    &:hover {
+        background-color: $blue;
+        background-image: none;
+    }
+}
+
+.horizontal-slider-item {
+    text-align: center;
+    position: relative;
+}
+
+.horizontal-slider-previous-button {
+    @extend %sprite;
+    background-position: -20px -73px;
+    position: absolute;
+    top: 40%;
+    left: -3em;
+    height: 2.2em;
+    width: 2.2em;
+}
+
+.horizontal-slider-next-button {
+    @extend .horizontal-slider-previous-button;
+    background-position:-17px -125px;
+    left: 0;
+    right: -3em;
+}
