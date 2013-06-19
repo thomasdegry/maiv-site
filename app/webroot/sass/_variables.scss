@@ -56,3 +56,12 @@ $font-mission-script: 'Mission Script';
     background-repeat: no-repeat;
     display: block;
 }
+
+@mixin transition-elastic {
+    -webkit-transition-timing-function: cubic-bezier(0.580, 0, 0.125, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.580, -0.600, 0.125, 1.475);
+       -moz-transition-timing-function: cubic-bezier(0.580, -0.600, 0.125, 1.475);
+        -ms-transition-timing-function: cubic-bezier(0.580, -0.600, 0.125, 1.475);
+         -o-transition-timing-function: cubic-bezier(0.580, -0.600, 0.125, 1.475);
+            transition-timing-function: cubic-bezier(0.580, -0.600, 0.125, 1.475);
+}

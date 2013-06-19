@@ -98,24 +98,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 html {
   height: 100%;
   min-height: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 7, ../sass/_base.scss */
+/* line 8, ../sass/_base.scss */
 body {
   background-color: #ecedde;
   font-family: "Traveler";
   height: 100%;
+  overflow-x: hidden;
   padding-top: 4.375em;
 }
 
-/* line 16, ../sass/_base.scss */
+/* line 18, ../sass/_base.scss */
 .orange {
   background-color: #ef691d;
   color: #ecedde;
 }
 
-/* line 21, ../sass/_base.scss */
+/* line 23, ../sass/_base.scss */
 .full-screen {
   height: 100%;
   min-height: 100%;
@@ -124,7 +126,7 @@ body {
   width: 100%;
 }
 
-/* line 29, ../sass/_base.scss */
+/* line 31, ../sass/_base.scss */
 .gradient-background {
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, #f57121), color-stop(65%, #e84a0c)), #ef691d;
   background: -webkit-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
@@ -133,14 +135,14 @@ body {
   background: radial-gradient(#f57121, #e84a0c 65%), #ef691d;
 }
 
-/* line 33, ../sass/_base.scss */
+/* line 35, ../sass/_base.scss */
 .blurry-background {
   background-image: url("../images/blurry-background.jpg");
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* line 41, ../sass/_base.scss */
+/* line 43, ../sass/_base.scss */
 p {
   color: inherit;
   font-family: "Traveler";
@@ -151,7 +153,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* line 48, ../sass/_base.scss */
+/* line 50, ../sass/_base.scss */
 select, input[type="text"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -175,18 +177,18 @@ select, input[type="text"] {
   width: 100%;
 }
 
-/* line 59, ../sass/_base.scss */
+/* line 61, ../sass/_base.scss */
 label {
   display: none;
 }
 
-/* line 63, ../sass/_base.scss */
+/* line 65, ../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-/* line 68, ../sass/_base.scss */
+/* line 70, ../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -202,7 +204,7 @@ label {
   z-index: 999;
 }
 
-/* line 81, ../sass/_base.scss */
+/* line 83, ../sass/_base.scss */
 select {
   height: 1.7em;
   padding: .4em 1em .3em;
@@ -211,12 +213,12 @@ select {
   z-index: 9;
 }
 
-/* line 93, ../sass/_base.scss */
+/* line 95, ../sass/_base.scss */
 input[type="text"] {
   letter-spacing: .05em;
   padding: .45em 1em .25em;
 }
-/* line 98, ../sass/_base.scss */
+/* line 100, ../sass/_base.scss */
 input[type="text"]::after {
   position: absolute;
   top: -1em;
@@ -224,7 +226,7 @@ input[type="text"]::after {
   z-index: 999;
 }
 
-/* line 108, ../sass/_base.scss */
+/* line 110, ../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -233,12 +235,12 @@ input[type="text"]::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 113, ../sass/_base.scss */
+/* line 115, ../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 118, ../sass/_base.scss */
+/* line 120, ../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: .3em solid white;
@@ -377,11 +379,11 @@ input[type="text"]::after {
   text-transform: uppercase;
   padding-left: 7em;
   width: 800px;
-  -webkit-transition: all 330ms ease-in-out;
+  -webkit-transition: padding-left 330ms ease-in-out;
   -webkit-transition-delay: 110ms;
-  -moz-transition: all 330ms ease-in-out 110ms;
-  -o-transition: all 330ms ease-in-out 110ms;
-  transition: all 330ms ease-in-out 110ms;
+  -moz-transition: padding-left 330ms ease-in-out 110ms;
+  -o-transition: padding-left 330ms ease-in-out 110ms;
+  transition: padding-left 330ms ease-in-out 110ms;
 }
 /* line 41, ../sass/modules/_site-header.scss */
 .horizontal-nav li {
@@ -457,12 +459,19 @@ input[type="text"]::after {
 
 /* line 1, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider {
-  overflow: hidden;
   *zoom: 1;
   padding: 2.5em 0;
+  position: relative;
+  height: 40em;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.horizontal-slider:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 6, ../sass/modules/_horizontal-slider.scss */
+/* line 8, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-title {
   color: #ecedde;
   font-family: "AlternateGothicCom-No2";
@@ -474,13 +483,18 @@ input[type="text"]::after {
   padding: 1em 0 .4em;
 }
 
-/* line 12, ../sass/modules/_horizontal-slider.scss */
+/* line 14, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation {
-  overflow: hidden;
   *zoom: 1;
   padding-bottom: 4.5em;
 }
-/* line 16, ../sass/modules/_horizontal-slider.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.horizontal-slider-navigation:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 18, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -490,7 +504,7 @@ input[type="text"]::after {
   *display: inline;
 }
 
-/* line 21, ../sass/modules/_horizontal-slider.scss */
+/* line 23, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -519,13 +533,13 @@ input[type="text"]::after {
   padding: .6em .4em;
   text-decoration: none;
 }
-/* line 32, ../sass/modules/_horizontal-slider.scss */
+/* line 34, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-item:hover {
   background-color: #ecedde;
   background-image: none;
 }
 
-/* line 38, ../sass/modules/_horizontal-slider.scss */
+/* line 40, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-item-active {
   background-color: #1e2328;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2d353a), color-stop(49%, #2d353a), color-stop(50%, #1e2328), color-stop(100%, #1e2328));
@@ -535,29 +549,68 @@ input[type="text"]::after {
   background: linear-gradient(center top, #2d353a, #2d353a 49%, #1e2328 50%, #1e2328);
   color: #ecedde;
 }
-/* line 43, ../sass/modules/_horizontal-slider.scss */
+/* line 45, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-item-active:hover {
   background-color: #2d353a;
   background-image: none;
 }
 
-/* line 49, ../sass/modules/_horizontal-slider.scss */
+/* line 51, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-item {
+  display: none;
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  -webkit-transition: all 440ms;
+  -moz-transition: all 440ms;
+  -o-transition: all 440ms;
+  transition: all 440ms;
+  -webkit-transition-timing-function: cubic-bezier(0.58, 0, 0.125, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.58, -0.6, 0.125, 1.475);
+  -moz-transition-timing-function: cubic-bezier(0.58, -0.6, 0.125, 1.475);
+  -ms-transition-timing-function: cubic-bezier(0.58, -0.6, 0.125, 1.475);
+  -o-transition-timing-function: cubic-bezier(0.58, -0.6, 0.125, 1.475);
+  transition-timing-function: cubic-bezier(0.58, -0.6, 0.125, 1.475);
 }
 
-/* line 54, ../sass/modules/_horizontal-slider.scss */
+/* line 61, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-item-shown {
+  display: block;
+  top: 2em;
+  left: 0px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 68, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-item-next {
+  display: block;
+  left: 150%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 74, ../sass/modules/_horizontal-slider.scss */
+.horizontal-slider-item-previous {
+  display: block;
+  left: -150%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 80, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-previous-button, .horizontal-slider-next-button {
   background-position: -20px -73px;
+  left: -3em;
+  right: auto;
   position: absolute;
   top: 40%;
-  left: -3em;
   height: 2.2em;
   width: 2.2em;
 }
 
-/* line 64, ../sass/modules/_horizontal-slider.scss */
+/* line 91, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-next-button {
   background-position: -17px -125px;
   left: auto;

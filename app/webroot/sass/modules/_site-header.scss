@@ -36,7 +36,7 @@
     @include font-alternate($blue, 1.6em);
     padding-left: 7em;
     width: 800px;
-    @include transition(all 330ms ease-in-out 110ms);
+    @include transition(padding-left 330ms ease-in-out 110ms);
 
     li {
         @include inline-block;

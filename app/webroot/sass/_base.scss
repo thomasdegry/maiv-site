@@ -1,6 +1,7 @@
 html {
     height: 100%;
     min-height: 100%;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -8,6 +9,7 @@ body {
     background-color: $beige;
     font-family: $font-traveler;
     height: 100%;
+    overflow-x: hidden;
     padding-top: 4.375em; // Height of header
 }
 

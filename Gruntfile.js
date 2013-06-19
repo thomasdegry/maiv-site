@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     watch: {
       scripts:{
         files: jspaths,
-        tasks: ['jshint','handlebars','concat','clean']
+        tasks: ['jshint', 'concat']
       },
       css:{
         files: csspaths,

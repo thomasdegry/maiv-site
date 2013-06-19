@@ -1,6 +1,8 @@
 .horizontal-slider {
-    @include clearfix;
+    @include pie-clearfix;
     padding: 2.5em 0;
+    position: relative;
+    height: 40em;
 }
 
 .horizontal-slider-navigation-title {
@@ -10,7 +12,7 @@
 }
 
 .horizontal-slider-navigation {
-    @include clearfix;
+    @include pie-clearfix;
     padding-bottom: 4.5em;
 
     li {
@@ -47,16 +49,41 @@
 }
 
 .horizontal-slider-item {
+    display: none;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    @include transition(all 440ms);
+    @include transition-elastic;
+}
+
+.horizontal-slider-item-shown {
+    display: block;
+    top: 2em;
+    left: 0px;
+    @include opacity(1);
+}
+
+.horizontal-slider-item-next {
+    display: block;
+    left: 150%;
+    @include opacity(0);
+}
+
+.horizontal-slider-item-previous {
+    display: block;
+    left: -150%;
+    @include opacity(0);
 }
 
 .horizontal-slider-previous-button {
     @extend %sprite;
     background-position: -20px -73px;
+    left: -3em;
+    right: auto;
     position: absolute;
     top: 40%;
-    left: -3em;
     height: 2.2em;
     width: 2.2em;
 }
@@ -64,6 +91,6 @@
 .horizontal-slider-next-button {
     @extend .horizontal-slider-previous-button;
     background-position:-17px -125px;
-    left: 0;
+    left: auto;
     right: -3em;
 }
