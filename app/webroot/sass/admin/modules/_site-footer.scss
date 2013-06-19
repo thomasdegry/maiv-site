@@ -1,0 +1,19 @@
+footer {
+    background-color: $orange;
+    height: 3em;
+
+    div.half {
+        width: 50%;
+        float: left;
+        @include clearfix;
+
+        p {
+            padding-top: 1.3em;
+            line-height: 0.5em;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}

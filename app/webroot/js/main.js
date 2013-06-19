@@ -18,6 +18,8 @@ var AppDemo = (function () {
             end: $(this.options.end)
         };
 
+        console.log('lol');
+
         if (this.el.start.length === 0) {
             return false;
         }
@@ -254,9 +256,8 @@ $(window).load(function () {
             }
         });
     }
-
+    
     var horizontalSlider = new HorizontalSlider();
-
 });
 
 })();

@@ -1,0 +1,624 @@
+/* line 4, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 18, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
+div, span, object, iframe, p,
+pre, a, abbr, acronym, address,
+code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend,
+caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  quotes: "" "";
+}
+/* line 67, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 22, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  float: none !important;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+@font-face {
+  font-family: 'Traveler';
+  src: url("../fonts/traveller.eot");
+  src: url("../fonts/traveller.eot?#iefix") format("embedded-opentype"), url("../fonts/traveller.woff") format("woff"), url("../fonts/traveller.ttf") format("truetype"), url("../fonts/traveller.svg#travelermedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mission Script';
+  src: url("../fonts/mission-script.eot");
+  src: url("../fonts/mission-script.eot?#iefix") format("embedded-opentype"), url("../fonts/mission-script.woff") format("woff"), url("../fonts/mission-script.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alternate Gothic';
+  src: url("../fonts/alternate.eot");
+  src: url("../fonts/alternate.eot?#iefix") format("embedded-opentype"), url("../fonts/alternate.woff") format("woff"), url("../fonts/alternate.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 3, ../../sass/_layout.scss */
+.container {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  width: 92%;
+}
+
+/* line 11, ../../sass/_layout.scss */
+.container-small {
+  width: 55%;
+}
+
+/* line 17, ../../sass/_layout.scss */
+.column-container {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.column-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 21, ../../sass/_layout.scss */
+.column {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 2em;
+}
+/* line 25, ../../sass/_layout.scss */
+.column:last-child {
+  float: right;
+}
+
+/* line 30, ../../sass/_layout.scss */
+.span-one-column {
+  float: left;
+}
+/* line 33, ../../sass/_layout.scss */
+.has-four-columns .span-one-column {
+  width: 25%;
+}
+/* line 37, ../../sass/_layout.scss */
+.has-three-columns .span-one-column {
+  width: 33%;
+}
+/* line 41, ../../sass/_layout.scss */
+.has-two-columns .span-one-column {
+  width: 50%;
+}
+
+/* line 46, ../../sass/_layout.scss */
+.span-two-columns {
+  float: left;
+}
+/* line 49, ../../sass/_layout.scss */
+.has-four-columns .span-two-columns {
+  width: 50%;
+}
+/* line 53, ../../sass/_layout.scss */
+.has-three-columns .span-two-columns {
+  width: 66%;
+}
+
+/* line 60, ../../sass/_layout.scss */
+.has-four-columns .span-three-columns {
+  width: 75%;
+}
+/* line 64, ../../sass/_layout.scss */
+.has-three-columns .span-three-columns {
+  width: 100%;
+}
+
+/* line 1, ../../sass/_base.scss */
+html {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 8, ../../sass/_base.scss */
+body {
+  background-color: #ecedde;
+  font-family: "Traveler";
+  height: 100%;
+  overflow-x: hidden;
+  padding-top: 4.375em;
+}
+
+/* line 18, ../../sass/_base.scss */
+.orange {
+  background-color: #ef691d;
+  color: #ecedde;
+}
+
+/* line 23, ../../sass/_base.scss */
+.full-screen {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 4.375em;
+  position: relative;
+  width: 100%;
+}
+
+/* line 31, ../../sass/_base.scss */
+.gradient-background {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, #f57121), color-stop(65%, #e84a0c)), #ef691d;
+  background: -webkit-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: -moz-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: -o-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+}
+
+/* line 35, ../../sass/_base.scss */
+.blurry-background {
+  background-image: url("../images/blurry-background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* line 43, ../../sass/_base.scss */
+p {
+  color: inherit;
+  font-family: "Traveler";
+  font-size: 0.9735em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+
+/* line 50, ../../sass/_base.scss */
+select, input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ecedde;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #2d353a;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* line 61, ../../sass/_base.scss */
+label {
+  display: none;
+}
+
+/* line 65, ../../sass/_base.scss */
+.label-icon-container {
+  position: relative;
+  padding-bottom: .5em;
+}
+
+/* line 70, ../../sass/_base.scss */
+.label-icon {
+  background-color: #2d353a;
+  border-radius: 1.4em;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  height: 2.8em;
+  width: 2.8em;
+  position: absolute;
+  top: -0.4em;
+  right: 3em;
+  z-index: 999;
+}
+
+/* line 83, ../../sass/_base.scss */
+select {
+  height: 1.7em;
+  padding: .4em 1em .3em;
+  position: relative;
+  top: .1em;
+  z-index: 9;
+}
+
+/* line 95, ../../sass/_base.scss */
+input[type="text"] {
+  letter-spacing: .05em;
+  padding: .45em 1em .25em;
+}
+/* line 100, ../../sass/_base.scss */
+input[type="text"]::after {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  z-index: 999;
+}
+
+/* line 110, ../../sass/_base.scss */
+.prefixed-link {
+  color: #ef691d;
+  text-decoration: none;
+  -webkit-transition: color 220ms ease-in-out;
+  -moz-transition: color 220ms ease-in-out;
+  -o-transition: color 220ms ease-in-out;
+  transition: color 220ms ease-in-out;
+}
+/* line 115, ../../sass/_base.scss */
+.prefixed-link:hover {
+  color: #f2894d;
+}
+
+/* line 120, ../../sass/_base.scss */
+.circle-picture {
+  background-position: center center;
+  border: .3em solid white;
+  border-radius: 1.5em;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+/* line 1, ../../sass/admin/_base-admin.scss */
+#content {
+  min-height: 700px;
+  padding-top: 50px;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 8, ../../sass/admin/_base-admin.scss */
+h1 {
+  font-family: 'Mission-Script';
+  color: #1e2328;
+  font-size: 2.5em;
+}
+
+/* line 14, ../../sass/admin/_base-admin.scss */
+.big-button-orange {
+  font-size: 1.5em;
+  background: #ef691d;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  width: 266px;
+  display: block;
+  text-align: center;
+  height: 1.9em;
+  line-height: 2em;
+  font-family: 'Alternate Gothic';
+  text-transform: uppercase;
+  color: #ecedde;
+  text-decoration: none;
+  -webkit-box-shadow: #ef4c0c 0 4px 0;
+  -moz-box-shadow: #ef4c0c 0 4px 0;
+  box-shadow: #ef4c0c 0 4px 0;
+}
+/* line 29, ../../sass/admin/_base-admin.scss */
+.big-button-orange:active {
+  margin-top: 2px;
+  -webkit-box-shadow: #ef4c0c 0 2px 0;
+  -moz-box-shadow: #ef4c0c 0 2px 0;
+  box-shadow: #ef4c0c 0 2px 0;
+}
+
+/* line 35, ../../sass/admin/_base-admin.scss */
+.hide {
+  display: none;
+}
+
+/* line 1, ../../sass/admin/modules/_site-header.scss */
+.site-header {
+  background-color: #ef691d;
+  box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.7em;
+  width: 100%;
+  z-index: 999;
+}
+
+/* line 14, ../../sass/admin/modules/_site-header.scss */
+.circle-logo {
+  background-image: url("../../img/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 58px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  position: absolute;
+  top: 0.3em;
+  width: 79px;
+}
+
+/* line 26, ../../sass/admin/modules/_site-header.scss */
+.horizontal-nav {
+  color: #2d353a;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  width: 620px;
+  padding-left: 4em;
+}
+/* line 30, ../../sass/admin/modules/_site-header.scss */
+.horizontal-nav li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 37, ../../sass/admin/modules/_site-header.scss */
+.nav-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: #ecedde;
+  padding: .9em 1.2em;
+  text-decoration: none;
+  -webkit-transition: color 220ms ease-in-out;
+  -moz-transition: color 220ms ease-in-out;
+  -o-transition: color 220ms ease-in-out;
+  transition: color 220ms ease-in-out;
+}
+/* line 44, ../../sass/admin/modules/_site-header.scss */
+.nav-item:hover {
+  color: #d4d5c7;
+}
+/* line 48, ../../sass/admin/modules/_site-header.scss */
+.nav-item.active {
+  color: #992a07;
+}
+
+/* line 53, ../../sass/admin/modules/_site-header.scss */
+#user {
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+/* line 57, ../../sass/admin/modules/_site-header.scss */
+#user img {
+  width: 40px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  border: 5px solid #ecedde;
+  float: right;
+}
+/* line 63, ../../sass/admin/modules/_site-header.scss */
+#user p {
+  float: left;
+  text-align: right;
+  padding-right: 0.8em;
+  line-height: 1.1em;
+  padding-top: 0.55em;
+}
+/* line 69, ../../sass/admin/modules/_site-header.scss */
+#user p a {
+  display: block;
+  text-decoration: none;
+  color: #ecedde;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* line 1, ../../sass/admin/modules/_site-stats.scss */
+#stats {
+  background: #1e2328;
+  display: block;
+  height: 12em;
+  position: relative;
+}
+/* line 7, ../../sass/admin/modules/_site-stats.scss */
+#stats:before {
+  width: 140px;
+  height: 140px;
+  display: block;
+  content: "";
+  background: url(../../img/stats.png) no-repeat center 40px #1e2328;
+  top: -65px;
+  left: 50%;
+  position: absolute;
+  margin-left: -70px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -ms-border-radius: 70px;
+  -o-border-radius: 70px;
+  border-radius: 70px;
+}
+
+/* line 21, ../../sass/admin/modules/_site-stats.scss */
+.column {
+  padding-top: 5em;
+  text-align: center;
+}
+/* line 24, ../../sass/admin/modules/_site-stats.scss */
+.column h2 {
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.7em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 27, ../../sass/admin/modules/_site-stats.scss */
+.column span {
+  color: #323b3f;
+  font-family: "Traveler";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  line-height: 2em;
+}
+
+/* line 1, ../../sass/admin/modules/_site-footer.scss */
+footer {
+  background-color: #ef691d;
+  height: 3em;
+}
+/* line 5, ../../sass/admin/modules/_site-footer.scss */
+footer div.half {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 10, ../../sass/admin/modules/_site-footer.scss */
+footer div.half p {
+  padding-top: 1.3em;
+  line-height: 0.5em;
+}
+/* line 15, ../../sass/admin/modules/_site-footer.scss */
+footer div.half:last-child {
+  text-align: right;
+}
+
+/* line 1, ../../sass/admin/modules/_scan.scss */
+#qr-canvas {
+  display: none;
+}
+
+/* line 5, ../../sass/admin/modules/_scan.scss */
+#scan {
+  width: 561px;
+  float: left;
+  margin-right: 63px;
+  margin-top: 30px;
+}
+
+/* line 12, ../../sass/admin/modules/_scan.scss */
+#scan-log {
+  width: 400px;
+  float: left;
+  height: 300px;
+  display: block;
+  margin-top: 30px;
+}
+/* line 19, ../../sass/admin/modules/_scan.scss */
+#scan-log ul {
+  list-style: none;
+}
+/* line 22, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li {
+  padding-bottom: 20px;
+}
+/* line 25, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li span.timeago {
+  line-height: 1em;
+  display: block;
+  color: #919086;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* line 36, ../../sass/admin/modules/_scan.scss */
+#startCam {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 240ms;
+  -moz-transition-duration: 240ms;
+  -o-transition-duration: 240ms;
+  transition-duration: 240ms;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 41, ../../sass/admin/modules/_scan.scss */
+#startCam.fadeAway {
+  -webkit-transform: translate(80px, 0px);
+  -moz-transform: translate(80px, 0px);
+  -ms-transform: translate(80px, 0px);
+  -o-transform: translate(80px, 0px);
+  transform: translate(80px, 0px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 47, ../../sass/admin/modules/_scan.scss */
+#outdiv {
+  border: 6px solid #fff;
+  height: 421px;
+  width: 100%;
+}
+/* line 52, ../../sass/admin/modules/_scan.scss */
+#outdiv #v {
+  width: 100%;
+}

@@ -1,8 +1,12 @@
 var jspaths = ['app/webroot/js-dev/classes/*.js','app/webroot/js-dev/main.js'];
-var csspaths = ['app/webroot/sass/modules/*.scss', 'app/webroot/sass/*.scss'];
+var adminjspaths = ['app/webroot/js-dev/admin/*.js','app/webroot/js-dev/admin.js'];
+var csspaths = [
+  'app/webroot/sass/modules/*.scss',
+  'app/webroot/sass/admin/modules/*.scss',
+  'app/webroot/sass/admin/*.scss',
+  'app/webroot/sass/*.scss'
+];
 var templatepaths = [];
-
-var concatpaths = [].concat(jspaths);
 
 module.exports = function(grunt) {
 
@@ -16,43 +20,40 @@ module.exports = function(grunt) {
         footer: "\n\n})();",
         separator: '\n\n'
       },
-      dist: {
-        src: concatpaths,
+      site: {
+        src: jspaths,
         dest: 'app/webroot/js/main.js'
+      },
+      admin: {
+        src: adminjspaths,
+        dest: 'app/webroot/js/admin.js'
       }
     },
 
     watch: {
       scripts:{
         files: jspaths,
-        tasks: ['jshint', 'concat']
+        tasks: ['jshint', 'concat:site']
       },
       css:{
         files: csspaths,
         tasks:['compass:development']
-      }
-    },
-
-    uglify: {
-      default: {
-        options: {
-          wrap: true
-        },
-        files: {
-          'out/js/main.js': concatpaths
-        }
+      },
+      admin: {
+        files:adminjspaths,
+        tasks: ['jshint', 'concat:admin']
       }
     },
 
     compass: {
-      development: { 
+      development: {
         options: {
           sassDir: 'app/webroot/sass',
           cssDir: 'app/webroot/css',
           environment: 'development'
         }
       },
-      production: { 
+      production: {
         options: {
           sassDir: 'app/webroot/sass',
           cssDir: 'out/css',
@@ -96,12 +97,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['jshint','concat','compass:development','watch']);
+  grunt.registerTask('default', ['jshint', 'concat:admin', 'concat:site', 'compass:development','watch']);
 
 };

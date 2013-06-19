@@ -1,0 +1,31 @@
+#stats {
+    background: $blue-darkened;
+    display: block;
+    height: 12em;
+    position: relative;
+    
+    &:before {
+        width: 140px;
+        height: 140px;
+        display: block;
+        content: "";
+        background: url(../../img/stats.png) no-repeat center 40px $blue-darkened;
+        top: -65px;
+        left: 50%;
+        position: absolute;
+        margin-left: -70px;
+        @include border-radius(70px);
+    }
+}
+
+.column {
+    padding-top: 5em;
+    text-align: center;
+    h2 {
+        @include font-alternate($beige, 1.7em);
+    }
+    span {
+        @include font-traveler(#323b3f, 1em);
+        line-height: 2em;
+    }
+}

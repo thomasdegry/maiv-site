@@ -1,36 +1,15 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
 <!DOCTYPE html>
 <html>
 <head>
     <?php echo $this->Html->charset(); ?>
     <title>
-        <?php echo $cakeDescription ?>:
+        Mr Burger Administration | 
         <?php echo $title_for_layout; ?>
     </title>
     <?php
         echo $this->Html->meta('icon');
 
-        echo $this->Html->css('cake.generic');
+        echo $this->Html->css(array('admin/screen.css'));
 
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -38,26 +17,74 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     ?>
 </head>
 <body>
-    <div id="container">
-        <h1>dikke homos</h1>
-        <div id="header">
-            <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+    <header class="site-header">
+        <div class="container">
+            <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
+            <nav class="horizontal-nav">
+                <ul>
+                    <li>
+                        <a href="#" title="" class="nav-item <?php if($this->name == 'Scan') {echo 'active';} ?>">Payment System</a>
+                    </li>
+                    <li>
+                        <a href="#" title="" class="nav-item">Events</a>
+                    </li>
+                    <li>
+                        <a href="#" title="" class="nav-item">Website</a>
+                    </li>
+                    <li>
+                        <a href="#" title="" class="nav-item">Push</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="user">
+                <p>
+                    Justine Lerno
+                    <?php echo $this->Html->link("Log out", array('controller'=>'', 'action'=>'')); ?>
+                </p>
+                <?php echo $this->Html->image('admin/users/justine.png', array('alt'=> 'loggedInUser')); ?>
+            </div>
         </div>
-        <div id="content">
+    </header>
 
+    <div id="content">
+        <div class="container">
             <?php echo $this->Session->flash(); ?>
-
             <?php echo $this->fetch('content'); ?>
         </div>
-        <div id="footer">
-            <?php echo $this->Html->link(
-                    $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-                    'http://www.cakephp.org/',
-                    array('target' => '_blank', 'escape' => false)
-                );
-            ?>
+    </div>
+
+    <div id="stats">
+        <div class="container column-container has-three-columns">
+            <div class="column span-one-column">
+                <h2>3.712 burgers</h2>
+                <span>were already created</span>
+            </div>
+            <div class="column span-one-column">
+                <h2>4.281 users</h2>
+                <span>opened the app at least once</span>
+            </div>
+            <div class="column span-one-column">
+                <h2>64.495 lines of code</h2>
+                <span>written so far</span>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="half" id="production">
+                <p>A Dreamteam Production</p>
+            </div>
+            <div class="half" id="copyright">
+                <p>Be your fucking best</p>
+            </div>
+        </div>
+    </footer>
+
     <?php echo $this->element('sql_dump'); ?>
+    <?php echo $this->Html->script(array('vendor/underscore.js', 'vendor/grid.js', 'vendor/version.js', 'vendor/detector.js', 'vendor/formatinf.js', 'vendor/errorlevel.js', 
+    'vendor/bitmat.js', 'vendor/datablock.js', 'vendor/bmparser.js', 'vendor/datamask.js', 'vendor/rsdecoder.js',
+    'vendor/rsdecoder.js', 'vendor/gf256poly.js', 'vendor/gf256.js', 'vendor/decoder.js', 'vendor/qrcode.js', 'vendor/findpat.js',
+    'vendor/alignpat.js', 'vendor/databr.js', 'vendor/jquery.js', 'admin.js')); ?>
 </body>
 </html>

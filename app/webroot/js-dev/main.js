@@ -16,7 +16,6 @@ $(window).load(function () {
             }
         });
     }
-
+    
     var horizontalSlider = new HorizontalSlider();
-
 });

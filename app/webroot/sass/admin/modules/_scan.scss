@@ -1,0 +1,55 @@
+#qr-canvas {
+    display: none;
+}
+
+#scan {
+    width: 561px;
+    float: left;
+    margin-right: 63px;
+    margin-top: 30px;
+}
+
+#scan-log {
+    width: 400px;
+    float: left;
+    height: 300px;
+    display: block;
+    margin-top: 30px;
+
+    ul {
+        list-style: none;
+
+        li {
+            padding-bottom: 20px;
+
+            span.timeago {
+                line-height: 1em;
+                display: block;
+                color: #919086;
+                font-style: italic;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+#startCam {
+    @include transition-property(all);
+    @include transition-duration(240ms);
+    @include transition-timing-function(ease-out);
+
+    &.fadeAway {
+        @include translate(80px, 0px);
+        @include opacity(0);
+    }
+}
+
+#outdiv {
+    border: 6px solid #fff;
+    height: 421px;
+    width: 100%;
+
+    #v {
+        width: 100%;
+    }
+}

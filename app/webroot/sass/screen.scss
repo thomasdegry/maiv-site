@@ -24,6 +24,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Alternate Gothic';
+    src: url('fonts/alternate.eot');
+    src: url('fonts/alternate.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alternate.woff') format('woff'),
+         url('fonts/alternate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import "_variables";
 @import "_base";
 
