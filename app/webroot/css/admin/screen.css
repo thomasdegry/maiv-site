@@ -576,8 +576,37 @@ footer div.half:last-child {
 /* line 22, ../../sass/admin/modules/_scan.scss */
 #scan-log ul li {
   padding-bottom: 20px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 240ms;
+  -moz-transition-duration: 240ms;
+  -o-transition-duration: 240ms;
+  transition-duration: 240ms;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transform: translate(10px, 0px);
+  -moz-transform: translate(10px, 0px);
+  -ms-transform: translate(10px, 0px);
+  -o-transform: translate(10px, 0px);
+  transform: translate(10px, 0px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
-/* line 25, ../../sass/admin/modules/_scan.scss */
+/* line 31, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li:first-child {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 36, ../../sass/admin/modules/_scan.scss */
 #scan-log ul li span.timeago {
   line-height: 1em;
   display: block;
@@ -585,8 +614,36 @@ footer div.half:last-child {
   font-style: italic;
   font-size: 0.9em;
 }
+/* line 44, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li.error {
+  color: #ef691d;
+}
+/* line 47, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li.error span.timeago {
+  color: #919086;
+}
+/* line 52, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li.inserted {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 57, ../../sass/admin/modules/_scan.scss */
+#scan-log ul li.go-away {
+  -webkit-transform: translate(0px, 10px);
+  -moz-transform: translate(0px, 10px);
+  -ms-transform: translate(0px, 10px);
+  -o-transform: translate(0px, 10px);
+  transform: translate(0px, 10px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
 
-/* line 36, ../../sass/admin/modules/_scan.scss */
+/* line 65, ../../sass/admin/modules/_scan.scss */
 #startCam {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -601,7 +658,7 @@ footer div.half:last-child {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 41, ../../sass/admin/modules/_scan.scss */
+/* line 70, ../../sass/admin/modules/_scan.scss */
 #startCam.fadeAway {
   -webkit-transform: translate(80px, 0px);
   -moz-transform: translate(80px, 0px);
@@ -612,13 +669,13 @@ footer div.half:last-child {
   opacity: 0;
 }
 
-/* line 47, ../../sass/admin/modules/_scan.scss */
+/* line 76, ../../sass/admin/modules/_scan.scss */
 #outdiv {
   border: 6px solid #fff;
   height: 421px;
   width: 100%;
 }
-/* line 52, ../../sass/admin/modules/_scan.scss */
+/* line 81, ../../sass/admin/modules/_scan.scss */
 #outdiv #v {
   width: 100%;
 }

@@ -10,10 +10,5 @@
     <a href="#" id="startCam" class="big-button-orange">Start Scanning</a>
     <ul class="hide">
         <li>Scanning<span id="dots"></span></li>
-        <li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
-        <li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
-        <li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
-        <li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
-        <li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
     </ul>
 </div>

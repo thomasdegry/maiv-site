@@ -85,6 +85,6 @@
     <?php echo $this->Html->script(array('vendor/underscore.js', 'vendor/grid.js', 'vendor/version.js', 'vendor/detector.js', 'vendor/formatinf.js', 'vendor/errorlevel.js', 
     'vendor/bitmat.js', 'vendor/datablock.js', 'vendor/bmparser.js', 'vendor/datamask.js', 'vendor/rsdecoder.js',
     'vendor/rsdecoder.js', 'vendor/gf256poly.js', 'vendor/gf256.js', 'vendor/decoder.js', 'vendor/qrcode.js', 'vendor/findpat.js',
-    'vendor/alignpat.js', 'vendor/databr.js', 'vendor/jquery.js', 'admin.js')); ?>
+    'vendor/alignpat.js', 'vendor/databr.js', 'vendor/jquery.js', 'vendor/timeago.js', 'admin.js')); ?>
 </body>
 </html>

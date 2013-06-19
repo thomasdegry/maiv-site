@@ -177,21 +177,40 @@ var QRScanner = (function () {
 
     QRScanner.prototype.read = function(a) {
         console.log(a);
-        //<li>Payment of Tatiana was successful <span class="timeago">30 seconds ago</span></li>
         var sharedCode = a,
             codeInformation = sharedCode.split('-'),
             burgerID = codeInformation[0],
-            userID = codeInformation[1];
+            userID = codeInformation[1],
+            that = this;
 
-        $.ajax({
-            type: 'GET',
-            url: 'http://student.howest.be/thomas.degry/20122013/MAIV/FOOD/api/creations/pay/'+userID+'/'+burgerID,
-            success: function(data) {
-                console.log(data);
+        $.getJSON('http://ksjkuurne.be/FOOD/api/creations/pay/' + userID + '/' + burgerID, function(data) {
+            console.log('in success handler');
+            var date = new Date();
+            var node;
+            if(data.used === true) {
+                console.log('used is true');
+                node = '<li class="error">Invalid QR code for ' + data.user.name + 
+                            ' <span class="timeago" data-date="' + date.toISOString() + '">' + date.toISOString() + '</span></li>';
+            } else {
+                console.log('used is false');
+                node = '<li>Payment for ' + data.user.name + 
+                            ' was successful <span class="timeago" data-date="' + date.toISOString() + '">' + date.toISOString() + '</span></li>';
             }
-        });
 
-        console.log('Just scanned a barcode with burger id ' + burgerID + ' and user ID ' + userID);
+            if($("#scan-log ul li").length > 7) {
+                $("#scan-log ul li:last-child").addClass('go-away');
+            }
+
+            $("#scan-log ul li:first-child").after(node);
+
+            setTimeout(function() {
+                console.log('time out functie');
+                $("#scan-log ul li:nth-child(2)").addClass('inserted');
+                $("body").timeago({selector: 'span.timeago', attr: 'data-date'});
+            },10);
+
+            setTimeout(that.captureToCanvas, 1500);
+        });
 
     };
 

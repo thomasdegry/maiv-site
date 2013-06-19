@@ -21,6 +21,17 @@
 
         li {
             padding-bottom: 20px;
+            @include transition-property(all);
+            @include transition-duration(240ms);
+            @include transition-timing-function(ease-out);
+
+            @include translate(10px, 0px);
+            @include opacity(0);
+
+            &:first-child {
+                @include translate(0px, 0px);
+                @include opacity(1);
+            }
 
             span.timeago {
                 line-height: 1em;
@@ -28,6 +39,24 @@
                 color: #919086;
                 font-style: italic;
                 font-size: 0.9em;
+            }
+
+            &.error {
+                color: $orange;
+
+                span.timeago {
+                    color: #919086;
+                }
+            }
+
+            &.inserted {
+                @include translate(0px, 0px);
+                @include opacity(1);
+            }
+
+            &.go-away {
+                @include translate (0px, 10px);
+                @include opacity(0);
             }
         }
     }
