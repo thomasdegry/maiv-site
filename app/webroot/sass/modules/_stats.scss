@@ -13,9 +13,6 @@
     margin-bottom: 1.25em;
     text-align: center;
     padding: .5em;
-}
-
-.stat-item {
     width: 2.3em;
 }
 
@@ -41,29 +38,45 @@
     }
 }
 
-.stat-item-facebook {
+%stat-item-facebook {
     background-color: $facebook;
     box-shadow: 0 .2em 0 $facebook-darkened;
 }
 
+.stat-item-facebook {
+    @extend %stat-item-facebook;
+    @extend %sprite;
+    background-position: -69px -11px;
+}
+
 .stat-number-facebook {
-    @extend .stat-item-facebook;
+    @extend %stat-item-facebook;
 
     &::after {
         border-right-color: $facebook;
     }
 }
 
-.stat-item-twitter {
+%stat-item-twitter {
     background-color: $twitter;
     box-shadow: 0 .2em 0 $twitter-darkened;
 }
 
+.stat-item-twitter {
+    @extend %stat-item-twitter;
+    @extend %sprite;
+    background-position: -99px -11px;
+}
+
 .stat-number-twitter {
-    @extend .stat-item-twitter;
+    @extend %stat-item-twitter;
 
     &::after {
         border-right-color: $twitter;
     }
 }
 
+.stat-item-downloads {
+    @extend %sprite;
+    background-position: -133px -11px;
+}

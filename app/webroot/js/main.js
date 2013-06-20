@@ -18,8 +18,6 @@ var AppDemo = (function () {
             end: $(this.options.end)
         };
 
-        console.log('lol');
-
         if (this.el.start.length === 0) {
             return false;
         }
@@ -43,7 +41,7 @@ var AppDemo = (function () {
         }
 
         if ((scrollPos > this.endPosition || scrollPos < this.startPosition) && this.el.container.hasClass(this.options.active)) {
-            this.elements.container.removeClass(this.options.active);
+            this.el.container.removeClass(this.options.active);
         }
     };
 
@@ -256,7 +254,7 @@ $(window).load(function () {
             }
         });
     }
-    
+
     var horizontalSlider = new HorizontalSlider();
 });
 
