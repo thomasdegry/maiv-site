@@ -11,6 +11,12 @@ body {
     padding-top: 4.375em; // Height of header
 }
 
+@media only all and (max-width: 48em) {
+    body {
+        font-size: 81.25%;
+    }
+}
+
 // Different kinds of containers
 
 .orange {

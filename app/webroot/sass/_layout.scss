@@ -27,41 +27,43 @@
     }
 }
 
-.span-one-column {
-    float: left;
+@media only all and (min-width: 53em) {
+    .span-one-column {
+        float: left;
 
-    .has-four-columns & {
-        width: 25%;
+        .has-four-columns & {
+            width: 25%;
+        }
+
+        .has-three-columns & {
+            width: 33%;
+        }
+
+        .has-two-columns & {
+            width: 50%;
+        }
     }
 
-    .has-three-columns & {
-        width: 33%;
+    .span-two-columns {
+        float: left;
+
+        .has-four-columns & {
+            width: 50%;
+        }
+
+        .has-three-columns & {
+            width: 66%;
+        }
     }
 
-    .has-two-columns & {
-        width: 50%;
-    }
-}
+    .span-three-columns {
 
-.span-two-columns {
-    float: left;
+        .has-four-columns & {
+            width: 75%;
+        }
 
-    .has-four-columns & {
-        width: 50%;
-    }
-
-    .has-three-columns & {
-        width: 66%;
-    }
-}
-
-.span-three-columns {
-
-    .has-four-columns & {
-        width: 75%;
-    }
-
-    .has-three-columns & {
-        width: 100%;
+        .has-three-columns & {
+            width: 100%;
+        }
     }
 }

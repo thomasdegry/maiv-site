@@ -18,4 +18,9 @@ $(window).load(function () {
     }
 
     var horizontalSlider = new HorizontalSlider();
+
+    $('.toggle-nav').on('click', 'a', function () {
+        $('.site-header').toggleClass('is-collapsed');
+        $('.site-header').toggleClass('is-expanded');
+    });
 });
