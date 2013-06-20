@@ -1,0 +1,42 @@
+.push {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.half {
+    width: 50%;
+}
+
+#pushNotification {
+    width: 400px;
+    position: absolute;
+    bottom: 0; right: 0;
+    overflow: visible;
+}
+
+#btnSendPush {
+    @include transition-property(all);
+    @include transition-duration(240ms);
+    @include transition-timing-function(ease-out);
+
+    &.fadeAway {
+        @include translate(80px, 0px);
+        @include opacity(0);
+    }
+}
+
+#loader {
+    width: 40px;
+    position: relative;
+    top: -37px;
+    left: 240px;
+    @include opacity(0);
+    @include transition-property(all);
+    @include transition-duration(240ms);
+    @include transition-timing-function(ease-out);
+
+    &.show {
+        @include opacity(1);
+    }
+}

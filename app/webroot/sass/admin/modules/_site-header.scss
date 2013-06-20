@@ -49,7 +49,7 @@
     @include transition(color 220ms ease-in-out);
 
     &:hover {
-        color: shade($beige, 10);
+        color: white;
     }
 }
 
