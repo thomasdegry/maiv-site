@@ -36,7 +36,8 @@ var QRScanner = (function () {
 
         var that = this;
         this.el.startButton.click(function(e) {
-            that.el.startButton.text('Allow the webcam');
+            that.el.startButton.addClass('disabled');
+            that.el.startButton.html('Allow the webcam  <span>&#11014;</span>');
             e.preventDefault();
             that.launch();
             that.launchCam();

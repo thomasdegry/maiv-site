@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <?php echo $this->Html->charset(); ?>
     <title>
         Mr Burger Administration | 
@@ -22,17 +23,17 @@
             <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
             <nav class="horizontal-nav">
                 <ul>
-                    <li>
-                        <a href="#" title="" class="nav-item <?php if($this->name == 'Scan') {echo 'active';} ?>">Payment System</a>
+                    <li <?php if($this->name == 'Scan') {echo 'class="active"';} ?>>
+                        <?php echo $this->Html->link("Payment System", array('controller'=>'Scan', 'action'=>'index'), array('class' => 'nav-item')); ?>
                     </li>
                     <li>
-                        <a href="#" title="" class="nav-item">Events</a>
+                        <?php echo $this->Html->link("Events", array('controller' => 'Events', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li>
-                        <a href="#" title="" class="nav-item">Website</a>
+                        <?php echo $this->Html->link("Website", array('controller' => 'Site', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li>
-                        <a href="#" title="" class="nav-item">Push</a>
+                        <?php echo $this->Html->link("Push", array('controller' => 'Creations', 'action' => 'push'), array('class' => 'nav-item')); ?>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +77,7 @@
                 <p>A Dreamteam Production</p>
             </div>
             <div class="half" id="copyright">
-                <p>Be your fucking best</p>
+                <p>Be your fucking best!</p>
             </div>
         </div>
     </footer>

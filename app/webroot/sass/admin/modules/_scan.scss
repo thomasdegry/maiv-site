@@ -71,6 +71,11 @@
         @include translate(80px, 0px);
         @include opacity(0);
     }
+
+    span {
+        font-family: 'EntypoRegular';
+        font-size: 1.5em;
+    }
 }
 
 #outdiv {

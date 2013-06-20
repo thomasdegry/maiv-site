@@ -81,6 +81,14 @@ a img {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url("../fonts/entypo.eot");
+  src: url("../fonts/entypo.eot?#iefix") format("embedded-opentype"), url("../fonts/entypo.woff") format("woff"), url("../fonts/entypo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* line 3, ../../sass/_layout.scss */
 .container {
   clear: both;
@@ -360,8 +368,28 @@ h1 {
   -moz-box-shadow: #ef4c0c 0 2px 0;
   box-shadow: #ef4c0c 0 2px 0;
 }
+/* line 34, ../../sass/admin/_base-admin.scss */
+.big-button-orange.disabled {
+  background: #c6c6c6;
+  -webkit-box-shadow: #aaaaaa 0 4px 0;
+  -moz-box-shadow: #aaaaaa 0 4px 0;
+  box-shadow: #aaaaaa 0 4px 0;
+}
+/* line 38, ../../sass/admin/_base-admin.scss */
+.big-button-orange.disabled:active {
+  margin-top: 0px;
+  -webkit-box-shadow: #aaaaaa 0 4px 0;
+  -moz-box-shadow: #aaaaaa 0 4px 0;
+  box-shadow: #aaaaaa 0 4px 0;
+  cursor: pointer;
+}
 
-/* line 35, ../../sass/admin/_base-admin.scss */
+/* line 46, ../../sass/admin/_base-admin.scss */
+.column {
+  padding-right: 0em;
+}
+
+/* line 50, ../../sass/admin/_base-admin.scss */
 .hide {
   display: none;
 }
@@ -415,8 +443,12 @@ h1 {
   zoom: 1;
   *display: inline;
 }
+/* line 34, ../../sass/admin/modules/_site-header.scss */
+.horizontal-nav li.active a {
+  color: #992a07;
+}
 
-/* line 37, ../../sass/admin/modules/_site-header.scss */
+/* line 44, ../../sass/admin/modules/_site-header.scss */
 .nav-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -432,22 +464,18 @@ h1 {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 44, ../../sass/admin/modules/_site-header.scss */
+/* line 51, ../../sass/admin/modules/_site-header.scss */
 .nav-item:hover {
   color: #d4d5c7;
 }
-/* line 48, ../../sass/admin/modules/_site-header.scss */
-.nav-item.active {
-  color: #992a07;
-}
 
-/* line 53, ../../sass/admin/modules/_site-header.scss */
+/* line 56, ../../sass/admin/modules/_site-header.scss */
 #user {
   position: absolute;
   right: 0;
   top: 12px;
 }
-/* line 57, ../../sass/admin/modules/_site-header.scss */
+/* line 60, ../../sass/admin/modules/_site-header.scss */
 #user img {
   width: 40px;
   -webkit-border-radius: 100px;
@@ -458,7 +486,7 @@ h1 {
   border: 5px solid #ecedde;
   float: right;
 }
-/* line 63, ../../sass/admin/modules/_site-header.scss */
+/* line 66, ../../sass/admin/modules/_site-header.scss */
 #user p {
   float: left;
   text-align: right;
@@ -466,7 +494,7 @@ h1 {
   line-height: 1.1em;
   padding-top: 0.55em;
 }
-/* line 69, ../../sass/admin/modules/_site-header.scss */
+/* line 72, ../../sass/admin/modules/_site-header.scss */
 #user p a {
   display: block;
   text-decoration: none;
@@ -542,8 +570,9 @@ footer div.half {
 footer div.half p {
   padding-top: 1.3em;
   line-height: 0.5em;
+  color: white;
 }
-/* line 15, ../../sass/admin/modules/_site-footer.scss */
+/* line 16, ../../sass/admin/modules/_site-footer.scss */
 footer div.half:last-child {
   text-align: right;
 }
@@ -668,14 +697,19 @@ footer div.half:last-child {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
+/* line 75, ../../sass/admin/modules/_scan.scss */
+#startCam span {
+  font-family: 'EntypoRegular';
+  font-size: 1.5em;
+}
 
-/* line 76, ../../sass/admin/modules/_scan.scss */
+/* line 81, ../../sass/admin/modules/_scan.scss */
 #outdiv {
   border: 6px solid #fff;
   height: 421px;
   width: 100%;
 }
-/* line 81, ../../sass/admin/modules/_scan.scss */
+/* line 86, ../../sass/admin/modules/_scan.scss */
 #outdiv #v {
   width: 100%;
 }

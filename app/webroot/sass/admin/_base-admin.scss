@@ -30,6 +30,21 @@ h1 {
         margin-top: 2px;
         @include box-shadow(rgba(239, 76, 12, 1) 0 2px 0); 
     }
+
+    &.disabled {
+        background: #c6c6c6;
+        @include box-shadow(rgba(170, 170, 170, 1) 0 4px 0);
+
+        &:active {
+            margin-top: 0px;
+            @include box-shadow(rgba(170, 170, 170, 1) 0 4px 0);
+            cursor: pointer;
+        }
+    }
+}
+
+.column {
+    padding-right: 0em;
 }
 
 .hide {display: none;}

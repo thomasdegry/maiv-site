@@ -29,7 +29,14 @@
 
     li {
         @include inline-block;
+
+        &.active {
+            a {
+                color: $brown;
+            }
+        }
     }
+
     padding-left: 4em;
 
 }
@@ -43,10 +50,6 @@
 
     &:hover {
         color: shade($beige, 10);
-    }
-
-    &.active {
-        color: $brown;
     }
 }
 
