@@ -3,7 +3,7 @@
     box-shadow: 0 .5em 0 rgba(0, 0, 0, .2);
     position: fixed;
     top: 0;
-    left: 0;
+    //left: 0;
     right: 0;
     width: 100%;
     z-index: 999;
@@ -50,12 +50,12 @@
 @media only all and (max-width: 64em) {
     .site-header.is-collapsed {
         top: -17em;
-        @include transition(top 220ms ease-in);
+      //  @include transition(top 220ms ease-in);
     }
 
     .site-header.is-expanded {
         top: 0;
-        @include transition(top 220ms ease-out);
+     //   @include transition(top 220ms ease-out);
     }
 }
 

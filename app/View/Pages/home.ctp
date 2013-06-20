@@ -11,6 +11,10 @@
                         Be social, create a new<br /><span>flavour</span> and get a free burger!
                     </div>
                 <li>
+                    <div id="scroll-indicator">
+                        <div id="ball"></div>
+                        <div id="shadow"></div>
+                    </div>
 <!--                     <li class="feature">
                     <div class="slogan">
                         Be social, create a new <span>flavour</span> and get a free burger!
