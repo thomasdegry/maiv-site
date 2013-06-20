@@ -1,0 +1,122 @@
+table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: separate;
+    tr:first-child th:first-child { @include border-top-left-radius(10px); }
+    tr:first-child th:last-child { @include border-top-right-radius(10px); }
+
+}
+
+thead {
+    padding: 20px;
+    background: $orange;
+
+    tr {
+
+        th {
+            padding: 10px;
+            @include font-alternate($beige, 1.3em);
+            a {
+                color: $beige;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:first-child {
+                padding-left: 20px;
+            }
+        }
+
+    }
+}
+
+tbody {
+    tr {
+        &:nth-child(odd) {
+            background: #ef4c0b;
+        }
+
+        &:nth-child(even) {
+            background: #f25a29;
+        }
+
+        td {
+            padding: 10px;
+            color: $beige;
+
+            &:first-child {
+                padding-left: 20px;
+                color: $brown;
+            }
+
+            &:nth-child(3), &:nth-child(4) {
+                color: $brown;
+            }
+
+            &.actions {
+                a {
+                    text-decoration: none;
+                    line-height: 0.3em;
+                    color: $beige;
+
+                    &:first-child {
+                        font-size: 2.0em;
+                        padding-right: 10px;
+                    }
+
+                    &:last-child {
+                        font-size: 2.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#tfoot {
+    background: $blue-darkened;
+    @include border-bottom-left-radius(10px);
+    @include border-bottom-right-radius(10px);
+    @include clearfix();
+    
+    div {
+        color: $beige;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:first-child {
+            width: 3%;
+            padding-left: 2%;
+            float: left;
+            background: tint($blue-darkened, 10);
+        }
+
+        &:nth-child(2) {
+            width: 90%;
+            float: left;
+            text-align: center;
+        }
+
+        &:last-child {
+            width: 3%;
+            padding-right: 2%;
+            float: left;
+            background: tint($blue-darkened, 10);
+            text-align: right;
+        }
+
+    }   
+
+    span.prev, span.next {
+        font-family: 'EntypoRegular';
+        font-size: 2em;
+        line-height: 0.3em;
+
+        &.disabled {
+            color: $blue-darkened;
+        }
+    }
+}

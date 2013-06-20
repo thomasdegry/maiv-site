@@ -384,12 +384,17 @@ h1 {
   cursor: pointer;
 }
 
-/* line 46, ../../sass/admin/_base-admin.scss */
+/* line 50, ../../sass/admin/_base-admin.scss */
 .column {
   padding-right: 0em;
 }
 
-/* line 50, ../../sass/admin/_base-admin.scss */
+/* line 54, ../../sass/admin/_base-admin.scss */
+.entypo {
+  font-family: 'EntypoRegular';
+}
+
+/* line 58, ../../sass/admin/_base-admin.scss */
 .hide {
   display: none;
 }
@@ -712,4 +717,141 @@ footer div.half:last-child {
 /* line 86, ../../sass/admin/modules/_scan.scss */
 #outdiv #v {
   width: 100%;
+}
+
+/* line 1, ../../sass/admin/modules/_tables.scss */
+table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: separate;
+}
+/* line 5, ../../sass/admin/modules/_tables.scss */
+table tr:first-child th:first-child {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+/* line 6, ../../sass/admin/modules/_tables.scss */
+table tr:first-child th:last-child {
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* line 10, ../../sass/admin/modules/_tables.scss */
+thead {
+  padding: 20px;
+  background: #ef691d;
+}
+/* line 16, ../../sass/admin/modules/_tables.scss */
+thead tr th {
+  padding: 10px;
+  color: #ecedde;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.3em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 19, ../../sass/admin/modules/_tables.scss */
+thead tr th a {
+  color: #ecedde;
+  text-decoration: none;
+}
+/* line 23, ../../sass/admin/modules/_tables.scss */
+thead tr th a:hover {
+  text-decoration: underline;
+}
+/* line 28, ../../sass/admin/modules/_tables.scss */
+thead tr th:first-child {
+  padding-left: 20px;
+}
+
+/* line 38, ../../sass/admin/modules/_tables.scss */
+tbody tr:nth-child(odd) {
+  background: #ef4c0b;
+}
+/* line 42, ../../sass/admin/modules/_tables.scss */
+tbody tr:nth-child(even) {
+  background: #f25a29;
+}
+/* line 46, ../../sass/admin/modules/_tables.scss */
+tbody tr td {
+  padding: 10px;
+  color: #ecedde;
+}
+/* line 50, ../../sass/admin/modules/_tables.scss */
+tbody tr td:first-child {
+  padding-left: 20px;
+  color: #992a07;
+}
+/* line 55, ../../sass/admin/modules/_tables.scss */
+tbody tr td:nth-child(3), tbody tr td:nth-child(4) {
+  color: #992a07;
+}
+/* line 60, ../../sass/admin/modules/_tables.scss */
+tbody tr td.actions a {
+  text-decoration: none;
+  line-height: 0.3em;
+  color: #ecedde;
+}
+/* line 65, ../../sass/admin/modules/_tables.scss */
+tbody tr td.actions a:first-child {
+  font-size: 2.0em;
+  padding-right: 10px;
+}
+/* line 70, ../../sass/admin/modules/_tables.scss */
+tbody tr td.actions a:last-child {
+  font-size: 2.2em;
+}
+
+/* line 79, ../../sass/admin/modules/_tables.scss */
+#tfoot {
+  background: #1e2328;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 85, ../../sass/admin/modules/_tables.scss */
+#tfoot div {
+  color: #ecedde;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 90, ../../sass/admin/modules/_tables.scss */
+#tfoot div:first-child {
+  width: 3%;
+  padding-left: 2%;
+  float: left;
+  background: #34383d;
+}
+/* line 97, ../../sass/admin/modules/_tables.scss */
+#tfoot div:nth-child(2) {
+  width: 90%;
+  float: left;
+  text-align: center;
+}
+/* line 103, ../../sass/admin/modules/_tables.scss */
+#tfoot div:last-child {
+  width: 3%;
+  padding-right: 2%;
+  float: left;
+  background: #34383d;
+  text-align: right;
+}
+/* line 113, ../../sass/admin/modules/_tables.scss */
+#tfoot span.prev, #tfoot span.next {
+  font-family: 'EntypoRegular';
+  font-size: 2em;
+  line-height: 0.3em;
+}
+/* line 118, ../../sass/admin/modules/_tables.scss */
+#tfoot span.prev.disabled, #tfoot span.next.disabled {
+  color: #1e2328;
 }

@@ -26,7 +26,7 @@
                     <li <?php if($this->name == 'Scan') {echo 'class="active"';} ?>>
                         <?php echo $this->Html->link("Payment System", array('controller'=>'Scan', 'action'=>'index'), array('class' => 'nav-item')); ?>
                     </li>
-                    <li>
+                    <li <?php if($this->name == 'Events') {echo 'class="active"';} ?>>
                         <?php echo $this->Html->link("Events", array('controller' => 'Events', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li>

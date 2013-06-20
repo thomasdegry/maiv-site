@@ -24,6 +24,7 @@ class EventsController extends AppController {
  * @return void
  */
 	public function overview() {
+		$this->layout = 'admin';
 		$this->Event->recursive = 0;
 		$this->set('events', $this->paginate());
 	}
