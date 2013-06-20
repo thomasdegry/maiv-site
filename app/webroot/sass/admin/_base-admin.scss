@@ -93,6 +93,10 @@ h1 {
     @extend %flash;
 }
 
+.container {
+    height: 100% !important;
+}
+
 %flash {
     margin-top: 30px;
     height: 2.5em;

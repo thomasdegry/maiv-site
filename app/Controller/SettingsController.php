@@ -25,10 +25,10 @@ class SettingsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Setting->save($this->request->data)) {
-				$this->Session->setFlash(__('The setting has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash('Save successul!', 'good_flash');
+				$this->redirect(array('action' => 'edit', '1'));
 			} else {
-				$this->Session->setFlash(__('The setting could not be saved. Please, try again.'));
+				$this->Session->setFlash('Your setting could not be saved', 'bad_flash');
 			}
 		} else {
 			$options = array('conditions' => array('Setting.' . $this->Setting->primaryKey => $id));

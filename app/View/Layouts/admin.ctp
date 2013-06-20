@@ -24,16 +24,16 @@
             <nav class="horizontal-nav">
                 <ul>
                     <li <?php if($this->name == 'Scan') {echo 'class="active"';} ?>>
-                        <?php echo $this->Html->link("Payment System", array('controller'=>'Scan', 'action'=>'index'), array('class' => 'nav-item')); ?>
+                        <?php echo $this->Html->link("Payment System", array('controller'=>'Scan', 'action'=>'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li <?php if($this->name == 'Events') {echo 'class="active"';} ?>>
                         <?php echo $this->Html->link("Events", array('controller' => 'Events', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li <?php if($this->name == 'Settings') {echo 'class="active"';} ?>>
-                        <?php echo $this->Html->link("Website", array('controller' => 'Settings', 'action' => 'overview'), array('class' => 'nav-item')); ?>
+                        <?php echo $this->Html->link("Website", array('controller' => 'Settings', 'action' => 'edit', '1'), array('class' => 'nav-item')); ?>
                     </li>
-                    <li>
-                        <?php echo $this->Html->link("Push", array('controller' => 'Creations', 'action' => 'push'), array('class' => 'nav-item')); ?>
+                    <li <?php if($this->name == 'Push') {echo 'class="active"';} ?>>
+                        <?php echo $this->Html->link("Push", array('controller' => 'Push', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                 </ul>
             </nav>

@@ -72,7 +72,7 @@ class Creation extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Hamburger' => array(
+		'Burger' => array(
 			'className' => 'Burger',
 			'foreignKey' => 'hamburger_id',
 			'conditions' => '',
