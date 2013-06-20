@@ -1,0 +1,21 @@
+#login {
+    text-align: center;
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    #scan {
+        margin: 30px auto;
+        float: none;
+    }
+
+    #startCam {
+        width: 220px;
+        position: absolute;
+        top: 120px; left: 50%;
+        margin-left: -110px;
+    }
+}

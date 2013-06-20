@@ -19,7 +19,7 @@ label {
 input[type=text], select {
     @include box-sizing(border-box);
     @extend %form-element;
-    width: 98%;
+    width: 100%;
     padding-left: 2%;
     background: white;
     @include font-traveler($blue-darkened, 1.2em);

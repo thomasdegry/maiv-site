@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php echo $this->Html->charset(); ?>
     <title>
         Mr Burger Administration | 
@@ -39,14 +40,13 @@
             </nav>
             <div id="user">
                 <p>
-                    Justine Lerno
-                    <?php echo $this->Html->link("Log out", array('controller'=>'', 'action'=>'')); ?>
+                    <?php echo $current_user["name"]; ?>
+                    <?php echo $this->Html->link("Log out", array('controller'=>'Admins', 'action'=>'logout')); ?>
                 </p>
-                <?php echo $this->Html->image('admin/users/justine.png', array('alt'=> 'loggedInUser')); ?>
+                <?php echo $this->Html->image('http://graph.facebook.com/'.$current_user["username"].'/picture?width=104&height=104', array('alt'=> 'loggedInUser')); ?>
             </div>
         </div>
     </header>
-
     <div id="content">
         <div class="container">
             <?php echo $this->fetch('content'); ?>

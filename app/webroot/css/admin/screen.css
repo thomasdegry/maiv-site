@@ -922,7 +922,7 @@ input[type=text], select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 98%;
+  width: 100%;
   padding-left: 2%;
   background: white;
   color: #1e2328;
@@ -1104,4 +1104,28 @@ input[type=submit].disabled:active {
 #loader.show {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* line 1, ../../sass/admin/modules/_login.scss */
+#login {
+  text-align: center;
+}
+/* line 4, ../../sass/admin/modules/_login.scss */
+#login h1 {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+/* line 10, ../../sass/admin/modules/_login.scss */
+#login #scan {
+  margin: 30px auto;
+  float: none;
+}
+/* line 15, ../../sass/admin/modules/_login.scss */
+#login #startCam {
+  width: 220px;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -110px;
 }
