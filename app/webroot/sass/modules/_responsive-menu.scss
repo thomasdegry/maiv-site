@@ -1,0 +1,148 @@
+// Colors
+$sidr-background : #2e353b;
+$sidr-background-shadow-color : #222a31;
+$sidr-text-color: #eceddf;
+
+.sidr {
+  /* Default Settings */
+
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: none;
+  overflow-y: auto;
+  border-right-style: solid;
+  border-right-width: 6px;
+  border-right-color: rgba(25, 32, 36, 0.630);
+
+  h1 {
+    background-color: #192026;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    @include font-mission-script($sidr-text-color, 1.2em);
+    text-transform: capitalize;
+  }
+
+  footer {
+    @include font-traveler($sidr-text-color, .6em);
+    position: absolute;
+    bottom: 10px;
+    padding-left: 20px;;
+    text-transform: capitalize;
+  }
+
+  .sidr-inner {
+    padding: 0 0 15px;
+
+    > p {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  &.right {
+    left: auto;
+    right: -260px;
+  }
+
+  &.left {
+    left: -260px;
+    right: auto;
+  }
+
+  /* Theme Settings */
+  @include font-alternate($sidr-text-color, 1.2em);
+  background: $sidr-background;
+  color: $sidr-text-color;
+
+  p {
+    margin: 0 0 12px;
+    a {
+      color: rgba($sidr-text-color, .9);
+    }
+  }
+
+  > p {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  ul {
+    display: block;
+    margin: 0 0 15px;
+    padding: 0;
+  //  border-top: 1px solid darken($sidr-background, 10%);
+  //  border-bottom: 1px solid lighten($sidr-background, 10%);
+
+    li {
+      display: block;
+      margin: 0;
+      line-height: 48px;
+      &:nth-child(odd){
+        background-color: #2a3137;
+      }
+      &:hover,
+      &.active,
+      &.sidr-class-active {
+       background-color: #192026;
+        > a, > span {
+
+        }
+      }
+
+      a, span {
+        padding: 0 20px;
+        display: block;
+        text-decoration: none;
+        color: $sidr-text-color;
+      }
+
+      ul {
+        border-bottom: none;
+        margin: 0;
+        li {
+          line-height: 40px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover,
+          &.active,
+          &.sidr-class-active {
+            background-color: #192026;
+          }
+
+          a, span {
+            color: rgba($sidr-text-color, .8);
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+.toggle-nav {
+  position: relative;
+  &.is-collapsed {
+    left: 0px;
+    @include transition-property(left);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-out);
+  }
+  &.is-expanded {
+    left: 300px;
+    @include transition-property(left);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+}

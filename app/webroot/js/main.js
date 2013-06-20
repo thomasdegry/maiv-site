@@ -257,9 +257,15 @@ $(window).load(function () {
 
     var horizontalSlider = new HorizontalSlider();
 
+    $('.toggle-nav a').sidr();
+    $("body").on("click", function(){
+        console.log("click");
+        $.sidr('close', 'sidr');
+    });
+
     $('.toggle-nav').on('click', 'a', function () {
-        $('.site-header').toggleClass('is-collapsed');
-        $('.site-header').toggleClass('is-expanded');
+        $('.toggle-nav').toggleClass('is-collapsed');
+        $('.toggle-nav').toggleClass('is-expanded');
     });
 });
 

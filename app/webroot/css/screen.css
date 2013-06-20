@@ -223,7 +223,7 @@ label {
 /* line 88, ../sass/_base.scss */
 select {
   height: 1.7em;
-  padding: .4em 1em .3em;
+  padding: 0.4em 1em 0.3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -232,7 +232,7 @@ select {
 /* line 100, ../sass/_base.scss */
 input[type="text"] {
   letter-spacing: .05em;
-  padding: .45em 1em .25em;
+  padding: 0.45em 1em 0.25em;
 }
 /* line 105, ../sass/_base.scss */
 input[type="text"]::after {
@@ -260,7 +260,7 @@ input[type="text"]::after {
 /* line 125, ../sass/_base.scss */
 .circle-picture {
   background-position: center center;
-  border: .3em solid white;
+  border: 0.3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -395,7 +395,7 @@ input[type="text"]::after {
 .nav-item {
   display: block;
   color: #2d353a;
-  padding: .8em 1.5em;
+  padding: 0.8em 1.5em;
   text-decoration: none;
   -webkit-transition: color 220ms ease-in-out;
   -moz-transition: color 220ms ease-in-out;
@@ -555,7 +555,7 @@ input[type="text"]::after {
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
-  padding: 1em 0 .4em;
+  padding: 1em 0 0.4em;
 }
 
 /* line 14, ../sass/modules/_horizontal-slider.scss */
@@ -605,7 +605,7 @@ input[type="text"]::after {
   line-height: 1.1;
   text-transform: uppercase;
   margin-right: .5rem;
-  padding: .6em .4em;
+  padding: 0.6em 0.4em;
   text-decoration: none;
 }
 /* line 34, ../sass/modules/_horizontal-slider.scss */
@@ -1088,4 +1088,176 @@ input[type="text"]::after {
 /* line 77, ../sass/modules/_gallery.scss */
 .gallery-item-rating span {
   font-size: .75em;
+}
+
+/* line 6, ../sass/modules/_responsive-menu.scss */
+.sidr {
+  /* Default Settings */
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: none;
+  overflow-y: auto;
+  border-right-style: solid;
+  border-right-width: 6px;
+  border-right-color: rgba(25, 32, 36, 0.63);
+  /* Theme Settings */
+  color: #eceddf;
+  font-family: "AlternateGothicCom-No2";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: #2e353b;
+  color: #eceddf;
+}
+/* line 22, ../sass/modules/_responsive-menu.scss */
+.sidr h1 {
+  background-color: #192026;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: #eceddf;
+  font-family: "Mission Script";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: capitalize;
+}
+/* line 31, ../sass/modules/_responsive-menu.scss */
+.sidr footer {
+  color: #eceddf;
+  font-family: "Traveler";
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 20px;
+  text-transform: capitalize;
+}
+/* line 39, ../sass/modules/_responsive-menu.scss */
+.sidr .sidr-inner {
+  padding: 0 0 15px;
+}
+/* line 42, ../sass/modules/_responsive-menu.scss */
+.sidr .sidr-inner > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 48, ../sass/modules/_responsive-menu.scss */
+.sidr.right {
+  left: auto;
+  right: -260px;
+}
+/* line 53, ../sass/modules/_responsive-menu.scss */
+.sidr.left {
+  left: -260px;
+  right: auto;
+}
+/* line 63, ../sass/modules/_responsive-menu.scss */
+.sidr p {
+  margin: 0 0 12px;
+}
+/* line 65, ../sass/modules/_responsive-menu.scss */
+.sidr p a {
+  color: rgba(236, 237, 223, 0.9);
+}
+/* line 70, ../sass/modules/_responsive-menu.scss */
+.sidr > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 75, ../sass/modules/_responsive-menu.scss */
+.sidr ul {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+}
+/* line 82, ../sass/modules/_responsive-menu.scss */
+.sidr ul li {
+  display: block;
+  margin: 0;
+  line-height: 48px;
+}
+/* line 86, ../sass/modules/_responsive-menu.scss */
+.sidr ul li:nth-child(odd) {
+  background-color: #2a3137;
+}
+/* line 91, ../sass/modules/_responsive-menu.scss */
+.sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
+  background-color: #192026;
+}
+/* line 98, ../sass/modules/_responsive-menu.scss */
+.sidr ul li a, .sidr ul li span {
+  padding: 0 20px;
+  display: block;
+  text-decoration: none;
+  color: #eceddf;
+}
+/* line 105, ../sass/modules/_responsive-menu.scss */
+.sidr ul li ul {
+  border-bottom: none;
+  margin: 0;
+}
+/* line 108, ../sass/modules/_responsive-menu.scss */
+.sidr ul li ul li {
+  line-height: 40px;
+}
+/* line 111, ../sass/modules/_responsive-menu.scss */
+.sidr ul li ul li:last-child {
+  border-bottom: none;
+}
+/* line 117, ../sass/modules/_responsive-menu.scss */
+.sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
+  background-color: #192026;
+}
+/* line 121, ../sass/modules/_responsive-menu.scss */
+.sidr ul li ul li a, .sidr ul li ul li span {
+  color: rgba(236, 237, 223, 0.8);
+  padding-left: 30px;
+}
+
+/* line 134, ../sass/modules/_responsive-menu.scss */
+.toggle-nav {
+  position: relative;
+}
+/* line 136, ../sass/modules/_responsive-menu.scss */
+.toggle-nav.is-collapsed {
+  left: 0px;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 142, ../sass/modules/_responsive-menu.scss */
+.toggle-nav.is-expanded {
+  left: 300px;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }

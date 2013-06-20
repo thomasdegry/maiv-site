@@ -36,6 +36,18 @@
     ?>
 </head>
 <body class="<?php if ($this->action !== 'display' && $this->name !== 'pages') { echo 'show-logo'; } ?>">
+<div id="sidr">
+    <!-- Your content -->
+    <h1>Navigation</h1>
+    <ul>
+        <li><a href="#">The campaign</a></li>
+        <li class="active"><a href="#">Festival Flavours</a></li>
+        <li><a href="#">Festivals</a></li>
+        <li><a href="#">Burger Pile</a></li>
+    </ul>
+    <footer>A Dreamteam production</footer>
+</div>
+
     <header class="site-header is-collapsed">
         <div class="container">
             <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
@@ -147,6 +159,6 @@
         </div>
     </footer>
 
-    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'main.js')); ?>
+    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'main.js')); ?>
 </body>
 </html>
