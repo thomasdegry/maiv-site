@@ -26,6 +26,10 @@ class EventsController extends AppController {
 	public function overview() {
 		$this->layout = 'admin';
 		$this->Event->recursive = 0;
+		$this->paginate = array(
+	        'limit' => 10
+	    );
+
 		$this->set('events', $this->paginate());
 	}
 
@@ -50,13 +54,14 @@ class EventsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->Event->create();
 			if ($this->Event->save($this->request->data)) {
-				$this->Session->setFlash(__('The event has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Your event has been saved successfully'), 'good_flash');
+				$this->redirect(array('action' => 'overview'));
 			} else {
-				$this->Session->setFlash(__('The event could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The event could not be saved. Please, try again.'), 'bad_flash');
 			}
 		}
 	}
@@ -69,15 +74,16 @@ class EventsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->layout = 'admin';
 		if (!$this->Event->exists($id)) {
 			throw new NotFoundException(__('Invalid event'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Event->save($this->request->data)) {
-				$this->Session->setFlash(__('The event has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash('Your event has been updated', 'good_flash');
+				$this->redirect(array('action' => 'overview'));
 			} else {
-				$this->Session->setFlash(__('The event could not be saved. Please, try again.'));
+				$this->Session->setFlash('Your event could not be updated, please try again');
 			}
 		} else {
 			$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
@@ -99,10 +105,10 @@ class EventsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Event->delete()) {
-			$this->Session->setFlash(__('Event deleted'));
-			$this->redirect(array('action' => 'index'));
+			$this->Session->setFlash('Your event has been deleted.', 'good_flash');
+			$this->redirect(array('action' => 'overview'));
 		}
-		$this->Session->setFlash(__('Event was not deleted'));
-		$this->redirect(array('action' => 'index'));
+		$this->Session->setFlash('Could not delete this event..', 'bad_flash');
+		$this->redirect(array('action' => 'overview'));
 	}
 }

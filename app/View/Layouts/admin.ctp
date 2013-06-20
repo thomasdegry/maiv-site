@@ -10,7 +10,7 @@
     <?php
         echo $this->Html->meta('icon');
 
-        echo $this->Html->css(array('admin/screen.css'));
+        echo $this->Html->css(array('admin/screen.css', 'admin/default.css', 'admin/default.date.css'));
 
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -29,8 +29,8 @@
                     <li <?php if($this->name == 'Events') {echo 'class="active"';} ?>>
                         <?php echo $this->Html->link("Events", array('controller' => 'Events', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
-                    <li>
-                        <?php echo $this->Html->link("Website", array('controller' => 'Site', 'action' => 'overview'), array('class' => 'nav-item')); ?>
+                    <li <?php if($this->name == 'Settings') {echo 'class="active"';} ?>>
+                        <?php echo $this->Html->link("Website", array('controller' => 'Settings', 'action' => 'overview'), array('class' => 'nav-item')); ?>
                     </li>
                     <li>
                         <?php echo $this->Html->link("Push", array('controller' => 'Creations', 'action' => 'push'), array('class' => 'nav-item')); ?>
@@ -49,7 +49,6 @@
 
     <div id="content">
         <div class="container">
-            <?php echo $this->Session->flash(); ?>
             <?php echo $this->fetch('content'); ?>
         </div>
     </div>
@@ -86,6 +85,6 @@
     <?php echo $this->Html->script(array('vendor/underscore.js', 'vendor/grid.js', 'vendor/version.js', 'vendor/detector.js', 'vendor/formatinf.js', 'vendor/errorlevel.js', 
     'vendor/bitmat.js', 'vendor/datablock.js', 'vendor/bmparser.js', 'vendor/datamask.js', 'vendor/rsdecoder.js',
     'vendor/rsdecoder.js', 'vendor/gf256poly.js', 'vendor/gf256.js', 'vendor/decoder.js', 'vendor/qrcode.js', 'vendor/findpat.js',
-    'vendor/alignpat.js', 'vendor/databr.js', 'vendor/jquery.js', 'vendor/timeago.js', 'admin.js')); ?>
+    'vendor/alignpat.js', 'vendor/databr.js', 'vendor/jquery.js', 'vendor/timeago.js', 'vendor/picker.js', 'vendor/picker.date.js', 'admin.js')); ?>
 </body>
 </html>

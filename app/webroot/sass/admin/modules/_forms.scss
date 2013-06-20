@@ -1,0 +1,61 @@
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: none;
+}
+
+%form-element {
+    @include appearance(none);
+    @include border-radius(4px);
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=text] {
+    @extend %form-element;
+    width: 98%;
+    padding-left: 2%;
+    background: white;
+    @include font-traveler($blue-darkened, 1.2em);
+    margin-bottom: 0.5em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    @include input-placeholder(shade($beige, 20)); 
+}
+
+input[type=submit] {
+    margin-left: -1px;
+    @include font-traveler($beige, 1.2em);
+    border: none;
+    background: tint($orange, 10);
+    @include box-shadow(rgba($orange, 1) 0 4px 0);
+    @include border-radius(4px);
+    text-decoration: none;
+    padding: 4px 12px 4px 12px;
+
+    @include transition-property(background);
+    @include transition-duration(240ms);
+    @include transition-timing-function(ease-out);
+
+    span {
+        position: relative;
+        font-size: 2em;
+        display: inline-block;
+        top: 3px;
+    }
+
+    &:hover {
+        background: tint($orange, 15);
+    }
+
+    &:active {
+        position: relative;
+        top: 2px;
+        @include box-shadow(rgba($orange, 1) 0 2px 0);
+    }
+}

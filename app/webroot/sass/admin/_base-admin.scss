@@ -1,8 +1,9 @@
 #content {
-    min-height: 700px;
+    min-height: 590px;
     padding-top: 50px;
     position: relative;
     @include clearfix;
+    padding-bottom: 110px;
 }
 
 h1 {
@@ -44,7 +45,32 @@ h1 {
 }
 
 .utility-button {
-    
+    color: $beige;
+    background: tint($blue-darkened, 10);
+    @include box-shadow(rgba($blue-darkened, 1) 0 4px 0);
+    @include border-radius(4px);
+    text-decoration: none;
+    padding: 4px 12px 4px 12px;
+
+    @include transition-property(background);
+    @include transition-duration(240ms);
+    @include transition-timing-function(ease-out);
+
+    span {
+        position: relative;
+        font-size: 2em;
+        display: inline-block;
+        top: 3px;
+    }
+
+    &:hover {
+        background: tint($blue-darkened, 15);
+    }
+
+    &:active {
+        margin-top: 2px;
+        @include box-shadow(rgba($blue-darkened, 1) 0 2px 0);
+    }
 }
 
 .column {
@@ -53,6 +79,34 @@ h1 {
 
 .entypo {
     font-family: 'EntypoRegular';
+}
+
+.inline-block {
+    @include inline-block;
+}
+
+.flashFailure {
+    @extend %flash;
+}
+
+.flashSuccess {
+    @extend %flash;
+}
+
+%flash {
+    margin-top: 30px;
+    height: 2.5em;
+    background: #cbcbcb;
+    width: 100%;
+    @include border-radius(8px);
+
+    p {
+        width: 100%;
+        text-align: center;
+        @include font-traveler($beige, 1em);
+        line-height: 2.3em;
+        color: $blue-darkened;
+    }
 }
 
 .hide {display: none;}

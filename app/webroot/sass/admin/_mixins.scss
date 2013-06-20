@@ -1,0 +1,11 @@
+@mixin input-placeholder($color) {
+    &.placeholder {
+        @include font-traveler($color, 1em);
+    }
+    &:-moz-placeholder {
+        @include font-traveler($color, 1em);
+    }
+    &::-webkit-input-placeholder {
+        @include font-traveler($color, 1em);
+    } 
+}

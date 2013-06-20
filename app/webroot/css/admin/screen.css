@@ -224,79 +224,6 @@ p {
   margin-bottom: 1em;
 }
 
-/* line 50, ../../sass/_base.scss */
-select, input[type="text"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #ecedde;
-  border: none;
-  border-radius: 0px;
-  -webkit-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
-  box-shadow: -0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #2d353a;
-  font-family: "AlternateGothicCom-No2";
-  font-size: 1em;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.1;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-/* line 61, ../../sass/_base.scss */
-label {
-  display: none;
-}
-
-/* line 65, ../../sass/_base.scss */
-.label-icon-container {
-  position: relative;
-  padding-bottom: .5em;
-}
-
-/* line 70, ../../sass/_base.scss */
-.label-icon {
-  background-color: #2d353a;
-  border-radius: 1.4em;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  display: block;
-  height: 2.8em;
-  width: 2.8em;
-  position: absolute;
-  top: -0.4em;
-  right: 3em;
-  z-index: 999;
-}
-
-/* line 83, ../../sass/_base.scss */
-select {
-  height: 1.7em;
-  padding: .4em 1em .3em;
-  position: relative;
-  top: .1em;
-  z-index: 9;
-}
-
-/* line 95, ../../sass/_base.scss */
-input[type="text"] {
-  letter-spacing: .05em;
-  padding: .45em 1em .25em;
-}
-/* line 100, ../../sass/_base.scss */
-input[type="text"]::after {
-  position: absolute;
-  top: -1em;
-  right: -1em;
-  z-index: 999;
-}
-
 /* line 110, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
@@ -325,21 +252,22 @@ input[type="text"]::after {
 
 /* line 1, ../../sass/admin/_base-admin.scss */
 #content {
-  min-height: 700px;
+  min-height: 590px;
   padding-top: 50px;
   position: relative;
   overflow: hidden;
   *zoom: 1;
+  padding-bottom: 110px;
 }
 
-/* line 8, ../../sass/admin/_base-admin.scss */
+/* line 9, ../../sass/admin/_base-admin.scss */
 h1 {
   font-family: 'Mission-Script';
   color: #1e2328;
   font-size: 2.5em;
 }
 
-/* line 14, ../../sass/admin/_base-admin.scss */
+/* line 15, ../../sass/admin/_base-admin.scss */
 .big-button-orange {
   font-size: 1.5em;
   background: #ef691d;
@@ -361,21 +289,21 @@ h1 {
   -moz-box-shadow: #ef4c0c 0 4px 0;
   box-shadow: #ef4c0c 0 4px 0;
 }
-/* line 29, ../../sass/admin/_base-admin.scss */
+/* line 30, ../../sass/admin/_base-admin.scss */
 .big-button-orange:active {
   margin-top: 2px;
   -webkit-box-shadow: #ef4c0c 0 2px 0;
   -moz-box-shadow: #ef4c0c 0 2px 0;
   box-shadow: #ef4c0c 0 2px 0;
 }
-/* line 34, ../../sass/admin/_base-admin.scss */
+/* line 35, ../../sass/admin/_base-admin.scss */
 .big-button-orange.disabled {
   background: #c6c6c6;
   -webkit-box-shadow: #aaaaaa 0 4px 0;
   -moz-box-shadow: #aaaaaa 0 4px 0;
   box-shadow: #aaaaaa 0 4px 0;
 }
-/* line 38, ../../sass/admin/_base-admin.scss */
+/* line 39, ../../sass/admin/_base-admin.scss */
 .big-button-orange.disabled:active {
   margin-top: 0px;
   -webkit-box-shadow: #aaaaaa 0 4px 0;
@@ -384,17 +312,99 @@ h1 {
   cursor: pointer;
 }
 
-/* line 50, ../../sass/admin/_base-admin.scss */
+/* line 47, ../../sass/admin/_base-admin.scss */
+.utility-button {
+  color: #ecedde;
+  background: #34383d;
+  -webkit-box-shadow: #1e2328 0 4px 0;
+  -moz-box-shadow: #1e2328 0 4px 0;
+  box-shadow: #1e2328 0 4px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 4px 12px 4px 12px;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 240ms;
+  -moz-transition-duration: 240ms;
+  -o-transition-duration: 240ms;
+  transition-duration: 240ms;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 59, ../../sass/admin/_base-admin.scss */
+.utility-button span {
+  position: relative;
+  font-size: 2em;
+  display: inline-block;
+  top: 3px;
+}
+/* line 66, ../../sass/admin/_base-admin.scss */
+.utility-button:hover {
+  background: #3f4448;
+}
+/* line 70, ../../sass/admin/_base-admin.scss */
+.utility-button:active {
+  margin-top: 2px;
+  -webkit-box-shadow: #1e2328 0 2px 0;
+  -moz-box-shadow: #1e2328 0 2px 0;
+  box-shadow: #1e2328 0 2px 0;
+}
+
+/* line 76, ../../sass/admin/_base-admin.scss */
 .column {
   padding-right: 0em;
 }
 
-/* line 54, ../../sass/admin/_base-admin.scss */
+/* line 80, ../../sass/admin/_base-admin.scss */
 .entypo {
   font-family: 'EntypoRegular';
 }
 
-/* line 58, ../../sass/admin/_base-admin.scss */
+/* line 84, ../../sass/admin/_base-admin.scss */
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 96, ../../sass/admin/_base-admin.scss */
+.flashFailure, .flashSuccess {
+  margin-top: 30px;
+  height: 2.5em;
+  background: #cbcbcb;
+  width: 100%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 103, ../../sass/admin/_base-admin.scss */
+.flashFailure p, .flashSuccess p {
+  width: 100%;
+  text-align: center;
+  color: #ecedde;
+  font-family: "Traveler";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  line-height: 2.3em;
+  color: #1e2328;
+}
+
+/* line 112, ../../sass/admin/_base-admin.scss */
 .hide {
   display: none;
 }
@@ -720,31 +730,30 @@ footer div.half:last-child {
 }
 
 /* line 1, ../../sass/admin/modules/_tables.scss */
-table {
+table.style {
   margin-top: 30px;
   width: 100%;
   border-collapse: separate;
 }
 /* line 5, ../../sass/admin/modules/_tables.scss */
-table tr:first-child th:first-child {
+table.style tr:first-child th:first-child {
   -moz-border-radius-topleft: 10px;
   -webkit-border-top-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 /* line 6, ../../sass/admin/modules/_tables.scss */
-table tr:first-child th:last-child {
+table.style tr:first-child th:last-child {
   -moz-border-radius-topright: 10px;
   -webkit-border-top-right-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-/* line 10, ../../sass/admin/modules/_tables.scss */
-thead {
+/* line 8, ../../sass/admin/modules/_tables.scss */
+table.style thead {
   padding: 20px;
   background: #ef691d;
 }
-/* line 16, ../../sass/admin/modules/_tables.scss */
-thead tr th {
+/* line 14, ../../sass/admin/modules/_tables.scss */
+table.style thead tr th {
   padding: 10px;
   color: #ecedde;
   font-family: "AlternateGothicCom-No2";
@@ -754,59 +763,58 @@ thead tr th {
   line-height: 1.1;
   text-transform: uppercase;
 }
-/* line 19, ../../sass/admin/modules/_tables.scss */
-thead tr th a {
+/* line 17, ../../sass/admin/modules/_tables.scss */
+table.style thead tr th a {
   color: #ecedde;
   text-decoration: none;
 }
-/* line 23, ../../sass/admin/modules/_tables.scss */
-thead tr th a:hover {
+/* line 21, ../../sass/admin/modules/_tables.scss */
+table.style thead tr th a:hover {
   text-decoration: underline;
 }
-/* line 28, ../../sass/admin/modules/_tables.scss */
-thead tr th:first-child {
+/* line 26, ../../sass/admin/modules/_tables.scss */
+table.style thead tr th:first-child {
   padding-left: 20px;
 }
-
-/* line 38, ../../sass/admin/modules/_tables.scss */
-tbody tr:nth-child(odd) {
+/* line 36, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr:nth-child(odd) {
   background: #ef4c0b;
 }
-/* line 42, ../../sass/admin/modules/_tables.scss */
-tbody tr:nth-child(even) {
+/* line 40, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr:nth-child(even) {
   background: #f25a29;
 }
-/* line 46, ../../sass/admin/modules/_tables.scss */
-tbody tr td {
+/* line 44, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td {
   padding: 10px;
   color: #ecedde;
 }
-/* line 50, ../../sass/admin/modules/_tables.scss */
-tbody tr td:first-child {
+/* line 48, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td:first-child {
   padding-left: 20px;
   color: #992a07;
 }
-/* line 55, ../../sass/admin/modules/_tables.scss */
-tbody tr td:nth-child(3), tbody tr td:nth-child(4) {
+/* line 53, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td:nth-child(3), table.style tbody tr td:nth-child(4) {
   color: #992a07;
 }
-/* line 60, ../../sass/admin/modules/_tables.scss */
-tbody tr td.actions a {
+/* line 58, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td.actions a {
   text-decoration: none;
   line-height: 0.3em;
   color: #ecedde;
 }
-/* line 65, ../../sass/admin/modules/_tables.scss */
-tbody tr td.actions a:first-child {
+/* line 63, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td.actions a:first-child {
   font-size: 2.0em;
   padding-right: 10px;
 }
-/* line 70, ../../sass/admin/modules/_tables.scss */
-tbody tr td.actions a:last-child {
+/* line 68, ../../sass/admin/modules/_tables.scss */
+table.style tbody tr td.actions a:last-child {
   font-size: 2.2em;
 }
 
-/* line 79, ../../sass/admin/modules/_tables.scss */
+/* line 83, ../../sass/admin/modules/_tables.scss */
 #tfoot {
   background: #1e2328;
   -moz-border-radius-bottomleft: 10px;
@@ -818,26 +826,26 @@ tbody tr td.actions a:last-child {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 85, ../../sass/admin/modules/_tables.scss */
+/* line 89, ../../sass/admin/modules/_tables.scss */
 #tfoot div {
   color: #ecedde;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 90, ../../sass/admin/modules/_tables.scss */
+/* line 94, ../../sass/admin/modules/_tables.scss */
 #tfoot div:first-child {
   width: 3%;
   padding-left: 2%;
   float: left;
   background: #34383d;
 }
-/* line 97, ../../sass/admin/modules/_tables.scss */
+/* line 101, ../../sass/admin/modules/_tables.scss */
 #tfoot div:nth-child(2) {
   width: 90%;
   float: left;
   text-align: center;
 }
-/* line 103, ../../sass/admin/modules/_tables.scss */
+/* line 107, ../../sass/admin/modules/_tables.scss */
 #tfoot div:last-child {
   width: 3%;
   padding-right: 2%;
@@ -845,13 +853,152 @@ tbody tr td.actions a:last-child {
   background: #34383d;
   text-align: right;
 }
-/* line 113, ../../sass/admin/modules/_tables.scss */
+/* line 117, ../../sass/admin/modules/_tables.scss */
 #tfoot span.prev, #tfoot span.next {
   font-family: 'EntypoRegular';
   font-size: 2em;
   line-height: 0.3em;
+  position: relative;
+  top: 2px;
 }
-/* line 118, ../../sass/admin/modules/_tables.scss */
+/* line 124, ../../sass/admin/modules/_tables.scss */
 #tfoot span.prev.disabled, #tfoot span.next.disabled {
   color: #1e2328;
+}
+/* line 128, ../../sass/admin/modules/_tables.scss */
+#tfoot span.prev a, #tfoot span.next a {
+  width: 100%;
+  text-align: center;
+  font-family: 'EntypoRegular';
+  text-decoration: none;
+  color: #ecedde;
+}
+
+/* line 138, ../../sass/admin/modules/_tables.scss */
+#addEvent {
+  float: right;
+}
+
+/* line 1, ../../sass/admin/modules/_forms.scss */
+form {
+  margin-top: 30px;
+}
+
+/* line 5, ../../sass/admin/modules/_forms.scss */
+label {
+  display: none;
+}
+
+/* line 9, ../../sass/admin/modules/_forms.scss */
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+}
+/* line 14, ../../sass/admin/modules/_forms.scss */
+input[type=text]:focus {
+  outline: none;
+}
+
+/* line 19, ../../sass/admin/modules/_forms.scss */
+input[type=text] {
+  width: 98%;
+  padding-left: 2%;
+  background: white;
+  color: #1e2328;
+  font-family: "Traveler";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  margin-bottom: 0.5em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+/* line 2, ../../sass/admin/_mixins.scss */
+input[type=text].placeholder {
+  color: #bcbdb1;
+  font-family: "Traveler";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+}
+/* line 5, ../../sass/admin/_mixins.scss */
+input[type=text]:-moz-placeholder {
+  color: #bcbdb1;
+  font-family: "Traveler";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+}
+/* line 8, ../../sass/admin/_mixins.scss */
+input[type=text]::-webkit-input-placeholder {
+  color: #bcbdb1;
+  font-family: "Traveler";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+}
+
+/* line 31, ../../sass/admin/modules/_forms.scss */
+input[type=submit] {
+  margin-left: -1px;
+  color: #ecedde;
+  font-family: "Traveler";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.45;
+  border: none;
+  background: #f07833;
+  -webkit-box-shadow: #ef691d 0 4px 0;
+  -moz-box-shadow: #ef691d 0 4px 0;
+  box-shadow: #ef691d 0 4px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 4px 12px 4px 12px;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 240ms;
+  -moz-transition-duration: 240ms;
+  -o-transition-duration: 240ms;
+  transition-duration: 240ms;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 45, ../../sass/admin/modules/_forms.scss */
+input[type=submit] span {
+  position: relative;
+  font-size: 2em;
+  display: inline-block;
+  top: 3px;
+}
+/* line 52, ../../sass/admin/modules/_forms.scss */
+input[type=submit]:hover {
+  background: #f17f3e;
+}
+/* line 56, ../../sass/admin/modules/_forms.scss */
+input[type=submit]:active {
+  position: relative;
+  top: 2px;
+  -webkit-box-shadow: #ef691d 0 2px 0;
+  -moz-box-shadow: #ef691d 0 2px 0;
+  box-shadow: #ef691d 0 2px 0;
 }
