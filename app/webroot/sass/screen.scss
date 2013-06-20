@@ -34,6 +34,16 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url('fonts/entypo.eot');
+  src: url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+  url('fonts/entypo.woff') format('woff'),
+  url('fonts/entypo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "_variables";
 @import "_base";
 

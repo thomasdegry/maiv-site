@@ -47,7 +47,7 @@
     </ul>
     <footer>A Dreamteam production</footer>
 </div>
-
+<div id="test" style="position: relative;">
     <header class="site-header is-collapsed">
         <div class="container">
             <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
@@ -66,7 +66,7 @@
                         <?php echo $this->Html->link('Festivals', array('controller' => 'events', 'action' => 'index'), array('class' => 'nav-item')); ?>
                     </li>
                     <li class="toggle-nav">
-                        <a href="#" class="nav-item">Toggle</a>
+                        <a href="#">&#9776;</a>
                     </li>
                 </ul>
             </nav>
@@ -158,7 +158,7 @@
             </div>
         </div>
     </footer>
-
+</div>
     <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'main.js')); ?>
 </body>
 </html>

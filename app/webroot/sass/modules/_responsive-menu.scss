@@ -24,7 +24,7 @@ $sidr-text-color: #eceddf;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-    @include font-mission-script($sidr-text-color, 1.2em);
+    @include font-mission-script($sidr-text-color, 1.4em);
     text-transform: capitalize;
   }
 
@@ -83,6 +83,7 @@ $sidr-text-color: #eceddf;
       display: block;
       margin: 0;
       line-height: 48px;
+      font-size: 1.2em;
       &:nth-child(odd){
         background-color: #2a3137;
       }
@@ -133,16 +134,29 @@ $sidr-text-color: #eceddf;
 
 .toggle-nav {
   position: relative;
+  @include transition-property(left);
+  @include transition-duration(.4s);
+  @include transition-timing-function(ease-in);
+
+  a {
+    font-family: "EntypoRegular";
+    font-size: 2.4em;
+    text-decoration: none;
+    color: $blue;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
   &.is-collapsed {
     left: 0px;
-    @include transition-property(left);
-    @include transition-duration(.5s);
-    @include transition-timing-function(ease-out);
   }
+
   &.is-expanded {
-    left: 300px;
+    left: 280px;
     @include transition-property(left);
-    @include transition-duration(.5s);
+    @include transition-duration(.2s);
     @include transition-timing-function(ease-in);
   }
 }

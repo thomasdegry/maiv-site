@@ -260,8 +260,13 @@ $(window).load(function () {
     $('.toggle-nav a').sidr();
     $("body").on("click", function(){
         console.log("click");
-        $.sidr('close', 'sidr');
+        $.sidr('close', 'sidr', function(){
+            console.log("dqsds");
+            $('.toggle-nav').toggleClass('is-collapsed');
+            $('.toggle-nav').toggleClass('is-expanded');
+        });
     });
+
 
     $('.toggle-nav').on('click', 'a', function () {
         $('.toggle-nav').toggleClass('is-collapsed');
