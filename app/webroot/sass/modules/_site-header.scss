@@ -1,12 +1,10 @@
 .site-header {
     background-color: $beige;
-    // border-bottom: .5em solid #c15024;
     box-shadow: 0 .5em 0 rgba(0, 0, 0, .2);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 4.375em;
     width: 100%;
     z-index: 999;
 }
@@ -16,39 +14,23 @@
     background-position: center;
     background-repeat: no-repeat;
     display: block;
-    height: 175px;
+    @include background-size(contain);
+    height: 122px;
+    left: 50%;
+    margin-left: -60px;
     @include hide-text;
-    left: -600px;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    top: -2.15em;
-    @include transition(all 440ms ease-in-out);
-    width: 170px;
-
-    .show-logo & {
-        display: block;
-        left: 0px;
-        opacity: 1;
-    }
+    bottom: -3.9em;
+    width: 120px;
 }
 
 .horizontal-nav {
     @include font-alternate($blue, 1.6em);
-    padding-left: 7em;
-    width: 800px;
-    @include transition(padding-left 330ms ease-in-out 110ms);
-
-    li {
-        @include inline-block;
-    }
-
-    .show-logo & {
-        padding-left: 8em;
-    }
 }
 
 .nav-item {
-    @include inline-block;
+    display: block;
     color: $blue;
     padding: .8em 1.5em;
     text-decoration: none;
@@ -57,4 +39,65 @@
     &:hover {
         color: $orange;
     }
+}
+
+@media only all and (min-width: 48em) {
+    .circle-logo {
+        bottom: -3.35em;
+    }
+}
+
+@media only all and (max-width: 64em) {
+    .site-header.is-collapsed {
+        top: -17em;
+        @include transition(top 220ms ease-in);
+    }
+
+    .site-header.is-expanded {
+        top: 0;
+        @include transition(top 220ms ease-out);
+    }
+}
+
+@media only all and (min-width: 64em) {
+    .site-header {
+        height: 4.375em;
+    }
+
+    .horizontal-nav {
+        padding-left: 7em;
+        @include transition(padding-left 330ms ease-in-out 110ms);
+        width: 800px;
+
+        li {
+            @include inline-block;
+        }
+
+        .toggle-nav {
+            display: none;
+        }
+        .show-logo & {
+            padding-left: 8em;
+        }
+    }
+
+    .nav-item {
+        @include inline-block;
+    }
+
+    .circle-logo {
+        height: 175px;
+        left: -600px;
+        opacity: 0;
+        bottom: auto;
+        top: -2.15em;
+        @include transition(all 440ms ease-in-out);
+        width: 170px;
+
+        .show-logo & {
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
 }

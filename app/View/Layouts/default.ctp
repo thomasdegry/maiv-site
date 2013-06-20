@@ -36,7 +36,7 @@
     ?>
 </head>
 <body class="<?php if ($this->action !== 'display' && $this->name !== 'pages') { echo 'show-logo'; } ?>">
-    <header class="site-header">
+    <header class="site-header is-collapsed">
         <div class="container">
             <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
             <nav class="horizontal-nav">
@@ -52,6 +52,9 @@
                     </li>
                     <li>
                         <?php echo $this->Html->link('Festivals', array('controller' => 'events', 'action' => 'index'), array('class' => 'nav-item')); ?>
+                    </li>
+                    <li class="toggle-nav">
+                        <a href="#" class="nav-item">Toggle</a>
                     </li>
                 </ul>
             </nav>
