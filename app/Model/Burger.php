@@ -35,11 +35,7 @@ class Burger extends AppModel {
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-/**
- * belongsTo associations
- *
- * @var array
- */
+
 	public $belongsTo = array(
 		'Event' => array(
 			'className' => 'Event',
@@ -50,11 +46,6 @@ class Burger extends AppModel {
 		)
 	);
 
-/**
- * hasMany associations
- *
- * @var array
- */
 	public $hasMany = array(
 		'Creation' => array(
 			'className' => 'Creation',
