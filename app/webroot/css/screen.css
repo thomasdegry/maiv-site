@@ -105,7 +105,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url("../images/sprite.svg");
+  background-image: url("../img/sprite.svg");
   background-repeat: no-repeat;
   display: block;
 }
@@ -840,19 +840,9 @@ p {
   margin-left: -20px;
   -webkit-animation: bounce .7s infinite;
   -moz-animation: bounce .7s infinite;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  -ms-animation: bounce .7s infinite;
-  animation: bounce .7s infinite;
-=======
-  -ms-animation: bounce 0.7s infinite;
-  animation: bounce 0.7s infinite;
->>>>>>> Corrected font embedding
-=======
   -ms-animation: bounce .7s infinite;
   -o-animation: bounce .7s infinite;
   animation: bounce .7s infinite;
->>>>>>> Various responsive fixes
   -webkit-animation-direction: alternate;
   -moz-animation-direction: alternate;
   -ms-animation-direction: alternate;

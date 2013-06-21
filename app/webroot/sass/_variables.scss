@@ -52,7 +52,7 @@ $font-mission-script: 'Mission Script';
 
 %sprite {
     @include hide-text;
-    background-image: url('../images/sprite.svg');
+    background-image: url('../img/sprite.svg');
     background-repeat: no-repeat;
     display: block;
 }
