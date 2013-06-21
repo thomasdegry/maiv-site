@@ -82,7 +82,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face {
   font-family: 'Alternate Gothic';
   src: url("fonts/alternate.eot");
-  src: url("fonts/alternate.eot?#iefix") format("embedded-opentype"), url("fonts/alternate.woff") format("woff"), url("fonts/alternate.ttf") format("truetype");
+  src: url("fonts/alternate.eot?#iefix") format("embedded-opentype"), url("fonts/alternate.woff") format("woff"), url("fonts/alternate.ttf") format("truetype"), url("fonts/alternate.svg#AlternateGothicCom-No2") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -313,7 +313,7 @@ p {
 /* line 28, ../sass/modules/_site-header.scss */
 .horizontal-nav {
   color: #2d353a;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.6em;
   font-style: normal;
   font-weight: normal;
@@ -471,7 +471,7 @@ p {
 /* line 8, ../sass/modules/_horizontal-slider.scss */
 .horizontal-slider-navigation-title {
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 2.125em;
   font-style: normal;
   font-weight: normal;
@@ -520,7 +520,7 @@ p {
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
   color: #2d353a;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.7em;
   font-style: normal;
   font-weight: normal;
@@ -703,7 +703,7 @@ p {
 /* line 37, ../sass/modules/_feature-slider.scss */
 .feature-slogan {
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 2.75em;
   font-style: normal;
   font-weight: normal;
@@ -757,8 +757,13 @@ p {
   margin-left: -20px;
   -webkit-animation: bounce .7s infinite;
   -moz-animation: bounce .7s infinite;
+<<<<<<< HEAD
   -ms-animation: bounce .7s infinite;
   animation: bounce .7s infinite;
+=======
+  -ms-animation: bounce 0.7s infinite;
+  animation: bounce 0.7s infinite;
+>>>>>>> Corrected font embedding
   -webkit-animation-direction: alternate;
   background: url("../img/sprite.svg") no-repeat -6px -5px;
 }
@@ -934,7 +939,7 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: white;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.125em;
   font-style: normal;
   font-weight: normal;
@@ -1060,7 +1065,7 @@ p {
 /* line 15, ../sass/modules/_calendar.scss */
 .calendar-item-title {
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 4.75em;
   font-style: normal;
   font-weight: normal;
@@ -1104,7 +1109,7 @@ p {
 /* line 10, ../sass/modules/_gallery.scss */
 .gallery-introduction {
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 3em;
   font-style: normal;
   font-weight: normal;
@@ -1138,7 +1143,7 @@ p {
 .gallery-item-heading {
   background-color: #2d353a;
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.5em;
   font-style: normal;
   font-weight: normal;
@@ -1175,7 +1180,7 @@ p {
   border-radius: 1.6em;
   display: block;
   color: #ecedde;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.4em;
   font-style: normal;
   font-weight: normal;
@@ -1212,7 +1217,7 @@ p {
   border-right-color: rgba(25, 32, 36, 0.63);
   /* Theme Settings */
   color: #eceddf;
-  font-family: "AlternateGothicCom-No2";
+  font-family: "Alternate Gothic";
   font-size: 1.2em;
   font-style: normal;
   font-weight: normal;
