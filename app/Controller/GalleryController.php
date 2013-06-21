@@ -27,6 +27,7 @@ class GalleryController extends AppController {
                 $event_id = $previous_event["Event"]["id"];
             }
 
+
         }
 
         //Get previous events for dropdown
@@ -40,7 +41,7 @@ class GalleryController extends AppController {
         ));
 
         $this->loadModel('Burger');
-
+        $this->Burger->recursive = 1;
         $this->paginate = array(
             'conditions' => array('Burger.event_id' => $event_id),
             'limit' => '12',
@@ -56,7 +57,12 @@ class GalleryController extends AppController {
             echo json_encode($paginated);
         }
 
+        // echo '<pre>';
+        // debug($paginated);
+        // echo '</pre>';
+        // die;
+
         $this->set('burgers', $paginated);
-        $this->set('previous_events', $list_previous_events);
+        $this->set('previousEvents', $list_previous_events);
     }
 }
