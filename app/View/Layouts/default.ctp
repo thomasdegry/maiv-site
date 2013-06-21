@@ -36,17 +36,6 @@
     ?>
 </head>
 <body class="<?php if ($this->action !== 'display' && $this->name !== 'pages') { echo 'show-logo'; } ?>">
-<!-- <div id="sidr">
-    <h1>Navigation</h1>
-    <ul>
-        <li><a href="#">The campaign</a></li>
-        <li class="active"><a href="#">Festival Flavours</a></li>
-        <li><a href="#">Festivals</a></li>
-        <li><a href="#">Burger Pile</a></li>
-    </ul>
-    <footer>A Dreamteam production</footer>
-</div>
- -->
 <header class="site-header">
     <div class="container">
         <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
@@ -70,7 +59,7 @@
 </header>
 
 <div id="site-wrapper">
-    <a href="#sidr-main" class="toggle-nav">&#9776;</a>
+    <a href="#sidr-main" class="toggle-nav">&#9776; <span class="current-page">The Campaign</span></a>
     <div id="site">
         <?php echo $this->Session->flash(); ?>
         <?php echo $this->fetch('content'); ?>
@@ -160,6 +149,6 @@
         </footer>
     </div>
 </div>
-    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'main.js')); ?>
+    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/fastclick.js', 'main.js')); ?>
 </body>
 </html>

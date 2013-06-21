@@ -4,13 +4,25 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 9;
+}
 
-    // .app-demo-started is a class that gets added to the body
-    // with Javascript when the demo should scroll
-    // and removed when the demo shouldn't scroll
-    .app-demo-started & {
-        background-attachment: fixed;
-        background-position: center 50%;
+@media only all and (max-width: 64em) {
+    .app-demo {
+        @include background-size(350px 350px);
+    }
+}
+
+@media only all and (min-width: 64em) {
+    .app-demo {
+        background-position: center center;
+
+        // .app-demo-started is a class that gets added to the body
+        // with Javascript when the demo should scroll
+        // and removed when the demo shouldn't scroll
+        .app-demo-started & {
+            background-attachment: fixed;
+            background-position: center 50%;
+        }
     }
 }
 

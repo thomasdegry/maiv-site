@@ -7,7 +7,7 @@ var AppDemo = (function () {
             start: '.app-demo-start',
             end: '.app-demo-end',
             active: 'app-demo-started',
-            container: 'body'
+            container: '#site'
         };
 
         this.options = _.extend(this.options, options);
@@ -24,8 +24,8 @@ var AppDemo = (function () {
 
         this.setScrollPositions();
 
-        $(window).on('resize', _.bind(this.setScrollPositions, this));
-        $(window).on('scroll', _.bind(this.detectScroll, this));
+        this.el.container.on('resize', _.bind(this.setScrollPositions, this));
+        this.el.container.on('scroll', _.bind(this.detectScroll, this));
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -34,7 +34,7 @@ var AppDemo = (function () {
     };
 
     AppDemo.prototype.detectScroll = function () {
-        var scrollPos = $(window).scrollTop();
+        var scrollPos = this.el.container.scrollTop();
 
         if (scrollPos >= this.startPosition && scrollPos < this.endPosition && !this.el.container.hasClass(this.options.active)) {
             this.el.container.addClass(this.options.active);
@@ -42,6 +42,14 @@ var AppDemo = (function () {
 
         if ((scrollPos > this.endPosition || scrollPos < this.startPosition) && this.el.container.hasClass(this.options.active)) {
             this.el.container.removeClass(this.options.active);
+        }
+
+        if ($('body.show-logo').length === 0) {
+            if (scrollPos > 500) {
+                $('body').addClass('show-logo');
+            } else {
+                $('body').removeClass('show-logo');
+            }
         }
     };
 
@@ -238,22 +246,12 @@ var HorizontalSlider = (function () {
 
 /* globals AppDemo */
 /* globals HorizontalSlider */
+/* globals FastClick */
 
 $(window).load(function () {
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();
-
-    // Show logo on scroll if it isn't shown already
-    if ($('body.show-logo').length === 0) {
-        $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 500) {
-                $('body').addClass('show-logo');
-            } else {
-                $('body').removeClass('show-logo');
-            }
-        });
-    }
 
     var horizontalSlider = new HorizontalSlider();
 
@@ -262,23 +260,7 @@ $(window).load(function () {
         source: '.site-header'
     });
 
-    $('.toggle-nav').on('click', function (e) {
-        console.log('wow!');
-    });
-
-    // $("body").on("click", function(){
-    //     console.log("click");
-    //     $.sidr('close', 'sidr', function(){
-    //         $('.toggle-nav').toggleClass('is-collapsed');
-    //         $('.toggle-nav').toggleClass('is-expanded');
-    //     });
-    // });
-
-
-    // $('.toggle-nav').on('click', 'a', function () {
-    //     $('.toggle-nav').toggleClass('is-collapsed');
-    //     $('.toggle-nav').toggleClass('is-expanded');
-    // });
+    FastClick.attach(document.body);
 });
 
 })();
