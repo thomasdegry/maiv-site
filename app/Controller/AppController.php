@@ -55,7 +55,7 @@ class AppController extends Controller {
         }
         $this->set('next_event', $next_event);
 
-        $this->Auth->allow('index', 'login', 'display', 'add');
+        $this->Auth->allow('index', 'login', 'display');
         $this->set('current_user', $this->Auth->user());
     }
 

@@ -5,14 +5,19 @@ class GalleryController extends AppController {
 
     public function index ($event_id = null) {
         $event_id = $event_id;
+        $current_date = $this->viewVars["current_date"];
+
+        //Check if a event_id was passed to the controller
         if($event_id == null) {
             $this->loadModel('Event');
+
+            //Check if a event is ongoing (set in app controller)
             $event = $this->viewVars["current_event"];
             if(!empty($event)) {
                 $event_id = $event["Event"]["id"];
             }
 
-            $current_date = $this->viewVars["current_date"];
+            //No current event so we have to fetch the previosu one to display the creations
             if(empty($event_id)) {
                 $previous_event = $this->Event->find('first', array(
                     'conditions' => array(
@@ -23,6 +28,16 @@ class GalleryController extends AppController {
             }
 
         }
+
+        //Get previous events for dropdown
+        $list_previous_events = $this->Event->find('all', array(
+            'conditions' => array(
+                'Event.start <=' => $current_date
+            ),
+            'order' => array(
+                'Event.start' => 'DESC'
+            )
+        ));
 
         $this->loadModel('Burger');
 
@@ -41,5 +56,6 @@ class GalleryController extends AppController {
         }
 
         $this->set('burgers', $paginated);
+        $this->set('previous_events', $list_previous_events);
     }
 }
