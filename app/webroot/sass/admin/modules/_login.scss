@@ -18,4 +18,12 @@
         top: 120px; left: 50%;
         margin-left: -110px;
     }
+
+    #returnToFrontEnd {
+        position: relative;
+
+        &:active {
+            top: 2px;
+        }
+    }
 }

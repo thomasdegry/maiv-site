@@ -536,7 +536,19 @@ h1 {
   height: 12em;
   position: relative;
 }
-/* line 7, ../../sass/admin/modules/_site-stats.scss */
+@media only screen and (max-width: 53em) {
+  /* line 1, ../../sass/admin/modules/_site-stats.scss */
+  #stats {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 1, ../../sass/admin/modules/_site-stats.scss */
+  #stats {
+    height: 400px;
+  }
+}
+/* line 17, ../../sass/admin/modules/_site-stats.scss */
 #stats:before {
   width: 140px;
   height: 140px;
@@ -554,12 +566,12 @@ h1 {
   border-radius: 70px;
 }
 
-/* line 21, ../../sass/admin/modules/_site-stats.scss */
+/* line 31, ../../sass/admin/modules/_site-stats.scss */
 .column {
   padding-top: 5em;
   text-align: center;
 }
-/* line 24, ../../sass/admin/modules/_site-stats.scss */
+/* line 34, ../../sass/admin/modules/_site-stats.scss */
 .column h2 {
   color: #ecedde;
   font-family: "AlternateGothicCom-No2";
@@ -569,7 +581,7 @@ h1 {
   line-height: 1.1;
   text-transform: uppercase;
 }
-/* line 27, ../../sass/admin/modules/_site-stats.scss */
+/* line 37, ../../sass/admin/modules/_site-stats.scss */
 .column span {
   color: #323b3f;
   font-family: "Traveler";
@@ -578,6 +590,12 @@ h1 {
   font-weight: normal;
   line-height: 1.45;
   line-height: 2em;
+}
+@media only screen and (max-width: 53em) {
+  /* line 42, ../../sass/admin/modules/_site-stats.scss */
+  .column:last-child {
+    float: none;
+  }
 }
 
 /* line 1, ../../sass/admin/modules/_site-footer.scss */
@@ -1043,8 +1061,14 @@ input[type=submit].disabled:active {
 .half {
   width: 50%;
 }
+@media only screen and (max-width: 1100px) {
+  /* line 7, ../../sass/admin/modules/_push.scss */
+  .half {
+    width: 100%;
+  }
+}
 
-/* line 11, ../../sass/admin/modules/_push.scss */
+/* line 15, ../../sass/admin/modules/_push.scss */
 #pushNotification {
   width: 400px;
   position: absolute;
@@ -1053,7 +1077,7 @@ input[type=submit].disabled:active {
   overflow: visible;
 }
 
-/* line 18, ../../sass/admin/modules/_push.scss */
+/* line 22, ../../sass/admin/modules/_push.scss */
 #btnSendPush {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -1068,7 +1092,7 @@ input[type=submit].disabled:active {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 23, ../../sass/admin/modules/_push.scss */
+/* line 27, ../../sass/admin/modules/_push.scss */
 #btnSendPush.fadeAway {
   -webkit-transform: translate(80px, 0px);
   -moz-transform: translate(80px, 0px);
@@ -1079,7 +1103,7 @@ input[type=submit].disabled:active {
   opacity: 0;
 }
 
-/* line 29, ../../sass/admin/modules/_push.scss */
+/* line 33, ../../sass/admin/modules/_push.scss */
 #loader {
   width: 40px;
   position: relative;
@@ -1100,10 +1124,41 @@ input[type=submit].disabled:active {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 39, ../../sass/admin/modules/_push.scss */
+/* line 43, ../../sass/admin/modules/_push.scss */
 #loader.show {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* line 48, ../../sass/admin/modules/_push.scss */
+#notification {
+  width: 400px;
+  position: absolute;
+  left: 624px;
+  top: 130px;
+}
+@media only screen and (max-width: 1100px) {
+  /* line 48, ../../sass/admin/modules/_push.scss */
+  #notification {
+    display: none;
+  }
+}
+
+/* line 59, ../../sass/admin/modules/_push.scss */
+.styled-select {
+  position: relative;
+}
+/* line 62, ../../sass/admin/modules/_push.scss */
+.styled-select span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 3em;
+  color: #bcbdb1;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 /* line 1, ../../sass/admin/modules/_login.scss */
@@ -1128,4 +1183,12 @@ input[type=submit].disabled:active {
   top: 120px;
   left: 50%;
   margin-left: -110px;
+}
+/* line 22, ../../sass/admin/modules/_login.scss */
+#login #returnToFrontEnd {
+  position: relative;
+}
+/* line 25, ../../sass/admin/modules/_login.scss */
+#login #returnToFrontEnd:active {
+  top: 2px;
 }

@@ -1,6 +1,6 @@
 <div id="login">
      <h1>Login</h1>
-     <div class="hide">
+     <div class="">
           <?php echo $this->Session->flash('auth'); ?>
           <?php echo $this->Form->create(); ?>
                <?php
@@ -27,5 +27,5 @@
          <canvas id="qr-canvas" width="800" height="600"></canvas>
      </div>
      <a href="#" id="startCam" class="big-button-orange">Start Scanning</a>
-     <?php echo $this->Html->link("<span class='entypo'>&#59229;</span> Back", array('controller'=>'Pages', 'action'=>'display'), array('class' => 'utility-button', 'escape' => false)); ?>
+     <?php echo $this->Html->link("<span class='entypo'>&#59229;</span> Back", array('controller'=>'Pages', 'action'=>'display'), array('class' => 'utility-button', 'id' => 'returnToFrontEnd', 'escape' => false)); ?>
 </div>
