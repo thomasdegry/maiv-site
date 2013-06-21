@@ -606,6 +606,67 @@ span.dreamteam {
   line-height: 5em;
 }
 
+/* line 1, ../sass/modules/_pagination.scss */
+.pagination {
+  padding-bottom: 2em;
+}
+
+/* line 5, ../sass/modules/_pagination.scss */
+.pagination-item {
+  background-color: #ecedde;
+  border-radius: 1em;
+  -webkit-box-shadow: -0.1rem 0.1rem 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -0.1rem 0.1rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: -0.1rem 0.1rem 0 rgba(0, 0, 0, 0.15);
+  color: #2d353a;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: #2d353a;
+  font-family: "Alternate Gothic";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  height: 2em;
+  line-height: 2;
+  margin-right: .4em;
+  text-align: center;
+  width: 2em;
+}
+/* line 18, ../sass/modules/_pagination.scss */
+.pagination-item a {
+  color: #2d353a;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-decoration: none;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+/* line 27, ../sass/modules/_pagination.scss */
+.pagination-item.current a {
+  color: #ef691d;
+}
+
+/* line 32, ../sass/modules/_pagination.scss */
+.pagination-item-active {
+  color: #ef691d;
+}
+
+/* line 36, ../sass/modules/_pagination.scss */
+.pagination-item-disabled {
+  display: none;
+}
+
 /* line 1, ../sass/modules/_full-width-image.scss */
 .full-width-image {
   background-image: url("../img/full-width-image.jpg");

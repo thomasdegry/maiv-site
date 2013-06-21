@@ -81,13 +81,18 @@
             </li>
             <?php endforeach; ?>
         </ul>
+        <div class="pagination">
+            <?php
+                echo $this->Paginator->prev('«', array('class' => 'pagination-item pagination-previous', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+
+                echo $this->Paginator->numbers(array(
+                             'class' => 'pagination-item',
+                             'separator' => '',
+                             'currentClass' => 'pagination-item-active'
+                        ));
+
+                echo $this->Paginator->next('»', array('class' => 'pagination-item pagination-next', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+            ?>
+        </div>
     </div>
 </section>
-
-
-<div><?php echo $this->Paginator->prev('Previous', array('class' => 'prev', 'escape' => false), null, array('class' => 'prev disabled', 'escape' => false)); ?></div>
-<div><?php echo $this->Paginator->counter(array('format' => __('Page {:page} of {:pages}, {:count} events found in total'))); ?></div>
-<div><?php echo $this->Paginator->numbers(array(
-                         "class" => "pagination-item"
-                    )); ?></div>
-<div><?php echo $this->Paginator->next('Next', array('class' => 'prev', 'escape' => false), null, array('class' => 'next disabled', 'escape' => false)); ?></div>
