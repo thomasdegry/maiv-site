@@ -3,18 +3,43 @@ App::uses('AppController', 'Controller');
 
 class GalleryController extends AppController {
 
-    public function index ($eventID = 0) {
+    public function index ($event_id = null) {
+        $event_id = $event_id;
+        if($event_id == null) {
+            $this->loadModel('Event');
+            $event = $this->viewVars["current_event"];
+            if(!empty($event)) {
+                $event_id = $event["Event"]["id"];
+            }
+
+            $current_date = $this->viewVars["current_date"];
+            if(empty($event_id)) {
+                $previous_event = $this->Event->find('first', array(
+                    'conditions' => array(
+                        'Event.end <=' => $current_date
+                    )
+                ));
+                $event_id = $previous_event["Event"]["id"];
+            }
+
+        }
+
         $this->loadModel('Burger');
 
-        // if ($this->request->is('ajax')) {
-        //     echo json_encode $burgers:
-        //     exit;
-        // }
+        $this->paginate = array(
+            'conditions' => array('Burger.event_id' => $event_id),
+            'limit' => '12',
+            'order' => array(
+                'Burger.created' => 'DESC'
+            )
+        );
 
-        $params = ($eventID > 0) ? array('conditions' => array('event_id' => $eventID)) : array();
+        $paginated = $this->paginate('Burger');
 
-        $burgers = $this->Burger->find('all', $params);
-        $this->set('burgers', $burgers);
-        debug($burgers);
+        if($this->request->is('ajax')) {
+            echo json_encode($paginated);
+        }
+
+        $this->set('burgers', $paginated);
     }
 }

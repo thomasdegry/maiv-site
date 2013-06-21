@@ -2,6 +2,8 @@
 
 class AppController extends Controller {
     public $helpers = array('Html', 'Paginator', 'js');
+    public $current_date;
+    public $current_event;
 
     public $components = array(
         'Session',
@@ -36,6 +38,8 @@ class AppController extends Controller {
         );
         $this->Event->recursive = 0;
         $current_event = $this->Event->find('first', $options);
+        $this->set('current_event', $current_event);
+
         if(!empty($current_event)) {
             $next_event["event"] = $current_event["Event"];
             $next_event["now"] = true;
