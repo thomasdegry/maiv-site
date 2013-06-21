@@ -12,7 +12,7 @@ $sidr-text-color: #eceddf;
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
+  width: 11em;
   overflow-x: none;
   overflow-y: auto;
   border-right-style: solid;
@@ -47,11 +47,11 @@ $sidr-text-color: #eceddf;
 
   &.right {
     left: auto;
-    right: -260px;
+    right: -11em;
   }
 
   &.left {
-    left: -260px;
+    left: -11em;
     right: auto;
   }
 
@@ -132,31 +132,31 @@ $sidr-text-color: #eceddf;
 }
 
 
-.toggle-nav {
-  position: relative;
-  @include transition-property(left);
-  @include transition-duration(.4s);
-  @include transition-timing-function(ease-in);
+// .toggle-nav {
+//   position: relative;
+//   @include transition-property(left);
+//   @include transition-duration(.4s);
+//   @include transition-timing-function(ease-in);
 
-  a {
-    font-family: "EntypoRegular";
-    font-size: 2.4em;
-    text-decoration: none;
-    color: $blue;
+//   a {
+//     font-family: "EntypoRegular";
+//     font-size: 2.4em;
+//     text-decoration: none;
+//     color: $blue;
 
-    &:hover {
-      color: $orange;
-    }
-  }
+//     &:hover {
+//       color: $orange;
+//     }
+//   }
 
-  &.is-collapsed {
-    left: 0px;
-  }
+//   &.is-collapsed {
+//     left: 0px;
+//   }
 
-  &.is-expanded {
-    left: 280px;
-    @include transition-property(left);
-    @include transition-duration(.2s);
-    @include transition-timing-function(ease-in);
-  }
-}
+//   &.is-expanded {
+//     left: 280px;
+//     @include transition-property(left);
+//     @include transition-duration(.2s);
+//     @include transition-timing-function(ease-in);
+//   }
+// }

@@ -1,65 +1,78 @@
-.site-header {
-    background-color: $beige;
-    box-shadow: 0 .5em 0 rgba(0, 0, 0, .2);
-    position: fixed;
-    top: 0;
-    //left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-.circle-logo {
-    background-image: url('../img/circle-logo.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    @include background-size(contain);
-    height: 122px;
-    left: 50%;
-    margin-left: -60px;
-    @include hide-text;
-    opacity: 1;
-    position: absolute;
-    bottom: -3.9em;
-    width: 120px;
-}
-
-.horizontal-nav {
-    @include font-alternate($blue, 1.6em);
-}
-
-.nav-item {
-    display: block;
-    color: $blue;
-    padding: .8em 1.5em;
-    text-decoration: none;
-    @include transition(color 220ms ease-in-out);
-
-    &:hover {
-        color: $orange;
-    }
-}
-
-@media only all and (min-width: 48em) {
-    .circle-logo {
-        bottom: -3.35em;
-    }
-}
+// @media only all and (min-width: 48em) {
+//     .circle-logo {
+//         bottom: -3.35em;
+//     }
+// }
 
 @media only all and (max-width: 64em) {
-    .site-header.is-collapsed {
-        top: -17em;
-      //  @include transition(top 220ms ease-in);
+    .site-header {
+        display: none;
     }
 
-    .site-header.is-expanded {
-        top: 0;
-     //   @include transition(top 220ms ease-out);
+    .toggle-nav {
+        background-color: $beige;
+        box-shadow: 0 .25em 0 rgba(0, 0, 0, .2);
+        color: $blue;
+        font-size: 2em;
+        text-decoration: none;
+        position: absolute;
+        padding: 0 0 .2em .9em;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        line-height: 2.2;
+        z-index: 999;
     }
 }
 
 @media only all and (min-width: 64em) {
+    .site-header {
+        background-color: $beige;
+        box-shadow: 0 .5em 0 rgba(0, 0, 0, .2);
+        position: fixed;
+        top: 0;
+        //left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .toggle-nav {
+        display: none;
+    }
+
+    .circle-logo {
+        background-image: url('../img/circle-logo.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        @include background-size(contain);
+        height: 122px;
+        left: 50%;
+        margin-left: -60px;
+        @include hide-text;
+        opacity: 1;
+        position: absolute;
+        bottom: -3.9em;
+        width: 120px;
+    }
+
+    .horizontal-nav {
+        @include font-alternate($blue, 1.6em);
+    }
+
+    .nav-item {
+        display: block;
+        color: $blue;
+        padding: .8em 1.5em;
+        text-decoration: none;
+        @include transition(color 220ms ease-in-out);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
     .site-header {
         height: 4.375em;
     }
@@ -73,9 +86,6 @@
             @include inline-block;
         }
 
-        .toggle-nav {
-            display: none;
-        }
         .show-logo & {
             padding-left: 8em;
         }
