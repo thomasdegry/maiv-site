@@ -3,6 +3,16 @@
     display: block;
     height: 12em;
     position: relative;
+
+    @media only screen and (max-width: 53em) {
+        height: 500px;
+    }
+
+    @media only screen and (max-width: 48em) {
+        height: 400px;
+    }
+
+
     
     &:before {
         width: 140px;
@@ -27,5 +37,11 @@
     span {
         @include font-traveler(#323b3f, 1em);
         line-height: 2em;
+    }
+
+    &:last-child {
+        @media only screen and (max-width: 53em) {
+            float: none;
+        }
     }
 }

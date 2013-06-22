@@ -8,7 +8,6 @@ body {
     background-color: $beige;
     font-family: $font-traveler;
     height: 100%;
-    padding-top: 4.375em; // Height of header
 }
 
 @media only all and (max-width: 48em) {
@@ -38,7 +37,7 @@ body {
 }
 
 .blurry-background {
-    background-image: url('../images/blurry-background.jpg');
+    background-image: url('../img/blurry-background.jpg');
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -52,63 +51,73 @@ p {
 
 // Form elements
 
-// %form-element {
-//     @include appearance(none);
-//     background-color: $beige;
-//     border: none;
-//     border-radius: 0px;
-//     @include box-shadow(-.2em .3em 0 rgba(0, 0, 0, .2));
-//     @include box-sizing(border-box);
-//     @include font-alternate($blue, 1em);
-//     width: 100%;
-// }
+%form-element {
+    @include appearance(none);
+    background-color: $beige;
+    border: none;
+    border-radius: 0px;
+    @include box-shadow(-.2em .3em 0 rgba(0, 0, 0, .2));
+    @include box-sizing(border-box);
+    cursor: pointer;
+    @include font-alternate($blue, 1em);
+    width: 100%;
+}
 
-// label {
-//     display: none;
-// }
+label {
+    display: none;
+}
 
-// .label-icon-container {
-//     position: relative;
-//     padding-bottom: .5em;
-// }
+.label-icon-container {
+    position: relative;
+    padding-bottom: .5em;
+}
 
-// .label-icon {
-//     background-color: $blue;
-//     border-radius: 1.4em;
-//     @include hide-text;
-//     display: block;
-//     height: 2.8em;
-//     width: 2.8em;
-//     position: absolute;
-//     top: -.4em;
-//     right: 3em;
-//     z-index: 999;
-// }
+.label-icon {
+    @extend %sprite;
+    background-color: $blue;
+    border-radius: 1.4em;
+    @include hide-text;
+    display: block;
+    height: 2.8em;
+    width: 2.8em;
+    position: absolute;
+    top: -.4em;
+    right: 1em;
+    z-index: 99;
+}
 
-// select {
-//     @extend %form-element;
-//     height: 1.7em;
-//     padding: .4em 1em .3em;
-//     position: relative;
-//     top: .1em;
-//     z-index: 9;
+.label-icon-dropdown {
+    background-position: -55px -174px;
+}
 
-//     &::after {
-//     }
-// }
+.label-icon-search {
+    background-position: -95px -175px;
+}
 
-// input[type="text"] {
-//     @extend %form-element;
-//     letter-spacing: .05em;
-//     padding: .45em 1em .25em;
+select.form-element {
+    @extend %form-element;
+    height: 1.7em;
+    padding: .4em 1em .3em;
+    position: relative;
+    top: .1em;
+    z-index: 9;
 
-//     &::after {
-//         position: absolute;
-//         top: -1em;
-//         right: -1em;
-//         z-index: 999;
-//     }
-// }
+    &::after {
+    }
+}
+
+input[type="text"].form-element {
+    @extend %form-element;
+    letter-spacing: .05em;
+    padding: .45em 1em .25em;
+
+    &::after {
+        position: absolute;
+        top: -1em;
+        right: -1em;
+        z-index: 999;
+    }
+}
 
 // Helper classes
 

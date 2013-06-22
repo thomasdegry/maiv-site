@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Creation Model
  *
- * @property Hamburger $Hamburger
+ * @property Burger $Burger
  * @property User $User
  * @property Ingredient $Ingredient
  */
@@ -22,7 +22,7 @@ class Creation extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'hamburger_id' => array(
+		'burger_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -74,7 +74,7 @@ class Creation extends AppModel {
 	public $belongsTo = array(
 		'Burger' => array(
 			'className' => 'Burger',
-			'foreignKey' => 'hamburger_id',
+			'foreignKey' => 'burger_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -33,7 +33,7 @@ $font-traveler: 'Traveler';
     @include font($font-traveler, $color, $size, $line-height, $bold, $italic);
 }
 
-$font-alternate: 'AlternateGothicCom-No2';
+$font-alternate: 'Alternate Gothic';
 
 @mixin font-alternate ($color: $blue, $size: 1em, $line-height: 1.1, $bold: normal, $italic: normal) {
     @include font($font-alternate, $color, $size, $line-height, $bold, $italic);
@@ -52,7 +52,7 @@ $font-mission-script: 'Mission Script';
 
 %sprite {
     @include hide-text;
-    background-image: url('../images/sprite.svg');
+    background-image: url('../img/sprite.svg');
     background-repeat: no-repeat;
     display: block;
 }

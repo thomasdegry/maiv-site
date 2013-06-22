@@ -5,7 +5,7 @@ var AppDemo = (function () {
             start: '.app-demo-start',
             end: '.app-demo-end',
             active: 'app-demo-started',
-            container: 'body'
+            container: '#site'
         };
 
         this.options = _.extend(this.options, options);
@@ -22,8 +22,8 @@ var AppDemo = (function () {
 
         this.setScrollPositions();
 
-        $(window).on('resize', _.bind(this.setScrollPositions, this));
-        $(window).on('scroll', _.bind(this.detectScroll, this));
+        this.el.container.on('resize', _.bind(this.setScrollPositions, this));
+        this.el.container.on('scroll', _.bind(this.detectScroll, this));
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -32,7 +32,7 @@ var AppDemo = (function () {
     };
 
     AppDemo.prototype.detectScroll = function () {
-        var scrollPos = $(window).scrollTop();
+        var scrollPos = this.el.container.scrollTop();
 
         if (scrollPos >= this.startPosition && scrollPos < this.endPosition && !this.el.container.hasClass(this.options.active)) {
             this.el.container.addClass(this.options.active);
@@ -40,6 +40,14 @@ var AppDemo = (function () {
 
         if ((scrollPos > this.endPosition || scrollPos < this.startPosition) && this.el.container.hasClass(this.options.active)) {
             this.el.container.removeClass(this.options.active);
+        }
+
+        if ($('body.show-logo').length === 0) {
+            if (scrollPos > 500) {
+                $('body').addClass('show-logo');
+            } else {
+                $('body').removeClass('show-logo');
+            }
         }
     };
 

@@ -2,5 +2,11 @@
     background-image: url('../img/full-width-image.jpg');
     background-position: center center;
     @include background-size(cover);
-    height: 30em;
+    height: 12em;
+}
+
+@media only all and (min-height: 47em) {
+    .full-width-image {
+        height: 30em;
+    }
 }

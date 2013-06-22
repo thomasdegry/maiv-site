@@ -17,6 +17,11 @@ class UsersController extends AppController {
 		$this->set('users', $this->paginate());
 	}
 
+	public function login() {
+		$this->layout = 'login';
+		
+	}
+
 /**
  * view method
  *

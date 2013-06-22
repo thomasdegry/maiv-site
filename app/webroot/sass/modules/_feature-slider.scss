@@ -1,13 +1,15 @@
 .feature-slider-container {
+
     padding: 5.3em 0 3.5em;
     margin: 0 auto;
     width: 100%;
+    display: none; // @todo
 }
 
 .feature-slider-navigation {
     margin: 0 auto;
     padding: 1.5em 0 0;
-    width: 6em;
+    width: 3.2em;
 
     li {
         @include inline-block;
@@ -75,21 +77,24 @@
 
 
 #ball {
-  width: 48px;
-  height: 47px;
-  z-index: 3;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  margin-left: -20px;
-  -webkit-animation: bounce .7s infinite;
-  -moz-animation: bounce .7s infinite;
-  -ms-animation: bounce .7s infinite ;
-  animation: bounce .7s infinite ;
-  -webkit-animation-direction: alternate;
-  background: url('../img/sprite.svg') no-repeat -6px -5px;
-
-
+    width: 48px;
+    height: 47px;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -20px;
+    -webkit-animation: bounce .7s infinite;
+       -moz-animation: bounce .7s infinite;
+        -ms-animation: bounce .7s infinite;
+         -o-animation: bounce .7s infinite;
+            animation: bounce .7s infinite;
+    -webkit-animation-direction: alternate;
+       -moz-animation-direction: alternate;
+        -ms-animation-direction: alternate;
+         -o-animation-direction: alternate;
+            animation-direction: alternate;
+    background: url('../img/sprite.svg') no-repeat -6px -5px;
 }
 
 

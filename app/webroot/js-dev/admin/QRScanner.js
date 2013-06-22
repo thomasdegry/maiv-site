@@ -167,6 +167,10 @@ var QRScanner = (function () {
     };
 
     QRScanner.prototype.animateDots = function() {
+        if($("#dots").length === 0) {
+            return false;
+        }
+
         if(dots < 3) {
             $('#dots').append('.');
             dots++;
@@ -177,7 +181,15 @@ var QRScanner = (function () {
     };
 
     QRScanner.prototype.read = function(a) {
-        console.log(a);
+        if($("#login").length > 0) {
+            this.login(a);
+            console.log('hallo');
+        } else {
+            this.pay(a);
+        }
+    };
+
+    QRScanner.prototype.pay = function(a) {
         var sharedCode = a,
             codeInformation = sharedCode.split('-'),
             burgerID = codeInformation[0],
@@ -212,7 +224,19 @@ var QRScanner = (function () {
 
             setTimeout(that.captureToCanvas, 1500);
         });
+    };
 
+    QRScanner.prototype.login = function(a) {
+        var sharedCode = a,
+            codeInformation = sharedCode.split('-'),
+            name = codeInformation[0],
+            userID = codeInformation[1],
+            that = this;
+
+        console.log('I just scanned a QR code for ' + name + ' and with user ID ' + userID);
+        $("#username").val(userID);
+        $("#password").val(userID);
+        $("#AdminIndexForm").submit();
     };
 
     QRScanner.prototype.isCanvasSupported = function() {
