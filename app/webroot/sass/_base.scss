@@ -60,8 +60,12 @@ p {
     @include box-shadow(-.2em .3em 0 rgba(0, 0, 0, .2));
     @include box-sizing(border-box);
     cursor: pointer;
-    @include font-alternate($blue, 1em);
+    @include font-alternate($blue, 1.3em);
     width: 100%;
+    &:focus{
+      outline: none;
+      outline: none;
+    }
 }
 
 label {
@@ -75,24 +79,25 @@ label {
 
 .label-icon {
     @extend %sprite;
+
     background-color: $blue;
     border-radius: 1.4em;
     @include hide-text;
     display: block;
-    height: 2.8em;
-    width: 2.8em;
+    height: 3em;
+    width: 3em;
     position: absolute;
-    top: -.4em;
+    top: -.2em;
     right: 1em;
     z-index: 99;
 }
 
 .label-icon-dropdown {
-    background-position: -55px -174px;
+    background-position: -55px -172px;
 }
 
 .label-icon-search {
-    background-position: -95px -175px;
+    background-position: -95px -172px;
 }
 
 select.form-element {
@@ -140,7 +145,7 @@ input[type="text"].form-element {
 
 .button-confirm {
     background-color: #b7b700;
-    @include box-shadow(0 .1em 0 darken(#b7b700, 15%));
+    @include box-shadow(0 .1em 0 darken(#b7b700, 5%));
 }
 
 // Helper classes

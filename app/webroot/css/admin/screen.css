@@ -274,26 +274,31 @@ select.form-element, input[type="text"].form-element, input[type=text], select {
   cursor: pointer;
   color: #2d353a;
   font-family: "Alternate Gothic";
-  font-size: 1em;
+  font-size: 1.3em;
   font-style: normal;
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
   width: 100%;
 }
+/* line 65, ../../sass/_base.scss */
+input[type="text"].form-element:focus, input[type=text]:focus, select:focus {
+  outline: none;
+  outline: none;
+}
 
-/* line 67, ../../sass/_base.scss */
+/* line 71, ../../sass/_base.scss */
 label {
   display: none;
 }
 
-/* line 71, ../../sass/_base.scss */
+/* line 75, ../../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-/* line 76, ../../sass/_base.scss */
+/* line 80, ../../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -301,25 +306,25 @@ label {
   overflow: hidden;
   text-align: left;
   display: block;
-  height: 2.8em;
-  width: 2.8em;
+  height: 3em;
+  width: 3em;
   position: absolute;
-  top: -.4em;
+  top: -.2em;
   right: 1em;
   z-index: 99;
 }
 
-/* line 90, ../../sass/_base.scss */
+/* line 95, ../../sass/_base.scss */
 .label-icon-dropdown {
-  background-position: -55px -174px;
+  background-position: -55px -172px;
 }
 
-/* line 94, ../../sass/_base.scss */
+/* line 99, ../../sass/_base.scss */
 .label-icon-search {
-  background-position: -95px -175px;
+  background-position: -95px -172px;
 }
 
-/* line 98, ../../sass/_base.scss */
+/* line 103, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
   padding: 0.4em 1em 0.3em;
@@ -328,12 +333,12 @@ select.form-element {
   z-index: 9;
 }
 
-/* line 110, ../../sass/_base.scss */
+/* line 115, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
   padding: 0.45em 1em 0.25em;
 }
-/* line 115, ../../sass/_base.scss */
+/* line 120, ../../sass/_base.scss */
 input[type="text"].form-element::after {
   position: absolute;
   top: -1em;
@@ -341,7 +346,7 @@ input[type="text"].form-element::after {
   z-index: 999;
 }
 
-/* line 123, ../../sass/_base.scss */
+/* line 128, ../../sass/_base.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -368,19 +373,19 @@ input[type="text"].form-element::after {
   text-align: center;
   text-decoration: none;
   text-shadow: -0.1em 0.1em 0 rgba(0, 0, 0, 0.1);
-  margin: 0 auto .5em;
+  margin: 0 auto 0.5em;
   width: 90%;
 }
 
-/* line 141, ../../sass/_base.scss */
+/* line 146, ../../sass/_base.scss */
 .button-confirm {
   background-color: #b7b700;
-  -webkit-box-shadow: 0 0.1em 0 #6a6b00;
-  -moz-box-shadow: 0 0.1em 0 #6a6b00;
-  box-shadow: 0 0.1em 0 #6a6b00;
+  -webkit-box-shadow: 0 0.1em 0 #9d9e00;
+  -moz-box-shadow: 0 0.1em 0 #9d9e00;
+  box-shadow: 0 0.1em 0 #9d9e00;
 }
 
-/* line 148, ../../sass/_base.scss */
+/* line 153, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -389,12 +394,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 153, ../../sass/_base.scss */
+/* line 158, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 158, ../../sass/_base.scss */
+/* line 163, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: 0.3em solid white;

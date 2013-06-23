@@ -347,7 +347,7 @@ var Rating = (function () {
             var rating = current + 1;
 
             this.el.inputRating.val(rating);
-            this.el.ratingView.css('background-position', -rating * 60 + 'px 0px');
+            this.el.ratingView.css('background-position', -rating * 72 + 'px 0px');
             this.el.plusButton.css('top', 60 - rating * 10);
 
             this.el.rating.find('.rate-rating').fadeIn(220).html(rating + '<span>/5</span>');

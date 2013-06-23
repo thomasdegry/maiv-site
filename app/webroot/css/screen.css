@@ -191,26 +191,31 @@ select.form-element, input[type="text"].form-element {
   cursor: pointer;
   color: #2d353a;
   font-family: "Alternate Gothic";
-  font-size: 1em;
+  font-size: 1.3em;
   font-style: normal;
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
   width: 100%;
 }
+/* line 65, ../sass/_base.scss */
+select.form-element:focus, input[type="text"].form-element:focus {
+  outline: none;
+  outline: none;
+}
 
-/* line 67, ../sass/_base.scss */
+/* line 71, ../sass/_base.scss */
 label {
   display: none;
 }
 
-/* line 71, ../sass/_base.scss */
+/* line 75, ../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-/* line 76, ../sass/_base.scss */
+/* line 80, ../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -218,25 +223,25 @@ label {
   overflow: hidden;
   text-align: left;
   display: block;
-  height: 2.8em;
-  width: 2.8em;
+  height: 3em;
+  width: 3em;
   position: absolute;
-  top: -.4em;
+  top: -.2em;
   right: 1em;
   z-index: 99;
 }
 
-/* line 90, ../sass/_base.scss */
+/* line 95, ../sass/_base.scss */
 .label-icon-dropdown {
-  background-position: -55px -174px;
+  background-position: -55px -172px;
 }
 
-/* line 94, ../sass/_base.scss */
+/* line 99, ../sass/_base.scss */
 .label-icon-search {
-  background-position: -95px -175px;
+  background-position: -95px -172px;
 }
 
-/* line 98, ../sass/_base.scss */
+/* line 103, ../sass/_base.scss */
 select.form-element {
   height: 1.7em;
   padding: 0.4em 1em 0.3em;
@@ -245,12 +250,12 @@ select.form-element {
   z-index: 9;
 }
 
-/* line 110, ../sass/_base.scss */
+/* line 115, ../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
   padding: 0.45em 1em 0.25em;
 }
-/* line 115, ../sass/_base.scss */
+/* line 120, ../sass/_base.scss */
 input[type="text"].form-element::after {
   position: absolute;
   top: -1em;
@@ -258,7 +263,7 @@ input[type="text"].form-element::after {
   z-index: 999;
 }
 
-/* line 123, ../sass/_base.scss */
+/* line 128, ../sass/_base.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -289,15 +294,15 @@ input[type="text"].form-element::after {
   width: 90%;
 }
 
-/* line 141, ../sass/_base.scss */
+/* line 146, ../sass/_base.scss */
 .button-confirm {
   background-color: #b7b700;
-  -webkit-box-shadow: 0 0.1em 0 #6a6b00;
-  -moz-box-shadow: 0 0.1em 0 #6a6b00;
-  box-shadow: 0 0.1em 0 #6a6b00;
+  -webkit-box-shadow: 0 0.1em 0 #9d9e00;
+  -moz-box-shadow: 0 0.1em 0 #9d9e00;
+  box-shadow: 0 0.1em 0 #9d9e00;
 }
 
-/* line 148, ../sass/_base.scss */
+/* line 153, ../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -306,12 +311,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 153, ../sass/_base.scss */
+/* line 158, ../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 158, ../sass/_base.scss */
+/* line 163, ../sass/_base.scss */
 .circle-picture, .gallery-share-button {
   background-position: center center;
   border: 0.3em solid white;
@@ -623,12 +628,38 @@ input[type="text"].form-element::after {
 }
 
 /* line 17, ../sass/modules/_site-footer.scss */
+.livefeed {
+  background-image: url("../img/livefeed.svg");
+  background-position: center;
+  display: block;
+  height: 128px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto 2em;
+  width: 175px;
+}
+
+/* line 26, ../sass/modules/_site-footer.scss */
+.statistics {
+  background-image: url("../img/statistics.svg");
+  background-position: center;
+  display: block;
+  height: 128px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  margin: 0 auto 2em;
+  width: 175px;
+}
+
+/* line 36, ../sass/modules/_site-footer.scss */
 a {
   text-decoration: none;
   color: #ecedde;
 }
 
-/* line 22, ../sass/modules/_site-footer.scss */
+/* line 41, ../sass/modules/_site-footer.scss */
 span.dreamteam {
   width: 103px;
   height: 23px;
@@ -640,10 +671,24 @@ span.dreamteam {
   left: 5px;
 }
 
-/* line 33, ../sass/modules/_site-footer.scss */
+/* line 52, ../sass/modules/_site-footer.scss */
 .copyright {
   margin-top: 4em;
   line-height: 5em;
+}
+
+/* line 58, ../sass/modules/_site-footer.scss */
+dl.stats {
+  width: 12em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 67, ../sass/modules/_site-footer.scss */
+.feed-content {
+  width: 220px;
+  margin-left: 20px;
 }
 
 /* line 1, ../sass/modules/_pagination.scss */
@@ -2007,12 +2052,12 @@ h2.winners-title {
 
 /* line 21, ../sass/modules/_rate.scss */
 .rate-visual {
-  background-image: url("../img/rate.png");
+  background: url("../img/rate.png") no-repeat;
   background-repeat: no-repeat;
   display: block;
-  height: 53px;
+  height: 60px;
   margin: 0 auto 1em;
-  width: 60px;
+  width: 76px;
 }
 
 /* line 31, ../sass/modules/_rate.scss */
@@ -2020,28 +2065,34 @@ h2.winners-title {
   background-position: -218px -20px;
   display: block;
   height: 83px;
-  margin: 0 0 0 -21px;
+  margin: 0 0 0 -23px;
   width: 35px;
   -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
   -webkit-animation: swinging 3s infinite ease-in-out;
+  -moz-animation: swinging 3s infinite ease-in-out;
+  -ms-animation: swinging 3s infinite ease-in-out;
+  -animation: swinging 3s infinite ease-in-out;
   position: absolute;
   left: 50%;
   top: 50px;
 }
 
 @-webkit-keyframes swinging {
-  /* line 47, ../sass/modules/_rate.scss */
+  /* line 53, ../sass/modules/_rate.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
+    -webkit-transform: rotate(-7deg);
   }
 
-  /* line 51, ../sass/modules/_rate.scss */
+  /* line 57, ../sass/modules/_rate.scss */
   50% {
-    -webkit-transform: rotate(10deg);
+    -webkit-transform: rotate(7deg);
   }
 
-  /* line 55, ../sass/modules/_rate.scss */
+  /* line 61, ../sass/modules/_rate.scss */
   100% {
-    -webkit-transform: rotate(-10deg);
+    -webkit-transform: rotate(-7deg);
   }
 }
