@@ -138,6 +138,11 @@ input[type="text"].form-element {
     width: 90%;
 }
 
+.button-confirm {
+    background-color: #b7b700;
+    @include box-shadow(0 .1em 0 darken(#b7b700, 15%));
+}
+
 // Helper classes
 
 .prefixed-link {

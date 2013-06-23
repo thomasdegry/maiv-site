@@ -372,7 +372,15 @@ input[type="text"].form-element::after {
   width: 90%;
 }
 
-/* line 143, ../../sass/_base.scss */
+/* line 141, ../../sass/_base.scss */
+.button-confirm {
+  background-color: #b7b700;
+  -webkit-box-shadow: 0 0.1em 0 #6a6b00;
+  -moz-box-shadow: 0 0.1em 0 #6a6b00;
+  box-shadow: 0 0.1em 0 #6a6b00;
+}
+
+/* line 148, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -381,12 +389,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 148, ../../sass/_base.scss */
+/* line 153, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 153, ../../sass/_base.scss */
+/* line 158, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: 0.3em solid white;

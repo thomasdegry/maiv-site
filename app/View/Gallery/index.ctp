@@ -94,10 +94,10 @@
                                         <input type="hidden" name="rating" value="0" />
                                         <a class="rate-plus-button" href="#">Rate</a>
                                         <div class="rate-visual"></div>
-                                        <span class="gallery-item-rating">
+                                        <span class="gallery-item-rating rate-rating">
                                             4<span>/5</span>
                                         </span>
-                                        <input type="submit" class="button" value="Confirm" />
+                                        <input type="submit" class="button button-confirm" value="Confirm" />
                                     </form>
                                 </div>
                             </div>

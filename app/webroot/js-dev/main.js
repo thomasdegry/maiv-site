@@ -181,6 +181,7 @@ $(window).load(function () {
     // @todo in class
     $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
         e.preventDefault();
+        $('.sliding-doors-open').removeClass('sliding-doors-open');
         $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
     });
 

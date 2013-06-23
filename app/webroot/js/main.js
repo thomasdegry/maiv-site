@@ -325,6 +325,8 @@ var Rating = (function () {
             ratingView: this.el.rating.find('.rate-visual')
         });
 
+        this.el.rating.find('.rate-rating').hide();
+
         this.bind();
     };
 
@@ -347,6 +349,8 @@ var Rating = (function () {
             this.el.inputRating.val(rating);
             this.el.ratingView.css('background-position', -rating * 60 + 'px 0px');
             this.el.plusButton.css('top', 60 - rating * 10);
+
+            this.el.rating.find('.rate-rating').fadeIn(220).html(rating + '<span>/5</span>');
         }
 
     };
@@ -537,6 +541,7 @@ $(window).load(function () {
     // @todo in class
     $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
         e.preventDefault();
+        $('.sliding-doors-open').removeClass('sliding-doors-open');
         $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
     });
 
