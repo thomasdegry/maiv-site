@@ -84,8 +84,14 @@
     right: auto;
     position: absolute;
     top: 40%;
-    height: 2.2em;
-    width: 2.2em;
+    height: 3.2em;
+    width: 3em;
+    opacity: .8;
+    @include transition(opacity 220ms ease-in-out);
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .horizontal-slider-next-button {

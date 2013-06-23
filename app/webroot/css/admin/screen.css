@@ -322,7 +322,7 @@ label {
 /* line 98, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
-  padding: 0.4em 1em 0.3em;
+  padding: .4em 1em .3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -331,7 +331,7 @@ select.form-element {
 /* line 110, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
-  padding: 0.45em 1em 0.25em;
+  padding: .45em 1em .25em;
 }
 /* line 115, ../../sass/_base.scss */
 input[type="text"].form-element::after {
@@ -397,7 +397,7 @@ input[type="text"].form-element::after {
 /* line 158, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
-  border: 0.3em solid white;
+  border: .3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -406,6 +406,17 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
+/* line 167, ../../sass/_base.scss */
+.hide-mobile {
+  display: none;
+}
+
+@media only all and (min-width: 64em) {
+  /* line 172, ../../sass/_base.scss */
+  .hide-mobile {
+    display: block;
+  }
+}
 /* line 1, ../../sass/admin/_base-admin.scss */
 #content {
   min-height: 590px;
@@ -633,7 +644,7 @@ h1 {
   zoom: 1;
   *display: inline;
   color: #ecedde;
-  padding: 0.9em 1.2em;
+  padding: .9em 1.2em;
   text-decoration: none;
   -webkit-transition: color 220ms ease-in-out;
   -moz-transition: color 220ms ease-in-out;
@@ -899,7 +910,7 @@ footer div.half:last-child {
 
 /* line 81, ../../sass/admin/modules/_scan.scss */
 #outdiv {
-  border: 6px solid white;
+  border: 6px solid #fff;
   height: 421px;
   width: 100%;
 }
