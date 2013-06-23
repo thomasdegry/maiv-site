@@ -153,13 +153,11 @@
 
 							endAnimPos = startAnimPos + anim.duration;
 
-                            console.log(scrollTop, startAnimPos, endAnimPos);
-
 							// if scroll is before start of animation, set to start value
 							if (scrollTop < startAnimPos) {
 								setProperty(anim, anim.startVal);
 							}
-							
+
 							// if scroll is after end of animation, set to end value
 							else if (scrollTop > endAnimPos) {
 								setProperty(anim, anim.endVal);

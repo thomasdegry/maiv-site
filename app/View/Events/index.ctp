@@ -43,9 +43,8 @@
                             <span class="calendar-item-subtitle">
                                 <?php echo $event['location']; ?>
                             </span>
-                            <a href="#" class="calendar-item-add">
-                                Add to iCal
-                            </a>
+                            
+                            <?php echo $this->Html->link("Add to iCal", array('controller' => 'Events', 'action'=>'addToCalender', '?' => array('id' => $event['id'], 'title' => $event['name'], 'start' => $event['start'], 'end' => $event['end'], 'location' => $event['location']))); ?>
                         </li>
                 <?php
                     $i++;

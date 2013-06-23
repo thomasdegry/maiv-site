@@ -19,6 +19,10 @@ var Gallery = (function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
         });
 
+        if(this.el.gallery.length === 0) {
+            return false;
+        }
+
         this.equalHeight();
         this.bind();
     };
@@ -28,6 +32,7 @@ var Gallery = (function () {
         this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
             window.location = $(this).val();
         });
+        this.el.gallery.on('click', '.pagination-item a', this.loadPage);
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -55,6 +60,21 @@ var Gallery = (function () {
         });
 
         items.height(height);
+    };
+
+    Gallery.prototype.loadPage = function(e) {
+        e.preventDefault();
+        var $el = $(e.target);
+        $.ajax({
+            type: 'GET',
+            url: $el.attr('href'),
+            success: function(data) {
+                $('.gallery-grid').empty();
+                $('.gallery-grid').html($(data).find('.gallery-grid'));
+
+                $('.pagination').html($(data).find('.pagination'));
+            }
+        });
     };
 
     return Gallery;

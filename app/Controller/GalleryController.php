@@ -52,12 +52,16 @@ class GalleryController extends AppController {
 
         $paginated = $this->paginate('Burger');
 
-        if($this->request->is('ajax')) {
-            echo json_encode($paginated);
-        }
+        // if($this->request->is('ajax')) {
+        //     echo json_encode($paginated);
+        // }
 
         $this->set('burgers', $paginated);
         $this->set('event', $event);
         $this->set('previousEvents', $list_previous_events);
+
+        if($this->request->is('ajax')) {
+            $this->layout = 'ajax';
+        }
     }
 }

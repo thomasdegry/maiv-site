@@ -43,7 +43,6 @@ var HorizontalSlider = (function () {
             } else if(e.keyCode === 39) {
                 this.showNext(null);
             }
-            return false;
         }, this));
 
         if (this.el.navigation.length > 0) {

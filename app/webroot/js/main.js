@@ -78,6 +78,10 @@ var Gallery = (function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
         });
 
+        if(this.el.gallery.length === 0) {
+            return false;
+        }
+
         this.equalHeight();
         this.bind();
     };
@@ -87,6 +91,7 @@ var Gallery = (function () {
         this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
             window.location = $(this).val();
         });
+        this.el.gallery.on('click', '.pagination-item a', this.loadPage);
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -114,6 +119,21 @@ var Gallery = (function () {
         });
 
         items.height(height);
+    };
+
+    Gallery.prototype.loadPage = function(e) {
+        e.preventDefault();
+        var $el = $(e.target);
+        $.ajax({
+            type: 'GET',
+            url: $el.attr('href'),
+            success: function(data) {
+                $('.gallery-grid').empty();
+                $('.gallery-grid').html($(data).find('.gallery-grid'));
+
+                $('.pagination').html($(data).find('.pagination'));
+            }
+        });
     };
 
     return Gallery;
@@ -165,7 +185,6 @@ var HorizontalSlider = (function () {
             } else if(e.keyCode === 39) {
                 this.showNext(null);
             }
-            return false;
         }, this));
 
         if (this.el.navigation.length > 0) {
@@ -320,6 +339,28 @@ var HorizontalSlider = (function () {
 
 })();
 
+var Navigation = (function () {
+
+    var Navigation = function (options, el) {
+        this.el = {
+            navItems: $('.nav-item')
+        };
+
+        this.bind();
+    };
+
+    Navigation.prototype.bind = function() {
+        this.el.navItems.on('click', _.bind(this.catchClick, this));
+    };
+
+    Navigation.prototype.catchClick = function(e) {
+        //e.preventDefault();
+        console.log('click');
+    };
+
+    return Navigation;
+})();
+
 var Rating = (function () {
 
     var Rating = function (options, el) {
@@ -375,6 +416,7 @@ var Rating = (function () {
 /* globals HorizontalSlider */
 /* globals Gallery */
 /* globals FastClick */
+/* globals Navigation */
 
 $(window).load(function () {
 
@@ -382,6 +424,7 @@ $(window).load(function () {
     var appDemo = new AppDemo();
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
+    var navigation = new Navigation();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -393,7 +436,6 @@ $(window).load(function () {
 
 
     if($(".app-demo").length > 0){
-
 
             var scrollorama = $.scrollorama({
                 blocks:'.scrollblock',

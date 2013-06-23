@@ -2,6 +2,7 @@
 /* globals HorizontalSlider */
 /* globals Gallery */
 /* globals FastClick */
+/* globals Navigation */
 
 $(window).load(function () {
 
@@ -9,6 +10,7 @@ $(window).load(function () {
     var appDemo = new AppDemo();
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
+    var navigation = new Navigation();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -20,7 +22,6 @@ $(window).load(function () {
 
 
     if($(".app-demo").length > 0){
-
 
             var scrollorama = $.scrollorama({
                 blocks:'.scrollblock',
