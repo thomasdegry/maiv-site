@@ -27,14 +27,34 @@
     width: 60px;
 }
 
+
 .rate-plus-button {
     @extend %sprite;
     background-position: -218px -20px;
     display: block;
-    height: 80px;
-    margin: 0 0 0 -26px;
+    height: 83px;
+    margin: 0 0 0 -21px;
     width: 35px;
-    position: absolute;
-    left: 50%;
-    top: 50px;
+  -webkit-transform-origin: bottom;
+  -webkit-animation: swinging 3s infinite ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+
 }
+
+@-webkit-keyframes swinging {
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+}
+
+

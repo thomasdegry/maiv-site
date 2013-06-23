@@ -2015,14 +2015,33 @@ h2.winners-title {
   width: 60px;
 }
 
-/* line 30, ../sass/modules/_rate.scss */
+/* line 31, ../sass/modules/_rate.scss */
 .rate-plus-button {
   background-position: -218px -20px;
   display: block;
-  height: 80px;
-  margin: 0 0 0 -26px;
+  height: 83px;
+  margin: 0 0 0 -21px;
   width: 35px;
+  -webkit-transform-origin: bottom;
+  -webkit-animation: swinging 3s infinite ease-in-out;
   position: absolute;
   left: 50%;
   top: 50px;
+}
+
+@-webkit-keyframes swinging {
+  /* line 47, ../sass/modules/_rate.scss */
+  0% {
+    -webkit-transform: rotate(-10deg);
+  }
+
+  /* line 51, ../sass/modules/_rate.scss */
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+
+  /* line 55, ../sass/modules/_rate.scss */
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
 }
