@@ -28,6 +28,10 @@ var Rating = (function () {
 
         var current = parseInt(this.el.inputRating.val(), 10);
 
+        if (current === this.options.maxRating) {
+            current = this.options.minRating;
+        }
+
         if (current >= this.options.minRating && current < this.options.maxRating) {
             var rating = current + 1;
 
@@ -35,6 +39,7 @@ var Rating = (function () {
             this.el.ratingView.css('background-position', -rating * 60 + 'px 0px');
             this.el.plusButton.css('top', 60 - rating * 10);
         }
+
     };
 
     return Rating;

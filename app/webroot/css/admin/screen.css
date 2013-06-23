@@ -243,9 +243,10 @@ body {
   background-image: url("../img/blurry-background.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  padding-top: 4.375em;
 }
 
-/* line 47, ../../sass/_base.scss */
+/* line 48, ../../sass/_base.scss */
 p {
   color: inherit;
   font-family: "Traveler";
@@ -256,7 +257,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* line 54, ../../sass/_base.scss */
+/* line 55, ../../sass/_base.scss */
 select.form-element, input[type="text"].form-element, input[type=text], select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -281,18 +282,18 @@ select.form-element, input[type="text"].form-element, input[type=text], select {
   width: 100%;
 }
 
-/* line 66, ../../sass/_base.scss */
+/* line 67, ../../sass/_base.scss */
 label {
   display: none;
 }
 
-/* line 70, ../../sass/_base.scss */
+/* line 71, ../../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-/* line 75, ../../sass/_base.scss */
+/* line 76, ../../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -303,22 +304,22 @@ label {
   height: 2.8em;
   width: 2.8em;
   position: absolute;
-  top: -0.4em;
+  top: -.4em;
   right: 1em;
   z-index: 99;
 }
 
-/* line 89, ../../sass/_base.scss */
+/* line 90, ../../sass/_base.scss */
 .label-icon-dropdown {
   background-position: -55px -174px;
 }
 
-/* line 93, ../../sass/_base.scss */
+/* line 94, ../../sass/_base.scss */
 .label-icon-search {
   background-position: -95px -175px;
 }
 
-/* line 97, ../../sass/_base.scss */
+/* line 98, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
   padding: .4em 1em .3em;
@@ -327,12 +328,12 @@ select.form-element {
   z-index: 9;
 }
 
-/* line 109, ../../sass/_base.scss */
+/* line 110, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
   padding: .45em 1em .25em;
 }
-/* line 114, ../../sass/_base.scss */
+/* line 115, ../../sass/_base.scss */
 input[type="text"].form-element::after {
   position: absolute;
   top: -1em;
@@ -340,7 +341,7 @@ input[type="text"].form-element::after {
   z-index: 999;
 }
 
-/* line 122, ../../sass/_base.scss */
+/* line 123, ../../sass/_base.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -371,7 +372,7 @@ input[type="text"].form-element::after {
   width: 90%;
 }
 
-/* line 142, ../../sass/_base.scss */
+/* line 143, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -380,12 +381,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 147, ../../sass/_base.scss */
+/* line 148, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 152, ../../sass/_base.scss */
+/* line 153, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: .3em solid white;

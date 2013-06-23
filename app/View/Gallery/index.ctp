@@ -11,8 +11,11 @@
                     <div class="column span-one-column label-icon-container">
                         <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
                         <select class="form-element" name="filter-festival" id="filter-name">
-                            <?php foreach($previousEvents as $event): ?>
-                                <option value="<?php echo $event['Event']['id']; ?>"><?php echo $event['Event']['name']; ?></option>
+                            <?php foreach($previousEvents as $e): ?>
+                                <?php $selected = ($e['Event']['id'] === $event['Event']['id']); ?>
+                                <option value="<?php echo URL . 'gallery/' . $e['Event']['id']; ?>" <?php if ($selected) { echo 'selected'; } ?>>
+                                    <?php echo $e['Event']['name']; ?>
+                                </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
