@@ -238,7 +238,7 @@ label {
 /* line 97, ../sass/_base.scss */
 select.form-element {
   height: 1.7em;
-  padding: .4em 1em .3em;
+  padding: 0.4em 1em 0.3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -247,7 +247,7 @@ select.form-element {
 /* line 109, ../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
-  padding: .45em 1em .25em;
+  padding: 0.45em 1em 0.25em;
 }
 /* line 114, ../sass/_base.scss */
 input[type="text"].form-element::after {
@@ -274,7 +274,7 @@ input[type="text"].form-element::after {
 /* line 134, ../sass/_base.scss */
 .circle-picture, .gallery-share-button {
   background-position: center center;
-  border: .3em solid white;
+  border: 0.3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -408,7 +408,7 @@ input[type="text"].form-element::after {
     font-size: 2em;
     text-decoration: none;
     position: absolute;
-    padding: 0 0 .2em .9em;
+    padding: 0 0 0.2em 0.9em;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -492,7 +492,7 @@ input[type="text"].form-element::after {
   .nav-item {
     display: block;
     color: #2d353a;
-    padding: .8em 1.5em;
+    padding: 0.8em 1.5em;
     text-decoration: none;
     -webkit-transition: color 220ms ease-in-out;
     -moz-transition: color 220ms ease-in-out;
@@ -583,6 +583,24 @@ input[type="text"].form-element::after {
 }
 
 /* line 17, ../sass/modules/_site-footer.scss */
+a {
+  text-decoration: none;
+  color: #ecedde;
+}
+
+/* line 22, ../sass/modules/_site-footer.scss */
+span.dreamteam {
+  width: 103px;
+  height: 23px;
+  display: inline-block;
+  background: url("../img/dreamteam.png") no-repeat;
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+  left: 5px;
+}
+
+/* line 33, ../sass/modules/_site-footer.scss */
 .copyright {
   margin-top: 4em;
   line-height: 5em;
@@ -628,7 +646,7 @@ input[type="text"].form-element::after {
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
-  padding: 1em 0 .4em;
+  padding: 1em 0 0.4em;
 }
 
 /* line 14, ../sass/modules/_horizontal-slider.scss */
@@ -678,7 +696,7 @@ input[type="text"].form-element::after {
   line-height: 1.1;
   text-transform: uppercase;
   margin-right: .5rem;
-  padding: .6em .4em;
+  padding: 0.6em 0.4em;
   text-decoration: none;
 }
 /* line 34, ../sass/modules/_horizontal-slider.scss */
@@ -796,20 +814,145 @@ input[type="text"].form-element::after {
 }
 /* line 29, ../sass/modules/_app-demo.scss */
 .app-demo-1 {
+  position: relative;
   background-image: url("../img/demo/iphone-01.png");
 }
+/* line 32, ../sass/modules/_app-demo.scss */
+.app-demo-1 .app-demo-1-info {
+  position: absolute;
+  right: 20%;
+  top: 350px;
+}
+/* line 37, ../sass/modules/_app-demo.scss */
+.app-demo-1 h1 {
+  color: #ef691d;
+  font-family: "Alternate Gothic";
+  font-size: 3em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 40, ../sass/modules/_app-demo.scss */
+.app-demo-1 .appstore-logo {
+  display: block;
+  width: 147px;
+  height: 48px;
+  background: url("../img/demo/appstore.png");
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+/* line 49, ../sass/modules/_app-demo.scss */
+.app-demo-1 .arrow-down {
+  display: block;
+  width: 8px;
+  height: 309px;
+  background: url("../img/demo/arrow.png") no-repeat;
+  background-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
-/* line 33, ../sass/modules/_app-demo.scss */
+/* line 63, ../sass/modules/_app-demo.scss */
 .app-demo-2 {
+  position: relative;
   background-image: url("../img/demo/iphone-02.png");
 }
-
-/* line 37, ../sass/modules/_app-demo.scss */
-.app-demo-3 {
-  background-image: url("../img/demo/iphone-03.png");
+/* line 66, ../sass/modules/_app-demo.scss */
+.app-demo-2 .app-demo-2-info {
+  position: absolute;
+  left: 15%;
+  top: 350px;
+}
+/* line 70, ../sass/modules/_app-demo.scss */
+.app-demo-2 .app-demo-2-info h1 {
+  color: #ecedde;
+  font-family: "Alternate Gothic";
+  font-size: 3em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 74, ../sass/modules/_app-demo.scss */
+.app-demo-2 .app-demo-2-info2 {
+  position: absolute;
+  right: 10%;
+  top: 350px;
+}
+/* line 78, ../sass/modules/_app-demo.scss */
+.app-demo-2 .app-demo-2-info2 h1 {
+  width: 360px;
+  height: 30px;
+  color: #ecedde;
+  font-family: "Alternate Gothic";
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: url("../img/demo/burgerpin.png") no-repeat;
+  padding-left: 30px;
+}
+/* line 86, ../sass/modules/_app-demo.scss */
+.app-demo-2 .app-demo-2-info2 h2 {
+  color: #992a07;
+  font-family: "Alternate Gothic";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  padding-left: 30px;
+  margin-bottom: 10px;
 }
 
-/* line 41, ../sass/modules/_app-demo.scss */
+/* line 94, ../sass/modules/_app-demo.scss */
+.app-demo-3 {
+  background-image: url("../img/demo/iphone-03.png");
+  position: relative;
+}
+/* line 97, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info {
+  position: absolute;
+  left: 20%;
+  top: 250px;
+}
+/* line 101, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info .mrburger {
+  width: 176px;
+  height: 88px;
+  display: block;
+}
+/* line 105, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info .mrburger.burger-01 {
+  background: url("../img/demo/burger_01.png");
+}
+/* line 108, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info .mrburger.burger-02 {
+  background: url("../img/demo/burger_02.png");
+}
+/* line 111, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info .mrburger.burger-02 {
+  background: url("../img/demo/burger_03.png");
+}
+/* line 116, ../sass/modules/_app-demo.scss */
+.app-demo-3 .app-demo-3-info2 {
+  color: #ef691d;
+  font-family: "Alternate Gothic";
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: absolute;
+  right: 20%;
+  top: 350px;
+}
+
+/* line 124, ../sass/modules/_app-demo.scss */
 .app-demo-4 {
   background-image: url("../img/demo/iphone-04.png");
 }
@@ -819,7 +962,7 @@ input[type="text"].form-element::after {
   padding: 5.3em 0 3.5em;
   margin: 0 auto;
   width: 100%;
-  display: none;
+  display: block;
 }
 
 /* line 9, ../sass/modules/_feature-slider.scss */
@@ -922,11 +1065,11 @@ input[type="text"].form-element::after {
   top: 0px;
   left: 50%;
   margin-left: -20px;
-  -webkit-animation: bounce .7s infinite;
-  -moz-animation: bounce .7s infinite;
-  -ms-animation: bounce .7s infinite;
-  -o-animation: bounce .7s infinite;
-  animation: bounce .7s infinite;
+  -webkit-animation: bounce 0.7s infinite;
+  -moz-animation: bounce 0.7s infinite;
+  -ms-animation: bounce 0.7s infinite;
+  -o-animation: bounce 0.7s infinite;
+  animation: bounce 0.7s infinite;
   -webkit-animation-direction: alternate;
   -moz-animation-direction: alternate;
   -ms-animation-direction: alternate;
@@ -1084,6 +1227,29 @@ input[type="text"].form-element::after {
     margin-left: -25px;
     -animation-timing-function: ease-out;
   }
+}
+
+/* line 229, ../sass/modules/_feature-slider.scss */
+#iphone-startscreen {
+  display: block;
+  width: 500px;
+  height: 413px;
+  background: url("../img/demo/iphone-00.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 75px;
+  right: 104px;
+}
+/* line 238, ../sass/modules/_feature-slider.scss */
+#iphone-startscreen .iphone-gif {
+  display: block;
+  width: 327px;
+  height: 239px;
+  background: url("../img/demo/iphone-gif.gif") no-repeat;
+  background-size: 100%;
+  position: relative;
+  top: 42px;
+  left: 119px;
 }
 
 /* line 1, ../sass/modules/_stats.scss */

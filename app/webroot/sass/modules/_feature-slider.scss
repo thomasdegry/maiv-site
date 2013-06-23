@@ -3,7 +3,7 @@
     padding: 5.3em 0 3.5em;
     margin: 0 auto;
     width: 100%;
-    display: none; // @todo
+    display: block; // @todo
 }
 
 .feature-slider-navigation {
@@ -226,3 +226,23 @@
   }
 }
 
+#iphone-startscreen {
+  display: block;
+  width: 500px;
+  height: 413px;
+  background: url("../img/demo/iphone-00.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 75px;
+  right: 104px;
+  .iphone-gif {
+    display: block;
+    width: 327px;
+    height: 239px;
+    background: url("../img/demo/iphone-gif.gif") no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: 42px;
+    left: 119px;
+  }
+}

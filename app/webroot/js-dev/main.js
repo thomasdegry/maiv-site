@@ -14,5 +14,7 @@ $(window).load(function () {
         source: '.site-header'
     });
 
-    FastClick.attach(document.body);
+    $.deck('.slide');
+
+   // FastClick.attach(document.body);
 });
