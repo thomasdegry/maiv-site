@@ -20,7 +20,7 @@
                         }
 
                 ?>
-                        <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item-winners horizontal-slider-item <?php echo $additionalClasses; ?>">
+                        <li id="hs-<?php echo $i; ?>" class="horizontal-slider-item-winners horizontal-slider-item <?php echo $additionalClasses; ?>">
                             <div id="burger-left">
                                 <div class="burger">
                                     <?php 
@@ -34,26 +34,29 @@
                                 <h1 class="winner-item-title">
                                     <?php echo $winner['mrb_events']['name']; ?>
                                 </h1>
-                                <ul>
-                                    <?php foreach($winner['mrb_creations'] as $creation): ?>
-                                        <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=44&amp;height=44);"></li>
-                                    <?php endforeach; ?> 
-                                </ul>
+
+
                                 <span class="winner-item-ingredients">
                                     A tasty burger with
-                                    
-                                    <?php
+
+                                            <?php
                                         $echostring = '';
 
-                                        for ($i=0; $i < count($winner['mrb_creations']) - 1; $i++) { 
+                                        for ($i=0; $i < count($winner['mrb_creations']) - 1; $i++) {
                                             $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ', ';
                                         }
 
                                         echo rtrim($echostring, ',  ');
                                     ?>
 
-                                    and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>
+                                            and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>
                                 </span>
+                                <ul>
+                                    <?php foreach($winner['mrb_creations'] as $creation): ?>
+                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=44&amp;height=44);"></li>
+                                    <?php endforeach; ?>
+                                </ul>
+
                             </div>
                             <div class="clear"></div>
                         </li>

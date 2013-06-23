@@ -5,16 +5,17 @@
 h2.winners-title {
     width: 100%;
     padding-top: 0.9em;
-    @include font-alternate($beige, 5em);
+    @include font-alternate($beige, 6em);
     @extend %offset-text-shadow;
     text-align: center;
 }
 
 #burger-left {
-    width: 15%;
+    width: 10%;
     float: left;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 10%;
+    margin-right: 5%;
 
     .burger {
         margin: 2em 0;
@@ -28,9 +29,9 @@ h2.winners-title {
     padding-top: 1.6em;
 
     h1.winner-item-title {
-        @include font-alternate($beige, 2em);
+        @include font-alternate($beige, 3em);
         @extend %offset-text-shadow;
-        padding-bottom: 0.4em;
+        padding-bottom: 0.1em;
     }
 
     span.winner-item-ingredients {
@@ -38,7 +39,7 @@ h2.winners-title {
     }
 
     ul {
-        padding-bottom: 0.6em;
+        margin-top: 1.3em;
         li {
             display: inline-block;
             margin-right: 0.6em;
@@ -49,7 +50,7 @@ h2.winners-title {
     }
 
     @media only all and (max-width: 1300px) {
-        width: 55%;
+        width: 60%;
         margin-left: 10%;
     }
 
@@ -74,4 +75,11 @@ h2.winners-title {
     .horizontal-slider-item-winners {
         text-align: center;
     }      
+}
+.burger::before{
+  margin-bottom: 5px;
+}
+
+.burger img {
+  padding-top: 6px;
 }
