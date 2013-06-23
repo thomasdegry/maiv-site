@@ -1,13 +1,14 @@
 /* globals AppDemo */
 /* globals HorizontalSlider */
+/* globals Gallery */
 /* globals FastClick */
 
 $(window).load(function () {
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();
-
     var horizontalSlider = new HorizontalSlider();
+    var gallery = new Gallery();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -17,7 +18,6 @@ $(window).load(function () {
     //leap
     $.deck('.slide');
 
-    // FastClick.attach(document.body);
 
     if($(".app-demo").length > 0){
 
@@ -175,5 +175,13 @@ $(window).load(function () {
 
             });
     }
+
+    FastClick.attach(document.body);
+
+    // @todo in class
+    $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
+        e.preventDefault();
+        $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
+    });
 
 });

@@ -57,6 +57,47 @@ var AppDemo = (function () {
 
 }());
 
+/* globals Rating */
+
+var Gallery = (function () {
+
+    var Gallery = function (options) {
+        this.options = {
+            gallery: '.gallery',
+            item: '.gallery-item'
+        };
+
+        this.activeElement = 0;
+
+        this.el = {
+            gallery: $(this.options.gallery)
+        };
+
+        // Create a rating element for each gallery item
+        this.el.gallery.find(this.options.item).each(function () {
+            var rating = new Rating(null, {rating: $(this).find('.rate')});
+        });
+
+        this.equalHeight();
+    };
+
+    Gallery.prototype.equalHeight = function () {
+        var height = 0,
+            items = $(this.options.item);
+
+        items.each(function () {
+            var tempHeight = $(this).height();
+
+            height = (tempHeight > height) ? tempHeight : height;
+        });
+
+        items.height(height);
+    };
+
+    return Gallery;
+
+})();
+
 var HorizontalSlider = (function () {
 
     var HorizontalSlider = function (options) {
@@ -244,16 +285,59 @@ var HorizontalSlider = (function () {
 
 })();
 
+var Rating = (function () {
+
+    var Rating = function (options, el) {
+        this.options = {
+            plusButton: '.rate-plus-button',
+            minRating: 0,
+            maxRating: 5,
+            ratingView: '.rate-visual'
+        };
+
+        this.el = el;
+
+        this.el = _.extend(this.el, {
+            plusButton: this.el.rating.find(this.options.plusButton),
+            inputRating: this.el.rating.find('input[name="rating"]'),
+            ratingView: this.el.rating.find('.rate-visual')
+        });
+
+        this.bind();
+    };
+
+    Rating.prototype.bind = function() {
+        this.el.plusButton.on('click', _.bind(this.addRate, this));
+    };
+
+    Rating.prototype.addRate = function (e) {
+        e.preventDefault();
+
+        var current = parseInt(this.el.inputRating.val(), 10);
+
+        if (current >= this.options.minRating && current < this.options.maxRating) {
+            var rating = current + 1;
+
+            this.el.inputRating.val(rating);
+            this.el.ratingView.css('background-position', -rating * 60 + 'px 0px');
+            this.el.plusButton.css('top', 60 - rating * 10);
+        }
+    };
+
+    return Rating;
+})();
+
 /* globals AppDemo */
 /* globals HorizontalSlider */
+/* globals Gallery */
 /* globals FastClick */
 
 $(window).load(function () {
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();
-
     var horizontalSlider = new HorizontalSlider();
+    var gallery = new Gallery();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -263,7 +347,6 @@ $(window).load(function () {
     //leap
     $.deck('.slide');
 
-    // FastClick.attach(document.body);
 
     if($(".app-demo").length > 0){
 
@@ -421,6 +504,14 @@ $(window).load(function () {
 
             });
     }
+
+    FastClick.attach(document.body);
+
+    // @todo in class
+    $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
+        e.preventDefault();
+        $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
+    });
 
 });
 

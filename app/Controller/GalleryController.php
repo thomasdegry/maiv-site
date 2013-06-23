@@ -44,7 +44,7 @@ class GalleryController extends AppController {
         $this->Burger->recursive = 1;
         $this->paginate = array(
             'conditions' => array('Burger.event_id' => $event_id),
-            'limit' => '12',
+            'limit' => '8',
             'order' => array(
                 'Burger.created' => 'DESC'
             )

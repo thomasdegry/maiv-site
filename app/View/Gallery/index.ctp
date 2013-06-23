@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <ul class="gallery-grid column-container has-four-columns">
+        <ul class="gallery-grid column-container has-three-columns">
             <?php foreach ($burgers as $burger) : ?>
             <?php $b = $burger['Burger']; ?>
             <?php $c = $burger['Creation']; ?>
@@ -66,17 +66,40 @@
                         <?php endforeach; ?>
                         <li><a href="#" class="gallery-share-button">Share</a></li>
                     </ul>
-                    <div class="burger gallery-burger">
-                        <?php
-                            foreach ($c as $creation) :
-                                $params = array('class' => 'burger-ingredient');
-                                echo $this->Html->image('ingredients/' . $creation['ingredient_id'] . '.png', $params);
-                            endforeach;
-                        ?>
+                    <div class="sliding-doors-viewport">
+                        <div class="sliding-doors">
+                            <div class="sliding-door">
+                                <div class="burger gallery-burger">
+                                    <?php
+                                        foreach ($c as $creation) :
+                                            $params = array('class' => 'burger-ingredient');
+                                            echo $this->Html->image('ingredients/' . $creation['ingredient_id'] . '.png', $params);
+                                        endforeach;
+                                    ?>
+                                </div>
+                                <span class="gallery-item-rating">
+                                    4<span>/5</span>
+                                </span>
+                                <a href="#rate-me" class="button sliding-door-toggle">Rate me!</a>
+                            </div>
+                            <div class="sliding-door">
+                                <div class="rate-container">
+                                    <h3 class="rate-heading">Rate this burger</h3>
+                                    <span class="rate-subtitle">by clicking the tube</span>
+                                    <form class="rate">
+                                        <input type="hidden" name="id" value="<?php echo $b['id']; ?>" />
+                                        <input type="hidden" name="rating" value="0" />
+                                        <a class="rate-plus-button" href="#">Rate</a>
+                                        <div class="rate-visual"></div>
+                                        <span class="gallery-item-rating">
+                                            4<span>/5</span>
+                                        </span>
+                                        <input type="submit" class="button" value="Confirm" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <span class="gallery-item-rating">
-                        8<span>/10</span>
-                    </span>
                 </div>
             </li>
             <?php endforeach; ?>
