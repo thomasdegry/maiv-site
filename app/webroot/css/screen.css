@@ -239,7 +239,7 @@ label {
 /* line 98, ../sass/_base.scss */
 select.form-element {
   height: 1.7em;
-  padding: .4em 1em .3em;
+  padding: 0.4em 1em 0.3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -248,7 +248,7 @@ select.form-element {
 /* line 110, ../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
-  padding: .45em 1em .25em;
+  padding: 0.45em 1em 0.25em;
 }
 /* line 115, ../sass/_base.scss */
 input[type="text"].form-element::after {
@@ -285,7 +285,7 @@ input[type="text"].form-element::after {
   text-align: center;
   text-decoration: none;
   text-shadow: -0.1em 0.1em 0 rgba(0, 0, 0, 0.1);
-  margin: 0 auto .5em;
+  margin: 0 auto 0.5em;
   width: 90%;
 }
 
@@ -306,7 +306,7 @@ input[type="text"].form-element::after {
 /* line 153, ../sass/_base.scss */
 .circle-picture, .gallery-share-button {
   background-position: center center;
-  border: .3em solid white;
+  border: 0.3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -440,7 +440,7 @@ input[type="text"].form-element::after {
     font-size: 2em;
     text-decoration: none;
     position: absolute;
-    padding: 0 0 .2em .9em;
+    padding: 0 0 0.2em 0.9em;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -524,7 +524,7 @@ input[type="text"].form-element::after {
   .nav-item {
     display: block;
     color: #2d353a;
-    padding: .8em 1.5em;
+    padding: 0.8em 1.5em;
     text-decoration: none;
     -webkit-transition: color 220ms ease-in-out;
     -moz-transition: color 220ms ease-in-out;
@@ -757,7 +757,7 @@ span.dreamteam {
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
-  padding: 1em 0 .4em;
+  padding: 1em 0 0.4em;
 }
 
 /* line 14, ../sass/modules/_horizontal-slider.scss */
@@ -807,7 +807,7 @@ span.dreamteam {
   line-height: 1.1;
   text-transform: uppercase;
   margin-right: .5rem;
-  padding: .6em .4em;
+  padding: 0.6em 0.4em;
   text-decoration: none;
 }
 /* line 34, ../sass/modules/_horizontal-slider.scss */
@@ -1179,11 +1179,11 @@ span.dreamteam {
   top: 0px;
   left: 50%;
   margin-left: -20px;
-  -webkit-animation: bounce .7s infinite;
-  -moz-animation: bounce .7s infinite;
-  -ms-animation: bounce .7s infinite;
-  -o-animation: bounce .7s infinite;
-  animation: bounce .7s infinite;
+  -webkit-animation: bounce 0.7s infinite;
+  -moz-animation: bounce 0.7s infinite;
+  -ms-animation: bounce 0.7s infinite;
+  -o-animation: bounce 0.7s infinite;
+  animation: bounce 0.7s infinite;
   -webkit-animation-direction: alternate;
   -moz-animation-direction: alternate;
   -ms-animation-direction: alternate;
@@ -1674,11 +1674,7 @@ span.dreamteam {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
-/* line 111, ../sass/modules/_gallery.scss */
-=======
-/* line 112, ../sass/modules/_gallery.scss */
->>>>>>> 780aa77291bd64bb5182ecfb8a8b155ca8b71e77
+/* line 113, ../sass/modules/_gallery.scss */
 .burger-ingredient {
   margin: 0 auto;
   height: 31px;
@@ -1925,16 +1921,21 @@ h2.winners-title {
     text-align: center;
   }
 }
-<<<<<<< HEAD
 /* line 79, ../sass/modules/_winners.scss */
 .burger::before {
   margin-bottom: 5px;
 }
 
 /* line 83, ../sass/modules/_winners.scss */
+.burger::after {
+  margin-top: 10px;
+}
+
+/* line 87, ../sass/modules/_winners.scss */
 .burger img {
   padding-top: 6px;
-=======
+}
+
 /* line 1, ../sass/modules/_sliding-doors.scss */
 .sliding-doors-viewport {
   overflow-x: hidden;
@@ -2016,5 +2017,4 @@ h2.winners-title {
   position: absolute;
   left: 50%;
   top: 50px;
->>>>>>> 780aa77291bd64bb5182ecfb8a8b155ca8b71e77
 }
