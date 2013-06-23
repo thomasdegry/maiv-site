@@ -21,7 +21,7 @@
 
                 ?>
                         <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item-winners horizontal-slider-item <?php echo $additionalClasses; ?>">
-                            <div id="burger-left">
+                            <div class="burger-left">
                                 <div class="burger">
                                     <?php 
                                         foreach($winner['mrb_creations'] as $creation) {
@@ -30,7 +30,7 @@
                                     ?>
                                 </div>
                             </div>
-                            <div id="burger-right">
+                            <div class="burger-right">
                                 <h1 class="winner-item-title">
                                     <?php echo $winner['mrb_events']['name']; ?>
                                 </h1>
