@@ -149,6 +149,8 @@
         </footer>
     </div>
 </div>
-    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/deck.core.js', 'vendor/deck.navigation.js', 'vendor/deck.leap.js', 'main.js')); ?>
+    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js',
+'vendor/deck.core.js', 'vendor/deck.navigation.js', 'vendor/deck.leap.js','vendor/jquery.lettering-0.6.1.min.js',
+'vendor/jquery.scrollorama.js', 'main.js')); ?>
 </body>
 </html>

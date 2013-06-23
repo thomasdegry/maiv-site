@@ -31,7 +31,7 @@
     background-image: url('../img/demo/iphone-01.png');
     .app-demo-1-info{
       position: absolute;
-      right: 20%;
+      right: 0;
       top: 350px;
     }
     h1 {
@@ -65,7 +65,7 @@
     background-image: url('../img/demo/iphone-02.png');
   .app-demo-2-info {
     position: absolute;
-    left: 15%;
+    left: 0;
     top: 350px;
     h1 {
       @include font-alternate($beige, 3em);
@@ -73,7 +73,7 @@
   }
   .app-demo-2-info2 {
     position: absolute;
-    right: 10%;
+    right: -100px;
     top: 350px;
     h1 {
       width: 360px;
@@ -81,7 +81,6 @@
       @include font-alternate($beige, 1.6em);
       background: url('../img/demo/burgerpin.png') no-repeat;
       padding-left: 30px;
-
     }
     h2 {
       @include font-alternate($brown, 1em);
@@ -96,27 +95,30 @@
   position: relative;
   .app-demo-3-info {
     position: absolute;
-    left: 20%;
+    left: 100px;
     top: 250px;
     .mrburger{
-      width: 176px;
+      width: 130px;
       height: 88px;
       display: block;
       &.burger-01{
-        background: url('../img/demo/burger_01.png');
+        background: url('../img/demo/burger_01.png') no-repeat;
+        background-size: 100%;
       }
       &.burger-02{
-        background: url('../img/demo/burger_02.png');
+        background: url('../img/demo/burger_02.png') no-repeat;
+        background-size: 100%;
       }
       &.burger-02{
-        background: url('../img/demo/burger_03.png');
+        background: url('../img/demo/burger_03.png') no-repeat;
+        background-size: 100%;
       }
     }
   }
  .app-demo-3-info2 {
     @include font-alternate($orange, 2em);
     position: absolute;
-    right: 20%;
+    right: 0;
     top: 350px;
   }
 }
