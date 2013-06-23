@@ -487,8 +487,12 @@ input[type="text"].form-element::after {
     line-height: 1.1;
     text-transform: uppercase;
   }
+  /* line 86, ../sass/modules/_site-header.scss */
+  .horizontal-nav ul li.active a {
+    color: #ef691d;
+  }
 
-  /* line 85, ../sass/modules/_site-header.scss */
+  /* line 93, ../sass/modules/_site-header.scss */
   .nav-item {
     display: block;
     color: #2d353a;
@@ -499,17 +503,17 @@ input[type="text"].form-element::after {
     -o-transition: color 220ms ease-in-out;
     transition: color 220ms ease-in-out;
   }
-  /* line 92, ../sass/modules/_site-header.scss */
+  /* line 100, ../sass/modules/_site-header.scss */
   .nav-item:hover {
     color: #ef691d;
   }
 
-  /* line 97, ../sass/modules/_site-header.scss */
+  /* line 105, ../sass/modules/_site-header.scss */
   .site-header {
     height: 4.375em;
   }
 
-  /* line 101, ../sass/modules/_site-header.scss */
+  /* line 109, ../sass/modules/_site-header.scss */
   .horizontal-nav {
     padding-left: 7em;
     -webkit-transition: padding-left 330ms ease-in-out;
@@ -519,7 +523,7 @@ input[type="text"].form-element::after {
     transition: padding-left 330ms ease-in-out 110ms;
     width: 800px;
   }
-  /* line 106, ../sass/modules/_site-header.scss */
+  /* line 114, ../sass/modules/_site-header.scss */
   .horizontal-nav li {
     display: -moz-inline-stack;
     display: inline-block;
@@ -528,12 +532,12 @@ input[type="text"].form-element::after {
     zoom: 1;
     *display: inline;
   }
-  /* line 110, ../sass/modules/_site-header.scss */
+  /* line 118, ../sass/modules/_site-header.scss */
   .show-logo .horizontal-nav {
     padding-left: 8em;
   }
 
-  /* line 115, ../sass/modules/_site-header.scss */
+  /* line 123, ../sass/modules/_site-header.scss */
   .nav-item {
     display: -moz-inline-stack;
     display: inline-block;
@@ -543,7 +547,7 @@ input[type="text"].form-element::after {
     *display: inline;
   }
 
-  /* line 119, ../sass/modules/_site-header.scss */
+  /* line 127, ../sass/modules/_site-header.scss */
   .circle-logo {
     height: 175px;
     left: -600px;
@@ -556,7 +560,7 @@ input[type="text"].form-element::after {
     transition: all 440ms ease-in-out;
     width: 170px;
   }
-  /* line 128, ../sass/modules/_site-header.scss */
+  /* line 136, ../sass/modules/_site-header.scss */
   .show-logo .circle-logo {
     left: 0px;
     opacity: 1;

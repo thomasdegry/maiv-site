@@ -41,16 +41,16 @@
         <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
         <nav class="horizontal-nav">
             <ul>
-                <li>
+                <li <?php if($this->name == 'Pages') {echo 'class="active"';} ?> >
                     <?php echo $this->Html->link('The Campaign', array('controller' => 'pages', 'action' => 'display'), array('class' => 'nav-item')); ?>
                 </li>
-                <li>
+                <li <?php if($this->name == 'Gallery') {echo 'class="active"';} ?> >
                     <?php echo $this->Html->link('Burger Pile', array('controller' => 'gallery', 'action' => 'index'), array('class' => 'nav-item')); ?>
                 </li>
-                <li>
+                <li <?php if($this->name == 'Winners') {echo 'class="active"';} ?> >
                     <?php echo $this->Html->link('Festival Flavours', array('controller' => 'winners', 'action' => 'index'), array('class' => 'nav-item')); ?>
                 </li>
-                <li>
+                <li <?php if($this->name == 'Events') {echo 'class="active"';} ?> >
                     <?php echo $this->Html->link('Festivals', array('controller' => 'events', 'action' => 'index'), array('class' => 'nav-item')); ?>
                 </li>
             </ul>

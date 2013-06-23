@@ -9,6 +9,7 @@ label {
 %form-element {
     @include appearance(none);
     @include border-radius(4px);
+    @include box-shadow(none);
     border: none;
 
     &:focus {
