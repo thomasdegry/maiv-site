@@ -51,6 +51,7 @@ class GalleryController extends AppController {
         );
 
         $paginated = $this->paginate('Burger');
+        debug($paginated);
 
         if($this->request->is('ajax')) {
             echo json_encode($paginated);

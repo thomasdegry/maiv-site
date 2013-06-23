@@ -5,6 +5,8 @@ App::uses('AppModel', 'Model');
  *
  * @property Event $Event
  * @property Creation $Creation
+ * @property Event $Event
+ * @property Rating $Rating
  */
 class Burger extends AppModel {
 
@@ -58,6 +60,32 @@ class Burger extends AppModel {
 	public $hasMany = array(
 		'Creation' => array(
 			'className' => 'Creation',
+			'foreignKey' => 'burger_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'burger_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Rating' => array(
+			'className' => 'Rating',
 			'foreignKey' => 'burger_id',
 			'dependent' => false,
 			'conditions' => '',

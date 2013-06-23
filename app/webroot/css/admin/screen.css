@@ -303,7 +303,7 @@ label {
   height: 2.8em;
   width: 2.8em;
   position: absolute;
-  top: -.4em;
+  top: -0.4em;
   right: 1em;
   z-index: 99;
 }
@@ -369,7 +369,7 @@ input[type="text"].form-element::after {
 /* line 1, ../../sass/admin/_base-admin.scss */
 #content {
   min-height: 590px;
-  padding-top: 50px;
+  padding-top: 130px;
   position: relative;
   overflow: hidden;
   *zoom: 1;
