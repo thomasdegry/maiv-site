@@ -1,0 +1,56 @@
+.pagination {
+    text-align: right;
+    padding-right: 1.9em;
+    padding-bottom: 2em;
+}
+
+.pagination-item {
+    background-color: $beige;
+    border-radius: 1em;
+    @include box-shadow(-0.1rem 0.1rem 0 rgba(0, 0, 0, 0.15));
+    color: $blue;
+    @include inline-block;
+    @include font-alternate($blue, 1em);
+    height: 2em;
+    line-height: 2;
+    margin-right: .4em;
+    text-align: center;
+    width: 2em;
+
+    &:nth-last-child(-n+2) {
+        margin-right: 0;
+    }
+
+    a {
+        color: $blue;
+        @include inline-block;
+        text-decoration: none;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.pagination-item-active {
+    color: $orange;
+}
+
+.pagination-item-disabled {
+    display: none;
+}
+
+.pagination-previous {
+    @extend %sprite;
+    background-position: -73px -126px;
+}
+
+.pagination-next {
+    @extend %sprite;
+    background-position: -100px -126px;
+    margin-left: .4em;
+    margin-right: 0;
+}

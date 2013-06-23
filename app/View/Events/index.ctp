@@ -36,7 +36,7 @@
                         }
 
                 ?>
-                        <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item <?php echo $additionalClasses; ?>">
+                        <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item slider <?php echo $additionalClasses; ?>">
                             <h1 class="calendar-item-title">
                                 <?php echo $event['name']; ?>
                             </h1>

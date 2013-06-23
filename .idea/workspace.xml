@@ -2,28 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6a1734-c870-488a-b5ee-8120cc89c493" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/modules/_app-demo.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/modules/_app-demo.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/modules/_responsive-menu.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/modules/_responsive-menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/modules/_site-header.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/modules/_site-header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/modules/_site-footer.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/modules/_site-footer.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Pages/home.ctp" afterPath="$PROJECT_DIR$/app/View/Pages/home.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Events/index.ctp" afterPath="$PROJECT_DIR$/app/View/Events/index.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/js/main.js" afterPath="$PROJECT_DIR$/app/webroot/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/js-dev/main.js" afterPath="$PROJECT_DIR$/app/webroot/js-dev/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/css/screen.css" afterPath="$PROJECT_DIR$/app/webroot/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/sass/screen.scss" afterPath="$PROJECT_DIR$/app/webroot/sass/screen.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mrburger-php.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371742147879" ignored="false" />
+    <file path="/Dummy.txt" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371930487156" ignored="false" />
     <file path="/screen.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371740370896" ignored="false" />
     <file path="$PROJECT_DIR$/../maiv-site-master/app/View/Layouts/default.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371740480348" ignored="false" />
     <file path="/main.js" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371742624682" ignored="false" />
     <file path="/_responsive-menu.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371744680396" ignored="false" />
-    <file path="/default.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371743829316" ignored="false" />
+    <file path="/default.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371973093678" ignored="false" />
     <file path="/_site-header.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371744312912" ignored="false" />
-    <file path="/home.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371744888340" ignored="false" />
-    <file path="/_feature-slider.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371747560621" ignored="false" />
+    <file path="/home.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371933683813" ignored="false" />
+    <file path="/_feature-slider.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371934584062" ignored="false" />
+    <file path="/index.ctp" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371923444673" ignored="false" />
+    <file path="$USER_HOME$/Documents/DEVINE/2 DEVINE/SEM 2/BURGER/LEAPTEST/index.html" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371923782291" ignored="false" />
+    <file path="/index.html" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371923588739" ignored="false" />
+    <file path="$USER_HOME$/Documents/DEVINE/2 DEVINE/SEM 2/BURGER/LEAPTEST/extensions/leap/deck.leap.js" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371924351877" ignored="false" />
+    <file path="/deck.leap.js" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371925194834" ignored="false" />
+    <file path="/_app-demo.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371933543854" ignored="false" />
+    <file path="/_site-footer.scss" changelist="ba6a1734-c870-488a-b5ee-8120cc89c493" time="1371973130898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,35 +51,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_site-header.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_site-header.scss">
+      <file leaf-file-name="_app-demo.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_app-demo.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="903" selection-end="941" vertical-scroll-proportion="-2.1625">
-              <folding>
-                <marker date="1371744354000" expanded="true" signature="122:136" placeholder="..." />
-              </folding>
+            <state line="125" column="0" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-18.4">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js-dev/main.js">
+      <file leaf-file-name="_feature-slider.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="5" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="42" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-21.777779">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="240" column="18" selection-start="4686" selection-end="4686" vertical-scroll-proportion="-15.88">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,16 +72,25 @@
       <file leaf-file-name="home.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Pages/home.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="20" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-18.666666">
+            <state line="13" column="61" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_feature-slider.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss">
+      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="1" selection-start="480" selection-end="480" vertical-scroll-proportion="0.8863636">
+            <state line="141" column="153" selection-start="6410" selection-end="6410" vertical-scroll-proportion="-14.148149">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_site-footer.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_site-footer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="330" selection-end="330" vertical-scroll-proportion="0.53283584">
               <folding />
             </state>
           </provider>
@@ -113,20 +115,26 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/webroot/sass/screen.scss" />
-        <option value="$PROJECT_DIR$/app/webroot/js-dev/main.js" />
-        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/webroot/sass/modules/_site-header.scss" />
         <option value="$PROJECT_DIR$/app/webroot/sass/modules/_responsive-menu.scss" />
+        <option value="$PROJECT_DIR$/app/Config/database.php" />
+        <option value="$PROJECT_DIR$/app/View/Events/index.ctp" />
+        <option value="$PROJECT_DIR$/app/webroot/js-dev/main.js" />
+        <option value="$PROJECT_DIR$/app/webroot/js/vendor/deck.leap.js" />
+        <option value="$PROJECT_DIR$/app/webroot/sass/modules/_app-demo.scss" />
         <option value="$PROJECT_DIR$/app/View/Pages/home.ctp" />
         <option value="$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/app/webroot/sass/modules/_site-footer.scss" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
+    <option name="x" value="14" />
     <option name="y" value="22" />
     <option name="width" value="1426" />
-    <option name="height" value="842" />
+    <option name="height" value="841" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -271,32 +279,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mrburger-php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mrburger-php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js-dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -370,9 +352,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.externalResources" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -384,6 +367,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ba6a1734-c870-488a-b5ee-8120cc89c493" name="Default" comment="" />
@@ -393,14 +393,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="22" width="1426" height="842" extended-state="0" />
+    <frame x="14" y="22" width="1426" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22681159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23768117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -478,122 +478,100 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/webroot/js-dev/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="3" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/vendor/deck.leap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="31" selection-start="2738" selection-end="2748" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="61" column="0" selection-start="49300" selection-end="49300" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_gallery.scss">
+    <entry file="file://$PROJECT_DIR$/app/View/Events/add.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/vendor/jquery.sidr.min.js">
+    <entry file="file://$PROJECT_DIR$/app/View/Events/edit.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/admin/screen.scss">
+    <entry file="file://$PROJECT_DIR$/app/View/Events/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1141" selection-end="1456" vertical-scroll-proportion="0.0923994">
-          <folding />
-        </state>
+        <state line="53" column="8" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.7401575" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/_variables.scss">
+    <entry file="file://$PROJECT_DIR$/app/View/Events/overview.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js-dev/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="5" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="42" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-21.777779">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.4398148">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/screen.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1177" selection-end="1177" vertical-scroll-proportion="1.2314814">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_responsive-menu.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="23" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.72006744">
+        <state line="78" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="-0.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_horizontal-slider.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_app-demo.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_site-header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="903" selection-end="941" vertical-scroll-proportion="-2.1625">
-          <folding>
-            <marker date="1371744354000" expanded="true" signature="122:136" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Pages/home.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-18.666666">
+        <state line="125" column="0" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-18.4">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_feature-slider.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="480" selection-end="480" vertical-scroll-proportion="0.8863636">
+        <state line="240" column="18" selection-start="4686" selection-end="4686" vertical-scroll-proportion="-15.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/sass/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2567164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1099236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Pages/home.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="153" selection-start="6410" selection-end="6410" vertical-scroll-proportion="-14.148149">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/sass/modules/_site-footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="330" selection-end="330" vertical-scroll-proportion="0.53283584">
           <folding />
         </state>
       </provider>

@@ -28,7 +28,7 @@
     <script type="text/javascript" src="js/vendor/modernizr.js"></script>
  -->
     <?php
-        echo $this->Html->css(array('screen'));
+        echo $this->Html->css(array('screen', 'horizontal-slide'));
 
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -139,7 +139,7 @@
             <div class="copyright orange">
                 <div class="container column-container has-three-columns">
                     <div class="column span-one-column">
-                        A <span class="dreamteam">Dreamteam</span> production
+                       <a href="http://student.howest.be/tatiana.van.campen1/20122013/MAIV/SOUNDBOARD/"> A <span class="dreamteam"></span> production</a>
                     </div>
                     <div class="column span-one-column">
                         Be your fucking best!
@@ -149,6 +149,8 @@
         </footer>
     </div>
 </div>
-    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/fastclick.js', 'main.js')); ?>
+    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js',
+'vendor/deck.core.js', 'vendor/deck.navigation.js', 'vendor/deck.leap.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
+'vendor/jquery.scrollorama.js', 'main.js')); ?>
 </body>
 </html>

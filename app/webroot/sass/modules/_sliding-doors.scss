@@ -1,0 +1,19 @@
+.sliding-doors-viewport {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.sliding-doors {
+    width: 200%;
+}
+
+.sliding-door {
+    float: left;
+    position: relative;
+    width: 50%;
+    @include transition(left 220ms ease-in-out);
+
+    .sliding-doors-open & {
+        left: -50%;
+    }
+}
