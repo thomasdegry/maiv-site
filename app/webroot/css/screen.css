@@ -1601,6 +1601,11 @@ h2.winners-title {
 /* line 42, ../sass/modules/_winners.scss */
 #burger-right ul li {
   display: inline-block;
+  margin-right: 0.6em;
+}
+/* line 45, ../sass/modules/_winners.scss */
+#burger-right ul li:last-child {
+  margin-right: 0em;
 }
 @media only all and (max-width: 1300px) {
   /* line 24, ../sass/modules/_winners.scss */
@@ -1611,7 +1616,7 @@ h2.winners-title {
 }
 
 @media only all and (max-width: 64em) {
-  /* line 56, ../sass/modules/_winners.scss */
+  /* line 60, ../sass/modules/_winners.scss */
   #burger-right, #burger-left {
     width: 100%;
     float: none;
@@ -1619,16 +1624,16 @@ h2.winners-title {
     padding: 0;
   }
 
-  /* line 63, ../sass/modules/_winners.scss */
+  /* line 67, ../sass/modules/_winners.scss */
   #burger-left {
     padding-bottom: 2.8em;
   }
-  /* line 65, ../sass/modules/_winners.scss */
+  /* line 69, ../sass/modules/_winners.scss */
   #burger-left .burger {
     margin: auto;
   }
 
-  /* line 70, ../sass/modules/_winners.scss */
+  /* line 74, ../sass/modules/_winners.scss */
   .horizontal-slider-item-winners {
     text-align: center;
   }

@@ -5,6 +5,8 @@ App::uses('AppModel', 'Model');
  *
  * @property Event $Event
  * @property Creation $Creation
+ * @property Event $Event
+ * @property Rating $Rating
  */
 class Burger extends AppModel {
 
@@ -35,7 +37,11 @@ class Burger extends AppModel {
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
 	public $belongsTo = array(
 		'Event' => array(
 			'className' => 'Event',
@@ -46,9 +52,40 @@ class Burger extends AppModel {
 		)
 	);
 
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
 	public $hasMany = array(
 		'Creation' => array(
 			'className' => 'Creation',
+			'foreignKey' => 'burger_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'burger_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Rating' => array(
+			'className' => 'Rating',
 			'foreignKey' => 'burger_id',
 			'dependent' => false,
 			'conditions' => '',

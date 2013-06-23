@@ -20,7 +20,7 @@
                         }
 
                 ?>
-                        <li id="hs-<?php echo $i; ?>" class="calendar-item   horizontal-slider-item <?php echo $additionalClasses; ?>">
+                        <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item-winners horizontal-slider-item <?php echo $additionalClasses; ?>">
                             <div id="burger-left">
                                 <div class="burger">
                                     <?php 
@@ -46,10 +46,10 @@
                                         $echostring = '';
 
                                         for ($i=0; $i < count($winner['mrb_creations']) - 1; $i++) { 
-                                            $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ',';
+                                            $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ', ';
                                         }
 
-                                        echo rtrim($echostring, ',');
+                                        echo rtrim($echostring, ', ');
                                     ?>
 
                                     and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>

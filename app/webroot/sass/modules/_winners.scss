@@ -41,6 +41,10 @@ h2.winners-title {
         padding-bottom: 0.6em;
         li {
             display: inline-block;
+            margin-right: 0.6em;
+            &:last-child {
+                margin-right: 0em;
+            }
         }
     }
 
