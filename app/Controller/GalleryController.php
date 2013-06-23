@@ -44,14 +44,14 @@ class GalleryController extends AppController {
         $this->Burger->recursive = 1;
         $this->paginate = array(
             'conditions' => array('Burger.event_id' => $event_id),
-            'limit' => '8',
+            'limit' => '6',
             'order' => array(
                 'Burger.created' => 'DESC'
             )
         );
 
         $paginated = $this->paginate('Burger');
-        debug($paginated);
+        // debug($paginatedated);
 
         if($this->request->is('ajax')) {
             echo json_encode($paginated);

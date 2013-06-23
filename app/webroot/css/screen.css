@@ -1610,13 +1610,14 @@ span.dreamteam {
   left: -1.5em;
   top: .8em;
   width: 2.8em;
+  z-index: 99;
 }
-/* line 55, ../sass/modules/_gallery.scss */
+/* line 56, ../sass/modules/_gallery.scss */
 .gallery-item-participants li {
   margin-bottom: .7em;
 }
 
-/* line 60, ../sass/modules/_gallery.scss */
+/* line 61, ../sass/modules/_gallery.scss */
 .gallery-item-rating {
   background-color: #2d353a;
   border-radius: 1.6em;
@@ -1637,23 +1638,23 @@ span.dreamteam {
   top: 1em;
   width: 1.4em;
 }
-/* line 74, ../sass/modules/_gallery.scss */
+/* line 75, ../sass/modules/_gallery.scss */
 .gallery-item-rating span {
   font-size: .75em;
 }
 
-/* line 79, ../sass/modules/_gallery.scss */
+/* line 80, ../sass/modules/_gallery.scss */
 .gallery-share-button {
   background-color: #395897;
   background-position: -8px -175px;
 }
 
-/* line 86, ../sass/modules/_gallery.scss */
+/* line 87, ../sass/modules/_gallery.scss */
 .burger {
   margin: 2em auto;
   width: 100px;
 }
-/* line 90, ../sass/modules/_gallery.scss */
+/* line 91, ../sass/modules/_gallery.scss */
 .burger::before {
   background-position: -12px -253px;
   content: " ";
@@ -1662,7 +1663,7 @@ span.dreamteam {
   width: 89px;
   margin: 0 auto;
 }
-/* line 100, ../sass/modules/_gallery.scss */
+/* line 101, ../sass/modules/_gallery.scss */
 .burger::after {
   background-position: -127px -262px;
   content: " ";
@@ -1672,7 +1673,7 @@ span.dreamteam {
   margin: 0 auto;
 }
 
-/* line 111, ../sass/modules/_gallery.scss */
+/* line 112, ../sass/modules/_gallery.scss */
 .burger-ingredient {
   margin: 0 auto;
   height: 31px;

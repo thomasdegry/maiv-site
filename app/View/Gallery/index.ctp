@@ -64,7 +64,7 @@
                         <?php foreach ($c as $user) : ?>
                             <li class="circle-picture" style="background-image: url('http://graph.facebook.com/<?php echo $user['user_id']; ?>/picture')"></li>
                         <?php endforeach; ?>
-                        <li><a href="#" class="gallery-share-button">Share</a></li>
+                        <li><a href="http://facebook.com/share.php?s=100&amp;p[url]=http%3A%2F%2Fstudent.howest.be%2Fthomas.degry%2F20122013%2FMAIV%2FFOOD%2Fgallery%2F<?php echo $b['id']; ?>&amp;" class="gallery-share-button">Share</a></li>
                     </ul>
                     <div class="sliding-doors-viewport">
                         <div class="sliding-doors">
