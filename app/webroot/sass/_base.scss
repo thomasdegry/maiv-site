@@ -40,6 +40,7 @@ body {
     background-image: url('../img/blurry-background.jpg');
     background-position: center top;
     background-repeat: no-repeat;
+    padding-top: 4.375em;
 }
 
 // Typography
@@ -117,6 +118,24 @@ input[type="text"].form-element {
         right: -1em;
         z-index: 999;
     }
+}
+
+.button {
+    @include appearance(none);
+    background-color: $orange;
+    @include box-shadow(0 .1em 0 darken($orange-darkened, 10%));
+    @include box-sizing(border-box);
+    border: 0;
+    border-radius: .3em;
+    display: block;
+    @include font-alternate($beige, 1.5em);
+    font-weight: normal;
+    padding: .3em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -.1em .1em 0 rgba(0, 0, 0, .1);
+    margin: 0 auto .5em;
+    width: 90%;
 }
 
 // Helper classes

@@ -11,8 +11,11 @@
                     <div class="column span-one-column label-icon-container">
                         <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
                         <select class="form-element" name="filter-festival" id="filter-name">
-                            <?php foreach($previousEvents as $event): ?>
-                                <option value="<?php echo $event['Event']['id']; ?>"><?php echo $event['Event']['name']; ?></option>
+                            <?php foreach($previousEvents as $e): ?>
+                                <?php $selected = ($e['Event']['id'] === $event['Event']['id']); ?>
+                                <option value="<?php echo URL . 'gallery/' . $e['Event']['id']; ?>" <?php if ($selected) { echo 'selected'; } ?>>
+                                    <?php echo $e['Event']['name']; ?>
+                                </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -50,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <ul class="gallery-grid column-container has-four-columns">
+        <ul class="gallery-grid column-container has-three-columns">
             <?php foreach ($burgers as $burger) : ?>
             <?php $b = $burger['Burger']; ?>
             <?php $c = $burger['Creation']; ?>
@@ -64,30 +67,58 @@
                         <?php foreach ($c as $user) : ?>
                             <li class="circle-picture" style="background-image: url('http://graph.facebook.com/<?php echo $user['user_id']; ?>/picture')"></li>
                         <?php endforeach; ?>
-                        <li><a href="#" class="gallery-share-button">Share</a></li>
+                        <li><a href="http://facebook.com/share.php?s=100&amp;p[url]=http%3A%2F%2Fstudent.howest.be%2Fthomas.degry%2F20122013%2FMAIV%2FFOOD%2Fgallery%2F<?php echo $b['id']; ?>&amp;" class="gallery-share-button">Share</a></li>
                     </ul>
-                    <div class="burger gallery-burger">
-                        <?php
-                            foreach ($c as $creation) :
-                                $params = array('class' => 'burger-ingredient');
-                                echo $this->Html->image('ingredients/' . $creation['ingredient_id'] . '.png', $params);
-                            endforeach;
-                        ?>
+                    <div class="sliding-doors-viewport">
+                        <div class="sliding-doors">
+                            <div class="sliding-door">
+                                <div class="burger gallery-burger">
+                                    <?php
+                                        foreach ($c as $creation) :
+                                            $params = array('class' => 'burger-ingredient');
+                                            echo $this->Html->image('ingredients/' . $creation['ingredient_id'] . '.png', $params);
+                                        endforeach;
+                                    ?>
+                                </div>
+                                <span class="gallery-item-rating">
+                                    4<span>/5</span>
+                                </span>
+                                <a href="#rate-me" class="button sliding-door-toggle">Rate me!</a>
+                            </div>
+                            <div class="sliding-door">
+                                <div class="rate-container">
+                                    <h3 class="rate-heading">Rate this burger</h3>
+                                    <span class="rate-subtitle">by clicking the tube</span>
+                                    <form class="rate">
+                                        <input type="hidden" name="id" value="<?php echo $b['id']; ?>" />
+                                        <input type="hidden" name="rating" value="0" />
+                                        <a class="rate-plus-button" href="#">Rate</a>
+                                        <div class="rate-visual"></div>
+                                        <span class="gallery-item-rating">
+                                            4<span>/5</span>
+                                        </span>
+                                        <input type="submit" class="button" value="Confirm" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <span class="gallery-item-rating">
-                        8<span>/10</span>
-                    </span>
                 </div>
             </li>
             <?php endforeach; ?>
         </ul>
+        <div class="pagination">
+            <?php
+                echo $this->Paginator->prev('«', array('class' => 'pagination-item pagination-previous', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+
+                echo $this->Paginator->numbers(array(
+                             'class' => 'pagination-item',
+                             'separator' => '',
+                             'currentClass' => 'pagination-item-active'
+                        ));
+
+                echo $this->Paginator->next('»', array('class' => 'pagination-item pagination-next', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+            ?>
+        </div>
     </div>
 </section>
-
-
-<div><?php echo $this->Paginator->prev('Previous', array('class' => 'prev', 'escape' => false), null, array('class' => 'prev disabled', 'escape' => false)); ?></div>
-<div><?php echo $this->Paginator->counter(array('format' => __('Page {:page} of {:pages}, {:count} events found in total'))); ?></div>
-<div><?php echo $this->Paginator->numbers(array(
-                         "class" => "pagination-item"
-                    )); ?></div>
-<div><?php echo $this->Paginator->next('Next', array('class' => 'prev', 'escape' => false), null, array('class' => 'next disabled', 'escape' => false)); ?></div>

@@ -2,7 +2,6 @@
     <div class="container container-small">
         <h2 class="winners-title">Winning flavours</h2>
         <div class="calendar horizontal-slider-container">
-            
             <ul class="calendar-slider horizontal-slider">
                 <?php
                     $i = 0;
@@ -23,10 +22,10 @@
                         <li id="hs-<?php echo $i; ?>" class="horizontal-slider-item-winners horizontal-slider-item <?php echo $additionalClasses; ?>">
                             <div id="burger-left">
                                 <div class="burger">
-                                    <?php 
+                                    <?php
                                         foreach($winner['mrb_creations'] as $creation) {
                                             echo $this->Html->image('ingredients/' . $creation['mrb_ingredients']['id'] . '.png');
-                                        } 
+                                        }
                                     ?>
                                 </div>
                             </div>
@@ -35,21 +34,19 @@
                                     <?php echo $winner['mrb_events']['name']; ?>
                                 </h1>
 
-
                                 <span class="winner-item-ingredients">
                                     A tasty burger with
-
-                                            <?php
+                                    <?php
                                         $echostring = '';
 
-                                        for ($i=0; $i < count($winner['mrb_creations']) - 1; $i++) {
-                                            $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ', ';
+                                        for ($j = 0; $j < count($winner['mrb_creations']) - 1; $j++) {
+                                            $echostring .= $winner['mrb_creations'][$j]['mrb_ingredients']['name'] . ', ';
                                         }
 
                                         echo rtrim($echostring, ',  ');
                                     ?>
 
-                                            and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>
+                                    and <?php $last = end($winner['mrb_creations']); echo $last['mrb_ingredients']['name']; ?>
                                 </span>
                                 <ul>
                                     <?php foreach($winner['mrb_creations'] as $creation): ?>

@@ -57,6 +57,69 @@ var AppDemo = (function () {
 
 }());
 
+/* globals Rating */
+
+var Gallery = (function () {
+
+    var Gallery = function (options) {
+        this.options = {
+            gallery: '.gallery',
+            item: '.gallery-item'
+        };
+
+        this.activeElement = 0;
+
+        this.el = {
+            gallery: $(this.options.gallery)
+        };
+
+        // Create a rating element for each gallery item
+        this.el.gallery.find(this.options.item).each(function () {
+            var rating = new Rating(null, {rating: $(this).find('.rate')});
+        });
+
+        this.equalHeight();
+        this.bind();
+    };
+
+    Gallery.prototype.bind = function () {
+        this.el.gallery.on('click', '.gallery-share-button', this.showShare);
+        this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
+            window.location = $(this).val();
+        });
+    };
+
+    Gallery.prototype.showShare = function (e) {
+        e.preventDefault();
+
+        var title = encodeURIComponent('Mr. Burger Festi Food'),
+            description = encodeURIComponent('Rate my burger and help me get my festival ticket refunded!'),
+            image = 'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/1013389_197379410418361_837255109_n.png',
+            top = $(window).height() * 0.5 - 150,
+            left = $(window).width() * 0.5 - 200;
+
+        window.open($(this).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
+
+        return false;
+    };
+
+    Gallery.prototype.equalHeight = function () {
+        var height = 0,
+            items = $(this.options.item);
+
+        items.each(function () {
+            var tempHeight = $(this).height();
+
+            height = (tempHeight > height) ? tempHeight : height;
+        });
+
+        items.height(height);
+    };
+
+    return Gallery;
+
+})();
+
 var HorizontalSlider = (function () {
 
     var HorizontalSlider = function (options) {
@@ -244,16 +307,64 @@ var HorizontalSlider = (function () {
 
 })();
 
+var Rating = (function () {
+
+    var Rating = function (options, el) {
+        this.options = {
+            plusButton: '.rate-plus-button',
+            minRating: 0,
+            maxRating: 5,
+            ratingView: '.rate-visual'
+        };
+
+        this.el = el;
+
+        this.el = _.extend(this.el, {
+            plusButton: this.el.rating.find(this.options.plusButton),
+            inputRating: this.el.rating.find('input[name="rating"]'),
+            ratingView: this.el.rating.find('.rate-visual')
+        });
+
+        this.bind();
+    };
+
+    Rating.prototype.bind = function() {
+        this.el.plusButton.on('click', _.bind(this.addRate, this));
+    };
+
+    Rating.prototype.addRate = function (e) {
+        e.preventDefault();
+
+        var current = parseInt(this.el.inputRating.val(), 10);
+
+        if (current === this.options.maxRating) {
+            current = this.options.minRating;
+        }
+
+        if (current >= this.options.minRating && current < this.options.maxRating) {
+            var rating = current + 1;
+
+            this.el.inputRating.val(rating);
+            this.el.ratingView.css('background-position', -rating * 60 + 'px 0px');
+            this.el.plusButton.css('top', 60 - rating * 10);
+        }
+
+    };
+
+    return Rating;
+})();
+
 /* globals AppDemo */
 /* globals HorizontalSlider */
+/* globals Gallery */
 /* globals FastClick */
 
 $(window).load(function () {
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();
-
     var horizontalSlider = new HorizontalSlider();
+    var gallery = new Gallery();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -263,7 +374,6 @@ $(window).load(function () {
     //leap
     $.deck('.slide');
 
-    // FastClick.attach(document.body);
 
     if($(".app-demo").length > 0){
 
@@ -421,6 +531,14 @@ $(window).load(function () {
 
             });
     }
+
+    FastClick.attach(document.body);
+
+    // @todo in class
+    $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
+        e.preventDefault();
+        $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
+    });
 
 });
 

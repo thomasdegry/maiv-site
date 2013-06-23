@@ -1,0 +1,40 @@
+.rate-container {
+    padding: 2em 0 0;
+}
+
+.rate {
+    position: relative;
+    padding: 6em 0 1em;
+}
+
+.rate-heading {
+    @include font-alternate($blue, 2em);
+    text-align: center;
+}
+
+.rate-subtitle {
+    display: block;
+    @include font-traveler(darken($beige, 25%), .85em);
+    text-align: center;
+}
+
+.rate-visual {
+    background-image: url('../img/rate.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 53px;
+    margin: 0 auto 1em;
+    width: 60px;
+}
+
+.rate-plus-button {
+    @extend %sprite;
+    background-position: -218px -20px;
+    display: block;
+    height: 80px;
+    margin: 0 0 0 -26px;
+    width: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+}

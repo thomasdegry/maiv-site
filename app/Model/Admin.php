@@ -48,7 +48,7 @@ class Admin extends AppModel {
 		),
 	);
 
-	public function beforeSave() {
+	public function beforeSave($options = array()) {
        	if(isset($this->data['Admin']['username'])) {
             $this->data['Admin']['password'] = AuthComponent::password($this->data['Admin']['username']);
        	}
