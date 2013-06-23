@@ -49,7 +49,7 @@
                                             $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ', ';
                                         }
 
-                                        echo rtrim($echostring, ', ');
+                                        echo rtrim($echostring, ',  ');
                                     ?>
 
                                     and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>

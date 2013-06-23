@@ -1,6 +1,6 @@
 <div id="login">
      <h1>Login</h1>
-     <div class="">
+     <div class="hide">
           <?php echo $this->Session->flash('auth'); ?>
           <?php echo $this->Form->create(); ?>
                <?php

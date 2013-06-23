@@ -88,6 +88,7 @@ var QRScanner = (function () {
     };
 
     QRScanner.prototype.captureToCanvas = function() {
+        console.log('capture to canvas');
         if(this.stype!==1) {
             console.log('quits');
             return;
@@ -123,6 +124,7 @@ var QRScanner = (function () {
     };
 
     QRScanner.prototype.success = function(stream) {
+        console.log('success');
         this.el.startButton.addClass('fadeAway');
         this.el.list.removeClass('hide');
         this.el.startButton.delay(300).stop().animate({
@@ -183,7 +185,6 @@ var QRScanner = (function () {
     QRScanner.prototype.read = function(a) {
         if($("#login").length > 0) {
             this.login(a);
-            console.log('hallo');
         } else {
             this.pay(a);
         }
@@ -212,6 +213,9 @@ var QRScanner = (function () {
 
             if($("#scan-log ul li").length > 7) {
                 $("#scan-log ul li:last-child").addClass('go-away');
+                setTimeout(function() {
+                    $("#scan-log ul li:last-child").remove();
+                },2000);
             }
 
             $("#scan-log ul li:first-child").after(node);
@@ -228,14 +232,10 @@ var QRScanner = (function () {
 
     QRScanner.prototype.login = function(a) {
         var sharedCode = a,
-            codeInformation = sharedCode.split('-'),
-            name = codeInformation[0],
-            userID = codeInformation[1],
             that = this;
 
-        console.log('I just scanned a QR code for ' + name + ' and with user ID ' + userID);
-        $("#username").val(userID);
-        $("#password").val(userID);
+        $("#username").val(a);
+        $("#password").val(a);
         $("#AdminIndexForm").submit();
     };
 

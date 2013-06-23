@@ -8,8 +8,8 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'Admins', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'Pages', 'action' => 'display'),
+            'loginRedirect' => array('controller' => 'Scan', 'action' => 'overview'),
+            'logoutRedirect' => array('controller' => 'Admins', 'action' => 'index'),
             'authError' => 'You have to be login to visit this page',
             //'authorize' => array('Controller'),
             'authenticate' => array(
