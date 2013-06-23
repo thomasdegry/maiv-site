@@ -1,9 +1,8 @@
 <section class="orange full-screen gradient-background">
     <div class="container container-small">
+        <h2 class="winners-title">Winning flavours</h2>
         <div class="calendar horizontal-slider-container">
-            <h2 class="horizontal-slider-navigation-title">
-                Upcoming festivals
-            </h2>
+            
             <ul class="calendar-slider horizontal-slider">
                 <?php
                     $i = 0;
@@ -21,33 +20,42 @@
                         }
 
                 ?>
-                        <li id="hs-<?php echo $i; ?>" class="calendar-item horizontal-slider-item <?php echo $additionalClasses; ?>">
-                            <div>
-                                <?php foreach()
+                        <li id="hs-<?php echo $i; ?>" class="calendar-item   horizontal-slider-item <?php echo $additionalClasses; ?>">
+                            <div id="burger-left">
+                                <div class="burger">
+                                    <?php 
+                                        foreach($winner['mrb_creations'] as $creation) {
+                                            echo $this->Html->image('ingredients/' . $creation['mrb_ingredients']['id'] . '.png');
+                                        } 
+                                    ?>
+                                </div>
                             </div>
-                            <h1 class="winner-item-title">
-                                <?php echo $winner['Event']['name']; ?>
-                            </h1>
-                            <ul>
-                                <?php foreach($winner['creations'] as $creation): ?>
-                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["User"]["id"]; ?>/picture?width=44&amp;height=44);"></li>
-                                <?php endforeach; ?> 
-                            </ul>
-                            <span class="winner-item-ingredients">
-                                A tasty burger with
-                                
-                                <?php
-                                    $echostring = '';
+                            <div id="burger-right">
+                                <h1 class="winner-item-title">
+                                    <?php echo $winner['mrb_events']['name']; ?>
+                                </h1>
+                                <ul>
+                                    <?php foreach($winner['mrb_creations'] as $creation): ?>
+                                        <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=44&amp;height=44);"></li>
+                                    <?php endforeach; ?> 
+                                </ul>
+                                <span class="winner-item-ingredients">
+                                    A tasty burger with
+                                    
+                                    <?php
+                                        $echostring = '';
 
-                                    for ($i=0; $i < count($winner['creations']) - 1; $i++) { 
-                                        $echostring .= $winner['creations'][$i]['Ingredient']['name'] . ',';
-                                    }
+                                        for ($i=0; $i < count($winner['mrb_creations']) - 1; $i++) { 
+                                            $echostring .= $winner['mrb_creations'][$i]['mrb_ingredients']['name'] . ',';
+                                        }
 
-                                    echo rtrim($echostring, ',');
-                                ?>
+                                        echo rtrim($echostring, ',');
+                                    ?>
 
-                                and <?php echo $winner['creations'][count($winners)]['Ingredient']['name']; ?>
-                            </span>
+                                    and <?php echo $winner['mrb_creations'][count($winner['mrb_creations']) - 1]['mrb_ingredients']['name']; ?>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
                         </li>
                 <?php
                     $i++;

@@ -1,0 +1,73 @@
+.horizontal-slider-item-winners {
+    text-align: left;
+}
+
+h2.winners-title {
+    width: 100%;
+    padding-top: 0.9em;
+    @include font-alternate($beige, 5em);
+    @extend %offset-text-shadow;
+    text-align: center;
+}
+
+#burger-left {
+    width: 15%;
+    float: left;
+    text-align: center;
+    margin-left: 20%;
+
+    .burger {
+        margin: 2em 0;
+    }
+}
+
+#burger-right {
+    width: 60%;
+    float: left;
+    margin-left: 5%;
+    padding-top: 1.6em;
+
+    h1.winner-item-title {
+        @include font-alternate($beige, 2em);
+        @extend %offset-text-shadow;
+        padding-bottom: 0.4em;
+    }
+
+    span.winner-item-ingredients {
+        @include font-alternate($brown, 1.4em);
+    }
+
+    ul {
+        padding-bottom: 0.6em;
+        li {
+            display: inline-block;
+        }
+    }
+
+    @media only all and (max-width: 1300px) {
+        width: 55%;
+        margin-left: 10%;
+    }
+
+    
+}
+
+@media only all and (max-width: 64em) {
+    #burger-right, #burger-left {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #burger-left {
+        padding-bottom: 2.8em;
+        .burger {
+            margin: auto;
+        }
+    }
+
+    .horizontal-slider-item-winners {
+        text-align: center;
+    }      
+}
