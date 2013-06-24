@@ -28,8 +28,9 @@
 <!--     <link href="css/screen.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/vendor/modernizr.js"></script>
  -->
+    <?php echo $this->Html->meta('icon', $this->Html->url('/favicon.png')); ?>
     <?php
-        echo $this->Html->css(array('screen', 'horizontal-slide'));
+        echo $this->Html->css(array('screen'));
 
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -92,15 +93,14 @@
                         <a href="#" class="mr-burger">Mr Burger</a>
                     </h6>
                     <p>
-                        Events are another of Mr Burger’s specialties. We cater everything from music festivals, sporting events and days, to school fetes, tradeshows and expos.
-                    </p>
+                        Mr Burger is a food truck dedicated to delivering the best tasting burgers to the people of Melbourne. Our mission is to bring a quality experience to eating burgers, wherever our trucks are parked. </p>
                     <p>
                         <a href="" class="prefixed-link">mrburger.com.au</a>
                     </p>
                 </div>
                 <div class="column span-one-column hide-mobile">
                     <!-- <h6 class="heading-twitter-bird">On Twitter</h6> -->
-                    <h6 class="mr-burger"></h6>
+                    <h6 class="livefeed"></h6>
                     <ul class="feed">
                         <li>
                             <img class="feed-profile-picture circle-picture" />
@@ -113,7 +113,7 @@
                             <img class="feed-profile-picture circle-picture" />
                             <div class="feed-content">
                                 <h2 class="feed-user">@tatsvc</h2>
-                                <p>Wow, this is amazing!</p>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.</p>
                             </div>
                         </li>
                         <li>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="column span-one-column hide-mobile">
                     <!-- <h6 class="heading-stats">Mr. Nerd!</h6> -->
-                    <h6 class="mr-burger"></h6>
+                    <h6 class="statistics"></h6>
                     <dl class="stats">
                         <dt class="stat-item stat-item-facebook">
                             F

@@ -10,7 +10,7 @@
                 <form class="gallery-filters">
                     <div class="column span-one-column label-icon-container">
                         <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
-                        <select class="form-element" name="filter-festival" id="filter-name">
+                        <select class="form-element" name="filter-festival" id="filter-festival">
                             <?php foreach($previousEvents as $e): ?>
                                 <?php $selected = ($e['Event']['id'] === $event['Event']['id']); ?>
                                 <option value="<?php echo URL . 'gallery/' . $e['Event']['id']; ?>" <?php if ($selected) { echo 'selected'; } ?>>
@@ -92,7 +92,7 @@
                                     <form class="rate">
                                         <input type="hidden" name="id" value="<?php echo $b['id']; ?>" />
                                         <input type="hidden" name="rating" value="0" />
-                                        <a class="rate-plus-button" href="#">Rate</a>
+                                       <a class="rate-plus-button" href="#">Rate</a>
                                         <div class="rate-visual"></div>
                                         <span class="gallery-item-rating rate-rating">
                                             4<span>/5</span>

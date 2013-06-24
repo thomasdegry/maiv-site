@@ -123,14 +123,17 @@ a img {
   max-width: 1024px;
   position: relative;
   width: 92%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
-/* line 27, ../../sass/_layout.scss */
+/* line 28, ../../sass/_layout.scss */
 .container-small {
   width: 55%;
 }
 
-/* line 33, ../../sass/_layout.scss */
+/* line 34, ../../sass/_layout.scss */
 .column-container {
   *zoom: 1;
 }
@@ -141,54 +144,54 @@ a img {
   clear: both;
 }
 
-/* line 37, ../../sass/_layout.scss */
+/* line 38, ../../sass/_layout.scss */
 .column {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-right: 2em;
 }
-/* line 41, ../../sass/_layout.scss */
+/* line 42, ../../sass/_layout.scss */
 .column:last-child {
   float: right;
 }
 
 @media only all and (min-width: 53em) {
-  /* line 47, ../../sass/_layout.scss */
+  /* line 48, ../../sass/_layout.scss */
   .span-one-column {
     float: left;
   }
-  /* line 50, ../../sass/_layout.scss */
+  /* line 51, ../../sass/_layout.scss */
   .has-four-columns .span-one-column {
     width: 25%;
   }
-  /* line 54, ../../sass/_layout.scss */
+  /* line 55, ../../sass/_layout.scss */
   .has-three-columns .span-one-column {
     width: 33%;
   }
-  /* line 58, ../../sass/_layout.scss */
+  /* line 59, ../../sass/_layout.scss */
   .has-two-columns .span-one-column {
     width: 50%;
   }
 
-  /* line 63, ../../sass/_layout.scss */
+  /* line 64, ../../sass/_layout.scss */
   .span-two-columns {
     float: left;
   }
-  /* line 66, ../../sass/_layout.scss */
+  /* line 67, ../../sass/_layout.scss */
   .has-four-columns .span-two-columns {
     width: 50%;
   }
-  /* line 70, ../../sass/_layout.scss */
+  /* line 71, ../../sass/_layout.scss */
   .has-three-columns .span-two-columns {
     width: 66%;
   }
 
-  /* line 77, ../../sass/_layout.scss */
+  /* line 78, ../../sass/_layout.scss */
   .has-four-columns .span-three-columns {
     width: 75%;
   }
-  /* line 81, ../../sass/_layout.scss */
+  /* line 82, ../../sass/_layout.scss */
   .has-three-columns .span-three-columns {
     width: 100%;
   }
@@ -221,15 +224,17 @@ body {
 
 /* line 26, ../../sass/_base.scss */
 .full-screen {
-  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-top: 4.375em;
   position: relative;
   width: 100%;
 }
 
-/* line 35, ../../sass/_base.scss */
+/* line 36, ../../sass/_base.scss */
 .gradient-background {
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, rgba(247, 110, 31, 0.5)), color-stop(65%, rgba(247, 110, 31, 0))), url("../img/body-pattern.png"), #ef691d;
   background: -webkit-radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
@@ -238,7 +243,7 @@ body {
   background: radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
 }
 
-/* line 39, ../../sass/_base.scss */
+/* line 40, ../../sass/_base.scss */
 .blurry-background {
   background-image: url("../img/blurry-background.jpg");
   background-position: center top;
@@ -246,7 +251,7 @@ body {
   padding-top: 4.375em;
 }
 
-/* line 48, ../../sass/_base.scss */
+/* line 49, ../../sass/_base.scss */
 p {
   color: inherit;
   font-family: "Traveler";
@@ -257,7 +262,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* line 55, ../../sass/_base.scss */
+/* line 56, ../../sass/_base.scss */
 select.form-element, input[type="text"].form-element, input[type=text], select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -274,26 +279,31 @@ select.form-element, input[type="text"].form-element, input[type=text], select {
   cursor: pointer;
   color: #2d353a;
   font-family: "Alternate Gothic";
-  font-size: 1em;
+  font-size: 1.3em;
   font-style: normal;
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
   width: 100%;
 }
+/* line 66, ../../sass/_base.scss */
+input[type="text"].form-element:focus, input[type=text]:focus, select:focus {
+  outline: none;
+  outline: none;
+}
 
-/* line 67, ../../sass/_base.scss */
+/* line 72, ../../sass/_base.scss */
 label {
   display: none;
 }
 
-/* line 71, ../../sass/_base.scss */
+/* line 76, ../../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-/* line 76, ../../sass/_base.scss */
+/* line 81, ../../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -301,25 +311,25 @@ label {
   overflow: hidden;
   text-align: left;
   display: block;
-  height: 2.8em;
-  width: 2.8em;
+  height: 3em;
+  width: 3em;
   position: absolute;
-  top: -.4em;
+  top: -.2em;
   right: 1em;
   z-index: 99;
 }
 
-/* line 90, ../../sass/_base.scss */
+/* line 96, ../../sass/_base.scss */
 .label-icon-dropdown {
-  background-position: -55px -174px;
+  background-position: -55px -172px;
 }
 
-/* line 94, ../../sass/_base.scss */
+/* line 100, ../../sass/_base.scss */
 .label-icon-search {
-  background-position: -95px -175px;
+  background-position: -95px -172px;
 }
 
-/* line 98, ../../sass/_base.scss */
+/* line 104, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
   padding: .4em 1em .3em;
@@ -328,12 +338,12 @@ select.form-element {
   z-index: 9;
 }
 
-/* line 110, ../../sass/_base.scss */
+/* line 116, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
   padding: .45em 1em .25em;
 }
-/* line 115, ../../sass/_base.scss */
+/* line 121, ../../sass/_base.scss */
 input[type="text"].form-element::after {
   position: absolute;
   top: -1em;
@@ -341,7 +351,7 @@ input[type="text"].form-element::after {
   z-index: 999;
 }
 
-/* line 123, ../../sass/_base.scss */
+/* line 129, ../../sass/_base.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -372,15 +382,15 @@ input[type="text"].form-element::after {
   width: 90%;
 }
 
-/* line 141, ../../sass/_base.scss */
+/* line 147, ../../sass/_base.scss */
 .button-confirm {
   background-color: #b7b700;
-  -webkit-box-shadow: 0 0.1em 0 #6a6b00;
-  -moz-box-shadow: 0 0.1em 0 #6a6b00;
-  box-shadow: 0 0.1em 0 #6a6b00;
+  -webkit-box-shadow: 0 0.1em 0 #9d9e00;
+  -moz-box-shadow: 0 0.1em 0 #9d9e00;
+  box-shadow: 0 0.1em 0 #9d9e00;
 }
 
-/* line 148, ../../sass/_base.scss */
+/* line 154, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -389,12 +399,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 153, ../../sass/_base.scss */
+/* line 159, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 158, ../../sass/_base.scss */
+/* line 164, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: .3em solid white;
@@ -406,13 +416,13 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
-/* line 167, ../../sass/_base.scss */
+/* line 173, ../../sass/_base.scss */
 .hide-mobile {
   display: none;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 172, ../../sass/_base.scss */
+  /* line 178, ../../sass/_base.scss */
   .hide-mobile {
     display: block;
   }

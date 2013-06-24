@@ -19,22 +19,48 @@
 }
 
 .rate-visual {
-    background-image: url('../img/rate.png');
+    background: url('../img/rate.png') no-repeat;
     background-repeat: no-repeat;
     display: block;
-    height: 53px;
+    height: 60px;
     margin: 0 auto 1em;
-    width: 60px;
+    width: 76px;
 }
+
 
 .rate-plus-button {
     @extend %sprite;
     background-position: -218px -20px;
     display: block;
-    height: 80px;
-    margin: 0 0 0 -26px;
+    height: 83px;
+    margin: 0 0 0 -23px;
     width: 35px;
-    position: absolute;
-    left: 50%;
-    top: 50px;
+  -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-animation: swinging 3s infinite ease-in-out;
+  -moz-animation: swinging 3s infinite ease-in-out;
+  -ms-animation: swinging 3s infinite ease-in-out;
+  -animation: swinging 3s infinite ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+
 }
+
+@-webkit-keyframes swinging {
+  0% {
+    -webkit-transform: rotate(-7deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(7deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-7deg);
+  }
+}
+
+
