@@ -170,6 +170,32 @@
         </footer>
     </div>
 </div>
+<?php if ($this->name === 'Gallery') : ?>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '197361027085761',
+      channelUrl : '//localhost/channel.html',
+      status     : true,
+      xfbml      : true
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<?php endif; ?>
+
     <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js',
 'vendor/deck.core.js', 'vendor/deck.navigation.js', 'vendor/deck.leap.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
 'vendor/jquery.scrollorama.js', 'main.js')); ?>

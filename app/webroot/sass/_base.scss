@@ -60,9 +60,10 @@ p {
     border-radius: 0px;
     @include box-shadow(-.2em .3em 0 rgba(0, 0, 0, .2));
     @include box-sizing(border-box);
-    cursor: pointer;
     @include font-alternate($blue, 1.3em);
     width: 100%;
+    -webkit-font-smoothing: antialiased;
+
     &:focus{
       outline: none;
       outline: none;
@@ -80,16 +81,15 @@ label {
 
 .label-icon {
     @extend %sprite;
-
     background-color: $blue;
-    border-radius: 1.4em;
+    border-radius: 1.6em;
     @include hide-text;
     display: block;
     height: 3em;
     width: 3em;
     position: absolute;
     top: -.2em;
-    right: 1em;
+    right: 3em;
     z-index: 99;
 }
 
@@ -103,11 +103,16 @@ label {
 
 select.form-element {
     @extend %form-element;
-    height: 1.7em;
-    padding: .4em 1em .3em;
+    cursor: pointer;
+    height: 1.85em;
+    padding: .4em 2em .5em .4em;
     position: relative;
     top: .1em;
     z-index: 9;
+
+    option {
+        text-transform: capitalize;
+    }
 
     &::after {
     }
@@ -133,6 +138,7 @@ input[type="text"].form-element {
     @include box-sizing(border-box);
     border: 0;
     border-radius: .3em;
+    cursor: pointer;
     display: block;
     @include font-alternate($beige, 1.5em);
     font-weight: normal;
@@ -141,6 +147,7 @@ input[type="text"].form-element {
     text-decoration: none;
     text-shadow: -.1em .1em 0 rgba(0, 0, 0, .1);
     margin: 0 auto .5em;
+    -webkit-font-smoothing: antialiased;
     width: 90%;
 }
 

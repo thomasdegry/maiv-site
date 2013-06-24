@@ -55,6 +55,7 @@ class AppController extends Controller {
         }
         $this->set('next_event', $next_event);
 
+        define('API', 'http://ksjkuurne.be/FOOD/api');
         define('URL', 'http://localhost/mrburger-php/');
 
         $this->Auth->allow('index', 'login', 'display', 'addToCalender');
