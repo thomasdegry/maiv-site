@@ -32,6 +32,8 @@
     <?php
         echo $this->Html->css(array('screen'));
 
+        echo $this->Html->script('vendor/modernizr');
+
         echo $this->fetch('meta');
         echo $this->fetch('css');
         echo $this->fetch('script');
@@ -196,8 +198,7 @@
 </script>
 <?php endif; ?>
 
-    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js',
-'vendor/deck.core.js', 'vendor/deck.navigation.js', 'vendor/deck.leap.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
+    <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
 'vendor/jquery.scrollorama.js', 'main.js')); ?>
 </body>
 </html>

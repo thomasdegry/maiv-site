@@ -20,7 +20,7 @@ $(window).load(function () {
     });
 
     //leap
-    $.deck('.slide');
+    // $.deck('.slide');
 
     FastClick.attach(document.body);
 
