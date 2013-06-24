@@ -13,7 +13,7 @@
 .feature-slider-navigation {
     margin: 0 auto;
     padding: 1.5em 0 0;
-    width: 3.2em;
+    width: 3.4em;
 
     li {
         @include inline-block;
@@ -28,11 +28,21 @@
     color: transparent;
     font: 0/0;
     height: 1em;
+    opacity: .6;
     text-decoration: none;
     width: 1em;
 
     @media only screen and (max-width: 21.25em) {
         display: none;
+    }
+
+    &.active {
+        border-radius: .6em;
+        margin-top: -.1em;
+        margin-left: -.1em;
+        height: 1.2em;
+        opacity: 1;
+        width: 1.2em;
     }
 }
 

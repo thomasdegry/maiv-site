@@ -39,10 +39,10 @@
         </div>
         <ol class="feature-slider-navigation">
             <li>
-                <a href="#feature-slider" class="feature-slider-navigation-item">1</a>
+                <a href="#feature-slider" class="feature-slider-navigation-item"></a>
             </li>
             <li>
-                <a href="#feature-slider" class="feature-slider-navigation-item">2</a>
+                <a href="#feature-slider" class="feature-slider-navigation-item"></a>
             </li>
         </ol>
 
