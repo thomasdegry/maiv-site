@@ -68,9 +68,9 @@
 <section class="beige full-screen app-demo app-demo-3 blocks scrollblock">
     <div class="container">
     <div class="app-demo-3-info">
-        <div class="mrburger burger-01" id="block6"></div>
-        <div class="mrburger burger-02" id="block7"></div>
-        <div class="mrburger burger-02" id="block8"></div>
+        <div class="mrburger burger-receipt burger-01" id="block6"></div>
+        <div class="mrburger burger-receipt burger-02" id="block7"></div>
+        <div class="mrburger burger-receipt burger-03" id="block8"></div>
     </div>
     <div class="app-demo-3-info2" id="block9">
         <h1>Check Out Our Burgers</h1>

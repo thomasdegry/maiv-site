@@ -8,7 +8,7 @@
 
 @media only all and (max-height: 40em) {
     .app-demo {
-        background-position: -3em center;
+        background-position: -6em center;
         @include background-size(auto 60%);
     }
 }
@@ -27,163 +27,224 @@
 }
 
 .app-demo-1 {
-  position: relative;
+    position: relative;
     background-image: url('../img/demo/iphone-01.png');
+
     .app-demo-1-info{
-      position: absolute;
-      right: 0;
-      top: 350px;
+        position: absolute;
+        right: 0;
+        top: 350px;
+
+        @media only screen and (max-width: 21.25em) {
+            top: 10px;
+        }
     }
+
     h1 {
-      @include font-alternate($orange, 3em);
+        @include font-alternate($orange, 3em);
     }
+
     .appstore-logo {
-      display: block;
-      width: 147px;
-      height: 48px;
-      background: url('../img/demo/appstore.png');
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 20px;
+        display: block;
+        width: 147px;
+        height: 48px;
+        background: url('../img/demo/appstore.png');
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
+
     .arrow-down {
-      display: block;
-      width: 8px;
-      height: 309px;
-      background: url('../img/demo/arrow.png') no-repeat;
-      background-size: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 20px;
-
+        display: block;
+        width: 8px;
+        height: 309px;
+        background: url('../img/demo/arrow.png') no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
-
 }
 
 .app-demo-2 {
     position: relative;
     background-image: url('../img/demo/iphone-02.png');
-  .app-demo-2-info {
-    position: absolute;
-    left: 0;
-    top: 350px;
-    h1 {
-      @include font-alternate($beige, 3em);
-    }
-  }
-  .app-demo-2-info2 {
-    position: absolute;
-    right: -100px;
-    top: 300px;
-    h1 {
-      width: 360px;
-      height: 50px;
-      @include font-alternate($beige, 1.6em);
-      background: url('../img/demo/burgerpin.png') no-repeat 0px 10px;
-      padding-left: 30px;
-    }
-    h2 {
-      @include font-alternate($brown, 1em);
-      padding-left: 30px;
-      margin-top: -25px;
-    }
-    #block3{
-      height: 154px;
-      position: relative;
-      left: 30px;
-      background: url('../img/dotted1.png') no-repeat 15px 48px;
-    }
-    #block4{
-      position: relative;
-      left: 50px;
-      top: -45px;
-      height: 100px;
-      background: url('../img/dotted2.png') no-repeat -50px 50px;
-      h1 {
-        background-position: 160px 0px;
-      }
 
+    .app-demo-2-info {
+        position: absolute;
+        left: 0;
+        top: 350px;
+
+        @media only screen and (max-width: 21.25em) {
+            left: 50%;
+        }
+
+        h1 {
+            @include font-alternate($beige, 3em);
+
+            @media only screen and (max-width: 21.25em) {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (max-width: 21.25em) {
+            top: 50px;
+        }
     }
-    #block5{
-      position: relative;
-      top: -50px;
-      left: 30px;
-      h1 {
-        background-position: 0px 5px;
-      }
+
+    .app-demo-2-info2 {
+        position: absolute;
+        right: -100px;
+        top: 300px;
+
+        h1 {
+            width: 360px;
+            height: 50px;
+            @include font-alternate($beige, 1.6em);
+            background: url('../img/demo/burgerpin.png') no-repeat 0px 10px;
+            padding-left: 30px;
+        }
+
+        h2 {
+            @include font-alternate($brown, 1em);
+            padding-left: 30px;
+            margin-top: -25px;
+        }
+
+        #block3{
+            height: 154px;
+            position: relative;
+            left: 30px;
+            background: url('../img/dotted1.png') no-repeat 15px 48px;
+        }
+
+        #block4{
+            position: relative;
+            left: 50px;
+            top: -45px;
+            height: 100px;
+            background: url('../img/dotted2.png') no-repeat -50px 50px;
+            h1 {
+                background-position: 160px 0px;
+            }
+        }
+
+        #block5{
+            position: relative;
+            top: -50px;
+            left: 30px;
+            h1 {
+                background-position: 0px 5px;
+            }
+        }
+
+        @media only screen and (max-width: 21.25em) {
+             @include scale(0.6);
+             top: 90px;
+             right: -145px;
+        }
     }
-  }
 }
 
 .app-demo-3 {
     background-image: url('../img/demo/iphone-03.png');
-  position: relative;
-  .app-demo-3-info {
-    position: absolute;
-    left: 100px;
-    top: 250px;
-    .mrburger{
-      width: 130px;
-      height: 88px;
-      display: block;
-      &.burger-01{
-        background: url('../img/demo/burger_01.png') no-repeat;
-        background-size: 100%;
-      }
-      &.burger-02{
-        background: url('../img/demo/burger_02.png') no-repeat;
-        background-size: 100%;
-      }
-      &.burger-02{
-        background: url('../img/demo/burger_03.png') no-repeat;
-        background-size: 100%;
-      }
+    position: relative;
+    .app-demo-3-info {
+        position: absolute;
+        left: 100px;
+        top: 250px;
+
+        @media only screen and (max-width: 21.25em) {
+            top: 60px;
+            left: 130px;
+        }
+
+        .mrburger{
+            width: 130px;
+            height: 88px;
+            display: block;
+
+            &.burger-01{
+                background: url('../img/demo/burger_01.png') no-repeat;
+                background-size: 100%;
+            }
+            &.burger-02{
+                background: url('../img/demo/burger_02.png') no-repeat;
+                background-size: 100%;
+            }
+            &.burger-03{
+                background: url('../img/demo/burger_03.png') no-repeat;
+                background-size: 100%;
+            }
+
+            @media only screen and (max-width: 21.25em) {
+                @include inline-block;
+                margin: 0; padding: 0;
+                &.burger-receipt {
+                    width: 33px;
+                    background-size: 100%;
+                }
+
+                &.burger-01, &.burger-02 {
+                    margin-right: 1em;
+                }
+            }
+        }
     }
-  }
- .app-demo-3-info2 {
-    @include font-alternate($orange, 2em);
-    position: absolute;
-    right: 0;
-    top: 350px;
-  }
+
+    .app-demo-3-info2 {
+        @include font-alternate($orange, 2em);
+        position: absolute;
+        right: 0;
+        top: 350px;
+
+        @media only screen and (max-width: 21.25em) {
+            top: 120px;
+            width: 40%;
+            left: 130px;
+        }
+    }
 }
 
 .app-demo-4 {
- background-color: #ff6824;
-  position: relative;
-  .btn-play {
-    @include font-alternate($beige, 3em);
-    padding: 40px;
-    padding-top: 55px;
-    padding-bottom: 25px;
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -68px;
-    margin-top: -80px;
-    background-color: $orange;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
-    &:hover {
-      background-color: $blue;
-      cursor: pointer;
+    @media only screen and (max-width: 21.25em) {
+        display: none;
     }
-  }
+
+    background-color: #ff6824;
+    position: relative;
+    .btn-play {
+        @include font-alternate($beige, 3em);
+        padding: 40px;
+        padding-top: 55px;
+        padding-bottom: 25px;
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -68px;
+        margin-top: -80px;
+        background-color: $orange;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        transition: all 1s;
+
+        &:hover {
+          background-color: $blue;
+          cursor: pointer;
+        }
+    }
+
     background-image: url('../img/demo/iphone-04.png');
-  position: relative;
+    position: relative;
     #mrburgervideo {
-      position: absolute;
-      left: -128px;
-      margin-left: auto;
-      margin-right: auto;
-      display: none;
+        position: absolute;
+        left: -128px;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
     }
 }
-
-
-

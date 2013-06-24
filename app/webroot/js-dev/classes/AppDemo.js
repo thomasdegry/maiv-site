@@ -1,3 +1,4 @@
+/* globals alert */
 var AppDemo = (function () {
 
     var AppDemo = function (options) {
@@ -22,12 +23,12 @@ var AppDemo = (function () {
 
         this.setScrollPositions();
 
-        this.el.container.on('resize', _.bind(this.setScrollPositions, this));
-        this.el.container.on('scroll', _.bind(this.detectScroll, this));
+        if (!this.checkMobile()) {
+            this.el.container.on('resize', _.bind(this.setScrollPositions, this));
+            this.el.container.on('scroll', _.bind(this.detectScroll, this));
 
-        // if (!!('ontouchstart' in window)) {
-        //     this.animate();
-        // }
+            this.animate();
+        }
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -53,6 +54,10 @@ var AppDemo = (function () {
                 $('body').removeClass('show-logo');
             }
         }
+    };
+
+    AppDemo.prototype.checkMobile = function() {
+        return !!('ontouchstart' in window) || !!('onmsgesturechange' in window); // works on ie10
     };
 
     AppDemo.prototype.animate = function () {

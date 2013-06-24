@@ -30,6 +30,10 @@
     height: 1em;
     text-decoration: none;
     width: 1em;
+
+    @media only screen and (max-width: 21.25em) {
+        display: none;
+    }
 }
 
 .mr-burger-appstore {
@@ -42,7 +46,19 @@
     width: 320px;
 
     @media only screen and (max-width: 63.99em) {
-        background: rgba(yellow, 0.4);
+        left: 0em;
+        margin: 0 auto;
+        position: relative;
+        top: -2em;
+    }
+
+    @media only screen and (max-width: 21.25em) {
+        width: 70%;
+        margin: 0 auto;
+        top: 4em;
+        left: -1em;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 }
 
@@ -57,6 +73,11 @@
     span {
         font-family: $font-mission-script;
         text-transform: none;
+    }
+
+    @media only screen and (max-width: 21.25em) {
+        margin-top: -2em;
+        @include font-alternate($beige, 2em);
     }
 }
 
@@ -78,6 +99,10 @@
         position: relative;
         top: 42px;
         left: 119px;
+    }
+
+    @media only screen and (max-width: 63.99em) {
+        display: none;
     }
 }
 
