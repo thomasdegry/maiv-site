@@ -54,6 +54,22 @@ class GalleryController extends AppController {
 
         $paginated = $this->paginate('Burger');
 
+        $arrayCount = 0;
+        foreach ($paginated as $burger) {
+            $totalCount = 0;
+            for ($i=0; $i < count($burger['Rating']); $i++) {
+                $totalCount += $burger['Rating'][$i]['rating'];
+            }
+
+            $average = 0;
+            if(count($burger['Rating'])) {
+                $average = $totalCount / count($burger['Rating']);
+            }
+
+            $paginated[$arrayCount]['average'] = ceil($average);
+            $arrayCount ++;
+        }
+
         // if($this->request->is('ajax')) {
         //     echo json_encode($paginated);
         // }

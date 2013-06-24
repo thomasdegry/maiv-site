@@ -1,3 +1,6 @@
+/* globals Settings */
+/* globals FB */
+
 var Rating = (function () {
 
     var Rating = function (options, el) {
@@ -9,6 +12,8 @@ var Rating = (function () {
         };
 
         this.el = el;
+
+        this.settings = new Settings();
 
         this.el = _.extend(this.el, {
             plusButton: this.el.rating.find(this.options.plusButton),
@@ -23,7 +28,43 @@ var Rating = (function () {
 
     Rating.prototype.bind = function() {
         this.el.plusButton.on('click', _.bind(this.addRate, this));
+        this.el.rating.on('submit', _.bind(this.submitRating, this));
     };
+
+    Rating.prototype.submitRating = function (e) {
+        e.preventDefault();
+
+        var rate = _.bind(function (userID) {
+            $.ajax(this.settings.API + '/rate', {
+                method: 'POST',
+                data: {
+                    burger_id: this.el.rating.find('input[name="id"]').val(),
+                    voter_id: userID,
+                    rating: this.el.rating.find('input[name="rating"]').val()
+                },
+                success: _.bind(function (data) {
+                    this.el.rating.find('input[type="submit"]').remove();
+                    this.el.plusButton.off('click');
+                    this.el.rating.trigger('rating:submit');
+                }, this)
+            });
+        }, this);
+
+        FB.getLoginStatus(function (response) {
+            if (response.status === 'connected') {
+                rate(response.authResponse.userID);
+            } else {
+                FB.login(function (response) {
+                    if (response.authResponse) {
+                        rate(response.authResponse.userID);
+                    }
+                });
+            }
+        });
+
+        return false;
+    };
+
 
     Rating.prototype.addRate = function (e) {
         e.preventDefault();

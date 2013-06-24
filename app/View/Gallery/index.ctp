@@ -1,57 +1,28 @@
 <section class="blurry-background">
     <div class="container gallery">
-        <div class="gallery-header column-container has-three-columns">
-            <div class="column-container has-two-columns column span-two-columns">
-                <p class="gallery-introduction">
-                    Rate these burgers and decide<br />
-                    which one will become the one<br />
-                    and only <span>festival flavour</span>
-                </p>
-                <form class="gallery-filters">
-                    <div class="column span-one-column label-icon-container">
-                        <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
-                        <select class="form-element" name="filter-festival" id="filter-festival">
-                            <?php foreach($previousEvents as $e): ?>
-                                <?php $selected = ($e['Event']['id'] === $event['Event']['id']); ?>
-                                <option value="<?php echo URL . 'gallery/' . $e['Event']['id']; ?>" <?php if ($selected) { echo 'selected'; } ?>>
-                                    <?php echo $e['Event']['name']; ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="column span-one-column label-icon-container">
-                        <label for="filter-name" class="label-icon label-icon-search">Filter on name</label>
-                        <input type="text" class="form-element" placeholder="Filter on name" id="filter-name" name="filter-name" />
-                    </div>
-                </form>
-            </div>
-            <div class="column span-one-column">
-                <div class="gallery-item gallery-item-featured">
-                    <h2 class="gallery-item-heading">
-                        Couleur Caf&eacute;
-                    </h2>
-                    <ul class="gallery-item-participants">
-                        <li class="circle-picture" style="background-image: url('http://profile.ak.fbcdn.net/hprofile-ak-ash4/203169_1515086493_965016673_q.jpg')">
-                            Pieter
-                        </li>
-                        <li class="circle-picture" style="background-image: url('http://profile.ak.fbcdn.net/hprofile-ak-ash4/203169_1515086493_965016673_q.jpg')">
-                            Pieter
-                        </li>
-                        <li class="circle-picture" style="background-image: url('http://profile.ak.fbcdn.net/hprofile-ak-ash4/203169_1515086493_965016673_q.jpg')">
-                            Pieter
-                        </li>
-                        <li class="circle-picture" style="background-image: url('http://profile.ak.fbcdn.net/hprofile-ak-ash4/203169_1515086493_965016673_q.jpg')">
-                            Pieter
-                        </li>
-                        <li class="circle-picture" style="background-image: url('http://profile.ak.fbcdn.net/hprofile-ak-ash4/203169_1515086493_965016673_q.jpg')">
-                            Pieter
-                        </li>
-                    </ul>
-                    <div class="burger gallery-burger">
-
-                    </div>
+        <div class="gallery-header column-container has-two-columns">
+            <p class="gallery-introduction">
+                Rate these burgers and decide
+                which one<br />will become the one
+                and only <span>festival flavour</span>
+            </p>
+            <form class="gallery-filters column-container has-two-columns">
+                <div class="column span-one-column label-icon-container">
+                    <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
+                    <select class="form-element" name="filter-festival" id="filter-festival">
+                        <?php foreach($previousEvents as $e): ?>
+                            <?php $selected = ($e['Event']['id'] === $event['Event']['id']); ?>
+                            <option value="<?php echo URL . 'gallery/' . $e['Event']['id']; ?>" <?php if ($selected) { echo 'selected'; } ?>>
+                                <?php echo $e['Event']['name']; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
-            </div>
+                <div class="column span-one-column label-icon-container">
+                    <label for="filter-name" class="label-icon label-icon-search">Filter on name</label>
+                    <input type="text" class="form-element" placeholder="Filter on name" id="filter-name" name="filter-name" />
+                </div>
+            </form>
         </div>
         <ul class="gallery-grid column-container has-three-columns">
             <?php foreach ($burgers as $burger) : ?>

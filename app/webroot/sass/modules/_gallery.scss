@@ -7,6 +7,12 @@
     padding-bottom: 3em;
 }
 
+.gallery-filters {
+    .column {
+        padding-right: 4em;
+    }
+}
+
 .gallery-introduction {
     @extend %offset-text-shadow;
     @include font-alternate($beige, 3em);
@@ -85,7 +91,7 @@
 }
 
 .burger {
-    margin: 2em auto;
+    margin: 2em auto 0;
     width: 100px;
 
     &::before {

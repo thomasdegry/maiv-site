@@ -12,6 +12,8 @@ var Gallery = (function () {
             share: '.gallery-share-button'
         };
 
+        this.user = null;
+
         this.createElements();
 
         this.activeElement = 0;
@@ -49,6 +51,11 @@ var Gallery = (function () {
         // Create a rating element for each gallery item
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
+            var that = this;
+            $(this).on('rating:submit', '.rate', _.bind(function () {
+                $(that).find('.button').html('Voted!').removeClass('button-confirm');
+                $('.sliding-doors-open').removeClass('sliding-doors-open');
+            }, this));
         });
     };
 
@@ -71,22 +78,22 @@ var Gallery = (function () {
             top = $(window).height() * 0.5 - 150,
             left = $(window).width() * 0.5 - 200;
 
-        window.open($(this).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
+        window.open($(e.target).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
 
         return false;
     };
 
     Gallery.prototype.equalHeight = function () {
         var height = 0,
-            items = $(this.options.item);
+            burgers = $(this.options.item).find('.burger');
 
-        items.each(function () {
+        burgers.each(function () {
             var tempHeight = $(this).height();
 
             height = (tempHeight > height) ? tempHeight : height;
         });
 
-        items.height(height);
+        burgers.height(height);
     };
 
     Gallery.prototype.loadPage = function(e, pageNumber) {
@@ -143,5 +150,4 @@ var Gallery = (function () {
     };
 
     return Gallery;
-
 })();

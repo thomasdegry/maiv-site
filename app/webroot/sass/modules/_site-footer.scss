@@ -7,7 +7,16 @@
         margin: 0 auto;
         max-width: 22em;
     }
+
+    .column:first-child {
+        @media only screen and (max-width: 63em) {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+    }
 }
+
 
 .mr-burger {
     background-image: url('../img/mr-burger.svg');
@@ -20,22 +29,22 @@
 }
 
 .livefeed {
-  background-image: url('../img/livefeed.svg');
-  background-position: center;
-  display: block;
-  height: 128px;
-  @include hide-text;
-  margin: 0 auto 2em;
-  width: 175px;
+    background-image: url('../img/livefeed.svg');
+    background-position: center;
+    display: block;
+    height: 128px;
+    @include hide-text;
+    margin: 0 auto 2em;
+    width: 175px;
 }
 .statistics {
-  background-image: url('../img/statistics.svg');
-  background-position: center;
-  display: block;
-  height: 128px;
-  @include hide-text;
-  margin: 0 auto 2em;
-  width: 175px;
+    background-image: url('../img/statistics.svg');
+    background-position: center;
+    display: block;
+    height: 128px;
+    @include hide-text;
+    margin: 0 auto 2em;
+    width: 175px;
 }
 
 a {
@@ -48,10 +57,11 @@ a {
     height:23px;
     @include inline-block;
     background: url('../img/dreamteam.png') no-repeat;
+    background-size: 100%;
     position: relative;
     top: -2px;
-    padding-right: 10px;
     left: 5px;
+    margin-right: 12px;
 }
 
 .copyright {
@@ -61,15 +71,13 @@ a {
 }
 
 dl.stats {
-  width: 12em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    width: 12em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-
 .feed-content {
-  width: 220px;
-  margin-left: 20px;
+    width: 220px;
+    margin-left: 20px;
 }

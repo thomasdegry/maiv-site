@@ -1,6 +1,6 @@
 <section class="orange full-screen gradient-background">
     <div class="container container-small">
-        <h2 class="winners-title">Winning flavours</h2>
+        <h1 class="winners-title">Winning flavours</h1>
         <div class="calendar horizontal-slider-container">
             <ul class="calendar-slider horizontal-slider">
                 <?php
@@ -30,9 +30,9 @@
                                 </div>
                             </div>
                             <div class="burger-right">
-                                <h1 class="winner-item-title">
+                                <h2 class="winner-item-title">
                                     <?php echo $winner['mrb_events']['name']; ?>
-                                </h1>
+                                </h2>
 
                                 <span class="winner-item-ingredients">
                                     A tasty burger with
@@ -50,7 +50,7 @@
                                 </span>
                                 <ul>
                                     <?php foreach($winner['mrb_creations'] as $creation): ?>
-                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=44&amp;height=44);"></li>
+                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=88&amp;height=88); background-size: 100%;"></li>
                                     <?php endforeach; ?>
                                 </ul>
 

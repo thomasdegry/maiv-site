@@ -263,6 +263,8 @@ var Gallery = (function () {
             share: '.gallery-share-button'
         };
 
+        this.user = null;
+
         this.createElements();
 
         this.activeElement = 0;
@@ -300,6 +302,11 @@ var Gallery = (function () {
         // Create a rating element for each gallery item
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
+            var that = this;
+            $(this).on('rating:submit', '.rate', _.bind(function () {
+                $(that).find('.button').html('Voted!').removeClass('button-confirm');
+                $('.sliding-doors-open').removeClass('sliding-doors-open');
+            }, this));
         });
     };
 
@@ -322,22 +329,22 @@ var Gallery = (function () {
             top = $(window).height() * 0.5 - 150,
             left = $(window).width() * 0.5 - 200;
 
-        window.open($(this).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
+        window.open($(e.target).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
 
         return false;
     };
 
     Gallery.prototype.equalHeight = function () {
         var height = 0,
-            items = $(this.options.item);
+            burgers = $(this.options.item).find('.burger');
 
-        items.each(function () {
+        burgers.each(function () {
             var tempHeight = $(this).height();
 
             height = (tempHeight > height) ? tempHeight : height;
         });
 
-        items.height(height);
+        burgers.height(height);
     };
 
     Gallery.prototype.loadPage = function(e, pageNumber) {
@@ -394,7 +401,6 @@ var Gallery = (function () {
     };
 
     return Gallery;
-
 })();
 
 var HorizontalSlider = (function () {
@@ -618,6 +624,9 @@ var Navigation = (function () {
     return Navigation;
 })();
 
+/* globals Settings */
+/* globals FB */
+
 var Rating = (function () {
 
     var Rating = function (options, el) {
@@ -629,6 +638,8 @@ var Rating = (function () {
         };
 
         this.el = el;
+
+        this.settings = new Settings();
 
         this.el = _.extend(this.el, {
             plusButton: this.el.rating.find(this.options.plusButton),
@@ -643,7 +654,43 @@ var Rating = (function () {
 
     Rating.prototype.bind = function() {
         this.el.plusButton.on('click', _.bind(this.addRate, this));
+        this.el.rating.on('submit', _.bind(this.submitRating, this));
     };
+
+    Rating.prototype.submitRating = function (e) {
+        e.preventDefault();
+
+        var rate = _.bind(function (userID) {
+            $.ajax(this.settings.API + '/rate', {
+                method: 'POST',
+                data: {
+                    burger_id: this.el.rating.find('input[name="id"]').val(),
+                    voter_id: userID,
+                    rating: this.el.rating.find('input[name="rating"]').val()
+                },
+                success: _.bind(function (data) {
+                    this.el.rating.find('input[type="submit"]').remove();
+                    this.el.plusButton.off('click');
+                    this.el.rating.trigger('rating:submit');
+                }, this)
+            });
+        }, this);
+
+        FB.getLoginStatus(function (response) {
+            if (response.status === 'connected') {
+                rate(response.authResponse.userID);
+            } else {
+                FB.login(function (response) {
+                    if (response.authResponse) {
+                        rate(response.authResponse.userID);
+                    }
+                });
+            }
+        });
+
+        return false;
+    };
+
 
     Rating.prototype.addRate = function (e) {
         e.preventDefault();

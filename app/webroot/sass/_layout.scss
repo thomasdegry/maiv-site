@@ -22,10 +22,15 @@
     max-width: 1024px;
     position: relative;
     width: 92%;
+    @include box-sizing(content-box);
 }
 
 .container-small {
     width: 55%;
+
+    @media only screen and (max-width: 64em) {
+        width: 80%;
+    }
 }
 
 // Grid system

@@ -18,6 +18,7 @@
                     endforeach;
                 ?>
             </ol>
+
             <ul class="calendar-slider horizontal-slider">
                 <?php
                     $i = 0;
@@ -43,8 +44,8 @@
                             <span class="calendar-item-subtitle">
                                 <?php echo $event['location']; ?>
                             </span>
-                            
-                            <?php echo $this->Html->link("Add to iCal", array('controller' => 'Events', 'action'=>'addToCalender', '?' => array('id' => $event['id'], 'title' => $event['name'], 'start' => $event['start'], 'end' => $event['end'], 'location' => $event['location']))); ?>
+
+                            <?php echo $this->Html->link("Add to iCal", array('controller' => 'Events', 'action'=>'addToCalender', '?' => array('id' => $event['id'], 'title' => $event['name'], 'start' => $event['start'], 'end' => $event['end'], 'location' => $event['location'])), array('class' => 'addToIcal')); ?>
                         </li>
                 <?php
                     $i++;
