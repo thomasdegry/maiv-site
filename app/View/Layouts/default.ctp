@@ -42,7 +42,7 @@
 <body class="<?php if ($this->action !== 'display' && $this->name !== 'pages') { echo 'show-logo'; } ?>">
 <header class="site-header">
     <div class="container">
-        <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
+        <?php echo $this->Html->link('The Campaign', array('controller' => 'pages', 'action' => 'display'), array('class' => 'circle-logo')); ?>
         <nav class="horizontal-nav">
             <ul>
                 <li <?php if($this->name == 'Pages') {echo 'class="active"';} ?> >
@@ -199,6 +199,6 @@
 <?php endif; ?>
 
     <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
-'vendor/jquery.scrollorama.js', 'main.js')); ?>
+'vendor/jquery.scrollorama.js', 'vendor/deck.core.js','vendor/deck.leap.js',  'main.js')); ?>
 </body>
 </html>
