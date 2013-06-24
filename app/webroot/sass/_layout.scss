@@ -46,6 +46,10 @@
     &:last-child {
         float: right;
     }
+
+    &:first-child {
+        float: left !important;
+    }
 }
 
 @media only all and (min-width: 53em) {

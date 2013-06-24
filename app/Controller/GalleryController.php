@@ -5,7 +5,7 @@ class GalleryController extends AppController {
     public $components = array('RequestHandler');
     public $helpers = array('Js');
 
-    public function index ($eventID = null, $name)
+    public function index ($eventID = null)
     {
         if($eventID == "getUsersForName") {
             return $this->getUsersForName($name);

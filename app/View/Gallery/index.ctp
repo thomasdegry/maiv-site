@@ -6,7 +6,7 @@
                 which one<br />will become the one
                 and only <span>festival flavour</span>
             </p>
-            <form class="gallery-filters column-container has-two-columns">
+            <form class="gallery-filters column-container has-one-columns">
                 <div class="column span-one-column label-icon-container">
                     <label for="filter-festival" class="label-icon label-icon-dropdown">Filter on festival</label>
                     <select class="form-element" name="filter-festival" id="filter-festival">
@@ -17,10 +17,6 @@
                             </option>
                         <?php endforeach; ?>
                     </select>
-                </div>
-                <div class="column span-one-column label-icon-container">
-                    <label for="filter-name" class="label-icon label-icon-search">Filter on name</label>
-                    <input type="text" class="form-element" placeholder="Filter on name" id="filter-name" name="filter-name" />
                 </div>
             </form>
         </div>
