@@ -323,10 +323,10 @@ var Gallery = (function () {
 
         $(window).on('hashchange', this.loadPageFromHash);
 
-        $(document).keydown(_.bind(function(e){
-            if(e.keyCode === 37) {
+        $(document).on('keyup', _.bind(function(e){
+            if (e.keyCode === 37) {
                 this.triggerprevious();
-            } else if(e.keyCode === 39) {
+            } else if (e.keyCode === 39) {
                 this.triggerNext();
             }
         }, this));
@@ -343,8 +343,15 @@ var Gallery = (function () {
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
             var that = this;
-            $(this).on('rating:submit', '.rate', _.bind(function () {
-                $(that).find('.button').html('Voted!').removeClass('button-confirm');
+            $(this).on('rating:submit', '.rate', _.bind(function (event, response) {
+                var newButtonText = 'You already voted';
+
+                if (parseInt(response, 10) > 0) {
+                    newButtonText = 'Voted!';
+                    $(that).find('.gallery-item-rating').html(response + '<span>/5</span>');
+                }
+
+                $(that).find('.button').off().html('Voted!').removeClass('button-confirm');
                 $('.sliding-doors-open').removeClass('sliding-doors-open');
             }, this));
         });
@@ -376,15 +383,17 @@ var Gallery = (function () {
 
     Gallery.prototype.equalHeight = function () {
         var height = 0,
-            burgers = $(this.options.item).find('.burger');
+            items = $(this.options.item).find('.burger');
 
-        burgers.each(function () {
+        items.each(function () {
             var tempHeight = $(this).height();
 
             height = (tempHeight > height) ? tempHeight : height;
         });
 
-        burgers.height(height);
+        items.height(height);
+
+        $('.rate-container').height(height + 41);
     };
 
     Gallery.prototype.loadPage = function(e, pageNumber) {
@@ -420,6 +429,11 @@ var Gallery = (function () {
     Gallery.prototype.triggerNext = function(e) {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
+
+        if (window.location.hash.length === 0) {
+            page = 1;
+        }
+
         if(!($(".pagination-item-active").next().hasClass('pagination-item-disabled'))) {
             window.location.hash = "page" + (parseInt(page, 10) + 1);
         }
@@ -428,6 +442,11 @@ var Gallery = (function () {
     Gallery.prototype.triggerprevious = function(e) {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
+
+        if (window.location.hash.length === 0) {
+            return false;
+        }
+
         if(!($(".pagination-item-active").prev().hasClass('pagination-item-disabled'))) {
             window.location.hash = "page" + (parseInt(page, 10) - 1);
         }
@@ -482,10 +501,10 @@ var HorizontalSlider = (function () {
         this.el.previousButton.on('click', _.bind(this.showPrevious, this));
         this.el.nextButton.on('click', _.bind(this.showNext, this));
 
-        $(document).keydown(_.bind(function(e){
-            if(e.keyCode === 37) {
+        $(document).on('keyup', _.bind(function(e){
+            if (e.keyCode === 37) {
                 this.showPrevious(null);
-            } else if(e.keyCode === 39) {
+            } else if (e.keyCode === 39) {
                 this.showNext(null);
             }
         }, this));
@@ -513,12 +532,16 @@ var HorizontalSlider = (function () {
     };
 
     HorizontalSlider.prototype.showPrevious = function (e) {
-        if(e) {
+        if (e) {
             e.preventDefault();
         }
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             previousElement = this.el.slider.find('.' + this.options.previous);
+
+        if (this.activeElement === 0) {
+            return false;
+        }
 
         this.activeElement--;
 
@@ -547,6 +570,10 @@ var HorizontalSlider = (function () {
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             nextElement = this.el.slider.find('.' + this.options.next);
+
+        if (this.activeElement >= $(this.options.item).length - 1) {
+            return false;
+        }
 
         this.activeElement++;
 
@@ -711,10 +738,12 @@ var Rating = (function () {
                 success: _.bind(function (data) {
                     this.el.rating.find('input[type="submit"]').remove();
                     this.el.plusButton.off('click');
-                    this.el.rating.trigger('rating:submit');
+                    this.el.rating.trigger('rating:submit', data);
                 }, this)
             });
         }, this);
+
+        this.el.rating.find('input[type="submit"]').fadeOut();
 
         FB.getLoginStatus(function (response) {
             if (response.status === 'connected') {
@@ -761,6 +790,7 @@ var Settings =(function () {
     var Settings = function () {
 
         this.URI = 'http://localhost/Devine/_MAMP_JAAR2/_SEM2/MAIV/mrburger/maiv-site';
+        this.API = 'http://ksjkuurne.be/FOOD/api';
         //this.api = 'http://192.168.2.8/maiv_oostende/api/';
         //this.api = 'http://192.168.2.4/rolstende/api/';
     };

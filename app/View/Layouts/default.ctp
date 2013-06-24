@@ -142,19 +142,19 @@
                             F
                         </dt>
                         <dd class="stat-number stat-number-facebook">
-                            3401834
+                            2.161
                         </dd>
                         <dt class="stat-item stat-item-twitter">
                             T
                         </dt>
                         <dd class="stat-number stat-number-twitter">
-                            3401834
+                            341.834
                         </dd>
                         <dt class="stat-item stat-item-downloads">
                             D
                         </dt>
                         <dd class="stat-number stat-number-downloads">
-                            3401834
+                            29.801
                         </dd>
                     </dl>
                 </div>

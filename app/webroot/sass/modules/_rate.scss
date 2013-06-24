@@ -1,10 +1,22 @@
 .rate-container {
     padding: 2em 0 0;
+
+    .button-confirm {
+        position: absolute;
+        margin-left: -5.35em;
+        left: 50%;
+        bottom: 1.35em;
+
+        @media only all and (max-width: 46em) {
+            margin-left: -5.75em;
+        }
+    }
 }
 
 .rate {
     position: relative;
     padding: 6em 0 1em;
+    height: 51%;
 }
 
 .rate-heading {
@@ -23,7 +35,7 @@
     background-repeat: no-repeat;
     display: block;
     height: 60px;
-    margin: 0 auto 1em;
+    margin: 0 auto 1.75em;
     width: 76px;
 }
 
@@ -35,18 +47,17 @@
     height: 83px;
     margin: 0 0 0 -23px;
     width: 35px;
-  -webkit-transform-origin: bottom;
-  -moz-transform-origin: bottom;
-  -ms-transform-origin: bottom;
-  transform-origin: bottom;
-  -webkit-animation: swinging 3s infinite ease-in-out;
-  -moz-animation: swinging 3s infinite ease-in-out;
-  -ms-animation: swinging 3s infinite ease-in-out;
-  -animation: swinging 3s infinite ease-in-out;
-  position: absolute;
-  left: 50%;
-  top: 50px;
-
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-animation: swinging 3s infinite ease-in-out;
+    -moz-animation: swinging 3s infinite ease-in-out;
+    -ms-animation: swinging 3s infinite ease-in-out;
+    -animation: swinging 3s infinite ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50px;
 }
 
 @-webkit-keyframes swinging {
