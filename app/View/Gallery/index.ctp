@@ -28,7 +28,6 @@
             <?php foreach ($burgers as $burger) : ?>
             <?php $b = $burger['Burger']; ?>
             <?php $c = $burger['Creation']; ?>
-            <?php // echo '<pre>'; var_dump(array($b, $c)); echo '</pre>'; die; ?>
             <li class="column span-one-column">
                 <div class="gallery-item">
                     <h2 class="gallery-item-heading">
@@ -52,7 +51,7 @@
                                     ?>
                                 </div>
                                 <span class="gallery-item-rating">
-                                    4<span>/5</span>
+                                    <?php echo $burger['average']; ?><span>/5</span>
                                 </span>
                                 <a href="#rate-me" class="button sliding-door-toggle">Rate me!</a>
                             </div>
