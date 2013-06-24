@@ -25,7 +25,9 @@ var AppDemo = (function () {
         this.el.container.on('resize', _.bind(this.setScrollPositions, this));
         this.el.container.on('scroll', _.bind(this.detectScroll, this));
 
-         this.animate();
+        // if (!!('ontouchstart' in window)) {
+        //     this.animate();
+        // }
     };
 
     AppDemo.prototype.setScrollPositions = function () {

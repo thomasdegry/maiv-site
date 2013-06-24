@@ -70,6 +70,10 @@ class GalleryController extends AppController {
             $arrayCount ++;
         }
 
+        // debug($paginated);
+        // die();
+
+
         // if($this->request->is('ajax')) {
         //     echo json_encode($paginated);
         // }
