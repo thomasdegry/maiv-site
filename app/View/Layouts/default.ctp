@@ -59,7 +59,27 @@
 </header>
 
 <div id="site-wrapper">
-    <a href="#sidr-main" class="toggle-nav">&#9776; <span class="current-page">The Campaign</span></a>
+    <?php
+        switch ($this->name) {
+            case 'Gallery':
+                $currentPage = 'Burger Pile';
+                break;
+
+            case 'Winners':
+                $currentPage = 'Festival Flavours';
+                break;
+
+            case 'Events':
+                $currentPage = 'Festivals';
+                break;
+
+            case 'Pages':
+            default:
+                $currentPage = 'The Campaign';
+                break;
+        }
+    ?>
+    <a href="#sidr-main" class="toggle-nav">&#9776; <span class="current-page"><?php echo $currentPage; ?></span></a>
     <div id="site">
         <?php echo $this->Session->flash(); ?>
         <?php echo $this->fetch('content'); ?>
@@ -77,7 +97,7 @@
                         <a href="" class="prefixed-link">mrburger.com.au</a>
                     </p>
                 </div>
-                <div class="column span-one-column">
+                <div class="column span-one-column hide-mobile">
                     <!-- <h6 class="heading-twitter-bird">On Twitter</h6> -->
                     <h6 class="mr-burger"></h6>
                     <ul class="feed">
@@ -111,7 +131,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="column span-one-column">
+                <div class="column span-one-column hide-mobile">
                     <!-- <h6 class="heading-stats">Mr. Nerd!</h6> -->
                     <h6 class="mr-burger"></h6>
                     <dl class="stats">
@@ -141,7 +161,7 @@
                     <div class="column span-one-column">
                        <a href="http://student.howest.be/tatiana.van.campen1/20122013/MAIV/SOUNDBOARD/"> A <span class="dreamteam"></span> production</a>
                     </div>
-                    <div class="column span-one-column">
+                    <div class="column span-one-column hide-mobile">
                         Be your fucking best!
                     </div>
                 </div>
