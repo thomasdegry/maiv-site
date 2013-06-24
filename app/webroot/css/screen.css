@@ -337,14 +337,29 @@ input[type="text"].form-element::after {
   height: 2.5em;
   width: 2.5em;
 }
+/* line 180, ../sass/_base.scss */
+.circle-picture.tatiana, .tatiana.gallery-share-button {
+  background: url("../img/tatiana.jpg");
+  background-size: 100%;
+}
+/* line 184, ../sass/_base.scss */
+.circle-picture.pieter, .pieter.gallery-share-button {
+  background: url("../img/pieter.jpg");
+  background-size: 100%;
+}
+/* line 188, ../sass/_base.scss */
+.circle-picture.thomas, .thomas.gallery-share-button {
+  background: url("../img/thomas.jpg");
+  background-size: 100%;
+}
 
-/* line 181, ../sass/_base.scss */
+/* line 194, ../sass/_base.scss */
 .hide-mobile {
   display: none;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 186, ../sass/_base.scss */
+  /* line 199, ../sass/_base.scss */
   .hide-mobile {
     display: block;
   }
@@ -742,6 +757,16 @@ dl.stats {
 .feed-content {
   width: 220px;
   margin-left: 20px;
+}
+
+/* line 84, ../sass/modules/_site-footer.scss */
+ul.feed li {
+  margin-bottom: 15px;
+}
+
+/* line 88, ../sass/modules/_site-footer.scss */
+.feed-user {
+  margin-bottom: 5px;
 }
 
 /* line 1, ../sass/modules/_pagination.scss */
