@@ -2,6 +2,8 @@
 App::uses('AppController', 'Controller');
 
 class GalleryController extends AppController {
+    public $components = array('RequestHandler');
+    public $helpers = array('Js');
 
     public function index ($eventID = null)
     {

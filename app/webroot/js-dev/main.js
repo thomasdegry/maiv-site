@@ -3,8 +3,10 @@
 /* globals Gallery */
 /* globals FastClick */
 /* globals Navigation */
+/* globals Settings */
 
 $(window).load(function () {
+    var settings = new Settings();
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();

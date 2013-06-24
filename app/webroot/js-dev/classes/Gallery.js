@@ -1,14 +1,17 @@
 /* globals Rating */
+/* globals Settings */
 
 var Gallery = (function () {
 
     var Gallery = function (options) {
+        _.bindAll(this);
         this.options = {
             gallery: '.gallery',
             item: '.gallery-item'
         };
 
         this.activeElement = 0;
+        this.settings = new Settings();
 
         this.el = {
             gallery: $(this.options.gallery)
@@ -33,6 +36,7 @@ var Gallery = (function () {
             window.location = $(this).val();
         });
         this.el.gallery.on('click', '.pagination-item a', this.loadPage);
+        $(window).on('hashchange', this.loadPageFromHash);
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -62,17 +66,30 @@ var Gallery = (function () {
         items.height(height);
     };
 
-    Gallery.prototype.loadPage = function(e) {
+    Gallery.prototype.loadPage = function(e, pageNumber) {
         e.preventDefault();
+
         var $el = $(e.target);
+        var url = $el.attr('href').split(':');
+        console.log(url);
+        window.location.hash = "page" + url[url.length - 1];
+    };
+
+    Gallery.prototype.loadPageFromHash = function(e) {
+        e.preventDefault();
+
+        var hash = window.location.hash;
+        var page = hash.replace('#page', '');
+
         $.ajax({
             type: 'GET',
-            url: $el.attr('href'),
+            url: this.settings.URI + '/gallery/:page' + page,
             success: function(data) {
-                $('.gallery-grid').empty();
-                $('.gallery-grid').html($(data).find('.gallery-grid'));
+                var gallery = $(data).find('.gallery-grid');
+                var pagination = $(data).find('.pagination');
 
-                $('.pagination').html($(data).find('.pagination'));
+                $('.gallery-grid').empty().html(gallery);
+                $('.pagination').empty().html(pagination);
             }
         });
     };
