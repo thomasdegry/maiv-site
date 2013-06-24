@@ -5,8 +5,12 @@ class GalleryController extends AppController {
     public $components = array('RequestHandler');
     public $helpers = array('Js');
 
-    public function index ($eventID = null)
+    public function index ($eventID = null, $name)
     {
+        if($eventID == "getUsersForName") {
+            return $this->getUsersForName($name);
+        }
+
         $this->loadModel('Event');
 
         $currentDate = $this->viewVars["current_date"];
