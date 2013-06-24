@@ -23,6 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <?php echo $this->Html->meta('icon', $this->Html->url('/favicon.ico')); ?>
     <title><?php echo $title_for_layout; ?></title>
 <!--     <link href="css/screen.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/vendor/modernizr.js"></script>
