@@ -33,7 +33,7 @@ body {
 }
 
 .gradient-background {
-    @include background(radial-gradient(#f57121, #e84a0c 65%), $orange);
+    @include background(radial-gradient(rgba(#f76e1f, .5), rgba(#f76e1f, 0) 65%), url('../img/body-pattern.png'), $orange);
 }
 
 .blurry-background {
