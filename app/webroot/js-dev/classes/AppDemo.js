@@ -24,6 +24,8 @@ var AppDemo = (function () {
 
         this.el.container.on('resize', _.bind(this.setScrollPositions, this));
         this.el.container.on('scroll', _.bind(this.detectScroll, this));
+
+        // this.animate();
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -49,6 +51,160 @@ var AppDemo = (function () {
                 $('body').removeClass('show-logo');
             }
         }
+    };
+
+    AppDemo.prototype.animate = function () {
+        var scrollorama = $.scrollorama({
+            blocks: '.scrollblock',
+            enablePin:false
+        });
+
+        scrollorama.animate('#block1', {
+            duration: 200,
+            property: 'right',
+            start: -1000,
+            end: 30,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block1', {
+            duration: 200,
+            property: 'opacity',
+            start: 0,
+            end: 1
+        });
+
+        scrollorama.animate('#block2', {
+            delay: 700,
+            duration: 200,
+            property:'left',
+            start:-1000,
+            end: 30,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block2', {
+            delay: 730,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1
+
+        });
+
+
+        scrollorama.animate('#block3',{
+            delay: 700,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block4',{
+            delay: 750,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block5',{
+            delay: 800,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+
+        scrollorama.animate('#block3',{
+            delay: 730,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block4',{
+            delay: 780,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block5',{
+            delay: 830,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+
+        scrollorama.animate('#block6',{
+            delay: 830,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block7',{
+            delay: 860,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block8',{
+            delay: 890,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block6',{
+            delay: 840,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block7',{
+            delay: 870,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block8',{
+            delay: 890,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block9',{
+            delay: 700,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
     };
 
     return AppDemo;

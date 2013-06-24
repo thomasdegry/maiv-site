@@ -59,7 +59,27 @@
 </header>
 
 <div id="site-wrapper">
-    <a href="#sidr-main" class="toggle-nav">&#9776; <span class="current-page">The Campaign</span></a>
+    <?php
+        switch ($this->name) {
+            case 'Gallery':
+                $currentPage = 'Burger Pile';
+                break;
+
+            case 'Winners':
+                $currentPage = 'Festival Flavours';
+                break;
+
+            case 'Events':
+                $currentPage = 'Festivals';
+                break;
+
+            case 'Pages':
+            default:
+                $currentPage = 'The Campaign';
+                break;
+        }
+    ?>
+    <a href="#sidr-main" class="toggle-nav">&#9776; <span class="current-page"><?php echo $currentPage; ?></span></a>
     <div id="site">
         <?php echo $this->Session->flash(); ?>
         <?php echo $this->fetch('content'); ?>

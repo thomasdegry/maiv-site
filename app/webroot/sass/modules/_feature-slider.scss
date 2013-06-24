@@ -1,9 +1,13 @@
 .feature-slider-container {
-
+    height: 31em;
     padding: 5.3em 0 3.5em;
-    margin: 0 auto;
-    width: 100%;
-    display: block; // @todo
+    margin: -20em 0 0 -38%;
+    max-width: 46em;
+    width: 80%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 .feature-slider-navigation {
@@ -33,6 +37,8 @@
     display: block;
     height: 280px;
     @include hide-text;
+    position: relative;
+    left: -6em;
     width: 320px;
 }
 
@@ -50,199 +56,39 @@
     }
 }
 
-@media only all and (min-width: 64em) {
-    .feature-slider-container {
-        width: 70%;
-    }
-
-    .feature-slogan {
-        width: 65%;
-    }
-}
-
-#scroll-indicator {
-  width: 48px;
-  height: 130px;
-  position: absolute;
-  right: 0px;
-  bottom: 20px;
-
-}
-
-@media only all and (min-width: 1200px) {
-  #scroll-indicator {
-    right: -60px;
-  }
-}
-
-
-#ball {
-    width: 48px;
-    height: 47px;
-    z-index: 3;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -20px;
-    -webkit-animation: bounce .7s infinite;
-       -moz-animation: bounce .7s infinite;
-        -ms-animation: bounce .7s infinite;
-         -o-animation: bounce .7s infinite;
-            animation: bounce .7s infinite;
-    -webkit-animation-direction: alternate;
-       -moz-animation-direction: alternate;
-        -ms-animation-direction: alternate;
-         -o-animation-direction: alternate;
-            animation-direction: alternate;
-    background: url('../img/sprite.svg') no-repeat -6px -5px;
-}
-
-
-
-@-webkit-keyframes bounce {
-  0% {
-    top: 30px;
-    -webkit-animation-timing-function: ease-in;
-  }
-  100% {
-    top: 40px;
-    -webkit-animation-timing-function: ease-in;
-  }
-}
-
-@-moz-keyframes bounce {
-  0% {
-    top: 30px;
-    -moz-animation-timing-function: ease-in;
-  }
-  100% {
-    top: 40px;
-    -moz-animation-timing-function: ease-in;
-  }
-}
-
-@-ms-keyframes bounce {
-  0% {
-    top: 30px;
-    -ms-animation-timing-function: ease-in;
-  }
-  100% {
-    top: 40px;
-    -ms-animation-timing-function: ease-in;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    top: 30px;
-    -animation-timing-function: ease-in;
-  }
-  100% {
-    top: 40px;
-    -animation-timing-function: ease-in;
-  }}
-
-#shadow {
-  position: absolute;
-  height: 5px;
-  width: 80px;
-  top: 115px;
-  background: rgba(0,0,0,.07);
-  bottom: 6px;
-  left: 50%;
-  margin-left: 50px;
-  -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,.1);
-  -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,.1);
-  box-shadow: 0px 0px 12x 2px rgba(0,0,0,.1);
-
-  -webkit-animation: shadow .7s infinite ;
-  -moz-animation: shadow .7s infinite ;
-  -ms-animation: shadow .7s infinite ;
-  animation: shadow .7s infinite ;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -ms-animation-direction: alternate;
-  -animation-direction: alternate;
-}
-
-@-webkit-keyframes shadow {
-  0% {
-    width: 30px;
-    -webkit-border-radius:10px/5px;
-    margin-left: -15px;
-    -webkit-animation-timing-function: ease-in;
-  }
-  100% {
-    width: 50px;
-    -webkit-border-radius:100px/5px;
-    margin-left: -25px;
-    -webkit-animation-timing-function: ease-out;
-  }
-
-}
-
-@-moz-keyframes shadow {
-  0% {
-    width: 30px;
-    -moz-border-radius:10px/5px;
-    margin-left: -15px;
-    -moz-animation-timing-function: ease-in;
-  }
-  100% {
-    width: 50px;
-    -moz-border-radius:100px/5px;
-    margin-left: -25px;
-    -moz-animation-timing-function: ease-out;
-  }
-}
-
-@-ms-keyframes shadow {
-  0% {
-    width: 30px;
-    -ms-border-radius:10px/5px;
-    margin-left: -15px;
-    -ms-animation-timing-function: ease-in;
-  }
-  100% {
-    width: 50px;
-    -ms-border-radius:100px/5px;
-    margin-left: -25px;
-    -ms-animation-timing-function: ease-out;
-  }
-}
-
-@keyframes shadow {
-  0% {
-    width: 30px;
-    -border-radius:10px/5px;
-    margin-left: -15px;
-    -animation-timing-function: ease-in;
-  }
-  100% {
-    width: 50px;
-    -border-radius:100px/5px;
-    margin-left: -25px;
-    -animation-timing-function: ease-out;
-  }
-}
-
 #iphone-startscreen {
-  display: block;
-  width: 500px;
-  height: 413px;
-  background: url("../img/demo/iphone-00.png") no-repeat;
-  background-size: 100%;
-  position: absolute;
-  top: 75px;
-  right: 104px;
-  .iphone-gif {
-    display: block;
-    width: 327px;
-    height: 239px;
-    background: url("../img/demo/iphone-gif.gif") no-repeat;
+    width: 500px;
+    height: 413px;
+    background: url("../img/demo/iphone-00.png") no-repeat;
     background-size: 100%;
-    position: relative;
-    top: 42px;
-    left: 119px;
-  }
+    position: absolute;
+    right: -5.5em;
+    top: 4.7em;
+
+    .iphone-gif {
+        display: block;
+        width: 327px;
+        height: 239px;
+        background: url("../img/demo/iphone-gif.gif") no-repeat;
+        background-size: 100%;
+        position: relative;
+        top: 42px;
+        left: 119px;
+    }
+}
+
+@media only all and (min-width: 66em) {
+    .feature-slider-container {
+        left: 50%;
+        margin-top: -18em;
+        margin-left: -23em;
+    }
+
+    .mr-burger-appstore {
+        left: 0em;
+    }
+
+    #iphone-startscreen {
+        right: -2.5em;
+    }
 }
