@@ -1813,9 +1813,16 @@ dl.stats {
 #next-event {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1em;
+  *zoom: 1;
 }
-/* line 150, ../sass/modules/_feature-slider.scss */
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#next-event:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 151, ../sass/modules/_feature-slider.scss */
 #next-event h3 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1833,6 +1840,7 @@ dl.stats {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  float: left;
   color: #2d353a;
   font-family: "Alternate Gothic";
   font-size: 2em;
@@ -1845,7 +1853,7 @@ dl.stats {
   text-decoration: none;
   position: relative;
 }
-/* line 162, ../sass/modules/_feature-slider.scss */
+/* line 164, ../sass/modules/_feature-slider.scss */
 #next-event h3 span {
   position: absolute;
   top: 77px;
@@ -1853,23 +1861,27 @@ dl.stats {
   font-size: 0.7em;
   color: #992a07;
 }
-/* line 169, ../sass/modules/_feature-slider.scss */
+/* line 171, ../sass/modules/_feature-slider.scss */
 #next-event h3:hover {
   background-color: #ecedde;
   background-image: none;
 }
-/* line 175, ../sass/modules/_feature-slider.scss */
+/* line 177, ../sass/modules/_feature-slider.scss */
 #next-event h4 {
+  float: left;
   width: 200px;
   color: #ecedde;
   font-family: "Alternate Gothic";
-  font-size: 2em;
+  font-size: 1.75em;
   font-style: normal;
   font-weight: normal;
   line-height: 1.1;
   text-transform: uppercase;
+  position: relative;
+  top: -.1em;
+  line-height: .9;
 }
-/* line 176, ../sass/modules/_feature-slider.scss */
+/* line 178, ../sass/modules/_feature-slider.scss */
 #next-event h4 span {
   display: block;
   color: #ecedde;
@@ -1878,24 +1890,24 @@ dl.stats {
   font-style: normal;
   font-weight: normal;
   line-height: 1.1;
+  line-height: .9;
   text-transform: lowercase;
-  float: left;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 188, ../sass/modules/_feature-slider.scss */
+  /* line 195, ../sass/modules/_feature-slider.scss */
   .feature-slider-container {
     left: 50%;
     margin-top: -18em;
     margin-left: -23em;
   }
 
-  /* line 194, ../sass/modules/_feature-slider.scss */
+  /* line 201, ../sass/modules/_feature-slider.scss */
   .mr-burger-appstore {
     left: 0em;
   }
 
-  /* line 198, ../sass/modules/_feature-slider.scss */
+  /* line 205, ../sass/modules/_feature-slider.scss */
   #iphone-startscreen {
     right: -2.5em;
   }
