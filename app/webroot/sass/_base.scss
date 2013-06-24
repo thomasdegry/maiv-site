@@ -24,9 +24,10 @@ body {
 }
 
 .full-screen {
-    height: 100%;
+    @include box-sizing(border-box);
+    // height: 100%;
     min-height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-top: 4.375em;
     position: relative;
     width: 100%;
