@@ -142,7 +142,7 @@ var Gallery = (function () {
 
         $.ajax({
             type: 'GET',
-            url: this.settings.URI + '/gallery/:page' + page,
+            url: this.settings.URI + '/gallery/page:' + page,
             success: function(data) {
                 var gallery = $(data).find('.gallery-grid');
                 var pagination = $(data).find('.pagination');
