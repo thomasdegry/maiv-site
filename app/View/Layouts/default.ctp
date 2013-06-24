@@ -42,7 +42,7 @@
 <body class="<?php if ($this->action !== 'display' && $this->name !== 'pages') { echo 'show-logo'; } ?>">
 <header class="site-header">
     <div class="container">
-        <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
+        <?php echo $this->Html->link('The Campaign', array('controller' => 'pages', 'action' => 'display'), array('class' => 'circle-logo')); ?>
         <nav class="horizontal-nav">
             <ul>
                 <li <?php if($this->name == 'Pages') {echo 'class="active"';} ?> >
@@ -105,31 +105,31 @@
                     <h6 class="livefeed"></h6>
                     <ul class="feed">
                         <li>
-                            <img class="feed-profile-picture circle-picture" />
+                            <img class="feed-profile-picture circle-picture tatiana" />
+                            <div class="feed-content">
+                                <h2 class="feed-user">@tatsvc</h2>
+                                <p>Su-per-toff!!!</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="feed-profile-picture circle-picture thomas" />
+                            <div class="feed-content">
+                                <h2 class="feed-user">@thomasDegry</h2>
+                                <p>Wow, incredible campaign! I will never forget this!</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="feed-profile-picture circle-picture tatiana" />
                             <div class="feed-content">
                                 <h2 class="feed-user">@tatsvc</h2>
                                 <p>Wow, this is amazing!</p>
                             </div>
                         </li>
                         <li>
-                            <img class="feed-profile-picture circle-picture" />
+                            <img class="feed-profile-picture circle-picture pieter" />
                             <div class="feed-content">
-                                <h2 class="feed-user">@tatsvc</h2>
-                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img class="feed-profile-picture circle-picture" />
-                            <div class="feed-content">
-                                <h2 class="feed-user">@tatsvc</h2>
-                                <p>Wow, this is amazing!</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img class="feed-profile-picture circle-picture" />
-                            <div class="feed-content">
-                                <h2 class="feed-user">@tatsvc</h2>
-                                <p>Wow, this is amazing!</p>
+                                <h2 class="feed-user">@pieterBeulque</h2>
+                                <p>Wat kunnen wij niet hé!?</p>
                             </div>
                         </li>
                     </ul>
@@ -199,6 +199,6 @@
 <?php endif; ?>
 
     <?php echo $this->Html->script(array('vendor/jquery.js', 'vendor/underscore.js', 'vendor/jquery.sidr.min.js', 'vendor/fastclick.js', 'vendor/jquery.lettering-0.6.1.min.js',
-'vendor/jquery.scrollorama.js', 'main.js')); ?>
+'vendor/jquery.scrollorama.js', 'vendor/deck.core.js','vendor/deck.leap.js',  'main.js')); ?>
 </body>
 </html>

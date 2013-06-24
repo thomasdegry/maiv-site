@@ -4,6 +4,9 @@
 var Gallery = (function () {
 
     var Gallery = function (options) {
+        //leap
+
+
         _.bindAll(this);
         this.options = {
             gallery: '.gallery',

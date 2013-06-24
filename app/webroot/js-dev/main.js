@@ -19,8 +19,10 @@ $(window).load(function () {
         source: '.site-header'
     });
 
-    //leap
-    // $.deck('.slide');
+    if($(".horizontal-slider-container").length > 0){
+        $.deck('.slide');
+    }
+
 
     FastClick.attach(document.body);
 

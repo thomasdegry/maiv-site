@@ -262,6 +262,9 @@ var AppDemo = (function () {
 var Gallery = (function () {
 
     var Gallery = function (options) {
+        //leap
+
+
         _.bindAll(this);
         this.options = {
             gallery: '.gallery',
@@ -757,8 +760,10 @@ $(window).load(function () {
         source: '.site-header'
     });
 
-    //leap
-    // $.deck('.slide');
+    if($(".horizontal-slider-container").length > 0){
+        $.deck('.slide');
+    }
+
 
     FastClick.attach(document.body);
 

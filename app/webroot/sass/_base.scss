@@ -176,6 +176,19 @@ input[type="text"].form-element {
     @include hide-text;
     height: 2.5em;
     width: 2.5em;
+
+  &.tatiana {
+    background: url("../img/tatiana.jpg");
+    background-size: 100%;
+  }
+  &.pieter {
+    background: url("../img/pieter.jpg");
+    background-size: 100%;
+  }
+  &.thomas {
+    background: url("../img/thomas.jpg");
+    background-size: 100%;
+  }
 }
 
 .hide-mobile {

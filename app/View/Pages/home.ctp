@@ -1,4 +1,5 @@
 <section class="orange full-screen gradient-background">
+
     <div class="feature-slider-container">
         <a href="#" class="mr-burger-appstore">Download Mr Burger&rsquo;s Festi Food</a>
         <ul class="feature-slider">
@@ -24,6 +25,7 @@
                 <a href="#feature-slider" class="feature-slider-navigation-item">2</a>
             </li>
         </ol>
+
         <div class="scroll-indicator">
             <div class="scroll-indicator-ball"></div>
             <div class="scroll-indicator-shadow"></div>
