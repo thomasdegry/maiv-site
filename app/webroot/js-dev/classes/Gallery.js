@@ -143,5 +143,4 @@ var Gallery = (function () {
     };
 
     return Gallery;
-
 })();

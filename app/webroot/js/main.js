@@ -358,7 +358,6 @@ var Gallery = (function () {
     };
 
     return Gallery;
-
 })();
 
 var HorizontalSlider = (function () {

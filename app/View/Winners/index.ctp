@@ -1,6 +1,6 @@
 <section class="orange full-screen gradient-background">
     <div class="container container-small">
-        <h2 class="winners-title">Winning flavours</h2>
+        <h1 class="winners-title">Winning flavours</h1>
         <div class="calendar horizontal-slider-container">
             <ul class="calendar-slider horizontal-slider">
                 <?php
@@ -30,9 +30,9 @@
                                 </div>
                             </div>
                             <div class="burger-right">
-                                <h1 class="winner-item-title">
+                                <h2 class="winner-item-title">
                                     <?php echo $winner['mrb_events']['name']; ?>
-                                </h1>
+                                </h2>
 
                                 <span class="winner-item-ingredients">
                                     A tasty burger with
