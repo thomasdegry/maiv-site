@@ -5,7 +5,8 @@
 h1.winners-title {
     width: 100%;
     padding-top: 0.9em;
-    @include font-alternate($beige, 6em);
+    // @include font-alternate($beige, 6em);
+    @include font-mission-script($beige, 5em);
     @extend %offset-text-shadow;
     text-align: center !important;
 

@@ -27,6 +27,10 @@
 
 .container-small {
     width: 55%;
+
+    @media only screen and (max-width: 64em) {
+        width: 80%;
+    }
 }
 
 // Grid system

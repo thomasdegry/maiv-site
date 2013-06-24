@@ -12,11 +12,38 @@
     }
 }
 
+.addToIcal {
+    position: relative;
+    display: block;
+    text-align: center;
+    display: inline-block;
+    padding-top: 1.5em;
+
+    &:before {
+        @extend %sprite;
+        background-position: -223px -135px;
+        width: 32px;
+        height: 29px;
+        content: " ";
+        position: absolute;
+        top: 15px; left: -40px;
+        display: block;
+    }
+
+    @media only screen and (max-width: 64em) {
+        display: none;
+    }
+}
+
 .calendar-item-title {
     @extend %offset-text-shadow;
     @include font-alternate($beige, 4.75em);
     text-align: center;
     padding-bottom: .2em;
+
+    @media only screen and (max-width: 64em) {
+        @include font-alternate($beige, 3.75em);
+    }
 }
 
 .calendar-item-subtitle {
