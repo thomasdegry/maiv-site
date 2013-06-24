@@ -94,9 +94,13 @@ a img {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url("../img/sprite.png");
+  background-image: url("../img/sprite.svg");
   background-repeat: no-repeat;
   display: block;
+}
+/* line 59, ../../sass/_variables.scss */
+.no-svg .label-icon {
+  background-image: url("../img/sprite.png");
 }
 
 /* line 2, ../../sass/_layout.scss */

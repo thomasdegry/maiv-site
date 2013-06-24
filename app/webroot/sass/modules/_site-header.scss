@@ -18,6 +18,10 @@
         @include hide-text;
         margin: 1em auto 0;
         width: 8em;
+
+        .no-svg & {
+            background-image: url('../img/mr-burger.png');
+        }
     }
 
     .toggle-nav {
@@ -76,16 +80,18 @@
         position: absolute;
         bottom: -3.9em;
         width: 120px;
+
+        .no-svg & {
+            background-image: url('../img/circle-logo.png');
+        }
     }
 
     .horizontal-nav {
         @include font-alternate($blue, 1.6em);
 
-        ul {
-            li.active {
-                a {
-                    color: $orange;
-                }
+        li.active {
+            a {
+                color: $orange;
             }
         }
     }

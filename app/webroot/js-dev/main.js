@@ -2,7 +2,7 @@
 /* globals HorizontalSlider */
 /* globals Gallery */
 /* globals FastClick */
-/* globals Navigation */
+/* globals Modernizr */
 /* globals Settings */
 /* globals FeatureSlider */
 
@@ -13,7 +13,6 @@ $(window).load(function () {
     var appDemo = new AppDemo();
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
-    var navigation = new Navigation();
     var featureSlider = new FeatureSlider();
 
     $('.toggle-nav').sidr({
@@ -25,9 +24,6 @@ $(window).load(function () {
         $.deck('.slide');
     }
 
-
     FastClick.attach(document.body);
-
-
 
 });

@@ -1,6 +1,7 @@
 (function(){
 
-/* globals alert */
+/* globals Modernizr */
+
 var AppDemo = (function () {
 
     var AppDemo = function (options) {
@@ -30,6 +31,32 @@ var AppDemo = (function () {
             this.el.container.on('scroll', _.bind(this.detectScroll, this));
 
             this.animate();
+        }
+
+        if ((Modernizr.video.ogg || Modernizr.video.h264 ||  Modernizr.video.webm) && $("#mrburgervideo").length > 0) {
+            var currenttime = 0;
+
+            $('video')[0].load();
+
+            $($('video')[0]).bind('ended', function(){
+                $('#mrburgervideo').hide();
+                $('.btn-play').show();
+            });
+
+            $($('video')[0]).bind("pause", function(){
+                var now = $('video')[0].currentTime;
+
+                $('#mrburgervideo').hide();
+                $('.btn-play').show();
+                currenttime = now;
+            });
+
+            $('.btn-play').click(function () {
+                $(this).hide();
+                $("#mrburgervideo").show();
+                $('video')[0].currentTime = parseInt(currenttime, 10);
+                $('video')[0].play();
+            });
         }
     };
 
@@ -215,42 +242,7 @@ var AppDemo = (function () {
 
         });
 
-
-
     };
-
-
-    if ($("#mrburgervideo").length > 0) {
-        var currenttime = 0;
-        console.log(currenttime);
-        var video = $(video)[0];
-        $("video")[0].load();
-        $(video).bind("ended", function(){
-            console.log("video ended");
-            $("#mrburgervideo").hide();
-            $('.btn-play').show();
-        });
-
-        $("video").bind("pause", function(){
-            var video = document.getElementsByTagName('video')[0];
-            var now = video.currentTime;
-            console.log("video paused on " + now);
-
-            $("#mrburgervideo").hide();
-            $('.btn-play').show();
-            currenttime = now;
-        });
-
-
-        $('.btn-play').click(function () {
-            console.log('play from ' + currenttime);
-            $(this).hide();
-            $("#mrburgervideo").show();
-            $("video")[0].currentTime = parseInt(currenttime, 10);
-            $("video")[0].play();
-        });
-    }
-
 
     return AppDemo;
 
@@ -669,28 +661,6 @@ var HorizontalSlider = (function () {
 
 })();
 
-var Navigation = (function () {
-
-    var Navigation = function (options, el) {
-        this.el = {
-            navItems: $('.nav-item')
-        };
-
-        this.bind();
-    };
-
-    Navigation.prototype.bind = function() {
-        this.el.navItems.on('click', _.bind(this.catchClick, this));
-    };
-
-    Navigation.prototype.catchClick = function(e) {
-        //e.preventDefault();
-        console.log('click');
-    };
-
-    return Navigation;
-})();
-
 /* globals Settings */
 /* globals FB */
 
@@ -803,7 +773,7 @@ var Settings =(function () {
 /* globals HorizontalSlider */
 /* globals Gallery */
 /* globals FastClick */
-/* globals Navigation */
+/* globals Modernizr */
 /* globals Settings */
 /* globals FeatureSlider */
 
@@ -814,7 +784,6 @@ $(window).load(function () {
     var appDemo = new AppDemo();
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
-    var navigation = new Navigation();
     var featureSlider = new FeatureSlider();
 
     $('.toggle-nav').sidr({
@@ -826,10 +795,7 @@ $(window).load(function () {
         $.deck('.slide');
     }
 
-
     FastClick.attach(document.body);
-
-
 
 });
 

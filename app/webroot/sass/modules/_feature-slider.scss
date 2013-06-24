@@ -45,6 +45,10 @@
     left: -6em;
     width: 320px;
 
+    .no-svg & {
+        background-image: url('../img/festi-food-appstore.png');
+    }
+
     @media only screen and (max-width: 63.99em) {
         left: 0em;
         margin: 0 auto;
