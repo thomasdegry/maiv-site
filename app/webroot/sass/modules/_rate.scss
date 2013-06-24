@@ -3,9 +3,13 @@
 
     .button-confirm {
         position: absolute;
-        margin-left: -5.75em;
+        margin-left: -5.35em;
         left: 50%;
-        bottom: .5em;
+        bottom: 1.35em;
+
+        @media only all and (max-width: 46em) {
+            margin-left: -5.75em;
+        }
     }
 }
 

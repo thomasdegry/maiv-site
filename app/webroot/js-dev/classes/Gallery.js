@@ -35,10 +35,10 @@ var Gallery = (function () {
 
         $(window).on('hashchange', this.loadPageFromHash);
 
-        $(document).keydown(_.bind(function(e){
-            if(e.keyCode === 37) {
+        $(document).on('keyup', _.bind(function(e){
+            if (e.keyCode === 37) {
                 this.triggerprevious();
-            } else if(e.keyCode === 39) {
+            } else if (e.keyCode === 39) {
                 this.triggerNext();
             }
         }, this));
@@ -141,6 +141,11 @@ var Gallery = (function () {
     Gallery.prototype.triggerNext = function(e) {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
+
+        if (window.location.hash.length === 0) {
+            page = 1;
+        }
+
         if(!($(".pagination-item-active").next().hasClass('pagination-item-disabled'))) {
             window.location.hash = "page" + (parseInt(page, 10) + 1);
         }
@@ -149,6 +154,11 @@ var Gallery = (function () {
     Gallery.prototype.triggerprevious = function(e) {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
+
+        if (window.location.hash.length === 0) {
+            return false;
+        }
+
         if(!($(".pagination-item-active").prev().hasClass('pagination-item-disabled'))) {
             window.location.hash = "page" + (parseInt(page, 10) - 1);
         }

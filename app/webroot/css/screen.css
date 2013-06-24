@@ -2470,19 +2470,25 @@ h1.winners-title {
 /* line 4, ../sass/modules/_rate.scss */
 .rate-container .button-confirm {
   position: absolute;
-  margin-left: -5.75em;
+  margin-left: -5.35em;
   left: 50%;
-  bottom: .5em;
+  bottom: 1.35em;
+}
+@media only all and (max-width: 46em) {
+  /* line 4, ../sass/modules/_rate.scss */
+  .rate-container .button-confirm {
+    margin-left: -5.75em;
+  }
 }
 
-/* line 12, ../sass/modules/_rate.scss */
+/* line 16, ../sass/modules/_rate.scss */
 .rate {
   position: relative;
   padding: 6em 0 1em;
   height: 51%;
 }
 
-/* line 18, ../sass/modules/_rate.scss */
+/* line 22, ../sass/modules/_rate.scss */
 .rate-heading {
   color: #2d353a;
   font-family: "Alternate Gothic";
@@ -2494,7 +2500,7 @@ h1.winners-title {
   text-align: center;
 }
 
-/* line 23, ../sass/modules/_rate.scss */
+/* line 27, ../sass/modules/_rate.scss */
 .rate-subtitle {
   display: block;
   color: #bdc08b;
@@ -2506,7 +2512,7 @@ h1.winners-title {
   text-align: center;
 }
 
-/* line 29, ../sass/modules/_rate.scss */
+/* line 33, ../sass/modules/_rate.scss */
 .rate-visual {
   background: url("../img/rate.png") no-repeat;
   background-repeat: no-repeat;
@@ -2516,7 +2522,7 @@ h1.winners-title {
   width: 76px;
 }
 
-/* line 39, ../sass/modules/_rate.scss */
+/* line 43, ../sass/modules/_rate.scss */
 .rate-plus-button {
   background-position: -218px -20px;
   display: block;
@@ -2537,17 +2543,17 @@ h1.winners-title {
 }
 
 @-webkit-keyframes swinging {
-  /* line 60, ../sass/modules/_rate.scss */
+  /* line 64, ../sass/modules/_rate.scss */
   0% {
     -webkit-transform: rotate(-7deg);
   }
 
-  /* line 64, ../sass/modules/_rate.scss */
+  /* line 68, ../sass/modules/_rate.scss */
   50% {
     -webkit-transform: rotate(7deg);
   }
 
-  /* line 68, ../sass/modules/_rate.scss */
+  /* line 72, ../sass/modules/_rate.scss */
   100% {
     -webkit-transform: rotate(-7deg);
   }
