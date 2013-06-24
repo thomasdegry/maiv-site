@@ -38,10 +38,14 @@ body {
 }
 
 .blurry-background {
-    background-image: url('../img/blurry-background.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-color: $orange;
     padding-top: 4.375em;
+
+    @media only all and (min-width: 64em) {
+        background-image: url('../img/blurry-background.jpg');
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
 }
 
 // Typography
