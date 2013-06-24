@@ -18,7 +18,9 @@ class EventsController extends AppController {
 		// debug($datum->getTimestamp());
 		// die();
 		$this->Event->recursive = 0;
-		$events = $this->Event->find('all');
+		$events = $this->Event->find('all', array(
+			'order' => 'Event.start ASC'
+		));
 		$this->set('events', $events);
 	}
 
