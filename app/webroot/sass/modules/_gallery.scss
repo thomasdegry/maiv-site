@@ -11,6 +11,13 @@
     .column {
         padding-right: 4em;
     }
+
+    @media only all and (max-width: 40em) {
+        .column {
+            margin-bottom: 2em;
+            width: 100%;
+        }
+    }
 }
 
 .gallery-introduction {
@@ -25,11 +32,55 @@
 }
 
 .gallery-grid {
+    @include pie-clearfix;
+    margin: 0 auto;
 
-    > li {
-        // Vertical spacing
-        padding: 2em 2em 2em 0;
+    @media only all and (max-width: 40em) {
+        position: relative;
+        width: 19em;
     }
+
+    @media only all and (min-width: 40em) and (max-width: 65em) {
+        position: relative;
+        left: -1em;
+        width: 44em;
+    }
+
+    @media only all and (min-width: 65em) {
+        width: 64em;
+        margin-left: -1em;
+    }
+}
+
+.grid-item {
+    margin-bottom: 4em;
+    width: 19em;
+
+    @media only all and (max-width: 40em) {
+        margin: 0 auto 4em;
+    }
+
+    @media only all and (min-width: 40em) and (max-width: 65em) {
+        float: left;
+        margin-left: 1em;
+        margin-right: 2em;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+    @media only all and (min-width: 65em) {
+        float: left;
+        margin-left: 1em;
+        margin-right: 3em;
+        width: 17.75em;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
 }
 
 .gallery-item {

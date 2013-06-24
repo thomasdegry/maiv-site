@@ -45,10 +45,12 @@ var Rating = (function () {
                 success: _.bind(function (data) {
                     this.el.rating.find('input[type="submit"]').remove();
                     this.el.plusButton.off('click');
-                    this.el.rating.trigger('rating:submit');
+                    this.el.rating.trigger('rating:submit', data);
                 }, this)
             });
         }, this);
+
+        this.el.rating.find('input[type="submit"]').fadeOut();
 
         FB.getLoginStatus(function (response) {
             if (response.status === 'connected') {

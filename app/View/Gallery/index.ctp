@@ -24,11 +24,11 @@
                 </div>
             </form>
         </div>
-        <ul class="gallery-grid column-container has-three-columns">
+        <ul class="gallery-grid">
             <?php foreach ($burgers as $burger) : ?>
             <?php $b = $burger['Burger']; ?>
             <?php $c = $burger['Creation']; ?>
-            <li class="column span-one-column">
+            <li class="grid-item">
                 <div class="gallery-item">
                     <h2 class="gallery-item-heading">
                         #<?php echo $b['id']; ?>

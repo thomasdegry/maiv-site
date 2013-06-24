@@ -9,6 +9,7 @@
 
 .sliding-door {
     float: left;
+    overflow: hidden;
     position: relative;
     width: 50%;
     @include transition(left 220ms ease-in-out);
