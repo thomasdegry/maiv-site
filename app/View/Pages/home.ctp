@@ -3,19 +3,35 @@
     <div class="feature-slider-container">
         <a href="#" class="mr-burger-appstore">Download Mr Burger&rsquo;s Festi Food</a>
         <ul class="feature-slider">
-            <div id="iphone-startscreen">
-                <div class="iphone-gif"></div>
-            </div>
-            <li class="feature">
+            <li class="feature feature-shown" id="feature-slide-1">
+                <div id="iphone-startscreen">
+                    <div class="iphone-gif"></div>
+                </div>
                 <div class="feature-slogan">
                     Be social, create a new<br /><span>flavour</span> and get a free burger!
                 </div>
             </li>
-<!--            <li class="feature">
-                <div class="slogan">
+           <li class="feature feature-hidden hide" id="feature-slide-2">
+                <div id="mayonaisse"></div>
+                <div id="next-event">
+                    <?php
+                        //debug($this->viewVars);
+
+                        $now = time(); // or your date as well
+                        $start_date = strtotime($this->viewVars["next_event"]["event"]["start"]);
+                        $datediff = $now - $start_date;
+                        $daysDifference = floor($datediff/(60*60*24));
+                    ?>
+                    <h3>
+                        <?php echo abs($daysDifference); ?>
+                        <span><?php if($daysDifference == 1) {echo '1 day';}else{echo 'days';} ?></span>
+                    </h3>
+                    <h4><span>untill</span> <?php echo $this->viewVars['next_event']['event']["name"]; ?></h4>
+                </div>
+                <div class="feature-slogan">
                     Be social, create a new <span>flavour</span> and get a free burger!
                 </div>
-            <li> -->
+            <li>
         </ul>
         <ol class="feature-slider-navigation">
             <li>

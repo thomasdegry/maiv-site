@@ -195,6 +195,10 @@ input[type="text"].form-element {
     display: none;
 }
 
+.hide {
+    display: none;
+}
+
 @media only all and (min-width: 64em) {
     .hide-mobile {
         display: block;

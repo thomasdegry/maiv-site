@@ -256,6 +256,36 @@ var AppDemo = (function () {
 
 }());
 
+var FeatureSlider = (function () {
+
+    var FeatureSlider = function (options, el) {
+        this.el = {
+            slider: $("ul.feature-slider"),
+            navigationItems: $(".feature-slider-navigation-item")
+        };
+
+        this.bind();
+    };
+
+    FeatureSlider.prototype.bind = function() {
+        this.el.navigationItems.on('click', _.bind(this.loadSlide, this));
+    };
+
+    FeatureSlider.prototype.loadSlide = function(e) {
+        e.preventDefault();
+        var slideToLoad = $(e.target).text(),
+            $slide = $("#feature-slide-" + slideToLoad);
+
+        $(".feature-shown").addClass('feature-hidden');
+        setTimeout(function() {
+            $(".feature-shown").addClass('hide').removeClass('feature-shown');
+            $slide.removeClass('hide').removeClass('feature-hidden').addClass('feature-shown');
+        }, 240);
+    };
+
+    return FeatureSlider;
+})();
+
 /* globals Rating */
 /* globals Settings */
 
@@ -745,6 +775,7 @@ var Settings =(function () {
 /* globals FastClick */
 /* globals Navigation */
 /* globals Settings */
+/* globals FeatureSlider */
 
 $(window).load(function () {
     var settings = new Settings();
@@ -754,6 +785,7 @@ $(window).load(function () {
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
     var navigation = new Navigation();
+    var featureSlider = new FeatureSlider();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',

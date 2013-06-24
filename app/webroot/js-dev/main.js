@@ -4,6 +4,7 @@
 /* globals FastClick */
 /* globals Navigation */
 /* globals Settings */
+/* globals FeatureSlider */
 
 $(window).load(function () {
     var settings = new Settings();
@@ -13,6 +14,7 @@ $(window).load(function () {
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
     var navigation = new Navigation();
+    var featureSlider = new FeatureSlider();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',

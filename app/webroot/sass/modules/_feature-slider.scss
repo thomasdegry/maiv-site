@@ -106,6 +106,80 @@
     }
 }
 
+#mayonaisse {
+    background: url("../img/mayonaise.png") no-repeat;
+    width: 251px;
+    height: 301px;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    right: 5em;
+    top: 6em;
+
+    @media only screen and (max-width: 63.99em) {
+        display: none;
+    }
+}
+
+.feature {
+    @include transition-property(all);
+    @include transition-duration(700ms);
+    @include transition-timing-function(ease-out);
+}
+
+.feature-slider {
+
+}
+
+.feature-shown {
+    @include opacity(1);
+}
+
+.feature-hidden {
+    @include opacity(0);
+}
+
+#next-event {
+    position: absolute;
+    top: 0; right: 0;
+
+    h3 {
+        @include inline-block;
+        background-color: $beige-darkened;
+        @include background(linear-gradient(center top, $beige, $beige 49%, $beige-darkened 50%, $beige-darkened));
+        border-radius: .2em;
+        @include box-shadow(0 2px 0 rgba(0, 0, 0, .15));
+        @include font-alternate($blue, 2em);
+        margin-right: .5rem;
+        padding: .6em .6em;
+        text-decoration: none;
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 77px; right: 19px;
+            font-size: 0.7em;
+            color: $brown;
+        }
+
+        &:hover {
+            background-color: $beige;
+            background-image: none;
+        }
+    }
+
+    h4 {
+        span {
+            display: block;
+            @include font-mission-script($beige, 1em);
+            text-transform: lowercase;
+            float: left;
+        }
+        width: 200px;
+        @include font-alternate($beige, 2em);
+    }
+}
+
 @media only all and (min-width: 64em) {
     .feature-slider-container {
         left: 50%;

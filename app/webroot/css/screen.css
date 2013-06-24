@@ -358,8 +358,13 @@ input[type="text"].form-element::after {
   display: none;
 }
 
+/* line 198, ../sass/_base.scss */
+.hide {
+  display: none;
+}
+
 @media only all and (min-width: 64em) {
-  /* line 199, ../sass/_base.scss */
+  /* line 203, ../sass/_base.scss */
   .hide-mobile {
     display: block;
   }
@@ -1720,20 +1725,139 @@ ul.feed li {
   }
 }
 
+/* line 109, ../sass/modules/_feature-slider.scss */
+#mayonaisse {
+  background: url("../img/mayonaise.png") no-repeat;
+  width: 251px;
+  height: 301px;
+  background-size: 100%;
+  display: block;
+  position: absolute;
+  right: 5em;
+  top: 6em;
+}
+@media only screen and (max-width: 63.99em) {
+  /* line 109, ../sass/modules/_feature-slider.scss */
+  #mayonaisse {
+    display: none;
+  }
+}
+
+/* line 124, ../sass/modules/_feature-slider.scss */
+.feature {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 134, ../sass/modules/_feature-slider.scss */
+.feature-shown {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 138, ../sass/modules/_feature-slider.scss */
+.feature-hidden {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 142, ../sass/modules/_feature-slider.scss */
+#next-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 146, ../sass/modules/_feature-slider.scss */
+#next-event h3 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-color: #d2d2bf;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ecedde), color-stop(49%, #ecedde), color-stop(50%, #d2d2bf), color-stop(100%, #d2d2bf));
+  background: -webkit-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: -moz-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: -o-linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  background: linear-gradient(center top, #ecedde, #ecedde 49%, #d2d2bf 50%, #d2d2bf);
+  border-radius: .2em;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  color: #2d353a;
+  font-family: "Alternate Gothic";
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-right: .5rem;
+  padding: .6em .6em;
+  text-decoration: none;
+  position: relative;
+}
+/* line 158, ../sass/modules/_feature-slider.scss */
+#next-event h3 span {
+  position: absolute;
+  top: 77px;
+  right: 19px;
+  font-size: 0.7em;
+  color: #992a07;
+}
+/* line 165, ../sass/modules/_feature-slider.scss */
+#next-event h3:hover {
+  background-color: #ecedde;
+  background-image: none;
+}
+/* line 171, ../sass/modules/_feature-slider.scss */
+#next-event h4 {
+  width: 200px;
+  color: #ecedde;
+  font-family: "Alternate Gothic";
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 172, ../sass/modules/_feature-slider.scss */
+#next-event h4 span {
+  display: block;
+  color: #ecedde;
+  font-family: "Mission Script";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: lowercase;
+  float: left;
+}
+
 @media only all and (min-width: 64em) {
-  /* line 110, ../sass/modules/_feature-slider.scss */
+  /* line 184, ../sass/modules/_feature-slider.scss */
   .feature-slider-container {
     left: 50%;
     margin-top: -18em;
     margin-left: -23em;
   }
 
-  /* line 116, ../sass/modules/_feature-slider.scss */
+  /* line 190, ../sass/modules/_feature-slider.scss */
   .mr-burger-appstore {
     left: 0em;
   }
 
-  /* line 120, ../sass/modules/_feature-slider.scss */
+  /* line 194, ../sass/modules/_feature-slider.scss */
   #iphone-startscreen {
     right: -2.5em;
   }
