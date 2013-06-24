@@ -17,9 +17,13 @@ var FeatureSlider = (function () {
 
         this.currentIndex = 0;
 
+        $('.feature-slider-navigation-item').eq(this.currentIndex).addClass('active');
+
+        console.log($('.feature-slider-navigation-item').eq(this.currentIndex));
+
         this.bind();
 
-        setInterval(_.bind(this.showNext, this), 2000);
+        setInterval(_.bind(this.showNext, this), 4000);
     };
 
     FeatureSlider.prototype.bind = function() {
@@ -65,6 +69,9 @@ var FeatureSlider = (function () {
                 }, 220);
             }, 440, this));
         }
+
+        $('.feature-slider-navigation-item').removeClass('active').eq(this.currentIndex).addClass('active');
+
     };
 
     FeatureSlider.prototype.loadSlide = function(e) {
