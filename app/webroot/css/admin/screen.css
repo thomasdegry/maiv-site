@@ -63,6 +63,7 @@ a img {
   src: url("../fonts/traveller.eot?#iefix") format("embedded-opentype"), url("../fonts/traveller.woff") format("woff"), url("../fonts/traveller.ttf") format("truetype"), url("../fonts/traveller.svg#travelermedium") format("svg");
   font-weight: normal;
   font-style: normal;
+  color: blue;
 }
 
 @font-face {
@@ -327,7 +328,7 @@ label {
 /* line 103, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
-  padding: .4em 1em .3em;
+  padding: 0.4em 1em 0.3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -336,7 +337,7 @@ select.form-element {
 /* line 115, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
-  padding: .45em 1em .25em;
+  padding: 0.45em 1em 0.25em;
 }
 /* line 120, ../../sass/_base.scss */
 input[type="text"].form-element::after {
@@ -402,7 +403,7 @@ input[type="text"].form-element::after {
 /* line 163, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
-  border: .3em solid white;
+  border: 0.3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -411,13 +412,13 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
-/* line 167, ../../sass/_base.scss */
+/* line 172, ../../sass/_base.scss */
 .hide-mobile {
   display: none;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 172, ../../sass/_base.scss */
+  /* line 177, ../../sass/_base.scss */
   .hide-mobile {
     display: block;
   }
@@ -649,7 +650,7 @@ h1 {
   zoom: 1;
   *display: inline;
   color: #ecedde;
-  padding: .9em 1.2em;
+  padding: 0.9em 1.2em;
   text-decoration: none;
   -webkit-transition: color 220ms ease-in-out;
   -moz-transition: color 220ms ease-in-out;
@@ -915,7 +916,7 @@ footer div.half:last-child {
 
 /* line 81, ../../sass/admin/modules/_scan.scss */
 #outdiv {
-  border: 6px solid #fff;
+  border: 6px solid white;
   height: 421px;
   width: 100%;
 }

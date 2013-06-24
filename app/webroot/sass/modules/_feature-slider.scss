@@ -77,18 +77,63 @@
     }
 }
 
-@media only all and (min-width: 66em) {
-    .feature-slider-container {
-        left: 50%;
-        margin-top: -18em;
-        margin-left: -23em;
-    }
-
-    .mr-burger-appstore {
-        left: 0em;
-    }
-
-    #iphone-startscreen {
-        right: -2.5em;
-    }
-}
+//@media only all and (min-width: 66em) {
+//    .feature-slider-container {
+///*        left: 50%;*/
+//        margin-top: -18em;
+///*        margin-left: -23em;*/
+//        //background: red;
+//    }
+//
+//    .mr-burger-appstore {
+//      top: -1em;
+//      left: 0;
+//    }
+//
+//  #iphone-startscreen {
+//        right: -2.5em;
+//    }
+//}
+//
+//@media only all and (max-width: 66em) {
+//  .feature-slider-container {
+//    left: 50%;
+//    margin-top: -18em;
+///*    margin-left: -23em;*/
+//  }
+//
+//  .mr-burger-appstore {
+//    top: -1em;
+//    left: 0;
+//  }
+//
+//  #iphone-startscreen {
+//    right: -2.5em;
+//  }
+//}
+//
+//@media only all and (max-width: 53.86em) {
+//  .feature-slider-container {
+//    padding: 0;
+//    margin: -14em 0 0 -40%;
+//  }
+//
+//  .mr-burger-appstore {
+//    margin-left: auto;
+//    margin-right: auto;
+//    left: 0em;
+//    top: -2em;
+//  }
+//
+//  #iphone-startscreen {
+//    display: none;
+//  }
+//
+//
+//}
+//
+//@media only all and (max-width: 18.75em){
+//  .scroll-indicator {
+//    display: none;
+//  }
+//}

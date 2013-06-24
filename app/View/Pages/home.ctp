@@ -2,7 +2,7 @@
     <div class="feature-slider-container">
         <a href="#" class="mr-burger-appstore">Download Mr Burger&rsquo;s Festi Food</a>
         <ul class="feature-slider">
-            <div id="iphone-startscreen" class="hide-mobile">
+            <div id="iphone-startscreen">
                 <div class="iphone-gif"></div>
             </div>
             <li class="feature">
@@ -54,7 +54,7 @@
                 <h2>Melbourne mill</h2>
             </div>
             <div class="festival-location" id="block4">
-                <h1>INTERNATIONAL JAZZ FESTIVALK</h1>
+                <h1>JAZZ FESTIVAL</h1>
                 <h2>Melbourne Manatee Zoo</h2>
             </div>
             <div class="festival-location" id="block5">
@@ -75,7 +75,16 @@
     <div class="app-demo-3-info2" id="block9">
         <h1>Check Out Our Burgers</h1>
     </div>
+
     </div>
 </section>
 <section class="orange full-screen app-demo app-demo-4 video-container app-demo-end">
+    <div class="btn-play">PLAY</div>
+    <div class="container">
+        <video controls preload="true" autobuffer width="1280" id="mrburgervideo">
+            <source src="media/_main3.webm" type="video/webm" />
+            <source src="media/_main3.mp4" type="video/mp4" />
+            <source src="media/_main3.theora.ogv" type="video/ogv" />
+        </video>
+    </div>
 </section>

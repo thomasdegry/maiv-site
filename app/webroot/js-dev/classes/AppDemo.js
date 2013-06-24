@@ -25,7 +25,7 @@ var AppDemo = (function () {
         this.el.container.on('resize', _.bind(this.setScrollPositions, this));
         this.el.container.on('scroll', _.bind(this.detectScroll, this));
 
-        // this.animate();
+         this.animate();
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -205,7 +205,43 @@ var AppDemo = (function () {
             easing: "bounce baby"
 
         });
+
+
+
     };
+
+
+    if ($("#mrburgervideo").length > 0) {
+        var currenttime = 0;
+        console.log(currenttime);
+        var video = $(video)[0];
+        $("video")[0].load();
+        $(video).bind("ended", function(){
+            console.log("video ended");
+            $("#mrburgervideo").hide();
+            $('.btn-play').show();
+        });
+
+        $("video").bind("pause", function(){
+            var video = document.getElementsByTagName('video')[0];
+            var now = video.currentTime;
+            console.log("video paused on " + now);
+
+            $("#mrburgervideo").hide();
+            $('.btn-play').show();
+            currenttime = now;
+        });
+
+
+        $('.btn-play').click(function () {
+            console.log('play from ' + currenttime);
+            $(this).hide();
+            $("#mrburgervideo").show();
+            $("video")[0].currentTime = parseInt(currenttime, 10);
+            $("video")[0].play();
+        });
+    }
+
 
     return AppDemo;
 

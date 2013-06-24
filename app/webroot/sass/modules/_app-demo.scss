@@ -6,17 +6,16 @@
     z-index: 9;
 }
 
-@media only all and (max-height: 47em) {
+@media only all and (max-height: 40em) {
     .app-demo {
         background-position: -3em center;
         @include background-size(auto 60%);
     }
 }
 
-@media only all and (min-height: 47em) and (min-width: 64em) {
+@media only all and (min-height: 40em) and (min-width: 64em) {
     .app-demo {
         background-position: center center;
-
         // .app-demo-started is a class that gets added to the body
         // with Javascript when the demo should scroll
         // and removed when the demo shouldn't scroll
@@ -75,18 +74,43 @@
   .app-demo-2-info2 {
     position: absolute;
     right: -100px;
-    top: 350px;
+    top: 300px;
     h1 {
       width: 360px;
-      height: 30px;
+      height: 50px;
       @include font-alternate($beige, 1.6em);
-      background: url('../img/demo/burgerpin.png') no-repeat;
+      background: url('../img/demo/burgerpin.png') no-repeat 0px 10px;
       padding-left: 30px;
     }
     h2 {
       @include font-alternate($brown, 1em);
       padding-left: 30px;
-      margin-bottom: 10px;
+      margin-top: -25px;
+    }
+    #block3{
+      height: 154px;
+      position: relative;
+      left: 30px;
+      background: url('../img/dotted1.png') no-repeat 15px 48px;
+    }
+    #block4{
+      position: relative;
+      left: 50px;
+      top: -45px;
+      height: 100px;
+      background: url('../img/dotted2.png') no-repeat -50px 50px;
+      h1 {
+        background-position: 160px 0px;
+      }
+
+    }
+    #block5{
+      position: relative;
+      top: -50px;
+      left: 30px;
+      h1 {
+        background-position: 0px 5px;
+      }
     }
   }
 }
@@ -125,8 +149,40 @@
 }
 
 .app-demo-4 {
+ background-color: #ff6824;
+  position: relative;
+  .btn-play {
+    @include font-alternate($beige, 3em);
+    padding: 40px;
+    padding-top: 55px;
+    padding-bottom: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -68px;
+    margin-top: -80px;
+    background-color: $orange;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+    &:hover {
+      background-color: $blue;
+      cursor: pointer;
+    }
+  }
     background-image: url('../img/demo/iphone-04.png');
-
+  position: relative;
+    #mrburgervideo {
+      position: absolute;
+      left: -128px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
 }
 
 
