@@ -71,7 +71,7 @@ var Gallery = (function () {
             top = $(window).height() * 0.5 - 150,
             left = $(window).width() * 0.5 - 200;
 
-        window.open($(this).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
+        window.open($(e.target).attr('href') + '&p[images][0]=' + image + '&p[summary]=' + description + '&p[title]=' + title, 'Share this burger!', 'width=400,height=300,scrollbars=no,toolbar=no,location=no,top=' + top + ',left=' + left);
 
         return false;
     };

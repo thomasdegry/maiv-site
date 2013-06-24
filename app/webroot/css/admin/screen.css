@@ -286,36 +286,24 @@ select.form-element, input[type="text"].form-element, input[type=text], select {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 65, ../../sass/_base.scss */
+/* line 66, ../../sass/_base.scss */
 input[type="text"].form-element:focus, input[type=text]:focus, select:focus {
   outline: none;
   outline: none;
 }
 
-<<<<<<< HEAD
-/* line 71, ../../sass/_base.scss */
-=======
-/* line 68, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 72, ../../sass/_base.scss */
 label {
   display: none;
 }
 
-<<<<<<< HEAD
-/* line 75, ../../sass/_base.scss */
-=======
-/* line 72, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 76, ../../sass/_base.scss */
 .label-icon-container {
   position: relative;
   padding-bottom: .5em;
 }
 
-<<<<<<< HEAD
-/* line 80, ../../sass/_base.scss */
-=======
-/* line 77, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 81, ../../sass/_base.scss */
 .label-icon {
   background-color: #2d353a;
   border-radius: 1.4em;
@@ -331,29 +319,17 @@ label {
   z-index: 99;
 }
 
-<<<<<<< HEAD
-/* line 95, ../../sass/_base.scss */
-=======
-/* line 91, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 96, ../../sass/_base.scss */
 .label-icon-dropdown {
   background-position: -55px -172px;
 }
 
-<<<<<<< HEAD
-/* line 99, ../../sass/_base.scss */
-=======
-/* line 95, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 100, ../../sass/_base.scss */
 .label-icon-search {
   background-position: -95px -172px;
 }
 
-<<<<<<< HEAD
-/* line 103, ../../sass/_base.scss */
-=======
-/* line 99, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 104, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
   padding: .4em 1em .3em;
@@ -362,20 +338,12 @@ select.form-element {
   z-index: 9;
 }
 
-<<<<<<< HEAD
-/* line 115, ../../sass/_base.scss */
-=======
-/* line 111, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 116, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
   padding: .45em 1em .25em;
 }
-<<<<<<< HEAD
-/* line 120, ../../sass/_base.scss */
-=======
-/* line 116, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 121, ../../sass/_base.scss */
 input[type="text"].form-element::after {
   position: absolute;
   top: -1em;
@@ -383,11 +351,7 @@ input[type="text"].form-element::after {
   z-index: 999;
 }
 
-<<<<<<< HEAD
-/* line 128, ../../sass/_base.scss */
-=======
-/* line 124, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 129, ../../sass/_base.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -414,15 +378,11 @@ input[type="text"].form-element::after {
   text-align: center;
   text-decoration: none;
   text-shadow: -0.1em 0.1em 0 rgba(0, 0, 0, 0.1);
-  margin: 0 auto 0.5em;
+  margin: 0 auto .5em;
   width: 90%;
 }
 
-<<<<<<< HEAD
-/* line 146, ../../sass/_base.scss */
-=======
-/* line 142, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 147, ../../sass/_base.scss */
 .button-confirm {
   background-color: #b7b700;
   -webkit-box-shadow: 0 0.1em 0 #9d9e00;
@@ -430,11 +390,7 @@ input[type="text"].form-element::after {
   box-shadow: 0 0.1em 0 #9d9e00;
 }
 
-<<<<<<< HEAD
-/* line 153, ../../sass/_base.scss */
-=======
-/* line 149, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 154, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -443,20 +399,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-<<<<<<< HEAD
-/* line 158, ../../sass/_base.scss */
-=======
-/* line 154, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 159, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-<<<<<<< HEAD
-/* line 163, ../../sass/_base.scss */
-=======
-/* line 159, ../../sass/_base.scss */
->>>>>>> Fix scroll nestin
+/* line 164, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: .3em solid white;
@@ -468,13 +416,13 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
-/* line 168, ../../sass/_base.scss */
+/* line 173, ../../sass/_base.scss */
 .hide-mobile {
   display: none;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 173, ../../sass/_base.scss */
+  /* line 178, ../../sass/_base.scss */
   .hide-mobile {
     display: block;
   }
