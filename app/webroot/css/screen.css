@@ -2371,6 +2371,7 @@ h1.winners-title {
 /* line 10, ../sass/modules/_sliding-doors.scss */
 .sliding-door {
   float: left;
+  overflow: hidden;
   position: relative;
   width: 50%;
   -webkit-transition: left 220ms ease-in-out;
@@ -2378,7 +2379,7 @@ h1.winners-title {
   -o-transition: left 220ms ease-in-out;
   transition: left 220ms ease-in-out;
 }
-/* line 16, ../sass/modules/_sliding-doors.scss */
+/* line 17, ../sass/modules/_sliding-doors.scss */
 .sliding-doors-open .sliding-door {
   left: -50%;
 }
@@ -2387,14 +2388,22 @@ h1.winners-title {
 .rate-container {
   padding: 2em 0 0;
 }
+/* line 4, ../sass/modules/_rate.scss */
+.rate-container .button-confirm {
+  position: absolute;
+  margin-left: -5.75em;
+  left: 50%;
+  bottom: .5em;
+}
 
-/* line 5, ../sass/modules/_rate.scss */
+/* line 12, ../sass/modules/_rate.scss */
 .rate {
   position: relative;
   padding: 6em 0 1em;
+  height: 51%;
 }
 
-/* line 10, ../sass/modules/_rate.scss */
+/* line 18, ../sass/modules/_rate.scss */
 .rate-heading {
   color: #2d353a;
   font-family: "Alternate Gothic";
@@ -2406,7 +2415,7 @@ h1.winners-title {
   text-align: center;
 }
 
-/* line 15, ../sass/modules/_rate.scss */
+/* line 23, ../sass/modules/_rate.scss */
 .rate-subtitle {
   display: block;
   color: #bdc08b;
@@ -2418,17 +2427,17 @@ h1.winners-title {
   text-align: center;
 }
 
-/* line 21, ../sass/modules/_rate.scss */
+/* line 29, ../sass/modules/_rate.scss */
 .rate-visual {
   background: url("../img/rate.png") no-repeat;
   background-repeat: no-repeat;
   display: block;
   height: 60px;
-  margin: 0 auto 1em;
+  margin: 0 auto 1.75em;
   width: 76px;
 }
 
-/* line 31, ../sass/modules/_rate.scss */
+/* line 39, ../sass/modules/_rate.scss */
 .rate-plus-button {
   background-position: -218px -20px;
   display: block;
@@ -2449,17 +2458,17 @@ h1.winners-title {
 }
 
 @-webkit-keyframes swinging {
-  /* line 53, ../sass/modules/_rate.scss */
+  /* line 60, ../sass/modules/_rate.scss */
   0% {
     -webkit-transform: rotate(-7deg);
   }
 
-  /* line 57, ../sass/modules/_rate.scss */
+  /* line 64, ../sass/modules/_rate.scss */
   50% {
     -webkit-transform: rotate(7deg);
   }
 
-  /* line 61, ../sass/modules/_rate.scss */
+  /* line 68, ../sass/modules/_rate.scss */
   100% {
     -webkit-transform: rotate(-7deg);
   }

@@ -313,8 +313,15 @@ var Gallery = (function () {
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
             var that = this;
-            $(this).on('rating:submit', '.rate', _.bind(function () {
-                $(that).find('.button').html('Voted!').removeClass('button-confirm');
+            $(this).on('rating:submit', '.rate', _.bind(function (event, response) {
+                var newButtonText = 'You already voted';
+
+                if (parseInt(response, 10) > 0) {
+                    newButtonText = 'Voted!';
+                    $(that).find('.gallery-item-rating').html(response + '<span>/5</span>');
+                }
+
+                $(that).find('.button').off().html('Voted!').removeClass('button-confirm');
                 $('.sliding-doors-open').removeClass('sliding-doors-open');
             }, this));
         });
@@ -346,15 +353,17 @@ var Gallery = (function () {
 
     Gallery.prototype.equalHeight = function () {
         var height = 0,
-            burgers = $(this.options.item).find('.burger');
+            items = $(this.options.item).find('.burger');
 
-        burgers.each(function () {
+        items.each(function () {
             var tempHeight = $(this).height();
 
             height = (tempHeight > height) ? tempHeight : height;
         });
 
-        burgers.height(height);
+        items.height(height);
+
+        $('.rate-container').height(height + 41);
     };
 
     Gallery.prototype.loadPage = function(e, pageNumber) {
@@ -681,10 +690,12 @@ var Rating = (function () {
                 success: _.bind(function (data) {
                     this.el.rating.find('input[type="submit"]').remove();
                     this.el.plusButton.off('click');
-                    this.el.rating.trigger('rating:submit');
+                    this.el.rating.trigger('rating:submit', data);
                 }, this)
             });
         }, this);
+
+        this.el.rating.find('input[type="submit"]').fadeOut();
 
         FB.getLoginStatus(function (response) {
             if (response.status === 'connected') {
@@ -731,6 +742,7 @@ var Settings =(function () {
     var Settings = function () {
 
         this.URI = 'http://localhost/Devine/_MAMP_JAAR2/_SEM2/MAIV/mrburger/maiv-site';
+        this.API = 'http://ksjkuurne.be/FOOD/api';
         //this.api = 'http://192.168.2.8/maiv_oostende/api/';
         //this.api = 'http://192.168.2.4/rolstende/api/';
     };
