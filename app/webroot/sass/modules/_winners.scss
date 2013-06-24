@@ -10,8 +10,8 @@ h2.winners-title {
     text-align: center;
 }
 
-#burger-left {
-    width: 10%;
+.burger-left {
+    width: 15%;
     float: left;
     text-align: center;
     margin-left: 10%;
@@ -22,7 +22,7 @@ h2.winners-title {
     }
 }
 
-#burger-right {
+.burger-right {
     width: 60%;
     float: left;
     margin-left: 5%;
@@ -58,14 +58,14 @@ h2.winners-title {
 }
 
 @media only all and (max-width: 64em) {
-    #burger-right, #burger-left {
+    .burger-right, .burger-left {
         width: 100%;
         float: none;
         margin: 0;
         padding: 0;
     }
 
-    #burger-left {
+    .burger-left {
         padding-bottom: 2.8em;
         .burger {
             margin: auto;

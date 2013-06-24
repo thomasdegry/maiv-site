@@ -26,6 +26,8 @@ var AppDemo = (function () {
 
         this.el.container.on('resize', _.bind(this.setScrollPositions, this));
         this.el.container.on('scroll', _.bind(this.detectScroll, this));
+
+        // this.animate();
     };
 
     AppDemo.prototype.setScrollPositions = function () {
@@ -53,40 +55,226 @@ var AppDemo = (function () {
         }
     };
 
+    AppDemo.prototype.animate = function () {
+        var scrollorama = $.scrollorama({
+            blocks: '.scrollblock',
+            enablePin:false
+        });
+
+        scrollorama.animate('#block1', {
+            duration: 200,
+            property: 'right',
+            start: -1000,
+            end: 30,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block1', {
+            duration: 200,
+            property: 'opacity',
+            start: 0,
+            end: 1
+        });
+
+        scrollorama.animate('#block2', {
+            delay: 700,
+            duration: 200,
+            property:'left',
+            start:-1000,
+            end: 30,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block2', {
+            delay: 730,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1
+
+        });
+
+
+        scrollorama.animate('#block3',{
+            delay: 700,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block4',{
+            delay: 750,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block5',{
+            delay: 800,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+
+        scrollorama.animate('#block3',{
+            delay: 730,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block4',{
+            delay: 780,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+        scrollorama.animate('#block5',{
+            delay: 830,
+            duration: 200,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+
+        });
+
+        scrollorama.animate('#block6',{
+            delay: 830,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block7',{
+            delay: 860,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block8',{
+            delay: 890,
+            duration: 80,
+            property:'bottom',
+            start:-400,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block6',{
+            delay: 840,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block7',{
+            delay: 870,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+        scrollorama.animate('#block8',{
+            delay: 890,
+            duration: 80,
+            property:'opacity',
+            start:0,
+            end: 1,
+            easing: "bounce baby"
+        });
+
+        scrollorama.animate('#block9',{
+            delay: 700,
+            duration: 200,
+            property:'right',
+            start:-1000,
+            end: 0,
+            easing: "bounce baby"
+
+        });
+    };
+
     return AppDemo;
 
 }());
 
 /* globals Rating */
+/* globals Settings */
 
 var Gallery = (function () {
 
     var Gallery = function (options) {
+        _.bindAll(this);
         this.options = {
             gallery: '.gallery',
-            item: '.gallery-item'
+            item: '.gallery-item',
+            rate: '.sliding-doors',
+            share: '.gallery-share-button'
         };
 
-        this.activeElement = 0;
+        this.createElements();
 
+        this.activeElement = 0;
+        this.settings = new Settings();
+
+        if(window.location.hash !== '') {
+            this.loadPageFromHash();
+        }
+
+        if(this.el.gallery.length === 0) {
+            return false;
+        }
+
+        this.equalHeight();
+        this.bind();
+
+        $(window).on('hashchange', this.loadPageFromHash);
+
+        $(document).keydown(_.bind(function(e){
+            if(e.keyCode === 37) {
+                this.triggerprevious();
+            } else if(e.keyCode === 39) {
+                this.triggerNext();
+            }
+        }, this));
+    };
+
+    Gallery.prototype.createElements = function () {
         this.el = {
-            gallery: $(this.options.gallery)
+            gallery: $(this.options.gallery),
+            rate: $(this.options.rate),
+            share: $(this.options.share)
         };
 
         // Create a rating element for each gallery item
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
         });
-
-        this.equalHeight();
-        this.bind();
     };
 
     Gallery.prototype.bind = function () {
-        this.el.gallery.on('click', '.gallery-share-button', this.showShare);
+        this.el.gallery.on('click', this.options.share, this.showShare);
         this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
             window.location = $(this).val();
         });
+
+        this.el.gallery.on('click', '.pagination-item a', this.loadPage);
+        this.el.rate.on('click', '.sliding-door-toggle', this.showRate);
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -114,6 +302,59 @@ var Gallery = (function () {
         });
 
         items.height(height);
+    };
+
+    Gallery.prototype.loadPage = function(e, pageNumber) {
+        e.preventDefault();
+
+        var url = $(e.target).attr('href').split(':');
+        window.location.hash = "page" + url[url.length - 1];
+    };
+
+    Gallery.prototype.loadPageFromHash = function() {
+        var hash = window.location.hash,
+            url  = window.location.href.substr(0, window.location.href.indexOf('#')),
+            page = hash.replace('#page', ''),
+            that = this;
+
+        $.ajax({
+            type: 'GET',
+            url: url + '/page:' + page,
+            success: function(data) {
+                var gallery = $(data).find('.gallery-grid');
+                var pagination = $(data).find('.pagination');
+
+                $('.gallery-grid').empty().html(gallery);
+                $('.pagination').empty().html(pagination);
+
+                that.createElements();
+                that.bind();
+                that.equalHeight();
+            }
+        });
+    };
+
+    Gallery.prototype.triggerNext = function(e) {
+        var hash = window.location.hash;
+        var page = hash.replace('#page', '');
+        if(!($(".pagination-item-active").next().hasClass('pagination-item-disabled'))) {
+            window.location.hash = "page" + (parseInt(page, 10) + 1);
+        }
+    };
+
+    Gallery.prototype.triggerprevious = function(e) {
+        var hash = window.location.hash;
+        var page = hash.replace('#page', '');
+        if(!($(".pagination-item-active").prev().hasClass('pagination-item-disabled'))) {
+            window.location.hash = "page" + (parseInt(page, 10) - 1);
+        }
+    };
+
+    Gallery.prototype.showRate = function(e) {
+        e.preventDefault();
+
+        $('.sliding-doors-open').removeClass('sliding-doors-open');
+        $(e.target).closest('.sliding-doors').toggleClass('sliding-doors-open');
     };
 
     return Gallery;
@@ -159,6 +400,14 @@ var HorizontalSlider = (function () {
         this.el.previousButton.on('click', _.bind(this.showPrevious, this));
         this.el.nextButton.on('click', _.bind(this.showNext, this));
 
+        $(document).keydown(_.bind(function(e){
+            if(e.keyCode === 37) {
+                this.showPrevious(null);
+            } else if(e.keyCode === 39) {
+                this.showNext(null);
+            }
+        }, this));
+
         if (this.el.navigation.length > 0) {
             this.el.navigation.on('click', this.options.navigationItem, _.bind(this.navigation, this));
         }
@@ -182,7 +431,9 @@ var HorizontalSlider = (function () {
     };
 
     HorizontalSlider.prototype.showPrevious = function (e) {
-        e.preventDefault();
+        if(e) {
+            e.preventDefault();
+        }
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             previousElement = this.el.slider.find('.' + this.options.previous);
@@ -208,7 +459,9 @@ var HorizontalSlider = (function () {
     };
 
     HorizontalSlider.prototype.showNext = function (e) {
-        e.preventDefault();
+        if(e) {
+            e.preventDefault();
+        }
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             nextElement = this.el.slider.find('.' + this.options.next);
@@ -307,6 +560,28 @@ var HorizontalSlider = (function () {
 
 })();
 
+var Navigation = (function () {
+
+    var Navigation = function (options, el) {
+        this.el = {
+            navItems: $('.nav-item')
+        };
+
+        this.bind();
+    };
+
+    Navigation.prototype.bind = function() {
+        this.el.navItems.on('click', _.bind(this.catchClick, this));
+    };
+
+    Navigation.prototype.catchClick = function(e) {
+        //e.preventDefault();
+        console.log('click');
+    };
+
+    return Navigation;
+})();
+
 var Rating = (function () {
 
     var Rating = function (options, el) {
@@ -358,17 +633,35 @@ var Rating = (function () {
     return Rating;
 })();
 
+var Settings =(function () {
+
+    var Settings = function () {
+
+        // this.URI = 'http://localhost/Devine/_MAMP_JAAR2/_SEM2/MAIV/mrburger/maiv-site';
+        this.URI = 'http://localhost/mrburger-php';
+        //this.api = 'http://192.168.2.8/maiv_oostende/api/';
+        //this.api = 'http://192.168.2.4/rolstende/api/';
+    };
+
+    return Settings;
+
+})();
+
 /* globals AppDemo */
 /* globals HorizontalSlider */
 /* globals Gallery */
 /* globals FastClick */
+/* globals Navigation */
+/* globals Settings */
 
 $(window).load(function () {
+    var settings = new Settings();
 
     // Init app demo (should only work on index)
     var appDemo = new AppDemo();
     var horizontalSlider = new HorizontalSlider();
     var gallery = new Gallery();
+    var navigation = new Navigation();
 
     $('.toggle-nav').sidr({
         name: 'sidr-main',
@@ -378,172 +671,7 @@ $(window).load(function () {
     //leap
     $.deck('.slide');
 
-
-    if($(".app-demo").length > 0){
-
-
-            var scrollorama = $.scrollorama({
-                blocks:'.scrollblock',
-                enablePin:false
-            });
-
-            scrollorama.animate('#block1',{
-                duration: 200,
-                property:'right',
-                start:-1000,
-                end: 30,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block1',{
-                duration: 200,
-                property:'opacity',
-                start:0,
-                end: 1
-
-            });
-
-            scrollorama.animate('#block2',{
-                delay: 700,
-                duration: 200,
-                property:'left',
-                start:-1000,
-                end: 30,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block2',{
-                delay: 730,
-                duration: 200,
-                property:'opacity',
-                start:0,
-                end: 1
-
-            });
-
-
-            scrollorama.animate('#block3',{
-                delay: 700,
-                duration: 200,
-                property:'right',
-                start:-1000,
-                end: 0,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block4',{
-                delay: 750,
-                duration: 200,
-                property:'right',
-                start:-1000,
-                end: 0,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block5',{
-                delay: 800,
-                duration: 200,
-                property:'right',
-                start:-1000,
-                end: 0,
-                easing: "bounce baby"
-
-            });
-
-            scrollorama.animate('#block3',{
-                delay: 730,
-                duration: 200,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block4',{
-                delay: 780,
-                duration: 200,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-
-            });
-            scrollorama.animate('#block5',{
-                delay: 830,
-                duration: 200,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-
-            });
-
-            scrollorama.animate('#block6',{
-                delay: 830,
-                duration: 80,
-                property:'bottom',
-                start:-400,
-                easing: "bounce baby"
-            });
-            scrollorama.animate('#block7',{
-                delay: 860,
-                duration: 80,
-                property:'bottom',
-                start:-400,
-                easing: "bounce baby"
-            });
-            scrollorama.animate('#block8',{
-                delay: 890,
-                duration: 80,
-                property:'bottom',
-                start:-400,
-                easing: "bounce baby"
-            });
-
-            scrollorama.animate('#block6',{
-                delay: 840,
-                duration: 80,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-            });
-            scrollorama.animate('#block7',{
-                delay: 870,
-                duration: 80,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-            });
-            scrollorama.animate('#block8',{
-                delay: 890,
-                duration: 80,
-                property:'opacity',
-                start:0,
-                end: 1,
-                easing: "bounce baby"
-            });
-
-            scrollorama.animate('#block9',{
-                delay: 700,
-                duration: 200,
-                property:'right',
-                start:-1000,
-                end: 0,
-                easing: "bounce baby"
-
-            });
-    }
-
     FastClick.attach(document.body);
-
-    // @todo in class
-    $('.sliding-doors').on('click', '.sliding-door-toggle', function (e) {
-        e.preventDefault();
-        $('.sliding-doors-open').removeClass('sliding-doors-open');
-        $(this).closest('.sliding-doors').toggleClass('sliding-doors-open');
-    });
 
 });
 

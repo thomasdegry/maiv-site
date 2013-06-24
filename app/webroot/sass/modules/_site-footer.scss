@@ -2,6 +2,11 @@
     background-color: $blue-darkened;
     color: $beige;
     padding-top: 4em;
+
+    p {
+        margin: 0 auto;
+        max-width: 22em;
+    }
 }
 
 .mr-burger {
@@ -34,19 +39,19 @@
 }
 
 a {
-  text-decoration: none;
-  color: $beige;
+    text-decoration: none;
+    color: $beige;
 }
 
-span.dreamteam {
-  width: 103px;
-  height:23px;
-  display: inline-block;
-  background: url('../img/dreamteam.png') no-repeat;
-  position: relative;
-  top: 5px;
-  padding-right: 10px;
-  left: 5px;
+.dreamteam {
+    width: 103px;
+    height:23px;
+    @include inline-block;
+    background: url('../img/dreamteam.png') no-repeat;
+    position: relative;
+    top: -2px;
+    padding-right: 10px;
+    left: 5px;
 }
 
 .copyright {

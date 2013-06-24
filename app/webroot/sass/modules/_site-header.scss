@@ -80,6 +80,14 @@
 
     .horizontal-nav {
         @include font-alternate($blue, 1.6em);
+
+        ul {
+            li.active {
+                a {
+                    color: $orange;
+                }
+            }
+        }
     }
 
     .nav-item {

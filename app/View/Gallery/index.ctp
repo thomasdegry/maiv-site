@@ -109,7 +109,7 @@
         </ul>
         <div class="pagination">
             <?php
-                echo $this->Paginator->prev('«', array('class' => 'pagination-item pagination-previous', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+                echo $this->Paginator->prev('«', array('class' => 'pagination-item pagination-previous', 'escape' => false), null, array('class' => 'pagination-item pagination-previous pagination-item-disabled', 'escape' => false));
 
                 echo $this->Paginator->numbers(array(
                              'class' => 'pagination-item',
@@ -117,8 +117,9 @@
                              'currentClass' => 'pagination-item-active'
                         ));
 
-                echo $this->Paginator->next('»', array('class' => 'pagination-item pagination-next', 'escape' => false), null, array('class' => 'pagination-item pagination-item-disabled', 'escape' => false));
+                echo $this->Paginator->next('»', array('class' => 'pagination-item pagination-next', 'escape' => false), null, array('class' => 'pagination-item pagination-next pagination-item-disabled', 'escape' => false));
             ?>
         </div>
     </div>
 </section>
+

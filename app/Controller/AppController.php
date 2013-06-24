@@ -57,7 +57,7 @@ class AppController extends Controller {
 
         define('URL', 'http://localhost/mrburger-php/');
 
-        $this->Auth->allow('index', 'login', 'display');
+        $this->Auth->allow('index', 'login', 'display', 'addToCalender');
         $this->set('current_user', $this->Auth->user());
     }
 

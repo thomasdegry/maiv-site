@@ -1,0 +1,152 @@
+.scroll-indicator {
+  width: 60px;
+  height: 130px;
+  position: absolute;
+  right: 0px;
+  bottom: 20px;
+
+}
+
+@media only all and (min-width: 1200px) {
+  .scroll-indicator {
+    right: -60px;
+  }
+}
+
+.scroll-indicator-ball {
+    width: 48px;
+    height: 47px;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -22px;
+    -webkit-animation: bounce .7s infinite alternate;
+       -moz-animation: bounce .7s infinite alternate;
+        -ms-animation: bounce .7s infinite alternate;
+         -o-animation: bounce .7s infinite alternate;
+            animation: bounce .7s infinite alternate;
+    background: url('../img/sprite.svg') no-repeat -6px -5px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 30px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@-moz-keyframes bounce {
+  0% {
+    top: 30px;
+    -moz-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    -moz-animation-timing-function: ease-in;
+  }
+}
+
+@-ms-keyframes bounce {
+  0% {
+    top: 30px;
+    -ms-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    -ms-animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    animation-timing-function: ease-in;
+  }
+}
+
+.scroll-indicator-shadow {
+  position: absolute;
+  height: 5px;
+  width: 90px;
+  top: 115px;
+  background: rgba(0,0,0,.07);
+  bottom: 6px;
+  left: 50%;
+  margin-left: 50px;
+  @include box-shadow(0px 0px 12px 2px rgba(0,0,0,.1));
+
+  -webkit-animation: shadow .7s infinite alternate;
+     -moz-animation: shadow .7s infinite alternate;
+      -ms-animation: shadow .7s infinite alternate;
+          animation: shadow .7s infinite alternate;
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    width: 30px;
+    -webkit-border-radius:10px/5px;
+    margin-left: -15px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    width: 50px;
+    -webkit-border-radius:100px/5px;
+    margin-left: -25px;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+}
+
+@-moz-keyframes shadow {
+  0% {
+    width: 30px;
+    -moz-border-radius:10px/5px;
+    margin-left: -15px;
+    -moz-animation-timing-function: ease-in;
+  }
+  100% {
+    width: 50px;
+    -moz-border-radius:100px/5px;
+    margin-left: -25px;
+    -moz-animation-timing-function: ease-out;
+  }
+}
+
+@-ms-keyframes shadow {
+  0% {
+    width: 30px;
+    -ms-border-radius:10px/5px;
+    margin-left: -15px;
+    -ms-animation-timing-function: ease-in;
+  }
+  100% {
+    width: 50px;
+    -ms-border-radius:100px/5px;
+    margin-left: -25px;
+    -ms-animation-timing-function: ease-out;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    width: 30px;
+    -border-radius:10px/5px;
+    margin-left: -15px;
+    -animation-timing-function: ease-in;
+  }
+  100% {
+    width: 50px;
+    -border-radius:100px/5px;
+    margin-left: -25px;
+    -animation-timing-function: ease-out;
+  }
+}

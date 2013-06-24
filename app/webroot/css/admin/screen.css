@@ -231,11 +231,11 @@ body {
 
 /* line 35, ../../sass/_base.scss */
 .gradient-background {
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, #f57121), color-stop(65%, #e84a0c)), #ef691d;
-  background: -webkit-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
-  background: -moz-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
-  background: -o-radial-gradient(#f57121, #e84a0c 65%), #ef691d;
-  background: radial-gradient(#f57121, #e84a0c 65%), #ef691d;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 65, color-stop(0%, rgba(247, 110, 31, 0.5)), color-stop(65%, rgba(247, 110, 31, 0))), url("../img/body-pattern.png"), #ef691d;
+  background: -webkit-radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
+  background: -moz-radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
+  background: -o-radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
+  background: radial-gradient(rgba(247, 110, 31, 0.5), rgba(247, 110, 31, 0) 65%), url("../img/body-pattern.png"), #ef691d;
 }
 
 /* line 39, ../../sass/_base.scss */
@@ -327,7 +327,7 @@ label {
 /* line 103, ../../sass/_base.scss */
 select.form-element {
   height: 1.7em;
-  padding: 0.4em 1em 0.3em;
+  padding: .4em 1em .3em;
   position: relative;
   top: .1em;
   z-index: 9;
@@ -336,7 +336,7 @@ select.form-element {
 /* line 115, ../../sass/_base.scss */
 input[type="text"].form-element {
   letter-spacing: .05em;
-  padding: 0.45em 1em 0.25em;
+  padding: .45em 1em .25em;
 }
 /* line 120, ../../sass/_base.scss */
 input[type="text"].form-element::after {
@@ -402,7 +402,7 @@ input[type="text"].form-element::after {
 /* line 163, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
-  border: 0.3em solid white;
+  border: .3em solid white;
   border-radius: 1.5em;
   text-indent: -119988px;
   overflow: hidden;
@@ -411,6 +411,17 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
+/* line 167, ../../sass/_base.scss */
+.hide-mobile {
+  display: none;
+}
+
+@media only all and (min-width: 64em) {
+  /* line 172, ../../sass/_base.scss */
+  .hide-mobile {
+    display: block;
+  }
+}
 /* line 1, ../../sass/admin/_base-admin.scss */
 #content {
   min-height: 590px;
@@ -638,7 +649,7 @@ h1 {
   zoom: 1;
   *display: inline;
   color: #ecedde;
-  padding: 0.9em 1.2em;
+  padding: .9em 1.2em;
   text-decoration: none;
   -webkit-transition: color 220ms ease-in-out;
   -moz-transition: color 220ms ease-in-out;
@@ -904,7 +915,7 @@ footer div.half:last-child {
 
 /* line 81, ../../sass/admin/modules/_scan.scss */
 #outdiv {
-  border: 6px solid white;
+  border: 6px solid #fff;
   height: 421px;
   width: 100%;
 }
@@ -1083,14 +1094,17 @@ select.form-element, input[type="text"].form-element, input[type=text], select {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   border: none;
 }
-/* line 14, ../../sass/admin/modules/_forms.scss */
+/* line 15, ../../sass/admin/modules/_forms.scss */
 input[type="text"].form-element:focus, input[type=text]:focus, select:focus {
   outline: none;
 }
 
-/* line 19, ../../sass/admin/modules/_forms.scss */
+/* line 20, ../../sass/admin/modules/_forms.scss */
 input[type=text], select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1136,7 +1150,7 @@ input[type=text]::-webkit-input-placeholder, select::-webkit-input-placeholder {
   line-height: 1.45;
 }
 
-/* line 32, ../../sass/admin/modules/_forms.scss */
+/* line 33, ../../sass/admin/modules/_forms.scss */
 input[type=submit] {
   margin-left: -1px;
   color: #ecedde;
@@ -1170,18 +1184,18 @@ input[type=submit] {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 46, ../../sass/admin/modules/_forms.scss */
+/* line 47, ../../sass/admin/modules/_forms.scss */
 input[type=submit] span {
   position: relative;
   font-size: 2em;
   display: inline-block;
   top: 3px;
 }
-/* line 53, ../../sass/admin/modules/_forms.scss */
+/* line 54, ../../sass/admin/modules/_forms.scss */
 input[type=submit]:hover {
   background: #f17f3e;
 }
-/* line 57, ../../sass/admin/modules/_forms.scss */
+/* line 58, ../../sass/admin/modules/_forms.scss */
 input[type=submit]:active {
   position: relative;
   top: 2px;
@@ -1189,14 +1203,14 @@ input[type=submit]:active {
   -moz-box-shadow: #ef691d 0 2px 0;
   box-shadow: #ef691d 0 2px 0;
 }
-/* line 64, ../../sass/admin/modules/_forms.scss */
+/* line 65, ../../sass/admin/modules/_forms.scss */
 input[type=submit].disabled {
   background: #c6c6c6;
   -webkit-box-shadow: #aaaaaa 0 4px 0;
   -moz-box-shadow: #aaaaaa 0 4px 0;
   box-shadow: #aaaaaa 0 4px 0;
 }
-/* line 68, ../../sass/admin/modules/_forms.scss */
+/* line 69, ../../sass/admin/modules/_forms.scss */
 input[type=submit].disabled:active {
   margin-top: 0px;
   -webkit-box-shadow: #aaaaaa 0 4px 0;

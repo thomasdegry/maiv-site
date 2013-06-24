@@ -21,7 +21,7 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="#" title="" class="circle-logo">Mr. Burger Festival Food</a>
+            <?php echo $this->Html->link("Mr. Burger Festival Food", array('controller'=>'Scan', 'action'=>'index'), array('class' => 'circle-logo')); ?>
             <nav class="horizontal-nav">
                 <ul>
                     <li <?php if($this->name == 'Scan') {echo 'class="active"';} ?>>

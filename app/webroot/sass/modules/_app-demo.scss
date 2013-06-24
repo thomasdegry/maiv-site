@@ -6,13 +6,14 @@
     z-index: 9;
 }
 
-@media only all and (max-width: 64em) {
+@media only all and (max-height: 47em) {
     .app-demo {
-        @include background-size(350px 350px);
+        background-position: -3em center;
+        @include background-size(auto 60%);
     }
 }
 
-@media only all and (min-width: 64em) {
+@media only all and (min-height: 47em) and (min-width: 64em) {
     .app-demo {
         background-position: center center;
 
@@ -21,7 +22,7 @@
         // and removed when the demo shouldn't scroll
         .app-demo-started & {
             background-attachment: fixed;
-            background-position: center 50%;
+            background-position: center 88%;
         }
     }
 }

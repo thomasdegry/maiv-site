@@ -37,6 +37,14 @@ var HorizontalSlider = (function () {
         this.el.previousButton.on('click', _.bind(this.showPrevious, this));
         this.el.nextButton.on('click', _.bind(this.showNext, this));
 
+        $(document).keydown(_.bind(function(e){
+            if(e.keyCode === 37) {
+                this.showPrevious(null);
+            } else if(e.keyCode === 39) {
+                this.showNext(null);
+            }
+        }, this));
+
         if (this.el.navigation.length > 0) {
             this.el.navigation.on('click', this.options.navigationItem, _.bind(this.navigation, this));
         }
@@ -60,7 +68,9 @@ var HorizontalSlider = (function () {
     };
 
     HorizontalSlider.prototype.showPrevious = function (e) {
-        e.preventDefault();
+        if(e) {
+            e.preventDefault();
+        }
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             previousElement = this.el.slider.find('.' + this.options.previous);
@@ -86,7 +96,9 @@ var HorizontalSlider = (function () {
     };
 
     HorizontalSlider.prototype.showNext = function (e) {
-        e.preventDefault();
+        if(e) {
+            e.preventDefault();
+        }
 
         var currentElement = this.el.slider.find('.' + this.options.current),
             nextElement = this.el.slider.find('.' + this.options.next);
