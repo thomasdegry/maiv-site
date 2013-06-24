@@ -1672,8 +1672,8 @@ dl.stats {
 /* line 39, ../sass/modules/_feature-slider.scss */
 .feature-slider-navigation-item.active {
   border-radius: .6em;
-  margin-top: -.1em;
-  margin-left: -.1em;
+  margin-top: -0.1em;
+  margin-left: -0.1em;
   height: 1.2em;
   opacity: 1;
   width: 1.2em;
@@ -1926,6 +1926,25 @@ dl.stats {
     right: -2.5em;
   }
 }
+/* line 220, ../sass/modules/_feature-slider.scss */
+#ticker {
+  width: 297px;
+  background: url("../img/ticker.png") no-repeat;
+  height: 196px;
+  display: block;
+  position: absolute;
+  top: -25px;
+  right: -1em;
+  *zoom: 1;
+  background-size: 100%;
+}
+/* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#ticker:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* line 1, ../sass/modules/_stats.scss */
 .stats {
   width: 12em;

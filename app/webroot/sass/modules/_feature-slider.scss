@@ -216,3 +216,14 @@
         right: -2.5em;
     }
 }
+
+#ticker {
+    width: 297px;
+    background: url("../img/ticker.png") no-repeat;
+    height: 196px;
+    display: block;
+    position: absolute;
+    top: -25px; right: -1em;
+    @include pie-clearfix;
+    background-size: 100%;
+}

@@ -1,6 +1,9 @@
 <section class="orange full-screen gradient-background">
 
     <div class="feature-slider-container">
+        <?php if($this->viewVars['next_event']['now']): ?>
+                <div id="ticker"></div>
+        <?php else: ?>
         <div id="next-event">
             <?php
                 $now = time(); // or your date as well
@@ -22,6 +25,8 @@
             </h3>
             <h4><span>until</span> <?php echo $this->viewVars['next_event']['event']["name"]; ?></h4>
         </div>
+        <?php endif; ?>
+
 
         <a href="#" class="mr-burger-appstore">Download Mr Burger&rsquo;s Festi Food</a>
         <div class="feature-slider">
