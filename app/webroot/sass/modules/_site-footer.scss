@@ -17,7 +17,6 @@
     }
 }
 
-
 .mr-burger {
     background-image: url('../img/mr-burger.svg');
     background-position: center;
@@ -26,6 +25,10 @@
     @include hide-text;
     margin: 0 auto 2em;
     width: 175px;
+
+    .no-svg & {
+        background-image: url('../img/mr-burger.png');
+    }
 }
 
 .livefeed {
@@ -36,7 +39,12 @@
     @include hide-text;
     margin: 0 auto 2em;
     width: 175px;
+
+    .no-svg & {
+        background-image: url('../img/livefeed.png');
+    }
 }
+
 .statistics {
     background-image: url('../img/statistics.svg');
     background-position: center;
@@ -45,6 +53,10 @@
     @include hide-text;
     margin: 0 auto 2em;
     width: 175px;
+
+    .no-svg & {
+        background-image: url('../img/statistics.png');
+    }
 }
 
 a {
@@ -81,7 +93,8 @@ dl.stats {
     width: 220px;
     margin-left: 20px;
 }
-ul.feed li {
+
+.feed li {
   margin-bottom: 15px;
 }
 

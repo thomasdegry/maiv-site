@@ -30,6 +30,10 @@
          -o-animation: bounce .7s infinite alternate;
             animation: bounce .7s infinite alternate;
     background: url('../img/sprite.svg') no-repeat -6px -5px;
+
+    .no-svg & {
+      background-image: url('../img/sprite.png');
+    }
 }
 
 @-webkit-keyframes bounce {

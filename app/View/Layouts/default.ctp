@@ -25,15 +25,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php echo $this->Html->meta('icon', $this->Html->url('/favicon.ico')); ?>
     <title><?php echo $title_for_layout; ?></title>
-<!--     <link href="css/screen.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/vendor/modernizr.js"></script>
- -->
     <?php echo $this->Html->meta('icon', $this->Html->url('/favicon.png')); ?>
     <?php
         echo $this->Html->css(array('screen'));
-
         echo $this->Html->script('vendor/modernizr');
-
+    ?>
+    <!--[if lte IE 8]>
+        <?php echo $this->Html->script('vendor/respond'); ?>
+    <![endif]-->
+    <?php
         echo $this->fetch('meta');
         echo $this->fetch('css');
         echo $this->fetch('script');
@@ -101,7 +101,6 @@
                     </p>
                 </div>
                 <div class="column span-one-column hide-mobile">
-                    <!-- <h6 class="heading-twitter-bird">On Twitter</h6> -->
                     <h6 class="livefeed"></h6>
                     <ul class="feed">
                         <li>
@@ -135,7 +134,6 @@
                     </ul>
                 </div>
                 <div class="column span-one-column hide-mobile">
-                    <!-- <h6 class="heading-stats">Mr. Nerd!</h6> -->
                     <h6 class="statistics"></h6>
                     <dl class="stats">
                         <dt class="stat-item stat-item-facebook">

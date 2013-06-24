@@ -52,9 +52,13 @@ $font-mission-script: 'Mission Script';
 
 %sprite {
     @include hide-text;
-    background-image: url('../img/sprite.png');
+    background-image: url('../img/sprite.svg');
     background-repeat: no-repeat;
     display: block;
+
+    .no-svg & {
+        background-image: url('../img/sprite.png');
+    }
 }
 
 @mixin transition-elastic {
