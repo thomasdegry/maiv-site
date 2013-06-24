@@ -227,19 +227,10 @@ var Gallery = (function () {
             share: '.gallery-share-button'
         };
 
+        this.createElements();
+
         this.activeElement = 0;
         this.settings = new Settings();
-
-        this.el = {
-            gallery: $(this.options.gallery),
-            rate: $(this.options.rate),
-            share: $(this.options.share)
-        };
-
-        // Create a rating element for each gallery item
-        this.el.gallery.find(this.options.item).each(function () {
-            var rating = new Rating(null, {rating: $(this).find('.rate')});
-        });
 
         if(window.location.hash !== '') {
             this.loadPageFromHash();
@@ -253,16 +244,33 @@ var Gallery = (function () {
         this.bind();
     };
 
+    Gallery.prototype.createElements = function () {
+        this.el = {
+            gallery: $(this.options.gallery),
+            rate: $(this.options.rate),
+            share: $(this.options.share)
+        };
+
+        // Create a rating element for each gallery item
+        this.el.gallery.find(this.options.item).each(function () {
+            var rating = new Rating(null, {rating: $(this).find('.rate')});
+        });
+
+        console.log('created elements', this.el);
+    };
+
     Gallery.prototype.bind = function () {
-        this.el.gallery.on('click', '.gallery-share-button', this.showShare);
+        console.log('binding handlers', this.el);
+
+        this.el.gallery.on('click', this.options.share, this.showShare);
         this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
             window.location = $(this).val();
         });
+
         this.el.gallery.on('click', '.pagination-item a', this.loadPage);
         this.el.rate.on('click', '.sliding-door-toggle', this.showRate);
-        $(window).on('hashchange', this.loadPageFromHash);
 
-        this.el.rate.delegate('a', 'click', this.showRate);
+        $(window).on('hashchange', this.loadPageFromHash);
 
         $(document).keydown(_.bind(function(e){
             if(e.keyCode === 37) {
@@ -310,13 +318,14 @@ var Gallery = (function () {
     };
 
     Gallery.prototype.loadPageFromHash = function() {
-        var hash = window.location.hash;
-        var page = hash.replace('#page', '');
-        var that = this;
+        var hash = window.location.hash,
+            url  = window.location.href.substr(0, window.location.href.indexOf('#')),
+            page = hash.replace('#page', ''),
+            that = this;
 
         $.ajax({
             type: 'GET',
-            url: this.settings.URI + '/gallery/page:' + page,
+            url: url + '/page:' + page,
             success: function(data) {
                 var gallery = $(data).find('.gallery-grid');
                 var pagination = $(data).find('.pagination');
@@ -324,10 +333,9 @@ var Gallery = (function () {
                 $('.gallery-grid').empty().html(gallery);
                 $('.pagination').empty().html(pagination);
 
-
-                //opnieuw binden event listeners
-                // that.el.rate.on('click', that.showRate);
-                // that.el.share.on('click', that.showShare);
+                that.createElements();
+                that.bind();
+                that.equalHeight();
             }
         });
     };
@@ -636,7 +644,8 @@ var Settings =(function () {
 
     var Settings = function () {
 
-        this.URI = 'http://localhost/Devine/_MAMP_JAAR2/_SEM2/MAIV/mrburger/maiv-site';
+        // this.URI = 'http://localhost/Devine/_MAMP_JAAR2/_SEM2/MAIV/mrburger/maiv-site';
+        this.URI = 'http://localhost/mrburger-php';
         //this.api = 'http://192.168.2.8/maiv_oostende/api/';
         //this.api = 'http://192.168.2.4/rolstende/api/';
     };
