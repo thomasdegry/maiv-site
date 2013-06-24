@@ -237,6 +237,10 @@ var Gallery = (function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
         });
 
+        if(window.location.hash !== '') {
+            this.loadPageFromHash();
+        }
+
         if(this.el.gallery.length === 0) {
             return false;
         }
@@ -252,6 +256,14 @@ var Gallery = (function () {
         });
         this.el.gallery.on('click', '.pagination-item a', this.loadPage);
         $(window).on('hashchange', this.loadPageFromHash);
+
+        $(document).keydown(_.bind(function(e){
+            if(e.keyCode === 37) {
+                this.triggerprevious();
+            } else if(e.keyCode === 39) {
+                this.triggerNext();
+            }
+        }, this));
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -290,9 +302,7 @@ var Gallery = (function () {
         window.location.hash = "page" + url[url.length - 1];
     };
 
-    Gallery.prototype.loadPageFromHash = function(e) {
-        e.preventDefault();
-
+    Gallery.prototype.loadPageFromHash = function() {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
 
@@ -307,6 +317,24 @@ var Gallery = (function () {
                 $('.pagination').empty().html(pagination);
             }
         });
+    };
+
+    Gallery.prototype.triggerNext = function(e) {
+        var hash = window.location.hash;
+        var page = hash.replace('#page', '');
+        if(!($(".pagination-item-active").next().hasClass('pagination-item-disabled'))) {
+            console.log('ik mag volgende');
+            window.location.hash = "page" + (parseInt(page, 10) + 1);
+        }
+    };
+
+    Gallery.prototype.triggerprevious = function(e) {
+        var hash = window.location.hash;
+        var page = hash.replace('#page', '');
+        if(!($(".pagination-item-active").prev().hasClass('pagination-item-disabled'))) {
+            console.log('ik mag vorige');
+            window.location.hash = "page" + (parseInt(page, 10) - 1);
+        }
     };
 
     return Gallery;
@@ -386,7 +414,7 @@ var HorizontalSlider = (function () {
         if(e) {
             e.preventDefault();
         }
-        
+
         var currentElement = this.el.slider.find('.' + this.options.current),
             previousElement = this.el.slider.find('.' + this.options.previous);
 

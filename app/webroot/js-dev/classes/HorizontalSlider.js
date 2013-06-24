@@ -71,7 +71,7 @@ var HorizontalSlider = (function () {
         if(e) {
             e.preventDefault();
         }
-        
+
         var currentElement = this.el.slider.find('.' + this.options.current),
             previousElement = this.el.slider.find('.' + this.options.previous);
 
