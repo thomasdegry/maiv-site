@@ -50,7 +50,7 @@
                                 </span>
                                 <ul>
                                     <?php foreach($winner['mrb_creations'] as $creation): ?>
-                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=44&amp;height=44);"></li>
+                                    <li class="circle-picture" style="background: url(http://graph.facebook.com/<?php echo $creation["mrb_creations"]["user_id"]; ?>/picture?width=88&amp;height=88); background-size: 100%;"></li>
                                     <?php endforeach; ?>
                                 </ul>
 

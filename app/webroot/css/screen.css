@@ -228,11 +228,7 @@ label {
   height: 3em;
   width: 3em;
   position: absolute;
-<<<<<<< HEAD
-  top: -0.4em;
-=======
-  top: -.2em;
->>>>>>> 3ccac2d1ae8fcfe99588d3384c027fc2a5a6883c
+  top: -0.2em;
   right: 1em;
   z-index: 99;
 }
@@ -642,8 +638,16 @@ input[type="text"].form-element::after {
   margin: 0 auto;
   max-width: 22em;
 }
+@media only screen and (max-width: 64em) {
+  /* line 11, ../sass/modules/_site-footer.scss */
+  .site-footer .column:first-child {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
 
-/* line 12, ../sass/modules/_site-footer.scss */
+/* line 21, ../sass/modules/_site-footer.scss */
 .mr-burger {
   background-image: url("../img/mr-burger.svg");
   background-position: center;
@@ -656,7 +660,7 @@ input[type="text"].form-element::after {
   width: 175px;
 }
 
-/* line 22, ../sass/modules/_site-footer.scss */
+/* line 31, ../sass/modules/_site-footer.scss */
 .livefeed {
   background-image: url("../img/livefeed.svg");
   background-position: center;
@@ -669,7 +673,7 @@ input[type="text"].form-element::after {
   width: 175px;
 }
 
-/* line 31, ../sass/modules/_site-footer.scss */
+/* line 40, ../sass/modules/_site-footer.scss */
 .statistics {
   background-image: url("../img/statistics.svg");
   background-position: center;
@@ -682,13 +686,13 @@ input[type="text"].form-element::after {
   width: 175px;
 }
 
-/* line 41, ../sass/modules/_site-footer.scss */
+/* line 50, ../sass/modules/_site-footer.scss */
 a {
   text-decoration: none;
   color: #ecedde;
 }
 
-/* line 46, ../sass/modules/_site-footer.scss */
+/* line 55, ../sass/modules/_site-footer.scss */
 .dreamteam {
   width: 103px;
   height: 23px;
@@ -699,19 +703,20 @@ a {
   zoom: 1;
   *display: inline;
   background: url("../img/dreamteam.png") no-repeat;
+  background-size: 100%;
   position: relative;
   top: -2px;
-  padding-right: 10px;
   left: 5px;
+  margin-right: 12px;
 }
 
-/* line 57, ../sass/modules/_site-footer.scss */
+/* line 67, ../sass/modules/_site-footer.scss */
 .copyright {
   margin-top: 4em;
   line-height: 5em;
 }
 
-/* line 63, ../sass/modules/_site-footer.scss */
+/* line 73, ../sass/modules/_site-footer.scss */
 dl.stats {
   width: 12em;
   display: block;
@@ -719,7 +724,7 @@ dl.stats {
   margin-right: auto;
 }
 
-/* line 72, ../sass/modules/_site-footer.scss */
+/* line 80, ../sass/modules/_site-footer.scss */
 .feed-content {
   width: 220px;
   margin-left: 20px;
