@@ -27,6 +27,16 @@ var Gallery = (function () {
 
         this.equalHeight();
         this.bind();
+
+        $(window).on('hashchange', this.loadPageFromHash);
+
+        $(document).keydown(_.bind(function(e){
+            if(e.keyCode === 37) {
+                this.triggerprevious();
+            } else if(e.keyCode === 39) {
+                this.triggerNext();
+            }
+        }, this));
     };
 
     Gallery.prototype.createElements = function () {
@@ -40,13 +50,9 @@ var Gallery = (function () {
         this.el.gallery.find(this.options.item).each(function () {
             var rating = new Rating(null, {rating: $(this).find('.rate')});
         });
-
-        console.log('created elements', this.el);
     };
 
     Gallery.prototype.bind = function () {
-        console.log('binding handlers', this.el);
-
         this.el.gallery.on('click', this.options.share, this.showShare);
         this.el.gallery.find('select[name="filter-festival"]').on('change', function () {
             window.location = $(this).val();
@@ -54,16 +60,6 @@ var Gallery = (function () {
 
         this.el.gallery.on('click', '.pagination-item a', this.loadPage);
         this.el.rate.on('click', '.sliding-door-toggle', this.showRate);
-
-        $(window).on('hashchange', this.loadPageFromHash);
-
-        $(document).keydown(_.bind(function(e){
-            if(e.keyCode === 37) {
-                this.triggerprevious();
-            } else if(e.keyCode === 39) {
-                this.triggerNext();
-            }
-        }, this));
     };
 
     Gallery.prototype.showShare = function (e) {
@@ -96,9 +92,7 @@ var Gallery = (function () {
     Gallery.prototype.loadPage = function(e, pageNumber) {
         e.preventDefault();
 
-        var $el = $(e.target);
-        var url = $el.attr('href').split(':');
-        console.log(url);
+        var url = $(e.target).attr('href').split(':');
         window.location.hash = "page" + url[url.length - 1];
     };
 
@@ -142,7 +136,6 @@ var Gallery = (function () {
     };
 
     Gallery.prototype.showRate = function(e) {
-        console.log('click');
         e.preventDefault();
 
         $('.sliding-doors-open').removeClass('sliding-doors-open');
