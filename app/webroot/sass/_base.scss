@@ -154,6 +154,7 @@ input[type="text"].form-element {
 .button-confirm {
     background-color: #b7b700;
     @include box-shadow(0 .1em 0 darken(#b7b700, 5%));
+    margin: 0 auto;
 }
 
 // Helper classes

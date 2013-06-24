@@ -401,9 +401,10 @@ input[type="text"].form-element::after {
   -webkit-box-shadow: 0 0.1em 0 #9d9e00;
   -moz-box-shadow: 0 0.1em 0 #9d9e00;
   box-shadow: 0 0.1em 0 #9d9e00;
+  margin: 0 auto;
 }
 
-/* line 161, ../../sass/_base.scss */
+/* line 162, ../../sass/_base.scss */
 .prefixed-link {
   color: #ef691d;
   text-decoration: none;
@@ -412,12 +413,12 @@ input[type="text"].form-element::after {
   -o-transition: color 220ms ease-in-out;
   transition: color 220ms ease-in-out;
 }
-/* line 166, ../../sass/_base.scss */
+/* line 167, ../../sass/_base.scss */
 .prefixed-link:hover {
   color: #f2894d;
 }
 
-/* line 171, ../../sass/_base.scss */
+/* line 172, ../../sass/_base.scss */
 .circle-picture {
   background-position: center center;
   border: 0.3em solid white;
@@ -429,13 +430,13 @@ input[type="text"].form-element::after {
   width: 2.5em;
 }
 
-/* line 180, ../../sass/_base.scss */
+/* line 181, ../../sass/_base.scss */
 .hide-mobile {
   display: none;
 }
 
 @media only all and (min-width: 64em) {
-  /* line 185, ../../sass/_base.scss */
+  /* line 186, ../../sass/_base.scss */
   .hide-mobile {
     display: block;
   }
