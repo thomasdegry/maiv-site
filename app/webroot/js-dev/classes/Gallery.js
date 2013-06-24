@@ -7,14 +7,18 @@ var Gallery = (function () {
         _.bindAll(this);
         this.options = {
             gallery: '.gallery',
-            item: '.gallery-item'
+            item: '.gallery-item',
+            rate: '.sliding-doors',
+            share: '.gallery-share-button'
         };
 
         this.activeElement = 0;
         this.settings = new Settings();
 
         this.el = {
-            gallery: $(this.options.gallery)
+            gallery: $(this.options.gallery),
+            rate: $(this.options.rate),
+            share: $(this.options.share)
         };
 
         // Create a rating element for each gallery item
@@ -40,7 +44,10 @@ var Gallery = (function () {
             window.location = $(this).val();
         });
         this.el.gallery.on('click', '.pagination-item a', this.loadPage);
+        this.el.rate.on('click', '.sliding-door-toggle', this.showRate);
         $(window).on('hashchange', this.loadPageFromHash);
+
+        this.el.rate.delegate('a', 'click', this.showRate);
 
         $(document).keydown(_.bind(function(e){
             if(e.keyCode === 37) {
@@ -90,6 +97,7 @@ var Gallery = (function () {
     Gallery.prototype.loadPageFromHash = function() {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
+        var that = this;
 
         $.ajax({
             type: 'GET',
@@ -100,6 +108,11 @@ var Gallery = (function () {
 
                 $('.gallery-grid').empty().html(gallery);
                 $('.pagination').empty().html(pagination);
+
+
+                //opnieuw binden event listeners
+                // that.el.rate.on('click', that.showRate);
+                // that.el.share.on('click', that.showShare);
             }
         });
     };
@@ -108,7 +121,6 @@ var Gallery = (function () {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
         if(!($(".pagination-item-active").next().hasClass('pagination-item-disabled'))) {
-            console.log('ik mag volgende');
             window.location.hash = "page" + (parseInt(page, 10) + 1);
         }
     };
@@ -117,9 +129,16 @@ var Gallery = (function () {
         var hash = window.location.hash;
         var page = hash.replace('#page', '');
         if(!($(".pagination-item-active").prev().hasClass('pagination-item-disabled'))) {
-            console.log('ik mag vorige');
             window.location.hash = "page" + (parseInt(page, 10) - 1);
         }
+    };
+
+    Gallery.prototype.showRate = function(e) {
+        console.log('click');
+        e.preventDefault();
+
+        $('.sliding-doors-open').removeClass('sliding-doors-open');
+        $(e.target).closest('.sliding-doors').toggleClass('sliding-doors-open');
     };
 
     return Gallery;

@@ -128,47 +128,44 @@ class EventsController extends AppController {
 			'dateend' => $this->request->query['end'],
 			'address' => $this->request->query['location']
 		);
-		 
+
 		//set correct content-type-header
 		if($this->request->query['id']){
-			// header('Content-type: text/calendar; charset=utf-8');
-			// header('Content-Disposition: attachment; filename=mohawk-event.ics');
-
-			// $event = "BEGIN:VCALENDAR\n";
-			// $event .= "PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN\n";
-			// $event .= "VERSION:2.0\n";
-			// $event .= "METHOD:PUBLISH\n";
-			// $event .= "X-MS-OLK-FORCEINSPECTOROPEN:TRUE\n";
-			// $event .= "BEGIN:VEVENT\n";
-			// $event .= "CLASS:PUBLIC\n";
-			// $event .= "CREATED:".time()."\n";
-			// $event .= "DESCRIPTION:Don't forget your free burger at Mr. Burger!\\n\\n\\nSee you then\n";
-			// $event .= "DTEND:".$this->dateToCal($event['start'])."\n";
-			// $event .= "DTSTAMP:".time()."\n";
-			// $event .= "DTSTART:".$this->dateToCal($event['end'])."\n";
-			// $event .= "LAST-MODIFIED:20091109T101015Z\n";
-			// $event .= "LOCATION:".$event['address']."\n";
-			// $event .= "PRIORITY:5\n";
-			// $event .= "SEQUENCE:0\n";
-			// $event .= "SUMMARY;LANGUAGE=en-us:".$event['description']."\n";
-			// $event .= "TRANSP:OPAQUE\n";
-			// $event .= "UID:".md5($event['id'])."\n";
-			// $event .= "X-MICROSOFT-CDO-BUSYSTATUS:BUSY\n";
-			// $event .= "X-MICROSOFT-CDO-IMPORTANCE:1\n";
-			// $event .= "X-MICROSOFT-DISALLOW-COUNTER:FALSE\n";
-			// $event .= "X-MS-OLK-ALLOWEXTERNCHECK:TRUE\n";
-			// $event .= "X-MS-OLK-AUTOFILLLOCATION:FALSE\n";
-			// $event .= "X-MS-OLK-CONFTYPE:0\n";
-
-			// $event .= "BEGIN:VALARM\n";
-			// $event .= "TRIGGER:-PT1440M\n";
-			// $event .= "ACTION:DISPLAY\n";
-			// $event .= "DESCRIPTION:Reminder\n";
-			// $event .= "END:VALARM\n";
-			// $event .= "END:VEVENT\n";
-			// $event .= "END:VCALENDAR\n";
-			$this->redirect(array('action' => 'index'));
-			
+			header("Content-Type: text/Calendar");
+			header("Content-Disposition: inline; filename=".addslashes($event['title']).".ics");
+			echo "BEGIN:VCALENDAR\n";
+			echo "PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN\n";
+			echo "VERSION:2.0\n";
+			echo "METHOD:PUBLISH\n";
+			echo "X-MS-OLK-FORCEINSPECTOROPEN:TRUE\n";
+			echo "BEGIN:VEVENT\n";
+			echo "CLASS:PUBLIC\n";
+			echo "CREATED:".$this->dateToCal(time())."\n";
+			echo "DESCRIPTION:Do not forget your free burger at Mr. Burgers food Trucks!\n\Download the app from the app store to create one.\n";
+			echo "DTEND:". $this->dateToCal($event['dateend']) ."\n";
+			echo "DTSTAMP:". $this->dateToCal(time()) ."\n";
+			echo "DTSTART:". $this->dateToCal($event['datestart']) ."\n";
+			echo "LAST-MODIFIED:". $this->dateToCal(time()) ."\n";
+			echo "LOCATION:".$event['address']."\n";
+			echo "PRIORITY:5\n";
+			echo "SEQUENCE:1\n";
+			echo "SUMMARY;LANGUAGE=en-us:".$event['title']."\n";
+			echo "TRANSP:OPAQUE\n";
+			echo "UID:040000008200E00074C5B7101A82E008000000008062306C6261CA01000000000000000\n";
+			echo "X-MICROSOFT-CDO-BUSYSTATUS:BUSY\n";
+			echo "X-MICROSOFT-CDO-IMPORTANCE:1\n";
+			echo "X-MICROSOFT-DISALLOW-COUNTER:FALSE\n";
+			echo "X-MS-OLK-ALLOWEXTERNCHECK:TRUE\n";
+			echo "X-MS-OLK-AUTOFILLLOCATION:FALSE\n";
+			echo "X-MS-OLK-CONFTYPE:0\n";
+			//Here is to set the reminder for the event.
+			echo "BEGIN:VALARM\n";
+			echo "TRIGGER:-PT1440M\n";
+			echo "ACTION:DISPLAY\n";
+			echo "DESCRIPTION:Reminder\n";
+			echo "END:VALARM\n";
+			echo "END:VEVENT\n";
+			echo "END:VCALENDAR\n";
 		} else {
 			// If $id isn't set, then kick the user back to home. Do not pass go, and do not collect $200.
 			$this->redirect(array('action' => 'index'));
